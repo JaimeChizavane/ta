@@ -1,18 +1,26 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="home">
+    <q-slider/>
+    <q-about-us-section/>
+    <q-contact/>
+    <q-structure/>
+    <q-galery/>
+    <q-blog/>
   </div>
+
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+
+import QSlider from "@/components/Slider";
+import QAboutUsSection from "@/components/AboutUsSection";
+import QContact from "@/components/Contact";
+import QStructure from "@/components/Structure";
+import QGalery from "@/components/Galery";
+import QBlog from "@/components/Blog";
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
+  name: 'QHome',
+  components: { QBlog, QGalery, QStructure, QContact, QAboutUsSection, QSlider }
 }
 </script>

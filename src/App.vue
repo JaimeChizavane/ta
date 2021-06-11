@@ -1,32 +1,19 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <div class="wrapper">
+<!--    <div class="preloader">-->
+<!--      <div class="loading"><span></span><span></span><span></span><span></span></div>-->
+<!--    </div>&lt;!&ndash; /.preloader &ndash;&gt;-->
+    <q-header/>
     <router-view/>
+<q-footer/>
   </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import QHeader from "@/components/Header/Header";
+import QFooter from "@/components/Footer";
+export default {
+  name: 'App',
+  components: { QFooter, QHeader }
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+</script>

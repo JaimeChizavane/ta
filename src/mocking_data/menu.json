@@ -1,0 +1,28 @@
+[
+  {
+    "name" : "start",
+    "to": {"name": "Home"}
+  },
+  {
+    "name": "about_us",
+    "to": {"name": "AboutUs"},
+    "submenus": [
+      {
+        "name": "support_service",
+        "to": {"name": "SupportService"}
+      },
+      {
+        "name": "competences",
+        "to": {"name": "Competences"}
+      },
+      {
+        "name": "history",
+        "to": {"name": "History"}
+      },
+      {
+        "name": "service_letter",
+        "to": {"name": "ServiceLetter"}
+      }
+    ]
+  }
+]
