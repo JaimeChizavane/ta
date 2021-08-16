@@ -63,6 +63,15 @@
       </li><!-- /.nav-item -->
       <li class="nav__item has-dropdown">
         <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">CONSULTA VISTO</a>
+        <ul class="dropdown-menu">
+          <li class="nav__item">
+            <a href="coming-soon.html" class="nav__item-link">INSTRUÇÃO DE PROCESSOS PARA O VISTO DE PESSOAL</a>
+          </li><!-- /.nav-item -->
+<!--          <li class="nav__item">-->
+<!--            <a href="404.html" class="nav__item-link">SUBSCRIÇÃO</a>-->
+<!--          </li>&lt;!&ndash; /.nav-item &ndash;&gt;-->
+
+        </ul><!-- /.dropdown-menu -->
       </li><!-- /.nav-item -->
       <li class="nav__item has-dropdown">
         <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">IMPRENSA</a>
@@ -78,18 +87,18 @@
           </li>
         </ul><!-- /.dropdown-menu -->
       </li><!-- /.nav-item -->
-      <li class="nav__item has-dropdown">
-        <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">JORNAL ELECTRÓNICO</a>
-        <ul class="dropdown-menu">
-          <li class="nav__item">
-            <a href="coming-soon.html" class="nav__item-link">INSTRUÇÃO DE PROCESSOS PARA O VISTO DE PESSOAL</a>
-          </li><!-- /.nav-item -->
-          <li class="nav__item">
-            <a href="404.html" class="nav__item-link">SUBSCRIÇÃO</a>
-          </li><!-- /.nav-item -->
+<!--      <li class="nav__item has-dropdown">-->
+<!--        <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">JORNAL ELECTRÓNICO</a>-->
+<!--        <ul class="dropdown-menu">-->
+<!--          <li class="nav__item">-->
+<!--            <a href="coming-soon.html" class="nav__item-link">INSTRUÇÃO DE PROCESSOS PARA O VISTO DE PESSOAL</a>-->
+<!--          </li>&lt;!&ndash; /.nav-item &ndash;&gt;-->
+<!--          <li class="nav__item">-->
+<!--            <a href="404.html" class="nav__item-link">SUBSCRIÇÃO</a>-->
+<!--          </li>&lt;!&ndash; /.nav-item &ndash;&gt;-->
 
-        </ul><!-- /.dropdown-menu -->
-      </li><!-- /.nav-item -->
+<!--        </ul>&lt;!&ndash; /.dropdown-menu &ndash;&gt;-->
+<!--      </li>&lt;!&ndash; /.nav-item &ndash;&gt;-->
       <li class="nav__item">
         <a href="contact-us.html" class="nav__item-link">CONTACTOS</a>
       </li><!-- /.nav-item -->
