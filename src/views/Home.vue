@@ -24,6 +24,9 @@ import QFooter from "@/components/Footer";
 
 export default {
   name: 'QHome',
-  components: { QBlog, QGalery, QContact, QAboutUsSection, QSlider, QFooter, QHeader }
+  components: { QBlog, QGalery, QContact, QAboutUsSection, QSlider, QFooter, QHeader },
+  mounted() {
+    window.mainExecution()
+  }
 }
 </script>

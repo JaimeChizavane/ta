@@ -10,6 +10,12 @@ Vue.prototype.$eventHub = new Vue()
 
 Vue.use(VueAxios, axios)
 
+Vue.filter('upper', function (value) {
+  if (!value) return ''
+  value = value.toString()
+  return value.toUpperCase()
+})
+
 new Vue({
   router,
   i18n,

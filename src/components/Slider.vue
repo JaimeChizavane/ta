@@ -94,10 +94,7 @@
 
 <script>
 export default {
-  name: "QSlider",
-  mounted() {
-    window.mainExecution()
-  }
+  name: "QSlider"
 }
 </script>
 

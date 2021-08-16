@@ -2,7 +2,7 @@
   <header class="header header-transparent header-full">
     <nav class="navbar navbar-expand-lg sticky-navbar">
       <div class="container">
-        <router-link class="navbar-brand" :to="{name : 'Home'}">
+        <router-link class="navbar-brand" :to="{name : 'home'}">
           <img src="assets/images/logo/logo-light.png" class="logo-light" alt="logo">
           <img src="assets/images/logo/logo-dark.png" class="logo-dark" alt="logo">
         </router-link>

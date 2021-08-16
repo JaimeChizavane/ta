@@ -1,5 +1,52 @@
 {
   "pt": {
-    "home": "Pagina Inicial"
+    "menus": {
+      "home": "início",
+      "institution": "instituição",
+      "history": "breve historial",
+      "support_services": "serviços de apoio",
+      "competencies": "atribuições e competências",
+      "structure": "organograma",
+      "section1": "1ª secção",
+      "section2": "2ª secção",
+      "section3": "3ª secção",
+      "strategic_plan": "planos estratégicos",
+      "contests": "concursos",
+      "work_opportunity": "oportunidades de emprego",
+      "international_cooperation": "cooperação internacional",
+      "legislation": "legislação",
+      "law": "lei",
+      "decret": "decreto",
+      "dispatchment": "despachos",
+      "dispatch": "visto",
+      "statistic": "estatísticas",
+      "sub_section": "subsecção da ficalização prévia",
+      "instruction_recomendation": "instrução e recomendação",
+      "fluxogram": "fluxograma de tramitação processual",
+      "jurispendency": "jurispudência",
+      "acordion": "acórdãos",
+      "certification": "certificações",
+      "account": "contas",
+      "rpcge": "rpcge",
+      "managers": "gestores",
+      "instruction_personal": "instrução de preocesso para visto pessoal",
+      "mandatory_instructions": "instruções obrigatórias",
+      "dispatchment_instructions": "instruções de processos/visto",
+      "obligations_calendar": "calendário de obrigações (prazo)",
+      "sanctions": "sanções",
+      "petitions": "elaboração de petições",
+      "citizen": "cidadão",
+      "publications": "publicações",
+      "activity_reports": "relatório de planos de actividade",
+      "doc_submitions": "submissão de denúncia, sugestões e petições",
+      "press": "imprensa",
+      "report_submission": "submissão de denúncia",
+      "galery": "galeria",
+      "videos": "videos"
+    },
+    "errors": {
+      "404" : "Página não encontrada!",
+      "go_home": "Ir para o Início"
+    }
   }
 }
