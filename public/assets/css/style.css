@@ -2846,13 +2846,13 @@ input[type=radio] {
   color: #ffffff;
 }
 
-.lang-dropdown .lang-dropdown-toggle:after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f107";
-  border: 0;
-  display: block !important;
-}
+/*.lang-dropdown .lang-dropdown-toggle:after {*/
+/*  font-family: "Font Awesome 5 Free";*/
+/*  font-weight: 900;*/
+/*  content: "\f107";*/
+/*  border: 0;*/
+/*  display: block !important;*/
+/*}*/
 
 .lang-dropdown .lang-dropdown-toggle i {
   font-size: 30px;
