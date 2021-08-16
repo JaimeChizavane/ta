@@ -1,0 +1,9 @@
+#!/bin/sh
+if [ `whoami` = 'root' ]
+  then
+    echo 'Não é possível correr o comando usando o ROOT'
+    exit
+fi
+
+echo 'A compilar a aplicação'
+yarn build

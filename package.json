@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "install-hook": "cp post-merge .git/hooks/post-merge && sudo chmod +x .git/hooks/post-merge && if [ ! -f .env.production ]; then cp .env.example .env.production;fi",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
