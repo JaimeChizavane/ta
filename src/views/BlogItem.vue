@@ -35,9 +35,11 @@ export default {
     related: function () {
       let items = this.news.filter((article) => {
         return ![this.item.GUID, this.navigation.next.GUID, this.navigation.previous.GUID].includes(article.GUID)
-      }).slice(0, 4) || []
+      }) || []
 
-      return items
+      return items.sort((item, next) => {
+        return new Date(next.Created1) - new Date(item.Created1);
+      }).slice(0, 4)
     },
     navigation: function () {
       let prev = this.news.find((article) => {
