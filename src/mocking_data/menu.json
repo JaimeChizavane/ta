@@ -15,7 +15,7 @@
       },
       {
         "name": "menus.competencies",
-        "to": "history",
+        "to": "competencies",
         "sub_menus": []
       },
       {

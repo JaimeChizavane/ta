@@ -9,7 +9,8 @@
             <div class="about__img mb-40">
               <img src="assets/images/about/1.jpg" alt="about">
               <blockquote class="blockquote mb-0">
-                <h4 class="blockquote__title">O  Tribunal  Administrativo  é  o  órgão  superior  da  hierarquia  dos  tribunais  administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos  tribunais aduaneiros.
+                <h4 class="blockquote__title">O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais
+                  administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.
                 </h4>
               </blockquote>
             </div><!-- /.about-img -->

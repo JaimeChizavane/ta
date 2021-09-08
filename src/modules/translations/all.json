@@ -49,6 +49,8 @@
     "news": "Notícia | Notícias",
     "blog": "Notícias",
     "home": "Início",
+    "competencies": "@:menus.competencies",
+    "support_services": "@:menus.support_services",
     "recent_article": "Artigo recente | Artigos recentes",
     "not_found": "Não encontrado!",
     "errors": {

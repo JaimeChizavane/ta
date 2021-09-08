@@ -21,6 +21,22 @@ const routes = [
     component: () => import('../views/AboutUs.vue')
   },
   {
+    path: '/support_services',
+    name: 'support_services',
+    meta: {
+      display: 'support_services'
+    },
+    component: () => import('../views/SupportService.vue')
+  },
+  {
+    path: '/competencies',
+    name: 'competencies',
+    meta: {
+      display: 'competencies'
+    },
+    component: () => import('../views/Competencies.vue')
+  },
+  {
     path: '/blog',
     name: 'blog',
     meta: {

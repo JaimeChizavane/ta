@@ -12,7 +12,7 @@
                 <h2 class="slide__title">O Tribunal Administrativo </h2>
                 <p class="slide__desc">É o órgão superior da hierarquia dos tribunais administrativos. </p>
                 <div class="d-flex flex-wrap align-items-center">
-                  <router-link :to="{name: 'AboutUs'}" class="btn btn__primary btn__primary-style2 mr-30">
+                  <router-link :to="{name: 'history'}" class="btn btn__primary btn__primary-style2 mr-30">
                     <i class="icon-arrow-right"></i>
                     <span> Saber Mais</span>
                   </router-link>
@@ -58,7 +58,7 @@
                   administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais
                   aduaneiros. </p>
                 <div class="d-flex flex-wrap align-items-center">
-                  <router-link :to="{name: 'AboutUs'}" class="btn btn__primary btn__primary-style2 mr-30">
+                  <router-link :to="{name: 'history'}" class="btn btn__primary btn__primary-style2 mr-30">
                     <i class="icon-arrow-right"></i>
                     <span> Saber Mais</span>
                   </router-link>
