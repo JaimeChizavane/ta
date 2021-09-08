@@ -1,0 +1,3246 @@
+{
+  "d": {
+    "results": [
+      {
+        "__metadata": {
+          "id": "2b078c0c-0a5b-4f38-8299-bf3a279c5962",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(1)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(1)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(1)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(1)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(1)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(1)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(1)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(1)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(1)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(1)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(1)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(1)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(1)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(1)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(1)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(1)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 1,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "`",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2016-06-07T10:57:19Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "\u200b\u200bVimos, por meio desta, informar aos sectores que para o pagamento das despesas, os mesmos devem enviar as suas solicita\u00e7\u00f5es a esta Direc\u00e7\u00e3o at\u00e9 ao dia 20 de cada m\u00eas, para que se efectue a programa\u00e7\u00e3o de valores no e-SISTAFE, por parte desta Direc\u00e7\u00e3o.<br>De salientar que a&#160; programa\u00e7\u00e3o financeira das despesas \u00e9 feita at\u00e9 ao dia <strong>25 de cada m\u00eas</strong> e os desembolsos de valores s\u00e3o feitos de acordo com a tabela abaixo.<br><br><br>Tabela dos per\u00edodos de desembolsos dos recursos finaceiros no e-SISTAFE<br><br>Per\u00edodo de LQF\u00b9<br>\u200b 1\u25e6 Per\u00edodo<br>2\u25e6 Per\u00edodo\u200b<br>\u200b3\u25e6 Per\u00edodo<br>4\u25e6 Per\u00edodo \u200bDia do m\u00eas\u200b\u200b1 \u00e0 8\u200b9 \u00e0 15\u200b16 \u00e0 22<br>23 \u00e0 31 &#160;\u00b9Liberta\u00e7\u00e3o da Quota Financeira<br><br><br>",
+        "OData__x0049_D1": 4,
+        "Modified1": "2017-08-30T12:04:59Z",
+        "Modified_x0020_By1": "Nalagy Cassamo Fakir Bay",
+        "Content_x0020_Type1": "Item",
+        "Title1": "Circular N. \u030a 01/DAF/TA/2016: Per\u00edodo de envio \u00e0 DAF de expediente para pagamento",
+        "ID": 1,
+        "Modified": "2021-08-12T08:38:58Z",
+        "Created": "2021-08-12T08:38:58Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "b833161b-949f-4531-82aa-34e438d8c652"
+      },
+      {
+        "__metadata": {
+          "id": "87e964dc-628e-40ce-8555-6694e9b9e681",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(2)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(2)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(2)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(2)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(2)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(2)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(2)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(2)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(2)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(2)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(2)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(2)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(2)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(2)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(2)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(2)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 2,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Elidia Taquidir",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2017-05-09T09:39:32Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "\u200bMesa de Debates.pdf",
+        "OData__x0049_D1": 12,
+        "Modified1": "2017-07-11T08:48:12Z",
+        "Modified_x0020_By1": "Dercia Cossa",
+        "Content_x0020_Type1": "Item",
+        "Title1": "TA promove debates",
+        "ID": 2,
+        "Modified": "2021-08-12T08:38:58Z",
+        "Created": "2021-08-12T08:38:58Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "7c3afc10-0e87-42a0-81c8-655f54b88092"
+      },
+      {
+        "__metadata": {
+          "id": "76edb319-c01c-41fa-a096-eb9a6720331d",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(3)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(3)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(3)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(3)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(3)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(3)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(3)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(3)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(3)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(3)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(3)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(3)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(3)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(3)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(3)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(3)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 3,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Celia Mbebe",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2017-08-11T08:40:14Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "Fazemos lembrar aos funcion\u00e1rios e agentes desta Institui\u00e7\u00e3o,que completam anos em Agosto, que devem fazer a Prova de Vida, no Minist\u00e9rio da Administra\u00e7\u00e3o Estatal e Fun\u00e7\u00e3o P\u00fablica,no edif\u00edcio localizado na Av. 10 de Novembro ou na Direc\u00e7\u00e3o de Finan\u00e7as da Cidade de Maputo, sita na Av. Josina Machel,pr\u00f3ximo ao BAU.<br>Lembramos igualmente que, os comprovativos devem ser apresentados logo de imediato \u00e0 Direc\u00e7\u00e3o de Recursos Humanos.&#160;<br><br>Os funcion\u00e1rios ou agentes que n\u00e3o cumprirem com estarecomenda\u00e7\u00e3o ficar\u00e3o sem sal\u00e1rio a partir do m\u00eas seguinte.<br><br>Sem mais do momento, cordiais sauda\u00e7\u00f5es.<br>Maputo, 02 de Agosto de 2017<br>&#160;____________<br>Isabel da Costa<br><br>A Chefe do Departamento\u200b<br> ",
+        "OData__x0049_D1": 13,
+        "Modified1": "2017-09-29T12:52:17Z",
+        "Modified_x0020_By1": "Celia Mbebe",
+        "Content_x0020_Type1": "Item",
+        "Title1": "Circular n.\u00ba 07/DRH/TA/023.2/2017 - Prova de Vida",
+        "ID": 3,
+        "Modified": "2021-08-12T08:38:58Z",
+        "Created": "2021-08-12T08:38:58Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "3f8ca0f0-6f0c-4489-bf27-645ade3ea419"
+      },
+      {
+        "__metadata": {
+          "id": "5ed4ed5a-d56c-46ca-a35d-3a4c6475abe3",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(4)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(4)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(4)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(4)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(4)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(4)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(4)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(4)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(4)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(4)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(4)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(4)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(4)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(4)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(4)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(4)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 4,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Nalagy Cassamo Fakir Bay",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2017-08-30T12:11:58Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "O Departamento de Comunica\u00e7\u00e3o e imagem vem fazendo a distribui\u00e7\u00e3o dos jornais electr\u00f3nicos a todos os funcion\u00e1rios da Institui\u00e7\u00e3o, usando, para o efeito, o correio electr\u00f3nico.<br><br><br><br><br><font face=\"times new roman\">Paralelamente a este processo, decorriam trabalhos com vista \u00e0 moderniza\u00e7\u00e3o da Intranet do Tribunal Administrativo (TA), trabalho este finalizado recentemente.</font><br><br><br><font face=\"times new roman\">Assim sendo, a partir do dia 04 de Setembro de 2017, o Departamento de Comunica\u00e7\u00e3o e Imagem passar\u00e1 a usar, APENAS, este canal (a Intranet) para a disponibiliza\u00e7\u00e3o dos jornais em alus\u00e3o, devendo, os leitores, para efeitos de leitura, aceder a rubrica, \u201cJornais Electr\u00f3nicos\u201d.</font><br><br><br><font face=\"times new roman\">A medida visa angariar tr\u00e1fego para a nova ferramenta, bem como promover a sua utiliza\u00e7\u00e3o, no seio da comunidade do TA.</font><br><br><br><font face=\"times new roman\">Maputo, 29 de Agosto de 2017</font><br><font face=\"times new roman\">______________________</font><br><font face=\"times new roman\">Nalagi Faquir-Bay</font><br><font face=\"times new roman\">Chefe do Departamento\u200b</font><br><br><br><br>",
+        "OData__x0049_D1": 14,
+        "Modified1": "2018-03-21T08:04:36Z",
+        "Modified_x0020_By1": "Celia Mbebe",
+        "Content_x0020_Type1": "Item",
+        "Title1": "Circular n.\u00ba 01/DCI/DSIC/TA/012.12/2017 - Disponibiliza\u00e7\u00e3o dos Jornais Electr\u00f3nicos",
+        "ID": 4,
+        "Modified": "2021-08-12T08:38:58Z",
+        "Created": "2021-08-12T08:38:58Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "5fd589e7-434b-4271-9659-a713fd9c6e4e"
+      },
+      {
+        "__metadata": {
+          "id": "592d5dc7-0d73-449a-9109-d20ccfce5eee",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(5)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(5)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(5)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(5)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(5)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(5)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(5)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(5)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(5)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(5)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(5)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(5)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(5)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(5)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(5)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(5)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 5,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Celia Mbebe",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2018-03-05T12:28:40Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "<br>Fazemos lembrar aos funcion\u00e1rios e agentes desta institui\u00e7\u00e3o, que completam anos no m\u00eas de Mar\u00e7o, que devem fazer aProva de Vida, no Minist\u00e9rio da Administra\u00e7\u00e3o Estatal e Fun\u00e7\u00e3o P\u00fablica, no edif\u00edcio localizado na Av. 10 de Novembro ou na Direc\u00e7\u00e3o de Finan\u00e7as da Cidade de Maputo, sita na Av. Josina Machel, pr\u00f3ximo ao BAU.<br><br>Lembramos, igualmente, que&#160;os funcion\u00e1rios&#160;devem comunicar&#160;&#160;de&#160;imediato ao Departamento de Recursos Humanos. Os funcion\u00e1rios ou agentes que n\u00e3o cumprirem&#160;esta recomenda\u00e7\u00e3o poder\u00e3o ficar&#160; sem sal\u00e1rio a partir do m\u00eas seguinte.<br><br>",
+        "OData__x0049_D1": 18,
+        "Modified1": "2020-03-26T12:27:40Z",
+        "Modified_x0020_By1": "Celia Mbebe",
+        "Content_x0020_Type1": "Item",
+        "Title1": " PROVA DE VIDA",
+        "ID": 5,
+        "Modified": "2021-08-12T08:38:58Z",
+        "Created": "2021-08-12T08:38:58Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "10c1f8a6-4161-41b7-a8ef-d317be316a8d"
+      },
+      {
+        "__metadata": {
+          "id": "eb4ba076-8c7b-4e8a-97fe-ad437b85310f",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(6)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(6)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(6)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(6)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(6)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(6)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(6)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(6)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(6)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(6)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(6)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(6)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(6)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(6)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(6)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(6)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 6,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Celia Mbebe",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2018-03-21T08:02:23Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "&#160;<br>Havendo necessidade de refor\u00e7ar a seguran\u00e7a no processo de pagamento por via do e-sistafe, efectuado pelos \u00f3rg\u00e3os e institui\u00e7\u00f5es do Estado, foi implementada a valida\u00e7\u00e3o da conta banc\u00e1ria por N\u00famero de Identifica\u00e7\u00e3o Banc\u00e1ria (NIB) e n\u00famero \u00fanico de Identifica\u00e7\u00e3o Tribut\u00e1ria Nuit.<br>&#160;<br><strong>Para o&#160;efeito, comunica-se a todos os Agentes e Funcion\u00e1rios do Estado, para efectuarem a associa\u00e7\u00e3o do NUIT&#160;ao NIB das suas contas banc\u00e1rias nas institui\u00e7\u00f5es financeiras domiciliadas das suas contas Banc\u00e1rias, at\u00e9 30 de Mar\u00e7o de 2018.</strong><br>&#160;<br><strong>Para obter o Formul\u00e1rio, dirijam-se a DAF.</strong><br>&#160;<br>Maputo, 20 de Mar\u00e7o de 2018<br>A Chefe do Departamento de Finan\u00e7as<br>&#160;<br>________________________<br>Susana Correia",
+        "OData__x0049_D1": 19,
+        "Modified1": "2018-12-10T13:29:46Z",
+        "Modified_x0020_By1": "Nalagy Cassamo Fakir Bay",
+        "Content_x0020_Type1": "Item",
+        "Title1": "Circular N\u00ba 01/DAF/2018 - Valida\u00e7\u00e3o do Par NUIT e NIB da Ordem de Pagamento pelo Banco de Mo\u00e7ambique.",
+        "ID": 6,
+        "Modified": "2021-08-12T08:38:58Z",
+        "Created": "2021-08-12T08:38:58Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "164a7649-f604-4ef8-8141-84ceded2a705"
+      },
+      {
+        "__metadata": {
+          "id": "e74a79ae-7321-4806-b95d-c425127b69a9",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(7)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(7)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(7)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(7)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(7)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(7)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(7)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(7)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(7)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(7)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(7)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(7)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(7)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(7)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(7)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(7)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 7,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Celia Mbebe",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2018-04-12T09:09:16Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "\u200b<br>&#160;<br>&#160;<br>&#160;<br><strong>&#160;</strong><br><strong>&#160;</strong><br>Vimos pela presente, informar a todos Funcion\u00e1rios e Agentes deste Tribunal, que faleceu no dia 10 de Abril do ano em curso, no ICOR, v\u00edtima de doen\u00e7a, o <strong>genro</strong> do <strong>Venerando Juiz Conselheiro, Dr</strong>. <strong>Jos\u00e9 Lu\u00eds Maria Pereira Cardoso</strong>, cujo funeral realizar-se-\u00e1 hoje, dia 12 de Abril de 2018, no Cemit\u00e9rio de Lhanguene pelas 11&#58;00 horas, antecedido de vel\u00f3rio na Capela do HCM, as 9&#58;00 horas.<br>&#160;<br>&#160;<br>&#160;<br>&#160;&#160;Maputo, 12 de Abril de 2018<br><strong>A Informante</strong><br>&#160;<br>&#160;<br>____________________________<br><strong>Belda Fortunato Romeu</strong><br>(T\u00e9cnica Superior de Administra\u00e7\u00e3o da Justi\u00e7a)<br>&#160;",
+        "OData__x0049_D1": 20,
+        "Modified1": "2018-04-13T11:55:26Z",
+        "Modified_x0020_By1": "Celia Mbebe",
+        "Content_x0020_Type1": "Item",
+        "Title1": "Luto",
+        "ID": 7,
+        "Modified": "2021-08-12T08:38:58Z",
+        "Created": "2021-08-12T08:38:58Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "5456e396-e8ed-47d2-b6e8-dff7f7a05225"
+      },
+      {
+        "__metadata": {
+          "id": "8f06a859-6f2b-419f-96f7-47d63605da25",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(8)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(8)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(8)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(8)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(8)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(8)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(8)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(8)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(8)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(8)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(8)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(8)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(8)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(8)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(8)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(8)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 8,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Celia Mbebe",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2018-04-17T12:43:55Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "\u200b<br>Na sequ\u00eancia do funeral da m\u00e3e da Veneranda Ju\u00edza Conselheira, <strong>Dra. Filomena Cacilda Maximiano Chitsonzo</strong>, Vimos pela presente informar a todos os funcion\u00e1rios, que se deslocar\u00e1 um autocarro as 06&#58;00horas do dia 19 de corrente m\u00eas, para cidade de Xai- Xai, e regressa no mesmo dia. Interessados em participar nas cerim\u00f3nias f\u00fanebres poder\u00e3o se inscrever RH, at\u00e9 amanha as 12 Horas.<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br>&#160;<br>Maputo, 17 de Abril de 2018<br>&#160;<br><strong>O informante</strong><br><strong>&#160;</strong><br><strong>_______________________</strong><br><strong>Ant\u00f3nio Arlindo Cumaio</strong>",
+        "OData__x0049_D1": 21,
+        "Modified1": "2018-04-20T09:11:30Z",
+        "Modified_x0020_By1": "Celia Mbebe",
+        "Content_x0020_Type1": "Item",
+        "Title1": "Luto",
+        "ID": 8,
+        "Modified": "2021-08-12T08:38:58Z",
+        "Created": "2021-08-12T08:38:58Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "4e9b3544-8d95-4f67-8261-e3640133d4c7"
+      },
+      {
+        "__metadata": {
+          "id": "d00edaba-8631-40f1-8ab2-725ebd1a7654",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(9)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(9)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(9)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(9)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(9)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(9)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(9)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(9)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(9)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(9)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(9)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(9)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(9)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(9)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(9)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(9)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 9,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Zea Nhambessa",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2018-11-01T11:06:52Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "<br>\u200bPor ocasi\u00e3o das celebra\u00e7\u00f5es do Dia da Legalidade, convida-se&#160;a todos os funcion\u00e1rios da Institui\u00e7\u00e3o a participarem do<em>Road Show</em> a ter lugar, no dia 03 de Novembro, \u00e0s 9&#58;30h, no distrito de Marracuene - Pra\u00e7a de Gwaza-Muthine, prov\u00edncia de Maputo e na cerim\u00f3nia de deposi\u00e7\u00e3o de coroa de flores, a acontecer, no dia 05 de Novembro, \u00e0s 8&#58;00 horas, na Pra\u00e7a dos Her\u00f3is Mo\u00e7ambicanos, cidade de Maputo.&#160;&#160;\u200b<br>",
+        "OData__x0049_D1": 23,
+        "Modified1": "2018-12-10T13:29:19Z",
+        "Modified_x0020_By1": "Nalagy Cassamo Fakir Bay",
+        "Content_x0020_Type1": "Item",
+        "Title1": "CONVITE: SEMANA DA LEGALIDADE",
+        "ID": 9,
+        "Modified": "2021-08-12T08:38:58Z",
+        "Created": "2021-08-12T08:38:58Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "721725a8-41f9-45c5-94d8-36e8610ec7b6"
+      },
+      {
+        "__metadata": {
+          "id": "871419c8-79f5-4cc7-a50a-53726b064f44",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(10)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(10)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(10)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(10)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(10)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(10)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(10)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(10)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(10)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(10)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(10)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(10)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(10)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(10)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(10)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(10)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 10,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Nalagy Cassamo Fakir Bay",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2018-11-07T11:06:07Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "\u200bVimos, pela presente, solicitar aos benefici\u00e1rios do curso de l\u00edngua francesa para consultar os endere\u00e7os electr\u00f3nicos por forma a tomar conhecimento sobre a realiza\u00e7\u00e3o dos exames finais do curso, os quais ter\u00e3o lugar de 12 a 16 de novembro do ano corrente\u200b.<br><br><br><br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Maputo,07 de Novembro de 2018<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; A chefe do Departamento<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Adelina Nhapulo<br> ",
+        "OData__x0049_D1": 24,
+        "Modified1": "2018-12-10T13:29:33Z",
+        "Modified_x0020_By1": "Nalagy Cassamo Fakir Bay",
+        "Content_x0020_Type1": "Item",
+        "Title1": "COMUNICADO: Exames Finais De L\u00edngua Francesa",
+        "ID": 10,
+        "Modified": "2021-08-12T08:38:58Z",
+        "Created": "2021-08-12T08:38:58Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "ab58c7d2-6589-46ac-a782-02680e72f55d"
+      },
+      {
+        "__metadata": {
+          "id": "f730b2bf-b365-4c56-96cc-290aeca92c32",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(11)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(11)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(11)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(11)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(11)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(11)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(11)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(11)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(11)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(11)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(11)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(11)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(11)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(11)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(11)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(11)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 11,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Karol Teresa",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2018-12-03T07:07:09Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "<br>\u200bInforma-se que a Prova de Vida dos funcion\u00e1rios do m\u00eas de&#160;Dezembro&#160;deve&#160;ser efectuada at\u00e9 ao dia 15 do m\u00eas em curso, independentemente do dia do&#160;anivers\u00e1rio, uma vez que todo o sistema de gest\u00e3o p\u00fablica e-SISTAFE encerra na mesma data.<br>Atenciosamente,&#160;<br>A Direc\u00e7\u00e3o de Administra\u00e7\u00e3o e Finan\u00e7as&#160; ",
+        "OData__x0049_D1": 25,
+        "Modified1": "2019-02-15T11:42:01Z",
+        "Modified_x0020_By1": "Nalagy Cassamo Fakir Bay",
+        "Content_x0020_Type1": "Item",
+        "Title1": "COMUNICADO n\u00ba 002 - Prova de Vida, data-limite, 15 de Dezembro",
+        "ID": 11,
+        "Modified": "2021-08-12T08:38:58Z",
+        "Created": "2021-08-12T08:38:58Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "863fe694-1e9d-4898-b986-b658d2dfc93d"
+      },
+      {
+        "__metadata": {
+          "id": "31dcccfc-b014-4f90-baba-38874a923e0e",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(12)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(12)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(12)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(12)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(12)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(12)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(12)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(12)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(12)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(12)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(12)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(12)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(12)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(12)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(12)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(12)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 12,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Nalagy Cassamo Fakir Bay",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2018-12-10T12:45:14Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "\u200bA Televis\u00e3o de Mo\u00e7ambique (TVM) volta a transmitir, hoje, ap\u00f3s ao Telejornal, o document\u00e1rio sobre\u201c<strong>os 40 anos da Organiza\u00e7\u00e3o Judici\u00e1ria de Mo\u00e7ambique\u201d.</strong>A repeti\u00e7\u00e3o do document\u00e1rio acontece depois de a TVM ter transmitido, ontem, 09 de Dezembro,&#160;um document\u00e1rio&#160;n\u00e3o acabado em termos de produ\u00e7\u00e3o.<br><br><br>Departamento de Comunica\u00e7\u00e3o e Imagem",
+        "OData__x0049_D1": 26,
+        "Modified1": "2018-12-11T13:19:21Z",
+        "Modified_x0020_By1": "Nalagy Cassamo Fakir Bay",
+        "Content_x0020_Type1": "Item",
+        "Title1": "COMUNICADO - Retransmiss\u00e3o do document\u00e1rio sobre os 40 anos da Organiza\u00e7\u00e3o Judici\u00e1ria de Mo\u00e7ambique ",
+        "ID": 12,
+        "Modified": "2021-08-12T08:38:58Z",
+        "Created": "2021-08-12T08:38:58Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "e81ecda7-5649-4d95-8205-81e5bbb762fe"
+      },
+      {
+        "__metadata": {
+          "id": "bebc518a-0e62-4e13-8315-91a0e07faade",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(13)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(13)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(13)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(13)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(13)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(13)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(13)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(13)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(13)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(13)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(13)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(13)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(13)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(13)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(13)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(13)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 13,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Nalagy Cassamo Fakir Bay",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2018-12-11T13:11:40Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "\u200bA Televis\u00e3o de Mo\u00e7ambique leva a cabo, hoje, 11 de Dezembro de 2018, a partir das 21H&#58;00, um debate alusivo aos \u201c<strong>40 Anos da Organiza\u00e7\u00e3o Judici\u00e1ria de Mo\u00e7ambique\u201d.</strong><br>O Tribunal Administrativo \u00e9 um dos convidados especiais.<br>&#160;<br>Maputo, 11 de Dezembro de 2018<br>Departamento de Comunica\u00e7\u00e3o e Imagem",
+        "OData__x0049_D1": 27,
+        "Modified1": "2018-12-27T10:20:46Z",
+        "Modified_x0020_By1": "Celia Mbebe",
+        "Content_x0020_Type1": "Item",
+        "Title1": "COMUNICADO n\u00ba 003 - Debate televisivo, hoje, na TVM, a partir das 21H",
+        "ID": 13,
+        "Modified": "2021-08-12T08:38:58Z",
+        "Created": "2021-08-12T08:38:58Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "cd9c590d-cf95-4e32-b460-fd4e49c8bd85"
+      },
+      {
+        "__metadata": {
+          "id": "fddc3b16-8f11-428b-bd7a-55a6a0734e20",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(14)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(14)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(14)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(14)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(14)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(14)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(14)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(14)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(14)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(14)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(14)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(14)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(14)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(14)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(14)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(14)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 14,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Nalagy Cassamo Fakir Bay",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2018-12-11T13:52:16Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "\u200bNo \u00e2mbito da comemora\u00e7\u00e3o dos<strong>40 Anos da Organiza\u00e7\u00e3o Judici\u00e1ria de Mo\u00e7ambique,</strong> o Juiz-Conselheiro Presidente da Terceira Sec\u00e7\u00e3o do Tribunal Administrativo, Janu\u00e1rio Guibunda, profere, amanh\u00e3, 12 de Dezembro, nas instala\u00e7\u00f5es da Procuradoria-Geral da Rep\u00fablica, na Sala de Confer\u00eancias Armando Em\u00edlio Guebuza, uma palestra subordinada ao tema<em>\u201cA capacita\u00e7\u00e3o institucional&#58; o papel dos tribunais no desenvolvimento s\u00f3cio-econ\u00f3mico do Pa\u00eds\u201d.</em><br>Mais palestras est\u00e3o previstas para o mesmo dia, com os temas<strong> </strong><em>\u201cOrganiza\u00e7\u00e3o Judici\u00e1ria de Mo\u00e7ambique, hist\u00f3ria, evolu\u00e7\u00e3o e desenvolvimento\u201d,</em><strong> </strong>a ser proferida pelo antigo Juiz-Presidente do Tribunal Supremo, M\u00e1rio Mangaze e <em>\u201ca edifica\u00e7\u00e3o, consolida\u00e7\u00e3o e desenvolvimento do Minist\u00e9rio P\u00fablico e da Procuradoria-Geral da Rep\u00fablica, no per\u00edodo p\u00f3s-independ\u00eancia nacional\u201d,</em> a ser conduzida pelo Juiz Conselheiro Jubilado do Tribunal Administrativo, Sinai Nhatitima. &#160;<strong>&#160;&#160;</strong><br>Somos todos convidados a participar.<br>Departamento de Comunica\u00e7\u00e3o e Imagem<br>Maputo 11 de Dezembro de 2018\u200b",
+        "OData__x0049_D1": 28,
+        "Modified1": "2018-12-27T10:21:20Z",
+        "Modified_x0020_By1": "Celia Mbebe",
+        "Content_x0020_Type1": "Item",
+        "Title1": "COMUNICADO n\u00ba 004 -  Realiza\u00e7\u00e3o de palestras no \u00e2mbito da comemora\u00e7\u00e3o dos 40 anos da Organiza\u00e7\u00e3o Judici\u00e1ria de Mo\u00e7ambique",
+        "ID": 14,
+        "Modified": "2021-08-12T08:38:58Z",
+        "Created": "2021-08-12T08:38:58Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "6b23e77f-86c1-451a-9257-12fd146bab2e"
+      },
+      {
+        "__metadata": {
+          "id": "48a933e6-d14a-4f67-bc60-4fe642ae16b5",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(15)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(15)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(15)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(15)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(15)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(15)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(15)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(15)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(15)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(15)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(15)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(15)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(15)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(15)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(15)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(15)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 15,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Karol Teresa",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2019-02-26T08:05:15Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "\u200bLeva-se ao conhecimento de todos os funcion\u00e1rios deste Tribunal, que nos meses de Fvereiro e&#160;Mar\u00e7o do ano em curso ser\u00e1 cativado directamente&#160;na e-folha, o valor IPA-Imposto pessoal aut\u00e1rquico.<br>De referir que o valor varia em fun\u00e7\u00e3o da localidade do Funcion\u00e1rio.<br><br><br>Cordiais Sauda\u00e7\u00f5es",
+        "OData__x0049_D1": 29,
+        "Modified1": "2019-04-16T14:15:30Z",
+        "Modified_x0020_By1": "Celia Mbebe",
+        "Content_x0020_Type1": "Item",
+        "Title1": "Desconto do IPA-Imposto pessoal aut\u00e1rquico",
+        "ID": 15,
+        "Modified": "2021-08-12T08:38:58Z",
+        "Created": "2021-08-12T08:38:58Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "66b8ae5d-6858-4d9e-a540-106fcd074934"
+      },
+      {
+        "__metadata": {
+          "id": "151142f9-ae60-4434-be29-75918cb5dbfd",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(16)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(16)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(16)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(16)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(16)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(16)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(16)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(16)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(16)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(16)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(16)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(16)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(16)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(16)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(16)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(16)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 16,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Orlando Carupeia",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2019-03-04T14:01:25Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "<font color=\"#000000\">TOMAM posse amanh\u00e3, dia 05 de Mar\u00e7o corrente, a partir das 09&#58;00 horas, no Audit\u00f3rio do Tribunal Administrativo (TA), em Maputo, os Ju\u00edzes Presidentes dos Tribunais Administrativos das Prov\u00edncias de Cabo Delgado, Manica, Gaza e Cidade de Maputo.</font><br><font color=\"#000000\">A cerim\u00f3nia de empossamento ser\u00e1 dirigida pelo Presidente do Tribunal Administrativo, Prof. doutor Machatine Paulo Marrengane Munguambe e contar\u00e1 com as presen\u00e7as dos Ju\u00edzes Conselheiros do TA, membros do Conselho Superior da Magistratura Judicial Administrativa, funcion\u00e1rios do TA e convidados. </font><br><font color=\"#000000\">A comunidade do TA \u00e9 convidada a tomar parte deste acto.</font><br>&#160;<br>\u200b",
+        "OData__x0049_D1": 30,
+        "Modified1": "2019-03-22T13:06:30Z",
+        "Modified_x0020_By1": "Celia Mbebe",
+        "Content_x0020_Type1": "Item",
+        "Title1": "Tomada de Posse Ju\u00edzes Presidentes dos Tribunais Administrativos das Prov\u00edncias de Cabo Delgado, Manica, Gaza e da Cidade de Maputo",
+        "ID": 16,
+        "Modified": "2021-08-12T08:38:59Z",
+        "Created": "2021-08-12T08:38:59Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "0d61c2ed-e0aa-4117-bc58-3dc7ce0527ce"
+      },
+      {
+        "__metadata": {
+          "id": "c182302e-efda-4fe4-8d12-4958fcbe094e",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(17)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(17)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(17)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(17)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(17)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(17)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(17)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(17)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(17)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(17)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(17)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(17)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(17)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(17)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(17)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(17)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 17,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Orlando Carupeia",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2019-03-22T14:11:01Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "<font color=\"#000000\">CINCO funcion\u00e1rios do Tribunal Administrativo (TA) tomar\u00e3o posse, no dia 26 de Mar\u00e7o corrente, no Audit\u00f3rio deste Tribunal, em Maputo, num acto que ser\u00e1 orientado pela Secret\u00e1ria Geral do TA.</font><br><br><font color=\"#000000\">Trata-se de Cla\u00fadio Chitsonzo, Elsa Lino, Mucindo Muhai, Sauzilda Chiau e S\u00e9rgio Mate que, em comiss\u00e3o de servi\u00e7o, passam a assumir novas fun\u00e7\u00f5es a n\u00edvel da Institui\u00e7\u00e3o nas Dire\u00e7\u00f5es de Planifica\u00e7\u00e3o e Estat\u00edstica e de Administra\u00e7\u00e3o e Finan\u00e7as. &#160;&#160;&#160;</font><br><br>\u200b\u200b",
+        "OData__x0049_D1": 31,
+        "Modified1": "2019-03-28T08:02:09Z",
+        "Modified_x0020_By1": "Celia Mbebe",
+        "Content_x0020_Type1": "Item",
+        "Title1": "Nomea\u00e7\u00e3o em Comiss\u00e3o de Servi\u00e7o",
+        "ID": 17,
+        "Modified": "2021-08-12T08:38:59Z",
+        "Created": "2021-08-12T08:38:59Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "5a1db742-ac65-43ba-b264-a9d7cad808ee"
+      },
+      {
+        "__metadata": {
+          "id": "e1cf857b-a600-433d-acb5-7859d6b851c6",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(18)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(18)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(18)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(18)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(18)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(18)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(18)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(18)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(18)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(18)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(18)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(18)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(18)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(18)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(18)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(18)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 18,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Celia Mbebe",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2019-08-13T09:24:31Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "\u200bO Tribunal Supremo pretende realizar uma palestra subordinada ao tema&#58;<strong>Media\u00e7\u00e3o Judicial</strong>, tendo como orador Sua Excel\u00eancia Piter Shivute, Venerando Presidente do Tribunal da Justi\u00e7a da Namibia, a ter lugar no dia 15 de m\u00eas em cursos, das 09&#58;00 as 11&#58;00 horas, na sala Armando Emilio Guebuza da Procuradoria Geral da Republica.&#160;<br>Sendo assim, Vimos pela presente solicitar a V.Excia, a divulga\u00e7\u00e3o deste acto \u00e0 comunidade do TA.<br>Com os nossos melhores comprimentos.<br>&#160;<br>Maputo, 12 de Agosto de 2019<br>A Chefe de Departamento<br>_____________________________<br><strong>Isabel da Costa</strong><br><em>(T\u00e9cnico Superior de Administra\u00e7\u00e3o de Justi\u00e7a)\u200b</em>",
+        "OData__x0049_D1": 34,
+        "Modified1": "2019-08-21T07:06:43Z",
+        "Modified_x0020_By1": "Celia Mbebe",
+        "Content_x0020_Type1": "Item",
+        "Title1": "Palestra- Media\u00e7\u00e3o Judicial",
+        "ID": 18,
+        "Modified": "2021-08-12T08:38:59Z",
+        "Created": "2021-08-12T08:38:59Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "8aa1ba63-26dc-4360-a289-afa5dcf8424b"
+      },
+      {
+        "__metadata": {
+          "id": "1c746eaa-d30b-4cac-ad3a-f877ed484dd4",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(19)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(19)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(19)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(19)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(19)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(19)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(19)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(19)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(19)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(19)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(19)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(19)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(19)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(19)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(19)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(19)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 19,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Elidia Taquidir",
+        "ComplianceAssetId": null,
+        "Online": true,
+        "Created1": "2019-11-27T11:40:57Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "\u200bComunica-se a toda a comunidade do Tribunal Administrativo que, com vista a mitigar o elevado risco decorrente de aglomera\u00e7\u00f5es&#160;e garantir a operacionaliza\u00e7\u00e3o das medidas de&#160;propaga\u00e7\u00e3o do COVID-19 informa-se que, todos os funcion\u00e1rios dever\u00e3o apresentar-se&#160;at\u00e9 o dia&#160;05 do m\u00eas do seu nascimento/anivers\u00e1rio,&#160;a&#160;Direc\u00e7\u00e3o dos Recursos Humanos (DRH),&#160;para o registo da Prova de Vida, levando&#160;as c\u00f3pias dos seguintes documentos&#58;<br>1 - N\u00famero \u00fanico de Identifica\u00e7\u00e3o Tribut\u00e1ria (Nuit),<br>2 - Bilhete de Identidade,<br>3 - Certificado de habilita\u00e7\u00f5es liter\u00e1rias<br><br><br>Atentamente,<br><br><br>Maputo, 30 de Mar\u00e7o de 2020<br><br><br><br><br>",
+        "OData__x0049_D1": 35,
+        "Modified1": "2020-03-30T08:25:56Z",
+        "Modified_x0020_By1": "Karol Teresa",
+        "Content_x0020_Type1": "Item",
+        "Title1": "Prova de Vida n\u00e3o presencial",
+        "ID": 19,
+        "Modified": "2021-08-12T08:38:59Z",
+        "Created": "2021-08-12T08:38:59Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "8c866dd0-9501-48e8-ae36-38515aff4741"
+      },
+      {
+        "__metadata": {
+          "id": "9c44c5ca-eb3e-4e7b-9016-f9ba14614d21",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(20)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(20)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(20)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(20)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(20)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(20)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(20)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(20)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(20)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(20)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(20)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(20)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(20)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(20)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(20)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(20)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 20,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Elidia Taquidir",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2019-11-29T12:26:22Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "\u200bNo \u00e2mbito da comemora\u00e7\u00e3o do Dia Mundial da Luta Contra o HIV e SIDA, que se assinala no dia 1 de Dezembro, o Tribunal Administrativo (TA), em parceria com a Direc\u00e7\u00e3o de Sa\u00fade da Cidade de Maputo e a Casa Rosa, organiza\u00e7\u00e3o n\u00e3o&#160; governamental e sem fins lucrativos, que trabalha em coordena\u00e7\u00e3o com a AMODEFA (Associa\u00e7\u00e3o Mo\u00e7ambicana de Desenvolvimento da Fam\u00edlia), convida a todos os funcion\u00e1rios a participarem da palestra sobre Novas Abordagens do HIV/SIDA, Cancro da Mama e da Pr\u00f3stata, a ter lugar no dia 3 de Dezembro do corrente ano, a partir das 9 horas, no Audit\u00f3rio.<br><br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;<br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Maputo, 29 de Novembro de 2019<br>",
+        "OData__x0049_D1": 36,
+        "Modified1": "2019-12-13T13:28:33Z",
+        "Modified_x0020_By1": "Celia Mbebe",
+        "Content_x0020_Type1": "Item",
+        "Title1": "Palestra por ocasi\u00e3o do Dia Mundial da Luta contra o HIV e SIDA",
+        "ID": 20,
+        "Modified": "2021-08-12T08:38:59Z",
+        "Created": "2021-08-12T08:38:59Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "3161822c-359e-4167-ab2f-7927ed0c9632"
+      },
+      {
+        "__metadata": {
+          "id": "06fafcb3-57b6-4ceb-91ca-0a8e526d8469",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(21)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(21)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(21)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(21)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(21)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(21)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(21)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(21)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(21)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(21)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(21)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(21)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(21)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(21)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(21)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(21)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 21,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Elidia Taquidir",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2019-12-10T14:12:06Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "\u200bO Presidente da Mesa do Fundo Social dos Trabalhadores convoca a todos os membros do Fundo para a Assembleia Geral Ordin\u00e1ria, que ter\u00e1 lugar no dia 12 de Dezembro corrente, no Audit\u00f3rio do Tribunal Administrativo, a partir 10&#58;00 horas.<br><br>Agenda<br>1.&#160;&#160;&#160; Leitura da Acta da Sess\u00e3o anterior;<br>2.&#160;&#160;&#160; Apresenta\u00e7\u00e3o do Relat\u00f3rio de contas desde a tomada de posse e Plano Econ\u00f3mico e Social para 2020;<br>3.&#160;&#160;&#160; Apresenta\u00e7\u00e3o do Parecer do Relat\u00f3rio de contas e do Plano Econ\u00f3mico e Social para 2020;<br>4.&#160;&#160;&#160; Debate e aprova\u00e7\u00e3o do Relat\u00f3rio de contas e Plano Econ\u00f3mico e Social para 2020;<br>5.&#160;&#160;&#160; Ponto de situa\u00e7\u00e3o das solicita\u00e7\u00f5es de cr\u00e9ditos e sua tramita\u00e7\u00e3o;<br>6.&#160;&#160;&#160; Diversos<br>",
+        "OData__x0049_D1": 37,
+        "Modified1": "2019-12-13T13:28:17Z",
+        "Modified_x0020_By1": "Celia Mbebe",
+        "Content_x0020_Type1": "Item",
+        "Title1": "I Sess\u00e3o Ordin\u00e1ria do Fundo Social dos Trabalhadores",
+        "ID": 21,
+        "Modified": "2021-08-12T08:38:59Z",
+        "Created": "2021-08-12T08:38:59Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "0a223490-fe80-4197-83a6-5465ad7aee76"
+      },
+      {
+        "__metadata": {
+          "id": "7cb46470-4370-49fb-829a-93fe06895fe0",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(22)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(22)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(22)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(22)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(22)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(22)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(22)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(22)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(22)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(22)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(22)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(22)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(22)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(22)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(22)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(22)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 22,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Orlando Carupeia",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2020-01-23T07:58:20Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "<font color=\"#000000\">\u200b\u00c9 convidada a comunidade do Tribunal Administrativo (TA) a participar na Cerim\u00f3nia&#160;de Abertura do Ano Judicial 2020, a ter lugar no dia 04 de Fevereiro de 2020, pelas 09H00, no Centro Internacional de Confer\u00eancias Joaquim Chissano, na cidade de Maputo.</font><br><font color=\"#000000\">A concentra\u00e7\u00e3o no local dever\u00e1 ser feita at\u00e9 \u00e0s 08H20.</font><br><font color=\"#000000\">Traje profissional para os magistrados e formal para os funcion\u00e1rios.</font>",
+        "OData__x0049_D1": 38,
+        "Modified1": "2020-02-05T12:27:21Z",
+        "Modified_x0020_By1": "Celia Mbebe",
+        "Content_x0020_Type1": "Item",
+        "Title1": "CERIM\u00d3NIA DE ABERTURA DO ANO JUDICIAL 2020",
+        "ID": 22,
+        "Modified": "2021-08-12T08:38:59Z",
+        "Created": "2021-08-12T08:38:59Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "7cca386e-9c61-489d-9645-061e8ed44db4"
+      },
+      {
+        "__metadata": {
+          "id": "6cacae27-8db5-4635-9fd6-95c6978fec52",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(23)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(23)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(23)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(23)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(23)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(23)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(23)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(23)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(23)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(23)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(23)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(23)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(23)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(23)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(23)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(23)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 23,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Ancha Herculano",
+        "ComplianceAssetId": null,
+        "Online": true,
+        "Created1": "2020-04-03T12:11:37Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "<br>&#160;<br><br><br>REP\u00daBLICA DE MO\u00c7AMBIQUE<br><br><br>TRIBUNAL ADMINISTRATIVO <br>&#160;<br>Instru\u00e7\u00e3o n.\u00ba 01/GP/TA/2020 <br>&#160;<br> <br><br>&#160;<br> <br>Atrav\u00e9s da Lei n.\u00ba 1/2020, de 31 de Mar\u00e7o, a Assembleia da Rep\u00fablica ratificou a Declara\u00e7\u00e3o do Estado de Emerg\u00eancia, constante do Decreto Presidencial n.\u00ba 11/2020, de 30 de Mar\u00e7o, tornando-se assim, imperiosa a adop\u00e7\u00e3o de medidas adicionais consideradas tempor\u00e1rias para a preven\u00e7\u00e3o e controlo da propaga\u00e7\u00e3o da pandemia COVID-19, nos Tribunais que comp\u00f5em a Jurisdi\u00e7\u00e3o Administrativa, Fiscal e Aduaneira e no Conselho Superior da Magistratura Judicial Administrativa. <br><br>Nestes termos e ao abrigo do disposto no n.\u00ba 4 do artigo 2 da Lei n.\u00ba 1/2020, de 31 de Mar\u00e7o, conjugado com a al\u00ednea q) do n.\u00ba 1 do artigo 23, da Lei n.\u00ba 24/2013, de 1 de Novembro, alterada e republicada pela Lei n.\u00ba 7/2015, de 6 de Outubro, determino&#160;a adop\u00e7\u00e3o das seguintes medidas adicionais&#58; <br><br>\u2022&#160;&#160;&#160; A sujei\u00e7\u00e3o ao regime da urgente conveni\u00eancia de servi\u00e7o, dos contratos administrativos sujeitos \u00e1 fiscaliza\u00e7\u00e3o pr\u00e9via que forem celebrados neste per\u00edodo e enquanto vigorar, sem preju\u00edzo da sua submiss\u00e3o ao Tribunal Administrativo competente no prazo de trinta dias ap\u00f3s o t\u00e9rmino do Estado de Emerg\u00eancia;<br><br>\u2022&#160;&#160;&#160; Para os actos e contratos que j\u00e1 estejam a correr os seus tramites legais, no tribunal administrativo competente, para efeitos de fiscaliza\u00e7\u00e3o pr\u00e9via, o prazo para a concess\u00e3o do visto suspende-se enquanto vigorar a Declara\u00e7\u00e3o do Estado de Emerg\u00eancia;<br><br>\u2022&#160;&#160;&#160; Os actos e contratos insetos da fiscaliza\u00e7\u00e3o pr\u00e9via que n\u00e3o tiverem sido remetidos ao tribunal administrativo compete at\u00e9 \u00e1 data, devem ser submetidos ao mesmo para efeitos de anota\u00e7\u00e3o at\u00e9 trinta dias ap\u00f3s o t\u00e9rmino do Estado de Emerg\u00eancia;<br><br>\u2022&#160;&#160;&#160; Os documentos que d\u00e3o entrada nos tribunais da jurisdi\u00e7\u00e3o administrativa e no Conselho Superior da Magistratura Judicial e Administrativa, devem ser higienizados pelos meios adequados e manuseados observando todas as medidas de preven\u00e7\u00e3o;<br><br>\u2022&#160;&#160;&#160; A rotatividade pode ser feita adop\u00e7\u00e3o da altern\u00e2ncia na assiduidade pelo per\u00edodo de 15 dias, sem preju\u00edzo da pontualidade;<br><br>\u2022&#160;&#160;&#160; Os funcion\u00e1rios que estiverem dispensados asseguram a realiza\u00e7\u00e3o das actividades profissionais no respectivo domic\u00edlio socorrendo-se dos meios eletr\u00f3nicos ao seu dispor, sob a orienta\u00e7\u00e3o e coordena\u00e7\u00e3o directa dos respectivos superiores hier\u00e1rquicos;<br><br>\u2022&#160;&#160;&#160; Os funcion\u00e1rios que no regime de rotatividade estiver no seu domic\u00edlio, considera-se dispon\u00edvel, devendo manter-se apto a apresentar-se prontamente ao servi\u00e7o perante motivos ponderosos da institui\u00e7\u00e3o;<br><br>\u2022&#160;&#160;&#160; A dispensa dos funcion\u00e1rios, ainda estejam a assegurar os servi\u00e7os m\u00ednimos, poder\u00e1 ser autorizada nos termos e para os efeitos das determina\u00e7\u00f5es do Minist\u00e9rio de Sa\u00fade no \u00e2mbito da pandemia prevalecente, sendo imediatamente substitu\u00eddos;<br><br>\u2022&#160;&#160;&#160; Os funcion\u00e1rios que nos termos da legisla\u00e7\u00e3o e instru\u00e7\u00f5es vigentes sobre a mat\u00e9ria s\u00e3o considerados vulner\u00e1veis, gozam de tratamento diferenciado no quadro das medidas de preven\u00e7\u00e3o da pandemia, sem exclus\u00e3o da sua colabora\u00e7\u00e3o no funcionamento dos servi\u00e7os;<br><br>\u2022&#160;&#160;&#160; A n\u00e3o realiza\u00e7\u00e3o de reuni\u00f5es presenciais, salvo se forem de caracter inadi\u00e1vel, devendo, neste caso, serem observados as medidas de preven\u00e7\u00e3o emanadas pelo Minist\u00e9rio de Sa\u00fade;<br><br>\u2022&#160;&#160;&#160; Os Secret\u00e1rios-Gerais do Tribunal Administrativo, do Conselho Superior da Magistratura Judicial Administrativa e os Ju\u00edzes Presidentes dos tribunais da jurisdi\u00e7\u00e3o administrativa fiscal e aduaneira garantem a operacionaliza\u00e7\u00e3o e divulga\u00e7\u00e3o da presente instru\u00e7\u00e3o.<br><br>\u2022&#160;&#160;&#160; A presente Instru\u00e7\u00e3o entra imediatamente em vigor, pelo per\u00edodo em que durar o Estado de emerg\u00eancia. <br><br>&#160;<br><br>Maputo, 02 de Abril de 2020<br><br>O Presidente<br><br>____________________<br><br>Machatine Paulo Marrengane Munguambe<br><br>&#160;<br>",
+        "OData__x0049_D1": 41,
+        "Modified1": "2020-04-03T13:27:31Z",
+        "Modified_x0020_By1": "Karol Teresa",
+        "Content_x0020_Type1": "Item",
+        "Title1": "Instru\u00e7\u00e3o COVID-19",
+        "ID": 23,
+        "Modified": "2021-08-12T08:38:59Z",
+        "Created": "2021-08-12T08:38:59Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "8049f038-c7f6-4963-a18e-ebf32970aa25"
+      },
+      {
+        "__metadata": {
+          "id": "2c5b21f5-11d9-4ca4-a3c0-1c8b717c98e3",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(24)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(24)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(24)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(24)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(24)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(24)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(24)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(24)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(24)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(24)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(24)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(24)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(24)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(24)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(24)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(24)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 24,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Orlando Carupeia",
+        "ComplianceAssetId": null,
+        "Online": true,
+        "Created1": "2020-07-07T11:37:21Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "<br><br><font color=\"#000000\">Caros Colegas,</font><br>&#160;<br><br><font color=\"#000000\">J\u00e1 est\u00e1 dispon\u00edvel uma pasta - LEGISLACAO - na plataforma electr\u00f3nica do TA, na qual pode aceder a diversa legisla\u00e7\u00e3o compilada, ainda que carecendo de actualiza\u00e7\u00e3o. A\u00ed poder\u00e1 consultar a Constitui\u00e7\u00e3o da Rep\u00fablica, leis ordin\u00e1rias, decretos presidenciais, decretos, decretos-lei, diplomas ministeriais, diplomas legislativos, portarias, resolu\u00e7\u00f5es, etc.</font><br><br><font color=\"#000000\">Esta disponibiliza\u00e7\u00e3o surge no quadro dos esfor\u00e7os visando a facilita\u00e7\u00e3o do trabalho nos diversos sectores do TA.</font><br><br>\u200b",
+        "OData__x0049_D1": 42,
+        "Modified1": "2020-07-07T11:37:21Z",
+        "Modified_x0020_By1": "Orlando Carupeia",
+        "Content_x0020_Type1": "Item",
+        "Title1": "Legisla\u00e7\u00e3o na plataforma electr\u00f3nica ",
+        "ID": 24,
+        "Modified": "2021-08-12T08:38:59Z",
+        "Created": "2021-08-12T08:38:59Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "a4047730-cf8b-4419-923c-ab7ab263ff2d"
+      },
+      {
+        "__metadata": {
+          "id": "6631d259-17a5-470a-950f-ff1828dadda3",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(25)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(25)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(25)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(25)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(25)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(25)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(25)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(25)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(25)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(25)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(25)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(25)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(25)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(25)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(25)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(25)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 25,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Karol Teresa",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2020-07-21T09:12:50Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "\u200bHavendonecessidade de clarificare especificaralgunsaspectoscontidosnaInstru\u00e7\u00e3on.'1/GP/TA/2020,de2deAbril,nomeadamentenoqueserefere atramita\u00e7\u00e3oetratamentodeprocessossujeitos&#160;afiscaliza\u00e7\u00e3opr\u00e9via do Tribunal Administrativo,dos&#160;&#160;Tribunais&#160;&#160;Administrativos&#160;&#160;provinciais&#160;&#160;e&#160;&#160;do&#160;&#160;&#160;&#160;Tribunal AdministrativodaCidadedeMaputo,que implicamaltera\u00e7\u00f5esamedidatomada,aoabrigododispostonon.0&#160;&#160;4doartigo4doDecretoPresidencialn.\u00ba21/2020,de26deJunho,conjugadocomaal\u00edneaq)do n.\u00ba 1doartigo23daLein.024/2013,de1 de&#160;Novembro,alteradaerepublicadapelaLein.\u00ba7/2015,de6deOutubro,determino&#58;<br>1&#160;.&#160;Osactosecontratossujeitos\u00e0fiscaliza\u00e7\u00e3opr\u00e9via,eosdemeraanota\u00e7\u00e3o,devemserremetidosaoTribunalAdministrativocompetente,devendoafigura&#160;&#160;&#160;&#160;&#160;&#160;&#160; de&#160;urgente&#160;conveni\u00eancia&#160;de&#160;servi\u00e7o&#160;ser&#160;&#160;aplicada&#160;nos&#160;casosexpressamente&#160;previstos&#160;nalei.<br>&#160;<br>&#160;<br><strong>2.&#160;&#160;</strong>Ficasuspensooprazoparaaconcess\u00e3odovistodestesactosecontratossujeitosafiscaliza\u00e7\u00e3opr\u00e9viaenquantovigoraraDeclara\u00e7\u00e3odoEstadodeEmerg\u00eancia.<br><br>\u200b&#160;<br>&#160;<br>3.&#160;Continuamemvigorasrestantesmedidasemitidasatrav\u00e9sdainstru\u00e7\u00e3on.\u00ba<br>1/GP/TA/2020,de2deAbril.<br>&#160;<br>&#160;<br>4.&#160;Apresenteinstru\u00e7\u00e3oentraimediatamenteemvigor,e\u00e9v\u00e1lidapeloper\u00edodoemqueduraroEstadodeEmerg\u00eancia.<br>&#160;<br><br>&#160;\u200bMaputo,17deJulhode2020<br>&#160;<br>&#160;<br><br>&#160;",
+        "OData__x0049_D1": 43,
+        "Modified1": "2021-02-18T10:01:23Z",
+        "Modified_x0020_By1": "Celia Mbebe",
+        "Content_x0020_Type1": "Item",
+        "Title1": "Instru\u00e7\u00e3o n.\u00ba 02/GP/TA/2020",
+        "ID": 25,
+        "Modified": "2021-08-12T08:38:59Z",
+        "Created": "2021-08-12T08:38:59Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "ad8cbf95-4391-4c06-83fb-a2f002d08319"
+      },
+      {
+        "__metadata": {
+          "id": "8beb7896-9c7b-42f0-9b8c-ed19eea079f2",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(26)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(26)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(26)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(26)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(26)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(26)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(26)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(26)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(26)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(26)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(26)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(26)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(26)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(26)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(26)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(26)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 26,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Ancha Herculano",
+        "ComplianceAssetId": null,
+        "Online": true,
+        "Created1": "2020-10-30T10:21:57Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "\u200b<br>Mostrando-se necess\u00e1ria, em virtude da aprova\u00e7\u00e3o do Decreto n.\u00ba 79/2020, de 4 de Setembro, que declara a Situa\u00e7\u00e3o de Calamidade P\u00fablica e Activa o Alerta Vermelho, a gest\u00e3o e harmoniza\u00e7\u00e3o de procedimentos a adaptar nesta fase, ao abrigo do disposto na al\u00ednea q) do n.\u00ba 1 do artigo 23 da Lei&#160;n.\u00ba 24/2013, de 1 de Novembro, alterada e republicada pela Lei n.\u00ba 7/2015, de 6 de Outubro, determino&#58;<br>1.&#160;&#160;&#160;&#160;Os actos e contratos sujeitos \u00e0 fiscaliza\u00e7\u00e3o pr\u00e9via e os de mera anota\u00e7\u00e3o devem ser remetidos ao Tribunal Administrativo competente, devendo a figura de urgente conveni\u00eancia de servi\u00e7o ser aplicada nos casos expressamente previsto por Lei.<br>2.&#160;&#160;&#160;&#160;Fica suspenso o prazo para concess\u00e3o do visto dos actos e contratos sujeitos \u00e0 fiscaliza\u00e7\u00e3o pr\u00e9via, enquanto vigorar a Situa\u00e7\u00e3o de Calamidade P\u00fablica.<br>3.&#160;&#160;&#160;&#160;\u00c9 dilatado o prazo de submiss\u00e3o das Contas de Ger\u00eancia do exerc\u00edcio econ\u00f3mico de 2019, at\u00e9 30 de Novembro de 2020.<br>4.&#160;&#160;&#160;&#160;Enquanto vigorar a Situa\u00e7\u00e3o de Calamidade P\u00fablica e Activo o Alerta Vermelho, o Tribunal Administrativo deve privilegiar a realiza\u00e7\u00e3o de ac\u00e7\u00f5es de auditorias \u00e0 distancia, sendo que, para tal, solicitar\u00e1 \u00e0s entidades sujeitas \u00e0 fiscaliza\u00e7\u00e3o, documentos e informa\u00e7\u00f5es que considerar relevantes.<br>5.&#160;&#160;&#160;&#160;Podem ser levadas a cabo ac\u00e7\u00f5es de auditorias presenciais, nos casos estritamente necess\u00e1rias, devendo observar-se as medidas de preven\u00e7\u00e3o \u00e0 pandemia da COVID-19,&#160;com vista \u00e0 prote\u00e7\u00e3o das partes envolvidas.<br>6.&#160;&#160;&#160;&#160;A presente Instru\u00e7\u00e3o entra imediatamente em vigor, e \u00e9 valida pelo per\u00edodo em que durar a s Situa\u00e7\u00f5es de Calamidade P\u00fablica.<br>&#160;<br>Maputo, 13 de Outubro de 2020<br>A Presidente<br>L\u00facia Fernanda Buinga Maximiano do Amaral",
+        "OData__x0049_D1": 44,
+        "Modified1": "2020-10-30T10:23:04Z",
+        "Modified_x0020_By1": "Ancha Herculano",
+        "Content_x0020_Type1": "Item",
+        "Title1": "Instru\u00e7\u00e3o  n.\u00ba 3/GP/TA/2020",
+        "ID": 26,
+        "Modified": "2021-08-12T08:39:00Z",
+        "Created": "2021-08-12T08:39:00Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "262bf7f7-43d3-4b02-a143-b09c99343958"
+      },
+      {
+        "__metadata": {
+          "id": "3f45f392-fe80-47f1-bb59-d503be934759",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(27)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(27)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(27)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(27)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(27)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(27)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(27)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(27)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(27)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(27)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(27)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(27)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(27)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(27)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(27)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(27)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 27,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Nalagy Cassamo Fakir Bay",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2020-11-20T10:59:09Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "Acompanhe a VI Congresso Internacional de Controlo e Pol\u00edticas P\u00fablicas,<strong> </strong>organizado pelo Instituto Rui Barbosa \u2013 Brasil, de 23 a 24 de Novembro corrente.<br>&#160;<br>Inscreva-se e participe atrav\u00e9s do <em>link&#58;</em> <u>https&#58;//www.tce.ba.gov.br/?Itemid=1211</u>",
+        "OData__x0049_D1": 45,
+        "Modified1": "2020-12-10T12:59:22Z",
+        "Modified_x0020_By1": "Celia Mbebe",
+        "Content_x0020_Type1": "Item",
+        "Title1": "CONVITE - VI Congresso Internacional de Controlo e Pol\u00edticas P\u00fablicas ",
+        "ID": 27,
+        "Modified": "2021-08-12T08:39:00Z",
+        "Created": "2021-08-12T08:39:00Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "162a000c-eb3e-454d-b0b9-16f000456013"
+      },
+      {
+        "__metadata": {
+          "id": "ca3408ac-4cee-4aeb-acfb-d87b34651143",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(28)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(28)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(28)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(28)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(28)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(28)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(28)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(28)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(28)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(28)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(28)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(28)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(28)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(28)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(28)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(28)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 28,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Ancha Herculano",
+        "ComplianceAssetId": null,
+        "Online": false,
+        "Created1": "2020-12-03T13:25:55Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "\u200b<br>Acompanhe, amanh\u00e3, 04 de Dezembro de 2020, no Programa \u201fBom Dia Mo\u00e7ambique\u02ee, transmitido pela Televis\u00e3o de Mo\u00e7ambique, a partir das 6 horas, a participa\u00e7\u00e3o do Juiz-Presidente do Tribunal Fiscal da Prov\u00edncia de Maputo, Cl\u00e1udio Pene, que ir\u00e1 falar da&#160;9.\u00aa Sess\u00e3o Ordin\u00e1ria do Conselho Judicial dos TribunaisAdministrativos, Fiscais e Aduaneiros, que decorrera de 7 a 9 de Dezembro,Sob o lema <strong><em>\u201cJurisdi\u00e7\u00e3o Administrativa \u2013 Por uma Justi\u00e7a C\u00e9lere e de Qualidade ao Servi\u00e7o do Cidad\u00e3o\u201d.</em></strong><br>&#160;",
+        "OData__x0049_D1": 46,
+        "Modified1": "2020-12-10T12:58:59Z",
+        "Modified_x0020_By1": "Celia Mbebe",
+        "Content_x0020_Type1": "Item",
+        "Title1": "Convite: Assista a Participa\u00e7\u00e3o do TA na Televis\u00e3o de Mo\u00e7ambique ",
+        "ID": 28,
+        "Modified": "2021-08-12T08:39:00Z",
+        "Created": "2021-08-12T08:39:00Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "9e01c15b-5a08-43b0-91ce-ddd456d13d3a"
+      },
+      {
+        "__metadata": {
+          "id": "3cf72ca5-6540-4e1e-b329-1a55847be7b9",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(29)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(29)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(29)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(29)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(29)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(29)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(29)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(29)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(29)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(29)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(29)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(29)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(29)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(29)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(29)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(29)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 29,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Orlando Carupeia",
+        "ComplianceAssetId": null,
+        "Online": true,
+        "Created1": "2021-03-23T10:56:30Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "<font color=\"#000000\">\u200bA Direc\u00e7\u00e3o de Administra\u00e7\u00e3o e Finan\u00e7as comunica a todos os funcion\u00e1rios que no \u00e2mbito do processamento de sal\u00e1rios referente ao m\u00eas de Mar\u00e7o corrente, ocorreram falhas nos sistemas e-CAF VS e e-SNGRH, afectando o normal funcionamento, culminado com a n\u00e3o actualiza\u00e7\u00e3o dos sal\u00e1rios</font><font size=\"3\" color=\"#000000\"> </font><font color=\"#000000\">de alguns funcion\u00e1rios, bem como os respectivos retroactivos. </font><br><br><font color=\"#000000\">No entanto, comunica-se que a regulariza\u00e7\u00e3o ser\u00e1 feita no m\u00eas de Abril.</font><br><br><font color=\"#000000\">Informa-se ainda que houve o desconto de Imposto Pessoal Aut\u00e1rquico (IPA) em 50% para todos os funcion\u00e1rios e os restantes ser\u00e3o descontados no m\u00eas de Abril.</font><br><br>\u200b",
+        "OData__x0049_D1": 47,
+        "Modified1": "2021-03-23T10:56:30Z",
+        "Modified_x0020_By1": "Orlando Carupeia",
+        "Content_x0020_Type1": "Item",
+        "Title1": "Falhas nos Sistemas de Actualiza\u00e7\u00e3o de sal\u00e1rios Mar\u00e7o 2021",
+        "ID": 29,
+        "Modified": "2021-08-12T08:39:00Z",
+        "Created": "2021-08-12T08:39:00Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "90cdedc8-7f7a-4fc2-b3c4-99c98edb6980"
+      },
+      {
+        "__metadata": {
+          "id": "0f07422c-7454-4cc0-b5d5-147ffb272ffd",
+          "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(30)",
+          "etag": "\"1\"",
+          "type": "SP.Data.ComunicadosListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(30)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(30)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(30)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(30)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(30)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(30)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(30)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(30)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(30)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(30)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(30)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(30)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(30)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(30)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'd9e64515-bf27-4685-8f44-da5b3532d53e')/Items(30)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 30,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000A84022D81FBA6469AB8AD4AEA25748F",
+        "Title": "Karol Teresa",
+        "ComplianceAssetId": null,
+        "Online": true,
+        "Created1": "2021-03-25T06:50:52Z",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "Content": "\u200bEm cumprimento do Despacho da Veneranda Presidente, reca\u00eddo na Informa\u00e7\u00e3o Proposta n.\u00ba 124/DA/041/2021, datado de 17 de Mar\u00e7o, que versa sobre o assunto em ep\u00edgrafe, leva-se ao conhecimento de toda comunidade do TA, que como forma de melhorar a imagem (indument\u00e1ria) dos funcion\u00e1rios que atendem ao p\u00fablico nomeadamente os afectos a Secretaria Geral, Cart\u00f3rios da 1.\u00aa, 2.\u00aa e 3.\u00aa Sec\u00e7\u00e3o, a partir do dia 01 de Abril do&#160;presente ano, passar\u00e3o apresentar-se uniformizados ao T.A e em outros locais que deslocarem-se em miss\u00e3o de servi\u00e7o.&#160;",
+        "OData__x0049_D1": 48,
+        "Modified1": "2021-03-25T06:50:52Z",
+        "Modified_x0020_By1": "Karol Teresa",
+        "Content_x0020_Type1": "Item",
+        "Title1": "Informa\u00e7\u00e3o - Uniforme institucional para os funcion\u00e1rio",
+        "ID": 30,
+        "Modified": "2021-08-12T08:39:00Z",
+        "Created": "2021-08-12T08:39:00Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "819ea1be-94a9-4d45-9e37-ab2efd5811b6"
+      }
+    ]
+  }
+}

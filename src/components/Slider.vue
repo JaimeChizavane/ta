@@ -9,13 +9,13 @@
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
               <div class="slide__content">
                 <span class="slide__subtitle">Seja bem-vindo ao site do Tribunal Administrativo de Moçambique.</span>
-                <h2 class="slide__title">O  Tribunal  Administrativo </h2>
-                <p class="slide__desc">É  o  órgão  superior  da  hierarquia  dos  tribunais  administrativos. </p>
+                <h2 class="slide__title">O Tribunal Administrativo </h2>
+                <p class="slide__desc">É o órgão superior da hierarquia dos tribunais administrativos. </p>
                 <div class="d-flex flex-wrap align-items-center">
-                  <a href="about-us.html" class="btn btn__primary btn__primary-style2 mr-30">
+                  <router-link :to="{name: 'AboutUs'}" class="btn btn__primary btn__primary-style2 mr-30">
                     <i class="icon-arrow-right"></i>
-                    <span>Mais acerca</span>
-                  </a>
+                    <span> Saber Mais</span>
+                  </router-link>
                   <!--<a href="it-solutions.html" class="btn btn__white">Our Services</a>-->
                 </div>
               </div><!-- /.slide-content -->
@@ -54,12 +54,14 @@
               <div class="slide__content">
                 <span class="slide__subtitle">Atribuições e Competências do Tribunal Administrativo </span>
                 <h2 class="slide__title">Tribunal Administrativo em prol da Justiça</h2>
-                <p class="slide__desc">O  Tribunal  Administrativo  é  o  órgão  superior  da  hierarquia  dos  tribunais  administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos  tribunais aduaneiros. </p>
+                <p class="slide__desc">O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais
+                  administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais
+                  aduaneiros. </p>
                 <div class="d-flex flex-wrap align-items-center">
-                  <a href="about-us.html" class="btn btn__primary btn__primary-style2 mr-30">
+                  <router-link :to="{name: 'AboutUs'}" class="btn btn__primary btn__primary-style2 mr-30">
                     <i class="icon-arrow-right"></i>
-                    <span>Mais acerca</span>
-                  </a>
+                    <span> Saber Mais</span>
+                  </router-link>
                   <!--<a href="it-solutions.html" class="btn btn__white">Our Services</a>-->
                 </div>
               </div><!-- /.slide-content -->

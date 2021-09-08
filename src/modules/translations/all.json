@@ -44,8 +44,14 @@
       "galery": "galeria",
       "videos": "videos"
     },
+    "read_more": "Ler mais",
+    "news": "Notícia | Notícias",
+    "blog": "Notícias",
+    "home": "Início",
+    "recent_article": "Artigo recente | Artigos recentes",
+    "not_found": "Não encontrado!",
     "errors": {
-      "404" : "Página não encontrada!",
+      "404": "Página não encontrada!",
       "go_home": "Ir para o Início"
     }
   }

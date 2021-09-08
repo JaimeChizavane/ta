@@ -1,0 +1,726 @@
+{
+  "d": {
+    "results": [
+      {
+        "__metadata": {
+          "id": "f123640e-257e-48d2-bdcd-a423222885a6",
+          "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(1)",
+          "etag": "\"1\"",
+          "type": "SP.Data.Reusable_x0020_ContentListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(1)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(1)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(1)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(1)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(1)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(1)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(1)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(1)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(1)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(1)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(1)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(1)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(1)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(1)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(1)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 1,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000D79332D597ACB47996A4369B0F4ECF0",
+        "Title": null,
+        "ComplianceAssetId": null,
+        "Show_x0020_in_x0020_drop_x002d_d": true,
+        "Automatic_x0020_Update": true,
+        "Reusable_x0020_Text": null,
+        "Reusable_x0020_HTML": "Copyright\u00a9 2009 Contoso Corporation - All Rights Reserved",
+        "Approval_x0020_Status1": "Approved",
+        "Approver_x0020_Comments1": null,
+        "Content_x0020_Category": "None",
+        "Content_x0020_Type1": "Reusable HTML",
+        "Created1": "2016-06-22T13:16:39Z",
+        "Created_x0020_By1": "System Account",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "OData__x0049_D1": 1,
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Modified1": "2016-06-22T13:16:39Z",
+        "Modified_x0020_By1": "System Account",
+        "Title1": "Copyright",
+        "Comments": null,
+        "ContentCategory": null,
+        "AutomaticUpdate": null,
+        "ShowInRibbon": null,
+        "ReusableHtml": null,
+        "ReusableText": null,
+        "ID": 1,
+        "Modified": "2021-08-12T08:49:24Z",
+        "Created": "2021-08-12T08:49:24Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "4263b7e7-4f7d-491e-9ebe-7f8f9520f476"
+      },
+      {
+        "__metadata": {
+          "id": "d44beaa7-5540-4524-ac28-ebf042c300bf",
+          "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(2)",
+          "etag": "\"1\"",
+          "type": "SP.Data.Reusable_x0020_ContentListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(2)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(2)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(2)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(2)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(2)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(2)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(2)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(2)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(2)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(2)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(2)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(2)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(2)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(2)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(2)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 2,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000D79332D597ACB47996A4369B0F4ECF0",
+        "Title": null,
+        "ComplianceAssetId": null,
+        "Show_x0020_in_x0020_drop_x002d_d": true,
+        "Automatic_x0020_Update": true,
+        "Reusable_x0020_Text": null,
+        "Reusable_x0020_HTML": "By Rich Haddock",
+        "Approval_x0020_Status1": "Approved",
+        "Approver_x0020_Comments1": null,
+        "Content_x0020_Category": "None",
+        "Content_x0020_Type1": "Reusable HTML",
+        "Created1": "2016-06-22T13:16:39Z",
+        "Created_x0020_By1": "System Account",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "OData__x0049_D1": 2,
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Modified1": "2016-06-22T13:16:39Z",
+        "Modified_x0020_By1": "System Account",
+        "Title1": "Byline",
+        "Comments": null,
+        "ContentCategory": null,
+        "AutomaticUpdate": null,
+        "ShowInRibbon": null,
+        "ReusableHtml": null,
+        "ReusableText": null,
+        "ID": 2,
+        "Modified": "2021-08-12T08:49:24Z",
+        "Created": "2021-08-12T08:49:24Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "d8354376-5397-4960-80d9-b5ccf7d8096d"
+      },
+      {
+        "__metadata": {
+          "id": "cd1abaf2-d350-47ca-b83c-5fda4fc03dfa",
+          "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(3)",
+          "etag": "\"1\"",
+          "type": "SP.Data.Reusable_x0020_ContentListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(3)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(3)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(3)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(3)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(3)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(3)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(3)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(3)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(3)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(3)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(3)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(3)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(3)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(3)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(3)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 3,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01000D79332D597ACB47996A4369B0F4ECF0",
+        "Title": null,
+        "ComplianceAssetId": null,
+        "Show_x0020_in_x0020_drop_x002d_d": true,
+        "Automatic_x0020_Update": true,
+        "Reusable_x0020_Text": null,
+        "Reusable_x0020_HTML": "\"Example quotation\"",
+        "Approval_x0020_Status1": "Approved",
+        "Approver_x0020_Comments1": null,
+        "Content_x0020_Category": "None",
+        "Content_x0020_Type1": "Reusable HTML",
+        "Created1": "2016-06-22T13:16:39Z",
+        "Created_x0020_By1": "System Account",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "OData__x0049_D1": 3,
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Modified1": "2016-06-22T13:16:39Z",
+        "Modified_x0020_By1": "System Account",
+        "Title1": "Quote",
+        "Comments": null,
+        "ContentCategory": null,
+        "AutomaticUpdate": null,
+        "ShowInRibbon": null,
+        "ReusableHtml": null,
+        "ReusableText": null,
+        "ID": 3,
+        "Modified": "2021-08-12T08:49:24Z",
+        "Created": "2021-08-12T08:49:24Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "9765da7f-63e5-47a7-9662-210031908cdb"
+      },
+      {
+        "__metadata": {
+          "id": "729f6793-28b5-4f34-a6a8-9a5ba0d11749",
+          "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(4)",
+          "etag": "\"1\"",
+          "type": "SP.Data.Reusable_x0020_ContentListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(4)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(4)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(4)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(4)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(4)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(4)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(4)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(4)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(4)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(4)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(4)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(4)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(4)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(4)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(4)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 4,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01002CF74A4DAE39480396EEA7A4BA2BE5FB00CC7FC58073CE7F42B609C90F74BE4006",
+        "Title": "Copyright",
+        "ComplianceAssetId": null,
+        "Show_x0020_in_x0020_drop_x002d_d": null,
+        "Automatic_x0020_Update": null,
+        "Reusable_x0020_Text": null,
+        "Reusable_x0020_HTML": null,
+        "Approval_x0020_Status1": null,
+        "Approver_x0020_Comments1": null,
+        "Content_x0020_Category": null,
+        "Content_x0020_Type1": null,
+        "Created1": null,
+        "Created_x0020_By1": null,
+        "Folder_x0020_Child_x0020_Count1": null,
+        "OData__x0049_D1": null,
+        "Item_x0020_Child_x0020_Count1": null,
+        "Modified1": null,
+        "Modified_x0020_By1": null,
+        "Title1": null,
+        "Comments": null,
+        "ContentCategory": "None",
+        "AutomaticUpdate": true,
+        "ShowInRibbon": true,
+        "ReusableHtml": "Copyright\u00a9 2009 Contoso Corporation - All Rights Reserved",
+        "ReusableText": null,
+        "ID": 4,
+        "Modified": "2021-08-18T06:08:46Z",
+        "Created": "2021-08-18T06:08:46Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "a47d1636-a01d-4b07-91db-3ceae27c659a"
+      },
+      {
+        "__metadata": {
+          "id": "7dc63ad4-a51f-47fd-b9fc-c2b97724e4c7",
+          "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(5)",
+          "etag": "\"1\"",
+          "type": "SP.Data.Reusable_x0020_ContentListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(5)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(5)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(5)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(5)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(5)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(5)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(5)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(5)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(5)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(5)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(5)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(5)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(5)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(5)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(5)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 5,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01002CF74A4DAE39480396EEA7A4BA2BE5FB00CC7FC58073CE7F42B609C90F74BE4006",
+        "Title": "Byline",
+        "ComplianceAssetId": null,
+        "Show_x0020_in_x0020_drop_x002d_d": null,
+        "Automatic_x0020_Update": null,
+        "Reusable_x0020_Text": null,
+        "Reusable_x0020_HTML": null,
+        "Approval_x0020_Status1": null,
+        "Approver_x0020_Comments1": null,
+        "Content_x0020_Category": null,
+        "Content_x0020_Type1": null,
+        "Created1": null,
+        "Created_x0020_By1": null,
+        "Folder_x0020_Child_x0020_Count1": null,
+        "OData__x0049_D1": null,
+        "Item_x0020_Child_x0020_Count1": null,
+        "Modified1": null,
+        "Modified_x0020_By1": null,
+        "Title1": null,
+        "Comments": null,
+        "ContentCategory": "None",
+        "AutomaticUpdate": true,
+        "ShowInRibbon": true,
+        "ReusableHtml": "<strong>By Rich Haddock</strong>",
+        "ReusableText": null,
+        "ID": 5,
+        "Modified": "2021-08-18T06:08:46Z",
+        "Created": "2021-08-18T06:08:46Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "047a9f49-759a-43e2-9958-83abb24af1db"
+      },
+      {
+        "__metadata": {
+          "id": "fedb549c-f486-4a15-ae1e-8a544740df9d",
+          "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(6)",
+          "etag": "\"1\"",
+          "type": "SP.Data.Reusable_x0020_ContentListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(6)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(6)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(6)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(6)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(6)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(6)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(6)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(6)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(6)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(6)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(6)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(6)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(6)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(6)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'1b61c997-e887-40d3-a3b5-8e05e6baec87')/Items(6)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 6,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01002CF74A4DAE39480396EEA7A4BA2BE5FB00CC7FC58073CE7F42B609C90F74BE4006",
+        "Title": "Quote",
+        "ComplianceAssetId": null,
+        "Show_x0020_in_x0020_drop_x002d_d": null,
+        "Automatic_x0020_Update": null,
+        "Reusable_x0020_Text": null,
+        "Reusable_x0020_HTML": null,
+        "Approval_x0020_Status1": null,
+        "Approver_x0020_Comments1": null,
+        "Content_x0020_Category": null,
+        "Content_x0020_Type1": null,
+        "Created1": null,
+        "Created_x0020_By1": null,
+        "Folder_x0020_Child_x0020_Count1": null,
+        "OData__x0049_D1": null,
+        "Item_x0020_Child_x0020_Count1": null,
+        "Modified1": null,
+        "Modified_x0020_By1": null,
+        "Title1": null,
+        "Comments": null,
+        "ContentCategory": "None",
+        "AutomaticUpdate": true,
+        "ShowInRibbon": true,
+        "ReusableHtml": "<em>&quot;Example quotation&quot;</em>",
+        "ReusableText": null,
+        "ID": 6,
+        "Modified": "2021-08-18T06:08:46Z",
+        "Created": "2021-08-18T06:08:46Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "85a8a03a-6d4b-4188-afe0-0546807ad4dc"
+      }
+    ]
+  }
+}

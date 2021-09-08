@@ -1,0 +1,252 @@
+{
+  "d": {
+    "results": [
+      {
+        "__metadata": {
+          "id": "b9de301c-e05a-453e-8bbc-36175c85127d",
+          "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(1)",
+          "etag": "\"1\"",
+          "type": "SP.Data.JurisprudenciaListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(1)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(1)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(1)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(1)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(1)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(1)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(1)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(1)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(1)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(1)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(1)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(1)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(1)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(1)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(1)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 1,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01008083A070DDBA7549A5B8D25A069EBAB2",
+        "Title": null,
+        "ComplianceAssetId": null,
+        "Partes_x002f_entidades_x0020_ou_": null,
+        "N_x00b0__x0020_do_x0020_Acord_x0": null,
+        "N_x002e__x00ba__x0020_do_x0020_P": null,
+        "Relator": null,
+        "Assunto": null,
+        "Data_x0020_do_x0020_Ac_x00f3_rd_": null,
+        "Sec_x00e7__x00e3_o_x0020_de_x002": null,
+        "Ac_x00f3_rd_x00e3_o_x0020_ou_x00": null,
+        "Recorrente_x002f_Apelante": null,
+        "Objecto_x0020_de_x0020_Recurso": null,
+        "Recorrido_x002f_Apelado": null,
+        "Contra_x0020_Interessados": null,
+        "Entidade": null,
+        "Benefici_x00e1_rio_x0020_do_x002": null,
+        "Contratante": null,
+        "Objecto_x0020_do_x0020_contrato": null,
+        "Contratado": null,
+        "Esp_x00e9_cie_x0020_de_x0020_aud": null,
+        "Gestores": null,
+        "Exerc_x00ed_cio_x0020_econ_x00f3": null,
+        "Objecto_x0020_de_x0020_multa": null,
+        "Recorrente": null,
+        "Recorrido": null,
+        "OData__x0033_a_x0020_Sec_x00e7__x00e3_": null,
+        "AuthorId": 1,
+        "EditorId": 1,
+        "Modified": "2021-08-18T09:04:53Z",
+        "Created": "2021-08-18T09:04:53Z",
+        "MultasRecursos": null,
+        "ID": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "fafbc05a-b3b9-4473-b8b6-1809ae3a4b7a"
+      },
+      {
+        "__metadata": {
+          "id": "06574e43-36bf-475e-8934-fb09072ab823",
+          "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(2)",
+          "etag": "\"1\"",
+          "type": "SP.Data.JurisprudenciaListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(2)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(2)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(2)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(2)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(2)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(2)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(2)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(2)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(2)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(2)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(2)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(2)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(2)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(2)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'8a6df427-f169-4253-a793-0692d4b0aba0')/Items(2)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 2,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x01008083A070DDBA7549A5B8D25A069EBAB2",
+        "Title": null,
+        "ComplianceAssetId": null,
+        "Partes_x002f_entidades_x0020_ou_": null,
+        "N_x00b0__x0020_do_x0020_Acord_x0": "2221233",
+        "N_x002e__x00ba__x0020_do_x0020_P": "teste",
+        "Relator": "<div class=\"ExternalClassB57B8B7ED4E440FC9FBE10037EAEBAB0\"><html>\r\n  <p>\u200btete</p>\r\n</html></div>",
+        "Assunto": "teste",
+        "Data_x0020_do_x0020_Ac_x00f3_rd_": "2021-08-04T22:00:00Z",
+        "Sec_x00e7__x00e3_o_x0020_de_x002": "Plen\u00e1rio",
+        "Ac_x00f3_rd_x00e3_o_x0020_ou_x00": "Ac\u00f3rd\u00e3o",
+        "Recorrente_x002f_Apelante": "<div class=\"ExternalClass38DBCA9C5DB542468ABC75E75F0460CD\"><html>\r\n  <p>\u200bteste</p>\r\n</html></div>",
+        "Objecto_x0020_de_x0020_Recurso": "<div class=\"ExternalClassB8C3C8BEE1DB430BB6E7A34E45BE1906\"><html>\r\n  <p>\u200bteste</p>\r\n</html></div>",
+        "Recorrido_x002f_Apelado": "<div class=\"ExternalClass5E4D46B652EB41C6BB163423ABFBCC9D\"><html>\r\n  <p>\u200bteste</p>\r\n</html></div>",
+        "Contra_x0020_Interessados": "<div class=\"ExternalClass525E5D60D25742DBAED38CC6294324E0\"><html>\r\n  <p>\u200bteste</p>\r\n</html></div>",
+        "Entidade": null,
+        "Benefici_x00e1_rio_x0020_do_x002": null,
+        "Contratante": null,
+        "Objecto_x0020_do_x0020_contrato": null,
+        "Contratado": null,
+        "Esp_x00e9_cie_x0020_de_x0020_aud": null,
+        "Gestores": null,
+        "Exerc_x00ed_cio_x0020_econ_x00f3": null,
+        "Objecto_x0020_de_x0020_multa": null,
+        "Recorrente": null,
+        "Recorrido": null,
+        "OData__x0033_a_x0020_Sec_x00e7__x00e3_": null,
+        "AuthorId": 8,
+        "EditorId": 8,
+        "Modified": "2021-08-24T09:23:22Z",
+        "Created": "2021-08-24T09:23:22Z",
+        "MultasRecursos": null,
+        "ID": 2,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "b3129bc0-67a5-4cea-b7d1-6c54ee486f13"
+      }
+    ]
+  }
+}

@@ -268,10 +268,7 @@ var mainExecution = function () {
     $('select').niceSelect();
 
     /*==========   portfolio Filtering and Sorting  ==========*/
-    $("#filtered-items-wrap").mixItUp();
-    $(".portfolio-filter li a").on("click", function (e) {
-        e.preventDefault();
-    });
+
 }
 
 $(mainExecution())

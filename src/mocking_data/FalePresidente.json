@@ -1,0 +1,117 @@
+{
+  "d": {
+    "results": [
+      {
+        "__metadata": {
+          "id": "5e9bc0e6-3fae-4030-ae70-71d773efc542",
+          "uri": "http://spapdev/_api/Web/Lists(guid'6ac77aa4-4408-4d47-b862-45e428db2972')/Items(1)",
+          "etag": "\"1\"",
+          "type": "SP.Data.FalePresidenteListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'6ac77aa4-4408-4d47-b862-45e428db2972')/Items(1)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'6ac77aa4-4408-4d47-b862-45e428db2972')/Items(1)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'6ac77aa4-4408-4d47-b862-45e428db2972')/Items(1)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'6ac77aa4-4408-4d47-b862-45e428db2972')/Items(1)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'6ac77aa4-4408-4d47-b862-45e428db2972')/Items(1)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'6ac77aa4-4408-4d47-b862-45e428db2972')/Items(1)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'6ac77aa4-4408-4d47-b862-45e428db2972')/Items(1)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'6ac77aa4-4408-4d47-b862-45e428db2972')/Items(1)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'6ac77aa4-4408-4d47-b862-45e428db2972')/Items(1)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'6ac77aa4-4408-4d47-b862-45e428db2972')/Items(1)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'6ac77aa4-4408-4d47-b862-45e428db2972')/Items(1)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'6ac77aa4-4408-4d47-b862-45e428db2972')/Items(1)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'6ac77aa4-4408-4d47-b862-45e428db2972')/Items(1)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'6ac77aa4-4408-4d47-b862-45e428db2972')/Items(1)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'6ac77aa4-4408-4d47-b862-45e428db2972')/Items(1)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 1,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x010087B2F7C3903AFC45BC9EA54FC9C772E8",
+        "Title": "Sugest\u00e3o",
+        "ComplianceAssetId": null,
+        "Descri_x00e7__x00e3_o": "dlcq\u00e7iubcfvfv adfvafba",
+        "Created1": "2016-07-26T07:54:24Z",
+        "Created_x0020_By1": "Leadership Admin",
+        "Nome": null,
+        "Email": null,
+        "Telefone": null,
+        "Assunto": "ola ddd",
+        "Item_x0020_Child_x0020_Count1": "0",
+        "Folder_x0020_Child_x0020_Count1": "0",
+        "OData__x0049_D1": 2,
+        "Modified1": "2016-07-26T07:54:24Z",
+        "Modified_x0020_By1": "System Account",
+        "Content_x0020_Type1": "Item",
+        "ID": 1,
+        "Modified": "2021-08-12T08:41:42Z",
+        "Created": "2021-08-12T08:41:42Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "7e20506f-0782-48a1-8e19-3873fd33c2e4"
+      }
+    ]
+  }
+}

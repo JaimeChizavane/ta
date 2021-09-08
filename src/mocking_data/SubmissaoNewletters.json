@@ -1,0 +1,110 @@
+{
+  "d": {
+    "results": [
+      {
+        "__metadata": {
+          "id": "f0450146-eaa9-4a43-ab6b-cbdc52b46401",
+          "uri": "http://spapdev/_api/Web/Lists(guid'3b45302f-cd57-46f1-8c9f-f463e2874559')/Items(1)",
+          "etag": "\"1\"",
+          "type": "SP.Data.SubmissaoNewlettersListItem"
+        },
+        "FirstUniqueAncestorSecurableObject": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'3b45302f-cd57-46f1-8c9f-f463e2874559')/Items(1)/FirstUniqueAncestorSecurableObject"
+          }
+        },
+        "RoleAssignments": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'3b45302f-cd57-46f1-8c9f-f463e2874559')/Items(1)/RoleAssignments"
+          }
+        },
+        "Activities": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'3b45302f-cd57-46f1-8c9f-f463e2874559')/Items(1)/Activities"
+          }
+        },
+        "AttachmentFiles": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'3b45302f-cd57-46f1-8c9f-f463e2874559')/Items(1)/AttachmentFiles"
+          }
+        },
+        "ContentType": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'3b45302f-cd57-46f1-8c9f-f463e2874559')/Items(1)/ContentType"
+          }
+        },
+        "GetDlpPolicyTip": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'3b45302f-cd57-46f1-8c9f-f463e2874559')/Items(1)/GetDlpPolicyTip"
+          }
+        },
+        "FieldValuesAsHtml": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'3b45302f-cd57-46f1-8c9f-f463e2874559')/Items(1)/FieldValuesAsHtml"
+          }
+        },
+        "FieldValuesAsText": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'3b45302f-cd57-46f1-8c9f-f463e2874559')/Items(1)/FieldValuesAsText"
+          }
+        },
+        "FieldValuesForEdit": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'3b45302f-cd57-46f1-8c9f-f463e2874559')/Items(1)/FieldValuesForEdit"
+          }
+        },
+        "File": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'3b45302f-cd57-46f1-8c9f-f463e2874559')/Items(1)/File"
+          }
+        },
+        "Folder": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'3b45302f-cd57-46f1-8c9f-f463e2874559')/Items(1)/Folder"
+          }
+        },
+        "LikedByInformation": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'3b45302f-cd57-46f1-8c9f-f463e2874559')/Items(1)/LikedByInformation"
+          }
+        },
+        "ParentList": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'3b45302f-cd57-46f1-8c9f-f463e2874559')/Items(1)/ParentList"
+          }
+        },
+        "Properties": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'3b45302f-cd57-46f1-8c9f-f463e2874559')/Items(1)/Properties"
+          }
+        },
+        "Versions": {
+          "__deferred": {
+            "uri": "http://spapdev/_api/Web/Lists(guid'3b45302f-cd57-46f1-8c9f-f463e2874559')/Items(1)/Versions"
+          }
+        },
+        "FileSystemObjectType": 0,
+        "Id": 1,
+        "ServerRedirectedEmbedUri": null,
+        "ServerRedirectedEmbedUrl": "",
+        "ContentTypeId": "0x0100C1E3FA069AC8F04E814A5B8EC73BFF86",
+        "Title": null,
+        "ComplianceAssetId": null,
+        "Assigned_x0020_To": null,
+        "Status": null,
+        "Priority": null,
+        "Due_x0020_Date": null,
+        "OData__x0025__x0020_Complete": null,
+        "Predecessors": null,
+        "ID": 1,
+        "Modified": "2021-08-12T08:50:24Z",
+        "Created": "2021-08-12T08:50:24Z",
+        "AuthorId": 1,
+        "EditorId": 1,
+        "OData__UIVersionString": "1.0",
+        "Attachments": false,
+        "GUID": "e4a0c0cd-e421-48d9-af15-8d3df2845bfb"
+      }
+    ]
+  }
+}
