@@ -10,6 +10,9 @@
               <li class="breadcrumb-item">
                 <router-link :to="{name: 'home'}">{{ $tc('home') }}</router-link>
               </li>
+              <li class="breadcrumb-item" v-show="$route.meta.parent">
+                <router-link :to="{name: ''}">{{ $tc($route.meta.parent) }}</router-link>
+              </li>
               <li class="breadcrumb-item active" aria-current="page">{{ $tc($route.meta.display, 2) }}</li>
             </ol>
           </nav>

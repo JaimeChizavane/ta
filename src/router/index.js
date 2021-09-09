@@ -16,7 +16,8 @@ const routes = [
     path: '/support_services',
     name: 'support_services',
     meta: {
-      display: 'menus.support_services'
+      display: 'menus.support_services',
+      parent: 'menus.institution'
     },
     component: () => import('@/views/SupportService.vue')
   },
@@ -24,7 +25,8 @@ const routes = [
     path: '/competencies',
     name: 'competencies',
     meta: {
-      display: 'menus.competencies'
+      display: 'menus.competencies',
+      parent: 'menus.institution'
     },
     component: () => import('@/views/Competencies.vue')
   },
@@ -32,7 +34,8 @@ const routes = [
     path: '/history',
     name: 'history',
     meta: {
-      display: 'menus.history'
+      display: 'menus.history',
+      parent: 'menus.institution'
     },
     component: () => import('@/views/AboutUs.vue')
   },
@@ -40,7 +43,8 @@ const routes = [
     path: '/structure',
     name: 'structure',
     meta: {
-      display: 'menus.structure'
+      display: 'menus.structure',
+      parent: 'menus.institution'
     },
     component: () => import('@/views/AboutUs.vue')
   },
@@ -48,7 +52,8 @@ const routes = [
     path: '/section1',
     name: 'section1',
     meta: {
-      display: 'menus.section1'
+      display: 'menus.section1',
+      parent: 'menus.institution'
     },
     component: () => import('@/views/1Section.vue')
   },
@@ -56,7 +61,8 @@ const routes = [
     path: '/section2',
     name: 'section2',
     meta: {
-      display: 'menus.section2'
+      display: 'menus.section2',
+      parent: 'menus.institution'
     },
     component: () => import('@/views/2Section.vue')
   },
@@ -64,7 +70,8 @@ const routes = [
     path: '/section3',
     name: 'section3',
     meta: {
-      display: 'menus.section3'
+      display: 'menus.section3',
+      parent: 'menus.institution'
     },
     component: () => import('@/views/3Section.vue')
   },
@@ -72,7 +79,8 @@ const routes = [
     path: '/strategic_plan',
     name: 'strategic_plan',
     meta: {
-      display: 'menus.strategic_plan'
+      display: 'menus.strategic_plan',
+      parent: 'menus.institution'
     },
     component: () => import('@/views/AboutUs.vue')
   },
@@ -80,7 +88,8 @@ const routes = [
     path: '/contests',
     name: 'contests',
     meta: {
-      display: 'menus.contests'
+      display: 'menus.contests',
+      parent: 'menus.institution'
     },
     component: () => import('@/views/AboutUs.vue')
   },
@@ -88,7 +97,8 @@ const routes = [
     path: '/work_opportunity',
     name: 'work_opportunity',
     meta: {
-      display: 'menus.work_opportunity'
+      display: 'menus.work_opportunity',
+      parent: 'menus.institution'
     },
     component: () => import('@/views/AboutUs.vue')
   },
@@ -96,7 +106,8 @@ const routes = [
     path: '/international_cooperation',
     name: 'international_cooperation',
     meta: {
-      display: 'menus.international_cooperation'
+      display: 'menus.international_cooperation',
+      parent: 'menus.institution'
     },
     component: () => import('@/views/AboutUs.vue')
   },
@@ -112,7 +123,8 @@ const routes = [
     path: '/law',
     name: 'law',
     meta: {
-      display: 'menus.law'
+      display: 'menus.law',
+      parent: 'menus.legislation'
     },
     component: () => import('@/views/AboutUs.vue')
   },
@@ -120,7 +132,8 @@ const routes = [
     path: '/decret',
     name: 'decret',
     meta: {
-      display: 'menus.decret'
+      display: 'menus.decret',
+      parent: 'menus.legislation'
     },
     component: () => import('@/views/AboutUs.vue')
   },
@@ -128,7 +141,8 @@ const routes = [
     path: '/dispatchment',
     name: 'dispatchment',
     meta: {
-      display: 'menus.dispatchment'
+      display: 'menus.dispatchment',
+      parent: 'menus.legislation'
     },
     component: () => import('@/views/AboutUs.vue')
   },
