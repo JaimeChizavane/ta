@@ -33,7 +33,7 @@ Vue.filter('excerpt', function (value) {
   return value
 })
 
-new Vue({
+window.vm = new Vue({
   router,
   i18n,
   render: h => h(App)

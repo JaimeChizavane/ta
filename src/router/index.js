@@ -8,7 +8,8 @@ const routes = [
     path: '/',
     name: 'home',
     meta: {
-      display: 'menus.home'
+      display: 'menus.home',
+      display_title: 'Tribunal Administrativo de Moçambique'
     },
     component: () => import('@/views/Home.vue')
   },
@@ -305,8 +306,10 @@ const router = new VueRouter({
 // next()
 // })
 
-// router.afterEach((to, from) => {
-// window.mainExecution()
-// })
+router.afterEach((to) => {
+  if (to.name && (to.meta.display || to.meta.display_title)) {
+    document.title = to.meta.display_title ? to.meta.display_title : window.vm.$tc(to.meta.display, 2).replace(/(^|\s)\S/g, l => l.toUpperCase())
+  }
+})
 
 export default router
