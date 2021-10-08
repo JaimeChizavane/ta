@@ -38,7 +38,7 @@ abstract class SPApiFetch extends Command
 
             $this->info('Data loaded.');
         } catch (GuzzleException $exception) {
-            $this->error("Couldn't load data.");
+            $this->error($exception->getMessage());
         }
     }
 }
