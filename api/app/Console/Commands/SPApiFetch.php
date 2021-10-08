@@ -34,7 +34,7 @@ abstract class SPApiFetch extends Command
         try {
             $jsonContent = $this->client->get($this->uri)->getBody()->getContents();
 
-            Storage::put($this->path, $jsonContent);
+            Storage::put('api/' . $this->path, $jsonContent);
 
             $this->info('Data loaded.');
         } catch (GuzzleException $exception) {
