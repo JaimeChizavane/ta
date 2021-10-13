@@ -10,7 +10,7 @@
               </router-link>
             </div><!-- /.post-img -->
             <div class="post__meta d-flex align-items-center mb-20">
-              <span class="post__meta-date">{{ item.Created1 | date }}</span>
+              <span class="post__meta-date">{{ item.Created | date }}</span>
               <!--              <div class="post__meta-cat">-->
               <!--                <a href="#">Consulting</a><a href="#">Sales</a>-->
               <!--              </div>&lt;!&ndash; /.blog-meta-cat &ndash;&gt;-->
@@ -19,7 +19,7 @@
               <!--                </span>-->
             </div><!-- /.blog-meta -->
             <h1 class="post__title mb-30">
-              {{ item.Title1 }}
+              {{ item.Title }}
             </h1>
             <div class="post__desc" v-html="item.Content">
             </div><!-- /.blog-desc -->
@@ -51,26 +51,26 @@
           </div>
           <div class="widget-nav d-flex justify-content-between mb-40">
             <router-link :to="{name: 'blog-item', params:{guid: navigation.previous.GUID}}"
-                         class="widget-nav__prev d-flex flex-wrap" v-if="navigation.previous.Title1">
+                         class="widget-nav__prev d-flex flex-wrap" v-if="navigation.previous.Title">
               <div class="widget-nav__img">
                 <div class="widget-nav__overlay"></div>
                 <img src="assets/images/blog/grid/4.jpg" alt="blog thumb">
               </div>
               <div class="widget-nav__content">
                 <span>Artigo Anterior</span>
-                <h5 class="widget-nav__ttile mb-0">{{ navigation.previous.Title1 }}</h5>
+                <h5 class="widget-nav__ttile mb-0">{{ navigation.previous.Title }}</h5>
               </div>
             </router-link>
             <span v-else></span>
             <router-link :to="{name: 'blog-item', params:{guid: navigation.next.GUID}}"
-                         class="widget-nav__next d-flex flex-wrap" v-if="navigation.next.Title1">
+                         class="widget-nav__next d-flex flex-wrap" v-if="navigation.next.Title">
               <div class="widget-nav__img">
                 <div class="widget-nav__overlay"></div>
                 <img src="assets/images/blog/grid/6.jpg" alt="blog thumb">
               </div>
               <div class="widget-nav__content">
                 <span>Artigo Seguinte</span>
-                <h5 class="widget-nav__ttile mb-0">{{ navigation.next.Title1 }}</h5>
+                <h5 class="widget-nav__ttile mb-0">{{ navigation.next.Title }}</h5>
               </div>
             </router-link><!-- /.widget-next  -->
           </div>
