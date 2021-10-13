@@ -23,7 +23,6 @@ import QFooter from "@/components/Footer";
 import QHeader from "@/components/Header/Header";
 import QBreadCrumb from "@/components/BreadCrumb";
 import QItemList from "@/components/ItemList";
-import news from '@/mocking_data/Noticias.json'
 
 export default {
   name: "QBlogList",
@@ -35,8 +34,14 @@ export default {
   },
   mounted() {
     window.mainExecution()
-    this.news = news.d.results.sort((item, next) => {
-      return new Date(next.Created1) - new Date(item.Created1);
+
+    this.$http.get("news.json").then((data) => {
+      console.log(data)
+      // this.news = data.results.d.results.sort((item, next) => {
+      //   return new Date(next.Created1) - new Date(item.Created1);
+      // })
+    }).catch((error) => {
+      console.log(error)
     })
   }
 }
