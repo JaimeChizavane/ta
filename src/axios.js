@@ -5,7 +5,7 @@ const APP_KEY = process.env.VUE_APP_KEY
 
 const instance = axios.create({
   baseURL: API_URL,
-  timeout: 20000,
+  // timeout: 20000,
   headers: {
     'Content-Type': 'application/json',
     'Q-AppID': APP_KEY
