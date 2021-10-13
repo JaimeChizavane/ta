@@ -6,7 +6,7 @@
           <div class="post-item mb-0">
             <div class="post__img">
               <router-link :to="{name: ''}">
-                <img src="assets/images/blog/single/1.jpg" alt="blog image">
+                <img :src="getImageUrl(item)" alt="blog image">
               </router-link>
             </div><!-- /.post-img -->
             <div class="post__meta d-flex align-items-center mb-20">
@@ -54,7 +54,7 @@
                          class="widget-nav__prev d-flex flex-wrap" v-if="navigation.previous.Title">
               <div class="widget-nav__img">
                 <div class="widget-nav__overlay"></div>
-                <img src="assets/images/blog/grid/4.jpg" alt="blog thumb">
+                <img :src="getImageUrl(navigation.previous)" alt="blog thumb">
               </div>
               <div class="widget-nav__content">
                 <span>Artigo Anterior</span>
@@ -66,7 +66,7 @@
                          class="widget-nav__next d-flex flex-wrap" v-if="navigation.next.Title">
               <div class="widget-nav__img">
                 <div class="widget-nav__overlay"></div>
-                <img src="assets/images/blog/grid/6.jpg" alt="blog thumb">
+                <img :src="getImageUrl(navigation.next)" alt="blog thumb">
               </div>
               <div class="widget-nav__content">
                 <span>Artigo Seguinte</span>
@@ -124,6 +124,11 @@ import QOtherArticles from "@/components/OtherArticles";
 export default {
   name: "QItem",
   components: { QOtherArticles },
+  methods:{
+    getImageUrl(item) {
+      return item && item.Attachments ? process.env.VUE_APP_ROOT_DOCS + item.AttachmentFiles.results[0].ServerRelativeUrl : 'assets/images/blog/grid/1.jpg'
+    },
+  },
   props: {
     item: {
       type: Object

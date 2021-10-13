@@ -5,8 +5,8 @@
       <!-- post item #1 -->
       <div class="widget-post-item d-flex align-items-center" v-for="(item, index) in items" :key="index">
         <div class="widget-post__img">
-          <router-link :to="{name: 'blog-item', params:{guid: item.GUID}}"><img src="assets/images/blog/grid/2.jpg"
-                                                                                alt="thumb"></router-link>
+          <router-link :to="{name: 'blog-item', params:{guid: item.GUID}}">
+            <img :src="getImageUrl(item)" alt="thumb"></router-link>
         </div><!-- /.widget-post-img -->
         <div class="widget-post__content">
           <span class="widget-post__date">{{ item.Created | date }}</span>
@@ -22,7 +22,12 @@
 <script>
 export default {
   name: "QOtherArticles",
-  props: ['items']
+  props: ['items'],
+  methods: {
+    getImageUrl(item) {
+      return item && item.Attachments ? process.env.VUE_APP_ROOT_DOCS + item.AttachmentFiles.results[0].ServerRelativeUrl : 'assets/images/blog/grid/1.jpg'
+    },
+  }
 }
 </script>
 

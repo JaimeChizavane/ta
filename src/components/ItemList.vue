@@ -7,7 +7,9 @@
           <div class="post-item">
             <div class="post__img">
               <router-link :to="{name: itemRoute, params: {guid : item.GUID}}">
-                <img src="assets/images/blog/grid/1.jpg" alt="blog image">
+                <img
+                    :src="getImageUrl(item)"
+                    alt="blog image">
               </router-link>
             </div><!-- /.blog-img -->
             <div class="post__body">
@@ -16,11 +18,11 @@
               <!--              </div>&lt;!&ndash; /.blog-meta-cat &ndash;&gt;-->
               <h4 class="post__title">
                 <router-link :to="{name: itemRoute, params: {guid : item.GUID}}">
-                  {{ item.Title1 }}
+                  {{ item.Title }}
                 </router-link>
               </h4>
               <div class="post__meta">
-                <span class="post__meta-date">{{ item.Created1 | date }}</span>
+                <span class="post__meta-date">{{ item.Created | date }}</span>
               </div>
               <p class="post__desc" v-html="$options.filters.excerpt(item.Content)"></p>
               <router-link :to="{name: itemRoute, params: {guid : item.GUID}}"
@@ -70,6 +72,9 @@ export default {
     }
   },
   methods: {
+    getImageUrl(item) {
+      return item && item.Attachments ? process.env.VUE_APP_ROOT_DOCS + item.AttachmentFiles.results[0].ServerRelativeUrl : 'assets/images/blog/grid/1.jpg'
+    },
     paginator(items, current_page, per_page_items) {
       let page = current_page || 1,
           per_page = per_page_items || 6,
