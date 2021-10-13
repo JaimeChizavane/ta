@@ -10,7 +10,7 @@
               </router-link>
             </div><!-- /.post-img -->
             <div class="post__meta d-flex align-items-center mb-20">
-              <span class="post__meta-date">{{ item.Created | date }}</span>
+              <span class="post__meta-date">{{ item.Data_x0020_Noticia || item.Created | date }}</span>
               <!--              <div class="post__meta-cat">-->
               <!--                <a href="#">Consulting</a><a href="#">Sales</a>-->
               <!--              </div>&lt;!&ndash; /.blog-meta-cat &ndash;&gt;-->

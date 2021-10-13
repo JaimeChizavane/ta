@@ -38,16 +38,16 @@ export default {
       }) || []
 
       return items.sort((item, next) => {
-        return new Date(next.Created) - new Date(item.Created);
+        return new Date(next.Data_x0020_Noticia || next.Created) - new Date(item.Data_x0020_Noticia || item.Created);
       }).slice(0, 4)
     },
     navigation: function () {
       let prev = this.news.find((article) => {
-        return new Date(article.Created) < new Date(this.item.Created) && article.GUID !== this.item.GUID
+        return new Date(article.Data_x0020_Noticia || article.Created) < new Date(this.item.Data_x0020_Noticia || this.item.Created) && article.GUID !== this.item.GUID
       }) || { GUID: null }
 
       let next = this.news.find((article) => {
-        return new Date(article.Created) > new Date(this.item.Created) && article.GUID !== this.item.GUID
+        return new Date(article.Data_x0020_Noticia || article.Created) > new Date(this.item.Data_x0020_Noticia || this.item.Created) && article.GUID !== this.item.GUID
       }) || { GUID: null }
 
       return {
