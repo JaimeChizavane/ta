@@ -36,7 +36,6 @@ export default {
     window.mainExecution()
 
     this.$http.get("news.json").then((data) => {
-      console.log(data)
       this.news = data.data.d.results.sort((item, next) => {
         return new Date(next.Created1) - new Date(item.Created1);
       })

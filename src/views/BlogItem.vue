@@ -59,11 +59,11 @@ export default {
   async mounted() {
     window.mainExecution()
 
-    await import('@/mocking_data/Noticias.json').then((data) => {
-      this.news = data.d.results
+    const data = await this.$http.get("news.json")
 
-      this.$route.meta.display = this.item.Title1
-    })
+    this.news = data.data.d.results
+
+    this.$route.meta.display = this.item.Title1
   }
 }
 </script>

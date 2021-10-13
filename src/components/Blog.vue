@@ -54,11 +54,12 @@
 export default {
   name: "QBlog",
   async mounted() {
-    await import('@/mocking_data/Noticias.json').then((data) => {
-      this.news = data.d.results.sort((item, next) => {
-        return new Date(next.Created1) - new Date(item.Created1);
-      }).slice(0, 6)
-    })
+
+    const data = await this.$http.get("news.json")
+
+    this.news = data.data.d.results.sort((item, next) => {
+      return new Date(next.Created1) - new Date(item.Created1);
+    }).slice(0, 6)
   },
   data() {
     return {
