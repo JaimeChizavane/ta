@@ -23,7 +23,7 @@ export default {
   },
   watch: {
     item: function (val) {
-      this.$route.meta.display = val.Title1
+      this.$route.meta.display = val.Title
     }
   },
   computed: {
@@ -38,16 +38,16 @@ export default {
       }) || []
 
       return items.sort((item, next) => {
-        return new Date(next.Created1) - new Date(item.Created1);
+        return new Date(next.Created) - new Date(item.Created);
       }).slice(0, 4)
     },
     navigation: function () {
       let prev = this.news.find((article) => {
-        return new Date(article.Created1) < new Date(this.item.Created1) && article.GUID !== this.item.GUID
+        return new Date(article.Created) < new Date(this.item.Created) && article.GUID !== this.item.GUID
       }) || { GUID: null }
 
       let next = this.news.find((article) => {
-        return new Date(article.Created1) > new Date(this.item.Created1) && article.GUID !== this.item.GUID
+        return new Date(article.Created) > new Date(this.item.Created) && article.GUID !== this.item.GUID
       }) || { GUID: null }
 
       return {
@@ -63,7 +63,7 @@ export default {
 
     this.news = data.data.d.results
 
-    this.$route.meta.display = this.item.Title1
+    this.$route.meta.display = this.item.Title
   }
 }
 </script>

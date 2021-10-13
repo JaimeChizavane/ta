@@ -28,11 +28,11 @@
               <!--              </div>&lt;!&ndash; /.blog-meta-cat &ndash;&gt;-->
               <h4 class="post__title">
                 <router-link :to="{name: 'blog-item', params: {guid : article.GUID}}">
-                  {{ article.Title1 }}
+                  {{ article.Title }}
                 </router-link>
               </h4>
               <div class="post__meta">
-                <span class="post__meta-date">{{ article.Created1 | date }}</span>
+                <span class="post__meta-date">{{ article.Created | date }}</span>
               </div>
               <p class="post__desc" v-html="$options.filters.excerpt(article.Content)"></p>
               <router-link :to="{name: 'blog-item', params: {guid : article.GUID}}"
@@ -58,7 +58,7 @@ export default {
     const data = await this.$http.get("news.json")
 
     this.news = data.data.d.results.sort((item, next) => {
-      return new Date(next.Created1) - new Date(item.Created1);
+      return new Date(next.Created) - new Date(item.Created);
     }).slice(0, 6)
   },
   data() {
