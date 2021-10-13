@@ -9,9 +9,9 @@
                                                                                 alt="thumb"></router-link>
         </div><!-- /.widget-post-img -->
         <div class="widget-post__content">
-          <span class="widget-post__date">{{ item.Created1 | date }}</span>
+          <span class="widget-post__date">{{ item.Created | date }}</span>
           <h4 class="widget-post__title">
-            <router-link :to="{name: 'blog-item', params:{guid: item.GUID}}">{{ item.Title1 }}</router-link>
+            <router-link :to="{name: 'blog-item', params:{guid: item.GUID}}">{{ item.Title }}</router-link>
           </h4>
         </div><!-- /.widget-post-content -->
       </div><!-- /.widget-post-item -->
