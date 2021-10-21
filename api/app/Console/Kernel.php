@@ -25,6 +25,7 @@ class Kernel extends ConsoleKernel
         FetchJurispudenciaCommand::class,
         FetchComunicadosCommand::class,
         FetchConcursosCommand::class,
+        FetchPublicacoesCommand::class
     ];
 
     /**
