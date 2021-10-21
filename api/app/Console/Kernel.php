@@ -8,6 +8,7 @@ use App\Console\Commands\FetchJurisdicaoCommand;
 use App\Console\Commands\FetchJurispudenciaCommand;
 use App\Console\Commands\FetchNewsCommand;
 use App\Console\Commands\FetchOportunitiesCommand;
+use App\Console\Commands\FetchPublicacoesCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
 
