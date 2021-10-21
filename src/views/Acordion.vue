@@ -24,7 +24,7 @@
                     <h4 class="job__title">{{ item.Sec_x00e7__x00e3_o }}</h4>
                   </div><!-- /.col-lg-4 -->
                   <div class="col-sm-12 col-md-12 col-lg-8" v-if="item.Folder">
-                    <a :href="getFileUrl(file)" v-for="(file, index) in item.Folder.Files.results" :key="index">
+                    <a target="_blank" :href="getFileUrl(file)" v-for="(file, index) in item.Folder.Files.results" :key="index">
                       <p class="job__desc mb-20">{{ file.Name }}</p>
                     </a>
                   </div><!-- /.col-lg-5 -->
