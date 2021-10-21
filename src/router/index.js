@@ -217,7 +217,7 @@ const routes = [
     meta: {
       display: 'menus.acordion'
     },
-    component: () => import('@/views/AboutUs.vue')
+    component: () => import('@/views/Acordion.vue')
   },
   {
     path: '/certification',
