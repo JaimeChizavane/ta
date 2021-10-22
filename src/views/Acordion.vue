@@ -57,7 +57,7 @@ export default {
       if (this.query) {
         this.items = this.allItems
             .filter(item => item.Sec_x00e7__x00e3_o && item.Folder && item.Folder.Files.results.length)
-            .filter(item => item.Folder.Name.includes(this.query) || item.Folder.Files.results.find(i => i.Name.includes(this.query)))
+            .filter(item => item.Folder.Name.toLowerCase().includes(this.query.toLowerCase()) || item.Folder.Files.results.find(i => i.Name.toLowerCase().includes(this.query.toLowerCase())))
       } else {
         this.items = this.allItems.filter(item => item.Sec_x00e7__x00e3_o && item.Folder && item.Folder.Files.results.length)
       }
