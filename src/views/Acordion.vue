@@ -55,9 +55,11 @@ export default {
     },
     search() {
       if (this.query) {
-        this.items = this.allItems.filter(item => item.Folder.Name.includes(this.query) || item.Folder.Files.results.find(i => i.Name.includes(this.query)))
-      } else {
         this.items = this.allItems
+            .filter(item => item.Sec_x00e7__x00e3_o && item.Folder && item.Folder.Files.results.length)
+            .filter(item => item.Folder.Name.includes(this.query) || item.Folder.Files.results.find(i => i.Name.includes(this.query)))
+      } else {
+        this.items = this.allItems.filter(item => item.Sec_x00e7__x00e3_o && item.Folder && item.Folder.Files.results.length)
       }
     }
   },
