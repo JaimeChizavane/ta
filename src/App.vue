@@ -1,7 +1,4 @@
 <template>
-  <!--    <div class="preloader">-->
-  <!--      <div class="loading"><span></span><span></span><span></span><span></span></div>-->
-  <!--    </div>&lt;!&ndash; /.preloader &ndash;&gt;-->
   <router-view/>
 </template>
 
@@ -9,6 +6,9 @@
 
 
 export default {
-  name: 'App'
+  name: 'App',
+  mounted() {
+    document.getElementById('preloader').style.display = 'none'
+  }
 }
 </script>

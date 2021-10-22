@@ -7,7 +7,8 @@
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-3">
             <div class="pagetitle__form mb-50">
-              <input type="text" class="form-control bordered-box" placeholder="Procurar...">
+              <input @keyup="search" v-model="query" type="text" class="form-control bordered-box"
+                     placeholder="Procurar...">
             </div>
           </div><!-- /.col-xl-6 -->
         </div>
@@ -24,7 +25,8 @@
                     <h4 class="job__title">{{ item.Sec_x00e7__x00e3_o }}</h4>
                   </div><!-- /.col-lg-4 -->
                   <div class="col-sm-12 col-md-12 col-lg-8" v-if="item.Folder">
-                    <a target="_blank" :href="getFileUrl(file)" v-for="(file, index) in item.Folder.Files.results" :key="index">
+                    <a target="_blank" :href="getFileUrl(file)" v-for="(file, index) in item.Folder.Files.results"
+                       :key="index">
                       <p class="job__desc mb-20">{{ file.Name }}</p>
                     </a>
                   </div><!-- /.col-lg-5 -->
@@ -51,18 +53,33 @@ export default {
     getFileUrl(item) {
       return item && item.ServerRelativeUrl ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl : '#'
     },
+    search() {
+      if (this.query) {
+        this.items = this.allItems.filter(item => item.Folder.Name.includes(this.query) || item.Folder.Files.results.find(i => i.Name.includes(this.query)))
+      } else {
+        this.items = this.allItems
+      }
+    }
   },
   data() {
     return {
-      items: []
+      items: [],
+      allItems: [],
+      query: ''
     }
   },
   mounted() {
     window.mainExecution()
 
+    document.getElementById('preloader').style.display = 'flex'
+
     this.$http.get("jurispudencia.json").then((data) => {
-      this.items = data.data.d.results.filter(item => item.Sec_x00e7__x00e3_o && item.Folder && item.Folder.Files.results.length)
+      this.allItems = data.data.d.results
+      this.items = this.allItems.filter(item => item.Sec_x00e7__x00e3_o && item.Folder && item.Folder.Files.results.length)
+
+      document.getElementById('preloader').style.display = 'none'
     }).catch((error) => {
+      document.getElementById('preloader').style.display = 'none'
       console.log(error)
     })
   }
