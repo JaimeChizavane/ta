@@ -40,8 +40,12 @@ abstract class SPApiFetch extends Command
             $content = json_decode($jsonContent);
 
             foreach ($content->d->results as $result) {
-                if ($result->AttachmentFiles->results) {
+                if (isset($result->AttachmentFiles->results)) {
                     $this->handleAttachements($result->AttachmentFiles->results);
+                }
+
+                if (isset($result->Folder->Files->results)) {
+                    $this->handleAttachements($result->Folder->Files->results);
                 }
             }
 
@@ -60,6 +64,8 @@ abstract class SPApiFetch extends Command
             ])->getBody()->getContents();
 
             Storage::put('api/' . $attachement->ServerRelativeUrl, $imageContent);
+
+            $this->info($attachement->Name ?? ($attachement->FileName ?? $attachement->ServerRelativeUrl));
         }
     }
 }
