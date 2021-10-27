@@ -2,13 +2,20 @@
 
 namespace App\Console;
 
+use App\Console\Commands\FetchAtendimentoCommand;
+use App\Console\Commands\FetchDenunciasCommand;
+use App\Console\Commands\FetchEventosCommand;
 use App\Console\Commands\FetchComunicadosCommand;
 use App\Console\Commands\FetchConcursosCommand;
+use App\Console\Commands\FetchFAQCommand;
+use App\Console\Commands\FetchInstituicaoCommand;
 use App\Console\Commands\FetchJurisdicaoCommand;
 use App\Console\Commands\FetchJurispudenciaCommand;
+use App\Console\Commands\FetchLegislacaoCommand;
 use App\Console\Commands\FetchNewsCommand;
 use App\Console\Commands\FetchOportunitiesCommand;
 use App\Console\Commands\FetchPublicacoesCommand;
+use App\Console\Commands\FetchSugestoesCommand;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
 
@@ -24,9 +31,18 @@ class Kernel extends ConsoleKernel
         FetchNewsCommand::class,
         FetchJurisdicaoCommand::class,
         FetchJurispudenciaCommand::class,
-        FetchComunicadosCommand::class,
+        FetchEventosCommand::class,
         FetchConcursosCommand::class,
-        FetchPublicacoesCommand::class
+        FetchEventosCommand::class,
+        FetchComunicadosCommand::class,
+        FetchPublicacoesCommand::class,
+        FetchEventosCommand::class,
+        FetchInstituicaoCommand::class,
+        FetchLegislacaoCommand::class,
+        FetchFAQCommand::class,
+        FetchSugestoesCommand::class,
+        FetchAtendimentoCommand::class,
+        FetchDenunciasCommand::class,
     ];
 
     /**

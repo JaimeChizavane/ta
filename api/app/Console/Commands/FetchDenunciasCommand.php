@@ -9,14 +9,14 @@
 
 namespace App\Console\Commands;
 
-class FetchJurisdicaoCommand extends SPApiFetch
+class FetchDenunciasCommand extends SPApiFetch
 {
-    protected $signature   = 'sp:jurisdicao';
-    protected $description = 'Fetch all Jurisdicao';
+    protected $signature   = 'sp:denuncias';
+    protected $description = 'Fetch all Denuncias';
     /**
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "web/lists/getByTitle('Jurisdição')/items";
-    protected $path = 'jurisdicao.json';
+    protected $uri  = "web/lists/getByTitle('Submissão%20de%20denúncia')/items";
+    protected $path = 'denuncias.json';
 }

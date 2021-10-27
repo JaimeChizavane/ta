@@ -39,7 +39,12 @@ abstract class SPApiFetch extends Command
 
             $content = json_decode($jsonContent);
 
+            if (isset($content->d->results[0]->ServerRelativeUrl)) {
+                $this->handleAttachements($content->d->results);
+            }
+
             foreach ($content->d->results as $result) {
+
                 if (isset($result->AttachmentFiles->results)) {
                     $this->handleAttachements($result->AttachmentFiles->results);
                 }
@@ -58,6 +63,10 @@ abstract class SPApiFetch extends Command
     protected function handleAttachements($attachements)
     {
         foreach ($attachements as $attachement) {
+
+            if (!isset($attachement->ServerRelativeUrl)) {
+                return;
+            }
 
             $imageContent = $this->client->get($attachement->ServerRelativeUrl, [
                 'base_uri' => config('http.sharepoint_url'),
