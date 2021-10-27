@@ -36,9 +36,30 @@ abstract class SPApiFetch extends Command
 
             Storage::put('api/' . $this->path, $jsonContent);
 
+
+            $content = json_decode($jsonContent);
+
+            foreach ($content->d->results as $result) {
+                if ($result->AttachmentFiles->results) {
+                    $this->handleAttachements($result->AttachmentFiles->results);
+                }
+            }
+
             $this->info('Data loaded.');
         } catch (GuzzleException $exception) {
             $this->error($exception->getMessage());
+        }
+    }
+
+    protected function handleAttachements($attachements)
+    {
+        foreach ($attachements as $attachement) {
+
+            $imageContent = $this->client->get($attachement->ServerRelativeUrl, [
+                'base_uri' => config('http.sharepoint_url'),
+            ])->getBody()->getContents();
+
+            Storage::put('api/' . $attachement->ServerRelativeUrl, $imageContent);
         }
     }
 }

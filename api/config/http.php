@@ -7,7 +7,8 @@
  * Hora: 12:51 PM
  */
 return [
-    'api_url'      => env('API_URL'),
-    'api_username' => env('API_USERNAME'),
-    'api_password' => env('API_PASSWORD'),
+    'api_url'        => env('API_URL'),
+    'sharepoint_url' => env('SHAREPOINT_URL'),
+    'api_username'   => env('API_USERNAME'),
+    'api_password'   => env('API_PASSWORD'),
 ];
