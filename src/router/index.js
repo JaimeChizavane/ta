@@ -136,7 +136,7 @@ const routes = [
       display: 'menus.decret',
       parent: 'menus.legislation'
     },
-    component: () => import('@/views/AboutUs.vue')
+    component: () => import('@/views/Decret.vue')
   },
   {
     path: '/dispatchment',
@@ -145,7 +145,7 @@ const routes = [
       display: 'menus.dispatchment',
       parent: 'menus.legislation'
     },
-    component: () => import('@/views/AboutUs.vue')
+    component: () => import('@/views/Dispatchment.vue')
   },
   {
     path: '/dispatch',
@@ -250,6 +250,30 @@ const routes = [
       display: 'menus.managers'
     },
     component: () => import('@/views/AboutUs.vue')
+  },
+  {
+    path: '/galery',
+    name: 'galery',
+    meta: {
+      display: 'menus.galery'
+    },
+    component: () => import('@/views/AboutUs.vue')
+  },
+  {
+    path: '/videos',
+    name: 'videos',
+    meta: {
+      display: 'menus.videos'
+    },
+    component: () => import('@/views/AboutUs.vue')
+  },
+  {
+    path: '/faq',
+    name: 'faq',
+    meta: {
+      display: 'menus.faq'
+    },
+    component: () => import('@/views/Faq.vue')
   },
   {
     path: '/blog',

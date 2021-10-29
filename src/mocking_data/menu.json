@@ -187,6 +187,11 @@
         "name": "menus.doc_submitions",
         "to": "doc_submitions",
         "sub_menus": []
+      },
+      {
+        "name": "menus.faq",
+        "to": "faq",
+        "sub_menus": []
       }
     ]
   },

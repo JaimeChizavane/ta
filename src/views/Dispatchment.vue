@@ -60,7 +60,7 @@ import QHeader from "@/components/Header/Header";
 import QBreadCrumb from "@/components/BreadCrumb";
 
 export default {
-  name: "QLaw",
+  name: "QDispatchment",
   components: { QBreadCrumb, QHeader, QFooter },
   methods: {
     getFileUrl(item) {
@@ -76,7 +76,7 @@ export default {
     window.mainExecution()
 
     this.$http.get("legislacao.json").then((data) => {
-      this.history = data.data.d.results.filter(item => item.Tipo_x0020_de_x0020_Legisla_x00e === 'Lei' || item.Tipo_x0020_de_x0020_Legisla_x00e === 'Decreto Lei')
+      this.history = data.data.d.results.filter(item => item.Tipo_x0020_de_x0020_Legisla_x00e === 'Despacho')
     }).catch((error) => {
       console.log(error)
     })
