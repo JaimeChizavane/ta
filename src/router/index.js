@@ -38,7 +38,7 @@ const routes = [
       display: 'menus.history',
       parent: 'menus.institution'
     },
-    component: () => import('@/views/AboutUs.vue')
+    component: () => import('@/views/History.vue')
   },
   {
     path: '/structure',
@@ -47,7 +47,7 @@ const routes = [
       display: 'menus.structure',
       parent: 'menus.institution'
     },
-    component: () => import('@/views/AboutUs.vue')
+    component: () => import('@/views/Structure.vue')
   },
   {
     path: '/section1',
@@ -83,7 +83,7 @@ const routes = [
       display: 'menus.strategic_plan',
       parent: 'menus.institution'
     },
-    component: () => import('@/views/AboutUs.vue')
+    component: () => import('@/views/StrategicPlan.vue')
   },
   {
     path: '/contests',
@@ -127,7 +127,7 @@ const routes = [
       display: 'menus.law',
       parent: 'menus.legislation'
     },
-    component: () => import('@/views/AboutUs.vue')
+    component: () => import('@/views/Law.vue')
   },
   {
     path: '/decret',

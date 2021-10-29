@@ -17,11 +17,14 @@
           </div><!-- /.col-xl-5 -->
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-1">
             <div class="heading-layout2 mb-40">
-              <h3 class="heading__title">Tribunal Administrativo.</h3>
+              <h3 class="heading__title">{{ $tc($route.meta.display) }}</h3>
             </div><!-- /heading -->
             <div class="about-text-wrapper">
               <div class="about__Text">
-                <p class="font-weight-bold mb-30" v-html="history.Content"></p>
+                <div v-for="(item, index) in history" :key="index" class="mb-60">
+                  <h5>{{ item.Title || 'Sem titulo' }}</h5>
+                  <p class="font-weight-bold mb-10" v-html="item.Assunto"></p>
+                </div>
               </div>
 
             </div>
@@ -43,16 +46,14 @@ export default {
   components: { QBreadCrumb, QHeader, QFooter },
   data() {
     return {
-      history: {
-        Content: null
-      }
+      history: []
     }
   },
   mounted() {
     window.mainExecution()
 
-    this.$http.get("instituicao.json").then((data) => {
-      this.history = data.data.d.results.find(item => item.Id === 1)
+    this.$http.get("legislacao.json").then((data) => {
+      this.history = data.data.d.results.filter(item => item.Tipo_x0020_de_x0020_Legisla_x00e === 'Despacho')
     }).catch((error) => {
       console.log(error)
     })

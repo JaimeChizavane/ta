@@ -39,7 +39,7 @@ import QHeader from "@/components/Header/Header";
 import QBreadCrumb from "@/components/BreadCrumb";
 
 export default {
-  name: "QHistory",
+  name: "QStrategicPlan",
   components: { QBreadCrumb, QHeader, QFooter },
   data() {
     return {
@@ -52,7 +52,7 @@ export default {
     window.mainExecution()
 
     this.$http.get("instituicao.json").then((data) => {
-      this.history = data.data.d.results.find(item => item.Id === 1)
+      this.history = data.data.d.results.find(item => item.Id === 7)
     }).catch((error) => {
       console.log(error)
     })

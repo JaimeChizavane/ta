@@ -73,15 +73,13 @@ export default {
   mounted() {
     window.mainExecution()
 
-    document.getElementById('preloader').style.display = 'flex'
+
 
     this.$http.get("jurispudencia.json").then((data) => {
       this.allItems = data.data.d.results
       this.items = this.allItems.filter(item => item.Sec_x00e7__x00e3_o && item.Folder && item.Folder.Files.results.length)
 
-      document.getElementById('preloader').style.display = 'none'
     }).catch((error) => {
-      document.getElementById('preloader').style.display = 'none'
       console.log(error)
     })
   }
