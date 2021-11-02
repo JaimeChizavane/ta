@@ -53,12 +53,12 @@
             </div><!-- /.tab-content -->
             <div class="cta-banner mt-30 mb-30 d-flex flex-wrap align-items-center">
               <h4 class="cta__title my-3 pr-30">
-                Encontre a nossa galeria online, com todos as coberturas de eventos. :
+                Encontre a nossa galeria online, com todos as coberturas de eventos:
               </h4>
-              <a href="#" class="btn btn__primary btn__primary-style2">
-                <span>Ver mais</span>
+              <router-link :to="{name: 'videos'}" class="btn btn__primary btn__primary-style2">
+                <span>Ver mais </span>
                 <i class="icon-arrow-right"></i>
-              </a>
+              </router-link>
             </div> <!-- /.cta-banner -->
           </div>
         </div><!-- /.col-lg-7 -->

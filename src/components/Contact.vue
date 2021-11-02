@@ -20,9 +20,6 @@
               <div>
                 <h4 class="stats-banner__ttile mb-20">O nosso canal digital permite uma melhor cobertura e transparência de modo que possa-se tornar visivel os resultados do TA.
                 </h4>
-                <a href="#" class="btn btn__white btn__link">
-                  <span>Mais artigos</span> <i class="icon-arrow-right icon-outlined"></i>
-                </a>
               </div>
             </div><!-- /.stats-banner-->
             <form class="contact-panel__form" method="post" action="assets/php/contact.php" id="contactForm">
