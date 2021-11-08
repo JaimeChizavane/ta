@@ -215,5 +215,119 @@
         "sub_menus": []
       }
     ]
+  },
+  {
+    "name": "menus.csmja",
+    "to": "csmja",
+    "sub_menus": [
+      {
+        "name": "menus.institution",
+        "to": "csmja.institution",
+        "sub_menus": [
+          {
+            "name": "menus.history",
+            "to": "csmja.history",
+            "sub_menus": []
+          },
+          {
+            "name": "menus.support_services",
+            "to": "csmja.support_services",
+            "sub_menus": []
+          },
+          {
+            "name": "menus.competencies",
+            "to": "csmja.competencies",
+            "sub_menus": []
+          },
+          {
+            "name": "menus.structure",
+            "to": "csmja.structure",
+            "sub_menus": []
+          },
+          {
+            "name": "menus.section1",
+            "to": "csmja.section1",
+            "sub_menus": []
+          },
+          {
+            "name": "menus.section2",
+            "to": "csmja.section2",
+            "sub_menus": []
+          },
+          {
+            "name": "menus.section3",
+            "to": "csmja.section3",
+            "sub_menus": []
+          },
+          {
+            "name": "menus.strategic_plan",
+            "to": "csmja.strategic_plan",
+            "sub_menus": []
+          },
+          {
+            "name": "menus.contests",
+            "to": "csmja.contests",
+            "sub_menus": []
+          },
+          {
+            "name": "menus.work_opportunity",
+            "to": "csmja.work_opportunity",
+            "sub_menus": []
+          },
+          {
+            "name": "menus.international_cooperation",
+            "to": "csmja.international_cooperation",
+            "sub_menus": []
+          }
+        ]
+      },
+      {
+        "name": "menus.legislation",
+        "to": "csmja.legislation",
+        "sub_menus": [
+          {
+            "name": "menus.law",
+            "to": "csmja.law",
+            "sub_menus": []
+          },
+          {
+            "name": "menus.decret",
+            "to": "csmja.decret",
+            "sub_menus": []
+          },
+          {
+            "name": "menus.dispatchment",
+            "to": "csmja.dispatchment",
+            "sub_menus": []
+          }
+        ]
+      },
+      {
+        "name": "menus.citizen",
+        "to": "csmja.citizen",
+        "sub_menus": [
+          {
+            "name": "menus.publications",
+            "to": "csmja.publications",
+            "sub_menus": []
+          },
+          {
+            "name": "menus.activity_reports",
+            "to": "csmja.activity_reports",
+            "sub_menus": []
+          },
+          {
+            "name": "menus.doc_submitions",
+            "to": "csmja.doc_submitions",
+            "sub_menus": []
+          },
+          {
+            "name": "menus.faq",
+            "to": "csmja.faq",
+            "sub_menus": []
+          }
+        ]
+      }
+    ]
   }
 ]

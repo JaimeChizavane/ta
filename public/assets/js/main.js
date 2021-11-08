@@ -12,7 +12,7 @@
     03- Sticky Navbar
     04- Scroll Top Button
     05- Close Topbar
-    06- Set Background-img to section 
+    06- Set Background-img to section
     07- Add active class to accordions
     08- Contact Form validation
     09- Slick Carousel
@@ -38,13 +38,13 @@ var mainExecution = function () {
     // });
 
     /*==========   Mobile Menu   ==========*/
-    $('.navbar-toggler').on('click', function () {
-        $('.navbar-collapse').addClass('menu-opened');
-    })
+    // $('.navbar-toggler').on('click', function () {
+    //     $('.navbar-collapse').addClass('menu-opened');
+    // })
 
-    $('.close-mobile-menu').on('click', function () {
-        $('.navbar-collapse').removeClass('menu-opened');
-    });
+    // $('.close-mobile-menu').on('click', function () {
+    //     $('.navbar-collapse').removeClass('menu-opened');
+    // });
 
     /*==========   Sticky Navbar   ==========*/
     $win.on('scroll', function () {

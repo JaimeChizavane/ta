@@ -276,6 +276,14 @@ const routes = [
     component: () => import('@/views/Faq.vue')
   },
   {
+    path: '/news',
+    name: 'publications',
+    meta: {
+      display: 'blog'
+    },
+    component: () => import('@/views/BlogList.vue')
+  },
+  {
     path: '/blog',
     name: 'blog',
     meta: {
@@ -290,6 +298,292 @@ const routes = [
       display: 'blog'
     },
     component: () => import('@/views/BlogItem.vue')
+  },
+  {
+    path: '/csmja/csmja/support_services',
+    name: 'csmja.support_services',
+    meta: {
+      display: 'menus.support_services',
+      parent: 'menus.institution'
+    },
+    component: () => import('@/views/csmja/SupportService.vue')
+  },
+  {
+    path: '/csmja/competencies',
+    name: 'csmja.competencies',
+    meta: {
+      display: 'menus.competencies',
+      parent: 'menus.institution'
+    },
+    component: () => import('@/views/csmja/Competencies.vue')
+  },
+  {
+    path: '/csmja/history',
+    name: 'csmja.history',
+    meta: {
+      display: 'menus.history',
+      parent: 'menus.institution'
+    },
+    component: () => import('@/views/csmja/History.vue')
+  },
+  {
+    path: '/csmja/structure',
+    name: 'csmja.structure',
+    meta: {
+      display: 'menus.structure',
+      parent: 'menus.institution'
+    },
+    component: () => import('@/views/csmja/Structure.vue')
+  },
+  {
+    path: '/csmja/section1',
+    name: 'csmja.section1',
+    meta: {
+      display: 'menus.section1',
+      parent: 'menus.institution'
+    },
+    component: () => import('@/views/csmja/1Section.vue')
+  },
+  {
+    path: '/csmja/section2',
+    name: 'csmja.section2',
+    meta: {
+      display: 'menus.section2',
+      parent: 'menus.institution'
+    },
+    component: () => import('@/views/csmja/2Section.vue')
+  },
+  {
+    path: '/csmja/section3',
+    name: 'csmja.section3',
+    meta: {
+      display: 'menus.section3',
+      parent: 'menus.institution'
+    },
+    component: () => import('@/views/csmja/3Section.vue')
+  },
+  {
+    path: '/csmja/strategic_plan',
+    name: 'csmja.strategic_plan',
+    meta: {
+      display: 'menus.strategic_plan',
+      parent: 'menus.institution'
+    },
+    component: () => import('@/views/csmja/StrategicPlan.vue')
+  },
+  {
+    path: '/csmja/contests',
+    name: 'csmja.contests',
+    meta: {
+      display: 'menus.contests',
+      parent: 'menus.institution'
+    },
+    component: () => import('@/views/csmja/AboutUs.vue')
+  },
+  {
+    path: '/csmja/work_opportunity',
+    name: 'csmja.work_opportunity',
+    meta: {
+      display: 'menus.work_opportunity',
+      parent: 'menus.institution'
+    },
+    component: () => import('@/views/csmja/AboutUs.vue')
+  },
+  {
+    path: '/csmja/international_cooperation',
+    name: 'csmja.international_cooperation',
+    meta: {
+      display: 'menus.international_cooperation',
+      parent: 'menus.institution'
+    },
+    component: () => import('@/views/csmja/AboutUs.vue')
+  },
+  {
+    path: '/csmja/legislation',
+    name: 'csmja.legislation',
+    meta: {
+      display: 'menus.legislation'
+    },
+    component: () => import('@/views/csmja/AboutUs.vue')
+  },
+  {
+    path: '/csmja/law',
+    name: 'csmja.law',
+    meta: {
+      display: 'menus.law',
+      parent: 'menus.legislation'
+    },
+    component: () => import('@/views/csmja/Law.vue')
+  },
+  {
+    path: '/csmja/decret',
+    name: 'csmja.decret',
+    meta: {
+      display: 'menus.decret',
+      parent: 'menus.legislation'
+    },
+    component: () => import('@/views/csmja/Decret.vue')
+  },
+  {
+    path: '/csmja/dispatchment',
+    name: 'csmja.dispatchment',
+    meta: {
+      display: 'menus.dispatchment',
+      parent: 'menus.legislation'
+    },
+    component: () => import('@/views/csmja/Dispatchment.vue')
+  },
+  {
+    path: '/csmja/dispatch',
+    name: 'csmja.dispatch',
+    meta: {
+      display: 'menus.dispatch'
+    },
+    component: () => import('@/views/csmja/AboutUs.vue')
+  },
+  {
+    path: '/csmja/dispatch',
+    name: 'csmja.dispatch',
+    meta: {
+      display: 'menus.dispatch'
+    },
+    component: () => import('@/views/csmja/AboutUs.vue')
+  },
+  {
+    path: '/csmja/statistic',
+    name: 'csmja.statistic',
+    meta: {
+      display: 'menus.statistic'
+    },
+    component: () => import('@/views/csmja/AboutUs.vue')
+  },
+  {
+    path: '/csmja/dispatch',
+    name: 'csmja.dispatch',
+    meta: {
+      display: 'menus.dispatch'
+    },
+    component: () => import('@/views/csmja/AboutUs.vue')
+  },
+  {
+    path: '/csmja/sub_section',
+    name: 'csmja.sub_section',
+    meta: {
+      display: 'menus.sub_section'
+    },
+    component: () => import('@/views/csmja/AboutUs.vue')
+  },
+  {
+    path: '/csmja/instruction_recomendation',
+    name: 'csmja.instruction_recomendation',
+    meta: {
+      display: 'menus.instruction_recomendation'
+    },
+    component: () => import('@/views/csmja/AboutUs.vue')
+  },
+  {
+    path: '/csmja/fluxogram',
+    name: 'csmja.fluxogram',
+    meta: {
+      display: 'menus.fluxogram'
+    },
+    component: () => import('@/views/csmja/AboutUs.vue')
+  },
+  {
+    path: '/csmja/jurispendency',
+    name: 'csmja.jurispendency',
+    meta: {
+      display: 'menus.jurispendency'
+    },
+    component: () => import('@/views/csmja/AboutUs.vue')
+  },
+  {
+    path: '/csmja/acordion',
+    name: 'csmja.acordion',
+    meta: {
+      display: 'menus.acordion'
+    },
+    component: () => import('@/views/csmja/Acordion.vue')
+  },
+  {
+    path: '/csmja/certification',
+    name: 'csmja.certification',
+    meta: {
+      display: 'menus.certification'
+    },
+    component: () => import('@/views/csmja/AboutUs.vue')
+  },
+  {
+    path: '/csmja/account',
+    name: 'csmja.account',
+    meta: {
+      display: 'menus.account'
+    },
+    component: () => import('@/views/csmja/AboutUs.vue')
+  },
+  {
+    path: '/csmja/rpcge',
+    name: 'csmja.rpcge',
+    meta: {
+      display: 'menus.rpcge'
+    },
+    component: () => import('@/views/csmja/AboutUs.vue')
+  },
+  {
+    path: '/csmja/managers',
+    name: 'csmja.managers',
+    meta: {
+      display: 'menus.managers'
+    },
+    component: () => import('@/views/csmja/AboutUs.vue')
+  },
+  {
+    path: '/csmja/galery',
+    name: 'csmja.galery',
+    meta: {
+      display: 'menus.galery'
+    },
+    component: () => import('@/views/csmja/AboutUs.vue')
+  },
+  {
+    path: '/csmja/videos',
+    name: 'csmja.videos',
+    meta: {
+      display: 'menus.videos'
+    },
+    component: () => import('@/views/csmja/AboutUs.vue')
+  },
+  {
+    path: '/csmja/faq',
+    name: 'csmja.faq',
+    meta: {
+      display: 'menus.faq'
+    },
+    component: () => import('@/views/csmja/Faq.vue')
+  },
+  {
+    path: '/csmja/news',
+    name: 'csmja.publications',
+    meta: {
+      display: 'blog'
+    },
+    component: () => import('@/views/csmja/BlogList.vue')
+  },
+  {
+    path: '/csmja/blog',
+    name: 'csmja.blog',
+    meta: {
+      display: 'blog'
+    },
+    component: () => import('@/views/csmja/BlogList.vue')
+  },
+  {
+    path: '/csmja/blog/:guid',
+    name: 'csmja.blog-item',
+    meta: {
+      display: 'blog'
+    },
+    component: () => import('@/views/csmja/BlogItem.vue')
   },
   {
     path: '*',
