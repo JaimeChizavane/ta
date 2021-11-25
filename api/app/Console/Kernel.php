@@ -21,6 +21,7 @@ use App\Console\Commands\FetchNewsCSMJACommand;
 use App\Console\Commands\FetchOportunitiesCommand;
 use App\Console\Commands\FetchPublicacoesCommand;
 use App\Console\Commands\FetchSugestoesCommand;
+use App\Console\Commands\SPApiFetchAll;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
 
@@ -51,6 +52,7 @@ class Kernel extends ConsoleKernel
         FetchLawCSMJACommand::class,
         FetchDecretCSMJACommand::class,
         FetchDispatchementsCSMJACommand::class,
+        SPApiFetchAll::class,
     ];
 
     /**
@@ -63,7 +65,9 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         foreach ($this->commands as $command) {
-            $schedule->command($command)->everyFifteenMinutes()->withoutOverlapping();
+            $schedule->command($command)->when(function () use ($command) {
+                $command !== SPApiFetchAll::class;
+            })->everyFifteenMinutes()->withoutOverlapping();
         }
     }
 }
