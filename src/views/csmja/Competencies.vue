@@ -13,8 +13,9 @@
           <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 offset-xl-1">
             <div class="heading-layout2">
             </div><!-- /heading -->
-            <div class="about__Text">
-              <ul class="list-items list-items-layout2 list-unstyled" v-html="services.Content">
+            <div class="about__Text" v-for="item in services" :key="item.Id">
+              <h5>{{ item.Title }}</h5>
+              <ul class="list-items list-items-layout2 list-unstyled" v-html="item.OData__x0074_i27">
               </ul>
             </div>
           </div><!-- /.col-xl-7 -->
@@ -35,16 +36,14 @@ export default {
   components: { QBreadCrumb, QHeader, QFooter },
   data() {
     return {
-      services: {
-        Content: null
-      }
+      services: []
     }
   },
   mounted() {
     window.mainExecution()
 
-    this.$http.get("instituicao.json").then((data) => {
-      this.services = data.data.d.results.find(item => item.Id === 3)
+    this.$http.get("csmjainstituicao.json").then((data) => {
+      this.services = data.data.d.results.filter(item => item.Id === 7)
     }).catch((error) => {
       console.log(error)
     })

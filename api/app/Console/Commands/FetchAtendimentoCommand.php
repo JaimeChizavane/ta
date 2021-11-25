@@ -17,6 +17,6 @@ class FetchAtendimentoCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "web/lists/getByTitle('Atendimento')/items";
+    protected $uri  = "_api/web/lists/getByTitle('Atendimento')/items";
     protected $path = 'atendimento.json';
 }

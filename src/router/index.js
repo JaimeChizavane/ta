@@ -92,7 +92,7 @@ const routes = [
       display: 'menus.contests',
       parent: 'menus.institution'
     },
-    component: () => import('@/views/AboutUs.vue')
+    component: () => import('@/views/Contests.vue')
   },
   {
     path: '/work_opportunity',
@@ -101,7 +101,7 @@ const routes = [
       display: 'menus.work_opportunity',
       parent: 'menus.institution'
     },
-    component: () => import('@/views/AboutUs.vue')
+    component: () => import('@/views/Opportunities.vue')
   },
   {
     path: '/international_cooperation',
@@ -225,7 +225,7 @@ const routes = [
     meta: {
       display: 'menus.certification'
     },
-    component: () => import('@/views/AboutUs.vue')
+    component: () => import('@/views/Certifications.vue')
   },
   {
     path: '/account',
@@ -266,6 +266,15 @@ const routes = [
       display: 'menus.videos'
     },
     component: () => import('@/views/AboutUs.vue')
+  },
+  {
+    path: '/jurisdiction',
+    name: 'jurisdiction',
+    meta: {
+      display: 'menus.jurisdiction',
+      parent: ''
+    },
+    component: () => import('@/views/Jurisdiction.vue')
   },
   {
     path: '/faq',
@@ -428,7 +437,7 @@ const routes = [
     path: '/csmja/dispatchment',
     name: 'csmja.dispatchment',
     meta: {
-      display: 'menus.dispatchment',
+      display: 'menus.resolution',
       parent: 'menus.legislation'
     },
     component: () => import('@/views/csmja/Dispatchment.vue')

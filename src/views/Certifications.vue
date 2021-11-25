@@ -103,7 +103,7 @@ import QHeader from "@/components/Header/Header";
 import QBreadCrumb from "@/components/BreadCrumb";
 
 export default {
-  name: "QAboutUs",
+  name: "QCertification",
   components: { QBreadCrumb, QHeader, QFooter },
   methods: {
     getFileUrl(item) {
@@ -132,7 +132,7 @@ export default {
 
 
     this.$http.get("jurispudencia.json").then((data) => {
-      this.allItems = data.data.d.results.filter(item => item.Folders.results.length && !item.Name.toLowerCase().includes("certificações"))
+      this.allItems = data.data.d.results.filter(item => item.Folders.results.length && item.Name.toLowerCase().includes("certificações"))
       this.items = this.allItems
 
     }).catch((error) => {

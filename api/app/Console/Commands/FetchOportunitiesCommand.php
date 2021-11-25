@@ -17,6 +17,7 @@ class FetchOportunitiesCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "web/GetFolderByServerRelativeUrl('/Oportunidades%20de%20Emprego')/Files";
+//    protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/Oportunidades%20de%20Emprego')/Files";
+    protected $uri  = "_api/web/lists/getByTitle('Oportunidades%20de%20Emprego')/items?\$expand=File";
     protected $path = 'oportunities.json';
 }

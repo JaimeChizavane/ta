@@ -17,6 +17,6 @@ class FetchPublicacoesCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "web/lists/getByTitle('Publicações')/items?\$expand=Folder/Files";
+    protected $uri  = "_api/web/lists/getByTitle('Publicações')/items?\$expand=Folder/Files";
     protected $path = 'publicacoes.json';
 }

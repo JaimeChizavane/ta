@@ -35,7 +35,7 @@ export default {
   mounted() {
     window.mainExecution()
 
-    this.$http.get("news.json").then((data) => {
+    this.$http.get("cmsjanews.json").then((data) => {
       this.news = data.data.d.results.sort((item, next) => {
         return new Date(next.Data_x0020_Noticia || next.Created) - new Date(item.Data_x0020_Noticia || item.Created);
       })

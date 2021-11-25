@@ -17,6 +17,6 @@ class FetchJurisdicaoCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "web/lists/getByTitle('Jurisdição')/items";
+    protected $uri  = "_api/web/lists/getByTitle('Jurisdição')/items";
     protected $path = 'jurisdicao.json';
 }

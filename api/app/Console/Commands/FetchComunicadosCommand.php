@@ -17,6 +17,6 @@ class FetchComunicadosCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "web/lists/getByTitle('Comunicados')/items";
+    protected $uri  = "_api/web/lists/getByTitle('Comunicados')/items";
     protected $path = 'comunicados.json';
 }

@@ -15,7 +15,7 @@
         </a>
 
         <router-link :to="{name: menu.to}" class="nav__item-link" active-class="active" v-else>
-          {{ $t(menu.name) }}
+          {{ $t(menu.name) | upper }}
         </router-link>
 
         <ul class="dropdown-menu" v-show="menu.sub_menus && menu.sub_menus.length">

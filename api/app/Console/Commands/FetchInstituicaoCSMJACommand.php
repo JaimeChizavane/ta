@@ -9,14 +9,14 @@
 
 namespace App\Console\Commands;
 
-class FetchInstituicaoCommand extends SPApiFetch
+class FetchInstituicaoCSMJACommand extends SPApiFetch
 {
-    protected $signature   = 'sp:instituicao';
-    protected $description = 'Fetch all Instituicao';
+    protected $signature   = 'sp:csmja-instituicao';
+    protected $description = 'Fetch all CSMJA Instituicao';
     /**
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "_api/web/lists/getByTitle('Instituição')/items";
-    protected $path = 'instituicao.json';
+    protected $uri  = "CSMJA/_api/web/lists/getByTitle('instituicao')/items";
+    protected $path = 'csmjainstituicao.json';
 }

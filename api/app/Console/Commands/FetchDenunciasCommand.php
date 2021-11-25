@@ -17,6 +17,6 @@ class FetchDenunciasCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "web/lists/getByTitle('Submissão%20de%20denúncia')/items";
+    protected $uri  = "_api/web/lists/getByTitle('Submissão%20de%20denúncia')/items";
     protected $path = 'denuncias.json';
 }

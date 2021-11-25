@@ -39,18 +39,43 @@ abstract class SPApiFetch extends Command
 
             $content = json_decode($jsonContent);
 
-            if (isset($content->d->results[0]->ServerRelativeUrl)) {
-                $this->handleAttachements($content->d->results);
-            }
+//            if (isset($content->d->results[0]->ServerRelativeUrl)) {
+//                $this->handleAttachements($content->d->results);
+//            }
 
             foreach ($content->d->results as $result) {
+
+                if ($result->__metadata->type == 'SP.FILE') {
+                    $this->handleAttachements([$result]);
+                }
 
                 if (isset($result->AttachmentFiles->results)) {
                     $this->handleAttachements($result->AttachmentFiles->results);
                 }
 
+                if (isset($result->File->Exists)) {
+                    $this->handleAttachements([$result->File]);
+                }
+
                 if (isset($result->Folder->Files->results)) {
                     $this->handleAttachements($result->Folder->Files->results);
+                }
+
+                if (isset($result->Folders->results)) {
+                    foreach ($result->Folders->results as $folder) {
+                        $this->handleAttachements($folder->Files->results);
+                    }
+                }
+
+
+                if (isset($result->Folders->results)) {
+                    foreach ($result->Folders->results as $folder) {
+                        if (isset($folder->Folders->results)) {
+                            foreach ($folder->Folders->results as $innerFolder) {
+                                $this->handleAttachements($innerFolder->Files->results);
+                            }
+                        }
+                    }
                 }
             }
 
@@ -65,11 +90,17 @@ abstract class SPApiFetch extends Command
         foreach ($attachements as $attachement) {
 
             if (!isset($attachement->ServerRelativeUrl)) {
-                return;
+                continue;
+            }
+
+            if (!config('http.allow_download')) {
+                $this->warn($attachement->Name ?? ($attachement->FileName ?? $attachement->ServerRelativeUrl));
+
+                continue;
             }
 
             $imageContent = $this->client->get($attachement->ServerRelativeUrl, [
-                'base_uri' => config('http.sharepoint_url'),
+                'base_uri' => config('http.sharepoint_url') . '/_api/',
             ])->getBody()->getContents();
 
             Storage::put('api/' . $attachement->ServerRelativeUrl, $imageContent);

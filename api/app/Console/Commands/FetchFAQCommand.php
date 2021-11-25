@@ -17,6 +17,6 @@ class FetchFAQCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "web/lists/getByTitle('Questões%20Frequentes')/items";
+    protected $uri  = "_api/web/lists/getByTitle('Questões%20Frequentes')/items";
     protected $path = 'faq.json';
 }

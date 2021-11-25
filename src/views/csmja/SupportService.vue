@@ -6,8 +6,10 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-7 col-xl-6">
-            <div class="heading heading-layout2 mb-50">
-              <ul class="list-items list-items-layout2 list-unstyled" v-html="services.Content">
+            <div class="heading heading-layout2 mb-50" v-for="item in services" :key="item.Id">
+              <h5>{{ item.Title }}</h5>
+              <ul class="list-items list-items-layout2 list-unstyled"
+                  v-html="item.OData__x0074_i27">
               </ul>
             </div>
           </div><!-- /.col-xl-5 -->
@@ -33,16 +35,14 @@ export default {
   components: { QBreadCrumb, QHeader, QFooter },
   data() {
     return {
-      services: {
-        Content: null
-      }
+      services: []
     }
   },
   mounted() {
     window.mainExecution()
 
-    this.$http.get("instituicao.json").then((data) => {
-      this.services = data.data.d.results.find(item => item.Id === 2)
+    this.$http.get("csmjainstituicao.json").then((data) => {
+      this.services = data.data.d.results.filter(item => item.Id === 8 || item.Id === 9 || item.Id === 10)
     }).catch((error) => {
       console.log(error)
     })

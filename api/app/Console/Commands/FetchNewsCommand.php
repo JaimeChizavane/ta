@@ -17,6 +17,6 @@ class FetchNewsCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "web/lists/getByTitle('Notícias')/items?\$expand=AttachmentFiles";
+    protected $uri  = "_api/web/lists/getByTitle('Notícias')/items?\$expand=AttachmentFiles";
     protected $path = 'news.json';
 }

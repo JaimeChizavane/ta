@@ -27,29 +27,20 @@
                 <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-4">
                     <div class="job__meta">
-                      <span class="job__type" v-show="item.N_x00fa_meroDeBR">N. BR: {{
-                          item.N_x00fa_meroDeBR
+                      <span class="job__type" v-show="item.Tipo">{{
+                          item.Tipo
                         }}</span>
-                      <span class="job__type" v-show="item.N_x00fa_meroDaLegisla_x00e7__x00">
-                        N. Diploma: {{ item.N_x00fa_meroDaLegisla_x00e7__x00 }}
+                      <span class="job__location">
+                        {{ item.Created | date }}
                       </span>
-                      <span class="job__location" v-show="item.Data_x0020_do_x0020_BR">
-                        {{ item.Data_x0020_do_x0020_BR | date }}
-                      </span>
-                      <!--                      <span class="job__location" v-show="item.OData__x00c1_rea_x0020_de_x0020_Apoio_0">-->
-                      <!--                        {{ item.OData__x00c1_rea_x0020_de_x0020_Apoio_0 }}-->
-                      <!--                      </span>-->
-                      <!--                      <span class="job__location" v-show="item.OData__x00c1_rea_x0020_de_x0020_Apoio_">-->
-                      <!--                        {{ item.OData__x00c1_rea_x0020_de_x0020_Apoio_ }}-->
-                      <!--                      </span>-->
                     </div>
-                    <h4 class="job__title">{{ item.Title || 'Sem titulo' }}</h4>
+                    <h4 class="job__title">{{ item.Descricao || item.Title || 'Sem titulo' }}</h4>
                   </div><!-- /.col-lg-4 -->
                   <div class="col-sm-12 col-md-12 col-lg-5">
-                    <p class="job__desc" v-html="item.Assunto"></p>
+                    <p class="job__desc" v-html="item.File.Name"></p>
                   </div><!-- /.col-lg-5 -->
                   <div class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap">
-                    <a :href="getFileUrl(item)" target="_blank" class="btn btn__secondary" v-show="item.Attachments">Abrir</a>
+                    <a :href="getFileUrl(item.File)" target="_blank" class="btn btn__secondary" v-show="item.File">Abrir</a>
                   </div><!-- /.col-lg-3 -->
                 </div><!-- /.row -->
               </div><!-- /.job-item -->
@@ -68,23 +59,23 @@ import QHeader from "@/components/Header/Header";
 import QBreadCrumb from "@/components/BreadCrumb";
 
 export default {
-  name: "QDecret",
+  name: "QOpportunity",
   components: { QBreadCrumb, QHeader, QFooter },
   methods: {
     search() {
       if (this.query) {
         this.history = this.allItems
-            .filter(item => item.Title?.toLowerCase().includes(this.query.toLowerCase())
-                || item.N_x00fa_meroDeBR?.toLowerCase().includes(this.query.toLowerCase())
-                || item.N_x00fa_meroDaLegisla_x00e7__x00?.toLowerCase().includes(this.query.toLowerCase())
-                || item.Assunto?.toLowerCase().includes(this.query.toLowerCase()))
+            .filter(item => item.Descricao?.toLowerCase().includes(this.query.toLowerCase())
+                || item.Tipo?.toLowerCase().includes(this.query.toLowerCase())
+                || item.File?.Name?.toLowerCase().includes(this.query.toLowerCase())
+                || item.Title?.toLowerCase().includes(this.query.toLowerCase()))
       } else {
         this.history = this.allItems
       }
     },
     getFileUrl(item) {
-      return item && item.Attachments ? process.env.VUE_APP_ROOT_DOCS + item.AttachmentFiles.results[0].ServerRelativeUrl : '#'
-    }
+      return item && item.ServerRelativeUrl ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl : '#'
+    },
   },
   data() {
     return {
@@ -96,8 +87,8 @@ export default {
   mounted() {
     window.mainExecution()
 
-    this.$http.get("legislacao.json").then((data) => {
-      this.history = data.data.d.results.filter(item => item.Tipo_x0020_de_x0020_Legisla_x00e === 'Decreto' || item.Tipo_x0020_de_x0020_Legisla_x00e === 'Decreto Lei')
+    this.$http.get("oportunities.json").then((data) => {
+      this.history = data.data.d.results
 
       this.allItems = this.history
     }).catch((error) => {

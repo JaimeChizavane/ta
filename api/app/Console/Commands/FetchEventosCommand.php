@@ -17,6 +17,6 @@ class FetchEventosCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "web/lists/getByTitle('Eventos')/items";
+    protected $uri  = "_api/web/lists/getByTitle('Eventos')/items";
     protected $path = 'eventos.json';
 }

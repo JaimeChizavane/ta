@@ -59,7 +59,7 @@ export default {
   async mounted() {
     window.mainExecution()
 
-    const data = await this.$http.get("news.json")
+    const data = await this.$http.get("cmsjanews.json")
 
     this.news = data.data.d.results
 

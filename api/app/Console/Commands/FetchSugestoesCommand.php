@@ -17,6 +17,6 @@ class FetchSugestoesCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "web/lists/getByTitle('Sugestão%20e%20Reclamação')/items";
+    protected $uri  = "_api/web/lists/getByTitle('Sugestão%20e%20Reclamação')/items";
     protected $path = 'sugestoes.json';
 }

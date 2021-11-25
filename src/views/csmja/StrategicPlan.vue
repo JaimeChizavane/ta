@@ -9,19 +9,18 @@
             <div class="about__img mb-40">
               <img src="assets/images/about/1.jpg" alt="about">
               <blockquote class="blockquote mb-0">
-                <h4 class="blockquote__title">O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais
-                  administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.
-                </h4>
+                <h4 class="blockquote__title">Conselho Superior da Magistratura Judicial Administrativa </h4>
               </blockquote>
             </div><!-- /.about-img -->
           </div><!-- /.col-xl-5 -->
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-1">
             <div class="heading-layout2 mb-40">
-              <h3 class="heading__title">Tribunal Administrativo.</h3>
+              <h3 class="heading__title">Conselho Superior da Magistratura Judicial Administrativa.</h3>
             </div><!-- /heading -->
             <div class="about-text-wrapper">
-              <div class="about__Text">
-                <p class="font-weight-bold mb-30" v-html="history.Content"></p>
+              <div class="about__Text" v-for="item in history" :key="item.Id">
+                <h5>{{ item.Title }}</h5>
+                <p class="font-weight-bold mb-30" v-html="item.OData__x0074_i27"></p>
               </div>
 
             </div>
@@ -43,16 +42,14 @@ export default {
   components: { QBreadCrumb, QHeader, QFooter },
   data() {
     return {
-      history: {
-        Content: null
-      }
+      history: []
     }
   },
   mounted() {
     window.mainExecution()
 
-    this.$http.get("instituicao.json").then((data) => {
-      this.history = data.data.d.results.find(item => item.Id === 7)
+    this.$http.get("csmjainstituicao.json").then((data) => {
+      this.history = data.data.d.results.filter(item => item.Id === 1 || item.Id === 2 || item.Id === 3 || item.Id === 5 || item.Id === 6)
     }).catch((error) => {
       console.log(error)
     })
