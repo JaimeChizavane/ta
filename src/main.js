@@ -7,6 +7,7 @@ import axios from './axios'
 import moment from 'moment'
 import 'moment/locale/pt'
 
+
 Vue.config.productionTip = false
 Vue.prototype.$eventHub = new Vue()
 

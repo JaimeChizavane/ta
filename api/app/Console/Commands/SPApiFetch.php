@@ -67,6 +67,10 @@ abstract class SPApiFetch extends Command
                     }
                 }
 
+                if (isset($result->Files->results)) {
+                    $this->handleAttachements($result->Files->results);
+                }
+
 
                 if (isset($result->Folders->results)) {
                     foreach ($result->Folders->results as $folder) {

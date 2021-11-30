@@ -9,6 +9,7 @@ use App\Console\Commands\FetchEventosCommand;
 use App\Console\Commands\FetchComunicadosCommand;
 use App\Console\Commands\FetchConcursosCommand;
 use App\Console\Commands\FetchFAQCommand;
+use App\Console\Commands\FetchGaleriaImagensCommand;
 use App\Console\Commands\FetchInstituicaoCommand;
 use App\Console\Commands\FetchInstituicaoCSMJACommand;
 use App\Console\Commands\FetchJurisdicaoCommand;
@@ -21,6 +22,7 @@ use App\Console\Commands\FetchNewsCSMJACommand;
 use App\Console\Commands\FetchOportunitiesCommand;
 use App\Console\Commands\FetchPublicacoesCommand;
 use App\Console\Commands\FetchSugestoesCommand;
+use App\Console\Commands\FetchVideosCommand;
 use App\Console\Commands\SPApiFetchAll;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
@@ -52,6 +54,8 @@ class Kernel extends ConsoleKernel
         FetchLawCSMJACommand::class,
         FetchDecretCSMJACommand::class,
         FetchDispatchementsCSMJACommand::class,
+        FetchGaleriaImagensCommand::class,
+        FetchVideosCommand::class,
         SPApiFetchAll::class,
     ];
 

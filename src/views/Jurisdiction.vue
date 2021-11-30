@@ -30,10 +30,6 @@
                               <h4 class="contact__info-box-title">{{ item.Title }}</h4>
                               <ul class="contact__info-list list-unstyled">
                                 <li>
-                                  História:
-                                  <p v-html="item.History"></p>
-                                </li>
-                                <li>
                                   Endereço:
                                   <p v-html="item.Address"></p>
                                 </li>

@@ -257,7 +257,7 @@ const routes = [
     meta: {
       display: 'menus.galery'
     },
-    component: () => import('@/views/AboutUs.vue')
+    component: () => import('@/views/Images.vue')
   },
   {
     path: '/videos',
@@ -265,7 +265,7 @@ const routes = [
     meta: {
       display: 'menus.videos'
     },
-    component: () => import('@/views/AboutUs.vue')
+    component: () => import('@/views/Videos.vue')
   },
   {
     path: '/jurisdiction',
