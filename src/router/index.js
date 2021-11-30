@@ -110,7 +110,7 @@ const routes = [
       display: 'menus.international_cooperation',
       parent: 'menus.institution'
     },
-    component: () => import('@/views/AboutUs.vue')
+    component: () => import('@/views/InternationalCooperation.vue')
   },
   {
     path: '/legislation',
@@ -196,12 +196,28 @@ const routes = [
     component: () => import('@/views/AboutUs.vue')
   },
   {
+    path: '/instruction_personal',
+    name: 'instruction_personal',
+    meta: {
+      display: 'menus.instruction_personal'
+    },
+    component: () => import('@/views/PersonalProcess.vue')
+  },
+  {
     path: '/fluxogram',
     name: 'fluxogram',
     meta: {
       display: 'menus.fluxogram'
     },
     component: () => import('@/views/AboutUs.vue')
+  },
+  {
+    path: '/report_submission',
+    name: 'report_submission',
+    meta: {
+      display: 'menus.report_submission'
+    },
+    component: () => import('@/views/ReporCase.vue')
   },
   {
     path: '/jurispendency',

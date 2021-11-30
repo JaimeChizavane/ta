@@ -1,5 +1,5 @@
 <template>
-  <section class="contact-layout2 py-0">
+  <section class="contact-layout2">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -43,8 +43,8 @@
                 <div class="col-sm-6 col-md-6 col-lg-6">
                   <div class="form-group">
                     <select class="form-control">
-                      <option value="1">Consulta</option>
-                      <option value="2">Caso de estudo</option>
+                      <option value="Denuncia">Denuncia</option>
+                      <option value="Consulta">Consulta</option>
                     </select>
                   </div>
                 </div><!-- /.col-lg-6 -->

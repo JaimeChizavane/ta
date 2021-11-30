@@ -6,48 +6,11 @@
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-7">
           <div class="banners-wrapper sticky-top">
             <div class="tab-content mb-50">
-              <div class="tab-pane fade show active" id="tab1">
+              <div class="tab-pane fade" :class="[activeIndex === index ? 'show active' : '']"
+                   v-for="(image, index) in allImages"
+                   :key="index">
                 <div class="video__banner">
-                  <img src="assets/images/work-process/1.jpg" class="rounded" alt="banner">
-                  <a class="video__btn video__btn-white popup-video"
-                     href="#">
-                    <div class="video__player">
-                      <i class="fa fa-play"></i>
-                    </div>
-                  </a>
-                </div><!-- /.video__banner -->
-              </div>
-              <div class="tab-pane fade" id="tab2">
-                <div class="video__banner">
-                  <img src="assets/images/work-process/2.jpg" class="rounded" alt="banner">
-                  <a class="video__btn video__btn-white popup-video"
-                     href="#">
-                    <div class="video__player">
-                      <i class="fa fa-play"></i>
-                    </div>
-                  </a>
-                </div><!-- /.video__banner -->
-              </div>
-              <div class="tab-pane fade" id="tab3">
-                <div class="video__banner">
-                  <img src="assets/images/work-process/3.jpg" class="rounded" alt="banner">
-                  <a class="video__btn video__btn-white popup-video"
-                     href="#">
-                    <div class="video__player">
-                      <i class="fa fa-play"></i>
-                    </div>
-                  </a>
-                </div><!-- /.video__banner -->
-              </div>
-              <div class="tab-pane fade" id="tab4">
-                <div class="video__banner">
-                  <img src="assets/images/work-process/4.jpg" class="rounded" alt="banner">
-                  <a class="video__btn video__btn-white popup-video"
-                     href="#">
-                    <div class="video__player">
-                      <i class="fa fa-play"></i>
-                    </div>
-                  </a>
+                  <img :src="image.src" class="rounded" alt="banner">
                 </div><!-- /.video__banner -->
               </div>
             </div><!-- /.tab-content -->
@@ -56,7 +19,7 @@
                 Encontre a nossa galeria online, com todos as coberturas de eventos:
               </h4>
               <router-link :to="{name: 'videos'}" class="btn btn__primary btn__primary-style2">
-                <span>Ver mais </span>
+                <span> Ver mais </span>
                 <i class="icon-arrow-right"></i>
               </router-link>
             </div> <!-- /.cta-banner -->
@@ -69,33 +32,12 @@
           </div>
           <nav class="nav nav-tabs">
             <!-- process Item #1 -->
-            <a class="process-item active" data-toggle="tab" href="#tab1">
+            <a class="process-item col-12" :class="[activeIndex == index ? 'active' : '']" @click.prevent="activeIndex = index" href="#"
+               v-for="(image, index) in allImages"
+               :key="index">
               <div class="process-item__content">
-                <h4 class="process-item__title">Nomeação do Presidente do TA</h4>
-                <p class="process-item__desc">Acompanhe o video aqui...</p>
-              </div>
-            </a><!-- /.process-item -->
-            <!-- process Item #2 -->
-            <a class="process-item" data-toggle="tab" href="#tab2">
-              <div class="process-item__content">
-                <h4 class="process-item__title">Video 2</h4>
-                <p class="process-item__desc">Acompanhe o video aqui...
-                </p>
-              </div>
-            </a><!-- /.process-item -->
-            <!-- process Item #3 -->
-            <a class="process-item" data-toggle="tab" href="#tab3">
-              <div class="process-item__content">
-                <h4 class="process-item__title">Video 3</h4>
-                <p class="process-item__desc">Acompanhe o video aqui...
-                </p>
-              </div>
-            </a><!-- /.process-item -->
-            <!-- process Item #4 -->
-            <a class="process-item" data-toggle="tab" href="#tab4">
-              <div class="process-item__content">
-                <h4 class="process-item__title">Video 3</h4>
-                <p class="process-item__desc">Acompanhe o video aqui...</p>
+                <h4 class="process-item__title">{{ image.Title }}</h4>
+                <p class="process-item__desc">{{ image.Name }}</p>
               </div>
             </a><!-- /.process-item -->
           </nav>
@@ -107,7 +49,34 @@
 
 <script>
 export default {
-  name: "QGalery"
+  name: "QGalery",
+  methods: {
+    getFileUrl(item) {
+      return item && item.ServerRelativeUrl ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl : '#'
+    }
+  },
+  data() {
+    return {
+      allImages: [],
+      activeIndex: 0
+    }
+  },
+  mounted() {
+    // window.mainExecution()
+    this.$http.get("images.json").then((data) => {
+      this.allImages = data.data.d.results.filter(f => f.Name !== 'Forms').flatMap(f => f.Folders.results
+          .flatMap(fo => fo.Files.results
+              .map((file) => {
+                file.Title = file.Title && file.Title.trim() ? file.Title : fo.Name
+                file.src = this.getFileUrl(file)
+
+                return file
+              }))).slice(0, 5)
+
+    }).catch((error) => {
+      console.log(error)
+    })
+  }
 }
 </script>
 
