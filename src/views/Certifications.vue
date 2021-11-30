@@ -12,11 +12,39 @@
             </div>
           </div><!-- /.col-xl-6 -->
         </div>
+        <div class="row" v-if="filtered.length">
+          <div class="col-12">
+            <div class="heading text-center mb-50">
+              <h2 class="heading__subtitle color-body">Resultados encontrados:</h2>
+            </div>
+            <div class="jobs-container">
+              <!-- career item #1 -->
+              <div class="job-item" v-for="(item, index) in filtered" :key="index">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="job__meta">
+                      <span class="job__type">{{ item.TimeCreated | date }}</span>
+                    </div>
+                  </div><!-- /.col-lg-4 -->
+                  <div class="col-sm-12 col-md-12 col-lg-5">
+                    <p class="job__desc" v-html="item.Name"></p>
+                  </div><!-- /.col-lg-5 -->
+                  <div class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap">
+                    <a :href="getFileUrl(item)" target="_blank" class="btn btn__secondary">Abrir</a>
+                  </div><!-- /.col-lg-3 -->
+                </div><!-- /.row -->
+              </div><!-- /.job-item -->
+            </div>
+          </div><!-- /.col-lg-12 -->
+        </div><!-- /.row -->
       </div><!-- /.container -->
     </section><!-- /.careers -->
     <section class="faq pt-0 pb-70">
       <div class="bg-img"><img src="assets/images/backgrounds/4.png" alt="backgrounds"></div>
       <div class="container">
+        <div class="heading text-center mb-50">
+          <h3 class="heading__title">Todas {{ $tc($route.meta.display) }}</h3>
+        </div>
         <div class="row" id="accordion">
           <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="accordion-item" v-for="(item, index) in items" :key="index">
@@ -111,12 +139,10 @@ export default {
     },
     search() {
       if (this.query) {
-        this.items = this.allItems
-            .filter(item => item.Name.toLowerCase().includes(this.query.toLowerCase())
-                || item.Folders.results.find(folder => folder.Files.results.find(file => file.Name.toLowerCase().includes(this.query.toLowerCase())))
-            )
+        this.filtered = this.searcheable
+            .filter(file => file.Name.toLowerCase().includes(this.query.toLowerCase())).slice(0, 5)
       } else {
-        this.items = this.allItems
+        this.filtered = []
       }
     }
   },
@@ -124,7 +150,9 @@ export default {
     return {
       items: [],
       allItems: [],
-      query: ''
+      query: '',
+      filtered: [],
+      searcheable: []
     }
   },
   mounted() {
@@ -134,7 +162,7 @@ export default {
     this.$http.get("jurispudencia.json").then((data) => {
       this.allItems = data.data.d.results.filter(item => item.Folders.results.length && item.Name.toLowerCase().includes("certificações"))
       this.items = this.allItems
-
+      this.searcheable = this.searcheable = this.items.flatMap(item => item.Folders.results.flatMap(s => s.Files.results))
     }).catch((error) => {
       console.log(error)
     })
