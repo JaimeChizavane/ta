@@ -130,6 +130,15 @@ const routes = [
     component: () => import('@/views/Law.vue')
   },
   {
+    path: '/others',
+    name: 'others',
+    meta: {
+      display: 'menus.others',
+      parent: 'menus.legislation'
+    },
+    component: () => import('@/views/Others.vue')
+  },
+  {
     path: '/decret',
     name: 'decret',
     meta: {
@@ -186,6 +195,14 @@ const routes = [
       display: 'menus.sub_section'
     },
     component: () => import('@/views/AboutUs.vue')
+  },
+  {
+    path: '/mandatory_instructions',
+    name: 'mandatory_instructions',
+    meta: {
+      display: 'menus.mandatory_instructions'
+    },
+    component: () => import('@/views/MandatoryInstructions.vue')
   },
   {
     path: '/instruction_recomendation',
@@ -249,7 +266,7 @@ const routes = [
     meta: {
       display: 'menus.account'
     },
-    component: () => import('@/views/AboutUs.vue')
+    component: () => import('@/views/Contas.vue')
   },
   {
     path: '/rpcge',
@@ -257,7 +274,7 @@ const routes = [
     meta: {
       display: 'menus.rpcge'
     },
-    component: () => import('@/views/AboutUs.vue')
+    component: () => import('@/views/RPCGE.vue')
   },
   {
     path: '/managers',
@@ -301,8 +318,16 @@ const routes = [
     component: () => import('@/views/Faq.vue')
   },
   {
-    path: '/news',
+    path: '/publications',
     name: 'publications',
+    meta: {
+      display: 'menus.publications'
+    },
+    component: () => import('@/views/Publications.vue')
+  },
+  {
+    path: '/news',
+    name: 'news',
     meta: {
       display: 'blog'
     },

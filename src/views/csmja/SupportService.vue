@@ -19,6 +19,15 @@
             </div>
           </div><!-- /col-lg-5 -->
         </div><!-- /.row -->
+        <div class="row">
+          <div class="col-12">
+            <div class="cta-banner mt-50 mb-30 d-flex flex-wrap align-items-center">
+              <router-link :to="{name: 'csmja.strategic_plan'}" class="btn btn__primary">
+                <i class="icon-arrow-left icon-outlined"></i> Plano Estratégico
+              </router-link>
+            </div><!-- /.cta-banner -->
+          </div><!-- /.col-12 -->
+        </div><!-- /.row -->
       </div><!-- /.container -->
     </section><!-- /.Features Layout 3 -->
     <q-footer/>

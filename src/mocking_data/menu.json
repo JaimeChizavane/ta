@@ -78,6 +78,11 @@
         "name": "menus.dispatchment",
         "to": "dispatchment",
         "sub_menus": []
+      },
+      {
+        "name": "menus.others",
+        "to": "others",
+        "sub_menus": []
       }
     ]
   },
@@ -185,7 +190,7 @@
       },
       {
         "name": "menus.doc_submitions",
-        "to": "doc_submitions",
+        "to": "report_submission",
         "sub_menus": []
       },
       {
@@ -199,6 +204,11 @@
     "name": "menus.press",
     "to": "press",
     "sub_menus": [
+      {
+        "name": "blog",
+        "to": "blog",
+        "sub_menus": []
+      },
       {
         "name": "menus.report_submission",
         "to": "report_submission",
@@ -227,29 +237,8 @@
     "sub_menus": [
       {
         "name": "menus.institution",
-        "to": "csmja.institution",
-        "sub_menus": [
-          {
-            "name": "menus.history",
-            "to": "csmja.history",
-            "sub_menus": []
-          },
-          {
-            "name": "menus.support_services",
-            "to": "csmja.support_services",
-            "sub_menus": []
-          },
-          {
-            "name": "menus.competencies",
-            "to": "csmja.competencies",
-            "sub_menus": []
-          },
-          {
-            "name": "menus.strategic_plan",
-            "to": "csmja.strategic_plan",
-            "sub_menus": []
-          }
-        ]
+        "to": "csmja.strategic_plan",
+        "sub_menus": []
       },
       {
         "name": "menus.legislation",

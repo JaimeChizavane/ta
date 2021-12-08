@@ -3,6 +3,7 @@
 namespace App\Console;
 
 use App\Console\Commands\FetchAtendimentoCommand;
+use App\Console\Commands\FetchContasCommand;
 use App\Console\Commands\FetchDecretCSMJACommand;
 use App\Console\Commands\FetchDenunciasCommand;
 use App\Console\Commands\FetchEventosCommand;
@@ -12,6 +13,7 @@ use App\Console\Commands\FetchFAQCommand;
 use App\Console\Commands\FetchGaleriaImagensCommand;
 use App\Console\Commands\FetchInstituicaoCommand;
 use App\Console\Commands\FetchInstituicaoCSMJACommand;
+use App\Console\Commands\FetchInstrucoesObrigatoriasCommand;
 use App\Console\Commands\FetchJurisdicaoCommand;
 use App\Console\Commands\FetchJurispudenciaCommand;
 use App\Console\Commands\FetchDispatchementsCSMJACommand;
@@ -21,6 +23,7 @@ use App\Console\Commands\FetchNewsCommand;
 use App\Console\Commands\FetchNewsCSMJACommand;
 use App\Console\Commands\FetchOportunitiesCommand;
 use App\Console\Commands\FetchPublicacoesCommand;
+use App\Console\Commands\FetchRPCGECommand;
 use App\Console\Commands\FetchSugestoesCommand;
 use App\Console\Commands\FetchVideosCommand;
 use App\Console\Commands\SPApiFetchAll;
@@ -56,6 +59,9 @@ class Kernel extends ConsoleKernel
         FetchDispatchementsCSMJACommand::class,
         FetchGaleriaImagensCommand::class,
         FetchVideosCommand::class,
+        FetchRPCGECommand::class,
+        FetchContasCommand::class,
+        FetchInstrucoesObrigatoriasCommand::class,
         SPApiFetchAll::class,
     ];
 

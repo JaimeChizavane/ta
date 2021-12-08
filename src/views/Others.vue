@@ -52,6 +52,9 @@
                       <span class="job__type" v-show="item.N_x00fa_mero_x0020_de_x0020_Diploma">
                         N. Diploma: {{ item.N_x00fa_mero_x0020_de_x0020_Diploma }}
                       </span>
+                      <span class="job__type" v-show="item.Tipo">
+                        {{ item.Tipo }}
+                      </span>
                       <span class="job__location" v-show="item.Data_x0020_do_x0020_BR">
                         {{ item.Data_x0020_do_x0020_BR | date }}
                       </span>
@@ -72,7 +75,7 @@
         <div class="row">
           <div class="col-12">
             <div class="heading text-center mb-20">
-              <h3 class="heading__title">Todos {{ $tc($route.meta.display) }}</h3>
+              <h3 class="heading__title">Todos</h3>
             </div>
             <div class="jobs-container" v-if="items.length">
               <!-- career item #1 -->
@@ -122,7 +125,7 @@ import QHeader from "@/components/Header/Header";
 import QBreadCrumb from "@/components/BreadCrumb";
 
 export default {
-  name: "QDispatchment",
+  name: "QOthers",
   components: { QBreadCrumb, QHeader, QFooter },
   methods: {
     search() {
@@ -158,14 +161,13 @@ export default {
         diploma: '',
         data: ''
       },
-
     }
   },
   mounted() {
     window.mainExecution()
 
     this.$http.get("legislacao.json").then((data) => {
-      this.allItems = data.data.d.results.filter(item => item?.Folder?.Files && (item?.Tipo === 'Despachos' || item?.Tipo_x0020_de_x0020_Diploma === 'Despacho'))
+      this.allItems = data.data.d.results.filter(item => item?.Folder?.Files && (item?.Tipo !== 'Leis' && item?.Tipo !== 'Despachos' && item?.Tipo !== 'Decretos'))
       this.items = this.allItems
       this.searcheable = this.items.flatMap((item) => {
         if (item.Folder.Files) {

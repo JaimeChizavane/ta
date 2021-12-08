@@ -41,6 +41,9 @@ class SPApiFetchAll extends Command
         FetchDispatchementsCSMJACommand::class,
         FetchGaleriaImagensCommand::class,
         FetchVideosCommand::class,
+        FetchContasCommand::class,
+        FetchRPCGECommand::class,
+        FetchInstrucoesObrigatoriasCommand::class,
     ];
 
     public function __construct()

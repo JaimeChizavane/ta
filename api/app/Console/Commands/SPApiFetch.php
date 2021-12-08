@@ -45,7 +45,7 @@ abstract class SPApiFetch extends Command
 
             foreach ($content->d->results as $result) {
 
-                if ($result->__metadata->type == 'SP.FILE') {
+                if (strtolower($result->__metadata->type) == 'sp.file') {
                     $this->handleAttachements([$result]);
                 }
 

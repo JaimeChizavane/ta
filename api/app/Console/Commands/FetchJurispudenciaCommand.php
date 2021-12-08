@@ -18,6 +18,7 @@ class FetchJurispudenciaCommand extends SPApiFetch
      */
     protected $client;
 //    protected $uri  = "_api/web/lists/getByTitle('Jurisprudência')/items?\$expand=Folder/Files&\$top=10&\$filter=Sec_x00e7__x00e3_o%20ne%20null";
-    protected $uri  = "_api/Web/GetFolderByServerRelativePath(decodedurl='/Jurisprudencia/Acórdãos')/Folders?\$expand=Folders/Files,Folders/Folders/Files&\$orderBy=Name";
+    protected $uri  = "_api/web/lists/getByTitle('Jurisprudência')/items?\$expand=Folder,File,AttachmentFiles&\$orderBy=Sec_x00e7__x00e3_o_x0020_de_x002";
+//    protected $uri  = "_api/Web/GetFolderByServerRelativePath(decodedurl='/Jurisprudencia/Acórdãos')/Folders?\$expand=Folders/Files,Folders/Folders/Files&\$orderBy=Name";
     protected $path = 'jurispudencia.json';
 }
