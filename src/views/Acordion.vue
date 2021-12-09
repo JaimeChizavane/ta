@@ -14,22 +14,31 @@
         <div class="row">
           <div class="col-12">
             <div class="pagetitle__form mb-50">
+              <label class="offset-11">
+                <button @click="clear"><i class="icon-query"></i> Limpar</button>
+              </label>
               <div class="form-row">
                 <div class="col-3">
-                  <input @keyup="search" v-model="query.assunto" type="text" class="form-control bordered-box mb-20"
-                         placeholder="Procurar por assunto...">
+                  <select class="form-control bordered-box mb-20" @change="search" v-model="query.assunto">
+                    <option value="">Todos assuntos</option>
+                    <option v-for="assunto in assuntos" :key="assunto.Id"> {{ assunto.Title }}</option>
+                  </select>
                 </div>
                 <div class="col-3">
                   <input @keyup="search" v-model="query.processo" type="text" class="form-control bordered-box mb-20"
                          placeholder="Procurar por n. do processo...">
                 </div>
-                <div class="col-3">
+                <div class="col-2">
                   <input @keyup="search" v-model="query.acordao" type="text" class="form-control bordered-box mb-20"
                          placeholder="Procurar por acordão/despacho...">
                 </div>
-                <div class="col-3">
+                <div class="col-2">
                   <input @keyup="search" v-model="query.relator" type="text" class="form-control bordered-box mb-20"
                          placeholder="Procurar por relator...">
+                </div>
+                <div class="col-2">
+                  <input @change="search" v-model="query.data" type="date" class="form-control bordered-box mb-20"
+                         placeholder="Procurar por data do acordão...">
                 </div>
               </div>
             </div>
@@ -63,24 +72,25 @@
 
 
                     <div class="job__meta">
-                      <span class="job__type" v-show="item.Sec_x00e7__x00e3_o_x0020_de_x002">{{
+                      <span class="job__type">
+                        Secção de origem: {{
                           item.Sec_x00e7__x00e3_o_x0020_de_x002
                         }}</span>
                     </div>
 
                     <div class="job__meta">
-                      <span class="job__type" v-show="item.N_x00b0__x0020_do_x0020_Acord_x0">
+                      <span class="job__type">
                         N. Acórdão: {{ item.N_x00b0__x0020_do_x0020_Acord_x0 }}
                       </span>
                     </div>
                     <div class="job__meta">
-                      <span class="job__type" v-show="item.N_x002e__x00ba__x0020_do_x0020_P">
+                      <span class="job__type">
                         N. do Processo: {{ item.N_x002e__x00ba__x0020_do_x0020_P }}
                       </span>
                     </div>
 
                     <div class="job__meta">
-                      <span class="job__location" v-show="item.Data_x0020_do_x0020_Ac_x00f3_rd_">
+                      <span class="job__location">
                         {{ item.Data_x0020_do_x0020_Ac_x00f3_rd_ | date }}
                       </span>
                     </div>
@@ -89,7 +99,7 @@
 
 
                     <div class="job__meta">
-                      <span class="job__location" v-show="item.Relator" v-html="'Relator: ' + item.Relator"></span>
+                      <span class="job__location" v-html="'Relator: ' + item.Relator"></span>
                     </div>
 
                     <p v-show="item.Assunto.results.length"><strong>Assunto:</strong></p>
@@ -141,14 +151,27 @@ export default {
   name: "QAboutUs",
   components: { QBreadCrumb, QHeader, QFooter },
   methods: {
+    clear() {
+      this.query = {
+        assunto: '',
+        processo: '',
+        acordao: '',
+        pessoas: '',
+        relator: '',
+        data: ''
+      }
+
+      this.search()
+    },
     getFileUrl(item) {
       return item && item.ServerRelativeUrl ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl : '#'
     },
     search() {
-      if (this.query.assunto || this.query.relator || this.query.processo || this.query.acordao) {
+      if (this.query.assunto || this.query.relator || this.query.processo || this.query.acordao || this.query.data) {
         this.items = this.allItems
             .filter(file => (this.query.assunto === '' || file.Assunto.results.find(i => i?.toLowerCase().includes(this.query.assunto.toLowerCase())))
                 && (this.query.relator === '' || file.Relator?.toLowerCase().includes(this.query.relator.toLowerCase()))
+                && (this.query.data === '' || file.Data_x0020_do_x0020_Ac_x00f3_rd_?.toLowerCase().includes(this.query.data.toLowerCase()))
                 && (this.query.processo === '' || file.N_x002e__x00ba__x0020_do_x0020_P?.toLowerCase().includes(this.query.processo.toLowerCase()))
                 && (this.query.acordao === '' || file.N_x00b0__x0020_do_x0020_Acord_x0?.toLowerCase().includes(this.query.acordao.toLowerCase()))
             )
@@ -161,21 +184,20 @@ export default {
     return {
       items: [],
       allItems: [],
+      assuntos: [],
       query: {
         assunto: '',
         processo: '',
         acordao: '',
         pessoas: '',
-        relator: ''
+        relator: '',
+        data: ''
       },
       filtered: [],
       searcheable: []
     }
   },
   mounted() {
-    window.mainExecution()
-
-
     this.$http.get("jurispudencia.json").then((data) => {
       this.allItems = data.data.d.results.filter(item => item.Ac_x00f3_rd_x00e3_o_x0020_ou_x00.toLowerCase().includes("acórdão"))
       this.items = this.allItems
@@ -184,6 +206,16 @@ export default {
     }).catch((error) => {
       console.log(error)
     })
+
+    this.$http.get("assuntos.json").then((data) => {
+      this.assuntos = data.data.d.results
+
+      // window.mainExecution()
+    }).catch((error) => {
+      console.log(error)
+    })
+
+    window.mainExecution()
   }
 }
 </script>

@@ -117,6 +117,11 @@
     "to": "jurispendency",
     "sub_menus": [
       {
+        "name": "menus.all",
+        "to": "jurispendency_all",
+        "sub_menus": []
+      },
+      {
         "name": "menus.acordion",
         "to": "acordion",
         "sub_menus": []

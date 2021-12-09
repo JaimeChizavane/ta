@@ -189,6 +189,14 @@ const routes = [
     component: () => import('@/views/AboutUs.vue')
   },
   {
+    path: '/jurispendency_all',
+    name: 'jurispendency_all',
+    meta: {
+      display: 'menus.all'
+    },
+    component: () => import('@/views/JurisAll.vue')
+  },
+  {
     path: '/sub_section',
     name: 'sub_section',
     meta: {

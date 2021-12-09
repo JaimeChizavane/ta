@@ -265,7 +265,7 @@ var mainExecution = function () {
     });
 
     /*==========  NiceSelect Plugin  ==========*/
-    $('select').niceSelect();
+    // $('select').niceSelect();
 
     /*==========   portfolio Filtering and Sorting  ==========*/
 

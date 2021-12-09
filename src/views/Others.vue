@@ -14,6 +14,9 @@
         <div class="row">
           <div class="col-12">
             <div class="pagetitle__form mb-50">
+              <label class="offset-11">
+                <button @click="clear"><i class="icon-query"></i> Limpar</button>
+              </label>
               <div class="form-row">
                 <div class="col-3">
                   <input @keyup="search" v-model="query.assunto" type="text" class="form-control bordered-box mb-20"
@@ -28,7 +31,8 @@
                          placeholder="Procurar por n. do diploma...">
                 </div>
                 <div class="col-3">
-                  <input @keyup="search" v-model="query.data" type="text" class="form-control bordered-box mb-20"
+                  <input @change="search" v-model="query.data" type="date"
+                         class="form-control bordered-box mb-20"
                          placeholder="Procurar por data do diploma...">
                 </div>
               </div>
@@ -83,13 +87,13 @@
                 <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-4">
                     <div class="job__meta">
-                      <span class="job__type" v-show="item.N_x00fa_mero_x0020_do_x0020_BR">N. BR: {{
+                      <span class="job__type">N. BR: {{
                           item.N_x00fa_mero_x0020_do_x0020_BR
                         }}</span>
-                      <span class="job__type" v-show="item.N_x00fa_mero_x0020_de_x0020_Diploma">
+                      <span class="job__type">
                         N. Diploma: {{ item.N_x00fa_mero_x0020_de_x0020_Diploma }}
                       </span>
-                      <span class="job__location" v-show="item.Data_x0020_do_x0020_BR">
+                      <span class="job__location">
                         {{ item.Data_x0020_do_x0020_BR | date }}
                       </span>
                     </div>
@@ -128,6 +132,14 @@ export default {
   name: "QOthers",
   components: { QBreadCrumb, QHeader, QFooter },
   methods: {
+    clear() {
+      this.query.assunto = ''
+      this.query.br = ''
+      this.query.diploma = ''
+      this.query.data = ''
+
+      this.search()
+    },
     search() {
       if (this.query.assunto || this.query.br || this.query.diploma || this.query.data) {
         this.filtered = this.searcheable
@@ -167,7 +179,7 @@ export default {
     window.mainExecution()
 
     this.$http.get("legislacao.json").then((data) => {
-      this.allItems = data.data.d.results.filter(item => item?.Folder?.Files && (item?.Tipo !== 'Leis' && item?.Tipo !== 'Despachos' && item?.Tipo !== 'Decretos'))
+      this.allItems = data.data.d.results.filter(item => (item?.Tipo !== 'Leis' && item?.Tipo !== 'Despachos' && item?.Tipo !== 'Decretos'))
       this.items = this.allItems
       this.searcheable = this.items.flatMap((item) => {
         if (item.Folder.Files) {
