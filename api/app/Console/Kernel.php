@@ -2,6 +2,8 @@
 
 namespace App\Console;
 
+use App\Console\Commands\FetchAreasCommand;
+use App\Console\Commands\FetchAssuntosCommand;
 use App\Console\Commands\FetchAtendimentoCommand;
 use App\Console\Commands\FetchContasCommand;
 use App\Console\Commands\FetchDecretCSMJACommand;
@@ -25,6 +27,7 @@ use App\Console\Commands\FetchOportunitiesCommand;
 use App\Console\Commands\FetchPublicacoesCommand;
 use App\Console\Commands\FetchRPCGECommand;
 use App\Console\Commands\FetchSugestoesCommand;
+use App\Console\Commands\FetchTipoJurispCommand;
 use App\Console\Commands\FetchVideosCommand;
 use App\Console\Commands\SPApiFetchAll;
 use Illuminate\Console\Scheduling\Schedule;
@@ -62,6 +65,9 @@ class Kernel extends ConsoleKernel
         FetchRPCGECommand::class,
         FetchContasCommand::class,
         FetchInstrucoesObrigatoriasCommand::class,
+        FetchAssuntosCommand::class,
+        FetchAreasCommand::class,
+        FetchTipoJurispCommand::class,
         SPApiFetchAll::class,
     ];
 
