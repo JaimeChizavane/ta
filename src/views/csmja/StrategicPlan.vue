@@ -1,5 +1,5 @@
 <template>
-  <section id="overview" class="features-layout3 pt-130 pb-30">
+  <section id="overview" class="features-layout3 pt-20 pb-30">
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-7 col-xl-6">

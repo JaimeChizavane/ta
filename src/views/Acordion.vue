@@ -26,7 +26,7 @@
                 </div>
                 <div class="col-md-2 col-sm-6">
                   <select class="form-control bordered-box mb-20" @change="search" v-model="query.seccao_origem">
-                    <option value="">Todos tipos de secção</option>
+                    <option value="">Todas Secções de Origem</option>
                     <option v-for="tipo in areas" :key="tipo.Id"> {{ tipo.Title }}</option>
                   </select>
                 </div>
@@ -225,13 +225,13 @@ export default {
       console.log(error)
     })
 
-    this.$http.get("areas.json").then((data) => {
-      this.areas = data.data.d.results
-
-      // window.mainExecution()
-    }).catch((error) => {
-      console.log(error)
-    })
+    // this.$http.get("areas.json").then((data) => {
+    //   this.areas = data.data.d.results
+    //
+    //   // window.mainExecution()
+    // }).catch((error) => {
+    //   console.log(error)
+    // })
 
     window.mainExecution()
   }

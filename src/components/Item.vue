@@ -50,7 +50,7 @@
             </div>
           </div>
           <div class="widget-nav d-flex justify-content-between mb-40">
-            <router-link :to="{name: 'blog-item', params:{guid: navigation.previous.GUID}}"
+            <router-link :to="{name: routeName, params:{guid: navigation.previous.GUID}}"
                          class="widget-nav__prev d-flex flex-wrap" v-if="navigation.previous.Title">
               <div class="widget-nav__img">
                 <div class="widget-nav__overlay"></div>
@@ -62,7 +62,7 @@
               </div>
             </router-link>
             <span v-else></span>
-            <router-link :to="{name: 'blog-item', params:{guid: navigation.next.GUID}}"
+            <router-link :to="{name: routeName, params:{guid: navigation.next.GUID}}"
                          class="widget-nav__next d-flex flex-wrap" v-if="navigation.next.Title">
               <div class="widget-nav__img">
                 <div class="widget-nav__overlay"></div>
@@ -86,7 +86,7 @@
                 </form>
               </div><!-- /.widget-content -->
             </div><!-- /.widget-search -->
-            <q-other-articles :items="related"/>
+            <q-other-articles :items="related" :route-name="routeName"/>
             <!--            <div class="widget widget-categories">-->
             <!--              <h5 class="widget__title">Categories</h5>-->
             <!--              <div class="widget-content">-->
@@ -124,7 +124,7 @@ import QOtherArticles from "@/components/OtherArticles";
 export default {
   name: "QItem",
   components: { QOtherArticles },
-  methods:{
+  methods: {
     getImageUrl(item) {
       return item && item.Attachments ? process.env.VUE_APP_ROOT_DOCS + item.AttachmentFiles.results[0].ServerRelativeUrl : 'assets/images/blog/grid/1.jpg'
     },
@@ -132,6 +132,10 @@ export default {
   props: {
     item: {
       type: Object
+    },
+    routeName: {
+      type: String,
+      default: 'blog-item'
     },
     navigation: Object,
     related: Array

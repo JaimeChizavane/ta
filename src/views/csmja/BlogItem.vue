@@ -2,7 +2,8 @@
   <div class="wrapper">
     <q-header/>
     <q-bread-crumb/>
-    <q-item :item="item" :navigation="navigation" :related="related"/>
+    <sub-menu/>
+    <q-item :item="item" :navigation="navigation" :related="related" route-name="csmja.blog-item"/>
     <q-footer/>
   </div>
 </template>
@@ -12,10 +13,11 @@ import QFooter from "@/components/Footer";
 import QHeader from "@/components/Header/Header";
 import QBreadCrumb from "@/components/BreadCrumb";
 import QItem from "@/components/Item";
+import SubMenu from "@/views/csmja/components/SubMenu";
 
 export default {
   name: "QBlogItem",
-  components: { QItem, QBreadCrumb, QHeader, QFooter },
+  components: { SubMenu, QItem, QBreadCrumb, QHeader, QFooter },
   data() {
     return {
       news: []

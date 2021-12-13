@@ -7,14 +7,14 @@
       <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
         <div class="heading text-center mb-0 mt-40">
           <h3 class="heading__title">
-            <router-link :to="{name: 'blog'}">
+            <router-link :to="{name: 'csmja.blog'}">
               {{ $tc('recent_article', 2) }}
             </router-link>
           </h3>
         </div><!-- /.heading -->
       </div><!-- /.col-lg-6 -->
     </div><!-- /.row -->
-    <q-item-list :items="news" itemRoute="blog-item"/>
+    <q-item-list :items="news" itemRoute="csmja.blog-item"/>
     <q-footer/>
   </div>
 </template>

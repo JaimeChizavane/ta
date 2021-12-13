@@ -20,7 +20,7 @@
     "sub_menus": []
   },
   {
-    "name": "menus.publications",
+    "name": "menus.news",
     "to": "csmja.publications",
     "sub_menus": []
   },

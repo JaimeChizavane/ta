@@ -17,6 +17,6 @@ class FetchNewsCSMJACommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "CSMJA/_api/web/lists/getByTitle('Notícias')/items?\$expand=AttachmentFiles";
+    protected $uri  = "CSMJA/_api/web/lists/getByTitle('Noticias')/items?\$expand=AttachmentFiles";
     protected $path = 'cmsjanews.json';
 }

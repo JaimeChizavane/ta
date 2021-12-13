@@ -22,7 +22,13 @@
 <script>
 export default {
   name: "QOtherArticles",
-  props: ['items'],
+  props: {
+    items: Array,
+    routeName: {
+      type: String,
+      default: 'blog-item'
+    }
+  },
   methods: {
     getImageUrl(item) {
       return item && item.Attachments ? process.env.VUE_APP_ROOT_DOCS + item.AttachmentFiles.results[0].ServerRelativeUrl : 'assets/images/blog/grid/1.jpg'

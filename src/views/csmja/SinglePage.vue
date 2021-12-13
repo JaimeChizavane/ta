@@ -3,6 +3,7 @@
     <q-header/>
     <q-bread-crumb/>
     <sub-menu/>
+    <q-c-s-j-a-blog/>
     <q-c-s-strategic-plan :results="services"/>
     <hr>
     <q-c-s-support-services :results="services"/>
@@ -23,11 +24,13 @@ import QCSSupportServices from "@/views/csmja/SupportService";
 import QCSStrategicPlan from "@/views/csmja/StrategicPlan";
 import QCSHistory from "@/views/csmja/History";
 import QCSCompetencies from "@/views/csmja/Competencies";
+import QCSJABlog from "@/components/CSMJABlog";
 
 
 export default {
   name: "QSectionOne",
   components: {
+    QCSJABlog,
     QCSCompetencies,
     QCSHistory,
     QCSStrategicPlan,
