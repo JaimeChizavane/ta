@@ -43,7 +43,7 @@ export default {
   mounted() {
     window.mainExecution()
 
-    this.$http.get("instituicao.json").then((data) => {
+    this.$http.get("csmjainstituicao.json").then((data) => {
       this.services = data.data.d.results.find(item => item.Id === 9)
     }).catch((error) => {
       console.log(error)

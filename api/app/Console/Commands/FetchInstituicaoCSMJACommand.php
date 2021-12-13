@@ -17,6 +17,6 @@ class FetchInstituicaoCSMJACommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "CSMJA/_api/web/lists/getByTitle('instituicao')/items";
+    protected $uri  = "CSMJA/_api/web/lists/getByTitle('instituicao')/items?\$expand=AttachmentFiles";
     protected $path = 'csmjainstituicao.json';
 }

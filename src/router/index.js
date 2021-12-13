@@ -382,7 +382,7 @@ const routes = [
       display: 'menus.history',
       parent: 'menus.institution'
     },
-    component: () => import('@/views/csmja/History.vue')
+    component: () => import('@/views/csmja/SinglePage.vue')
   },
   {
     path: '/csmja/structure',

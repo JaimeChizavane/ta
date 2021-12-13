@@ -2,6 +2,7 @@
   <div class="wrapper">
     <q-header/>
     <q-bread-crumb/>
+    <sub-menu/>
     <div class="row">
       <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
         <div class="heading text-center mb-0 mt-40">
@@ -23,10 +24,11 @@ import QFooter from "@/components/Footer";
 import QHeader from "@/components/Header/Header";
 import QBreadCrumb from "@/components/BreadCrumb";
 import QItemList from "@/components/ItemList";
+import SubMenu from "@/views/csmja/components/SubMenu";
 
 export default {
   name: "QBlogList",
-  components: { QItemList, QBreadCrumb, QHeader, QFooter },
+  components: { SubMenu, QItemList, QBreadCrumb, QHeader, QFooter },
   data() {
     return {
       news: []

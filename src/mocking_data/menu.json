@@ -238,50 +238,8 @@
   },
   {
     "name": "menus.csmja",
-    "to": "csmja",
+    "to": "csmja.history",
     "sub_menus": [
-      {
-        "name": "menus.institution",
-        "to": "csmja.strategic_plan",
-        "sub_menus": []
-      },
-      {
-        "name": "menus.legislation",
-        "to": "csmja.legislation",
-        "sub_menus": [
-          {
-            "name": "menus.law",
-            "to": "csmja.law",
-            "sub_menus": []
-          },
-          {
-            "name": "menus.decret",
-            "to": "csmja.decret",
-            "sub_menus": []
-          },
-          {
-            "name": "menus.resolution",
-            "to": "csmja.dispatchment",
-            "sub_menus": []
-          }
-        ]
-      },
-      {
-        "name": "menus.citizen",
-        "to": "csmja.citizen",
-        "sub_menus": [
-          {
-            "name": "menus.publications",
-            "to": "csmja.publications",
-            "sub_menus": []
-          },
-          {
-            "name": "menus.faq",
-            "to": "csmja.faq",
-            "sub_menus": []
-          }
-        ]
-      }
     ]
   }
 ]
