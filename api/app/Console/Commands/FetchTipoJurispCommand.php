@@ -17,6 +17,6 @@ class FetchTipoJurispCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "_api/web/lists/getByTitle('Tipo_Jurisprudencia')/items";
+    protected $uri  = "_api/web/lists/getByTitle('Tipo_Jurisprudencia')/items?\$orderBy=Title";
     protected $path = 'tipos.json';
 }

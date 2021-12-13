@@ -17,7 +17,7 @@ class FetchLegislacaoCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-//    protected $uri  = "_api/web/lists/getByTitle('Legislação')/items?\$expand=AttachmentFiles";
-    protected $uri  = "_api/web/lists/getByTitle('Legislação')/items?\$expand=Folder/Files";
+    protected $uri  = "_api/web/lists/getByTitle('Legislação')/items?\$expand=AttachmentFiles";
+//    protected $uri  = "_api/web/lists/getByTitle('Legislação')/items?\$expand=Folder/Files";
     protected $path = 'legislacao.json';
 }

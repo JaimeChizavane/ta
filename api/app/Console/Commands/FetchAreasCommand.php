@@ -17,6 +17,6 @@ class FetchAreasCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "_api/web/lists/getByTitle('Areas')/items";
+    protected $uri  = "_api/web/lists/getByTitle('Areas')/items?\$orderBy=Title";
     protected $path = 'areas.json';
 }

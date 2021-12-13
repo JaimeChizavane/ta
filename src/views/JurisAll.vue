@@ -18,31 +18,41 @@
                 <button @click="clear"><i class="icon-query"></i> Limpar</button>
               </label>
               <div class="form-row">
-                <div class="col-2">
+                <div class="col-md-4 col-sm-6">
                   <select class="form-control bordered-box mb-20" @change="search" v-model="query.assunto">
                     <option value="">Todos assuntos</option>
                     <option v-for="assunto in assuntos" :key="assunto.Id"> {{ assunto.Title }}</option>
                   </select>
                 </div>
-                <div class="col-2">
+                <div class="col-md-4 col-sm-6">
                   <select class="form-control bordered-box mb-20" @change="search" v-model="query.tipo">
                     <option value="">Todos tipos de jurisp.</option>
                     <option v-for="tipo in tipos" :key="tipo.Id"> {{ tipo.Title }}</option>
                   </select>
                 </div>
-                <div class="col-2">
-                  <input @keyup="search" v-model="query.processo" type="text" class="form-control bordered-box mb-20"
-                         placeholder="Procurar por n. do processo...">
+
+                <div class="col-md-4 col-sm-6">
+                  <select class="form-control bordered-box mb-20" @change="search" v-model="query.seccao_origem">
+                    <option value="">Todos tipos de secção</option>
+                    <option v-for="tipo in areas" :key="tipo.Id"> {{ tipo.Title }}</option>
+                  </select>
                 </div>
-                <div class="col-2">
+
+              </div>
+              <div class="form-row">
+                <div class="col-md-3 col-sm-6">
                   <input @keyup="search" v-model="query.acordao" type="text" class="form-control bordered-box mb-20"
                          placeholder="Procurar por acordão/despacho...">
                 </div>
-                <div class="col-2">
+                <div class="col-md-3 col-sm-6">
+                  <input @keyup="search" v-model="query.processo" type="text" class="form-control bordered-box mb-20"
+                         placeholder="Procurar por n. do processo...">
+                </div>
+                <div class="col-md-3 col-sm-6">
                   <input @keyup="search" v-model="query.relator" type="text" class="form-control bordered-box mb-20"
                          placeholder="Procurar por relator...">
                 </div>
-                <div class="col-2">
+                <div class="col-md-3 col-sm-6">
                   <input @change="search" v-model="query.data" type="date" class="form-control bordered-box mb-20"
                          placeholder="Procurar por data do acordão...">
                 </div>
@@ -171,7 +181,8 @@ export default {
         acordao: '',
         pessoas: '',
         relator: '',
-        data: ''
+        data: '',
+        seccao_origem: ''
       }
 
       this.search()
@@ -180,12 +191,14 @@ export default {
       return item && item.ServerRelativeUrl ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl : '#'
     },
     search() {
-      if (this.query.assunto || this.query.tipo || this.query.relator || this.query.processo || this.query.acordao || this.query.data) {
+      if (this.query.assunto || this.query.tipo || this.query.relator || this.query.processo || this.query.acordao || this.query.data
+          || this.query.seccao_origem) {
         this.items = this.allItems
             .filter(file => (this.query.assunto === '' || file.Assunto.results.find(i => i?.toLowerCase().includes(this.query.assunto.toLowerCase())))
                 && (this.query.relator === '' || file.Relator?.toLowerCase().includes(this.query.relator.toLowerCase()))
                 && (this.query.data === '' || file.Data_x0020_do_x0020_Ac_x00f3_rd_?.toLowerCase().includes(this.query.data.toLowerCase()))
                 && (this.query.tipo === '' || this.query.tipo.toLowerCase().includes(file.Ac_x00f3_rd_x00e3_o_x0020_ou_x00?.toLowerCase()))
+                && (this.query.seccao_origem === '' || this.query.seccao_origem.toLowerCase().includes(file.Sec_x00e7__x00e3_o_x0020_de_x002?.toLowerCase()))
                 && (this.query.processo === '' || file.N_x002e__x00ba__x0020_do_x0020_P?.toLowerCase().includes(this.query.processo.toLowerCase()))
                 && (this.query.acordao === '' || file.N_x00b0__x0020_do_x0020_Acord_x0?.toLowerCase().includes(this.query.acordao.toLowerCase()))
             )
@@ -199,6 +212,7 @@ export default {
       items: [],
       allItems: [],
       assuntos: [],
+      areas: [],
       tipos: [],
       query: {
         assunto: '',
@@ -207,7 +221,8 @@ export default {
         acordao: '',
         pessoas: '',
         relator: '',
-        data: ''
+        data: '',
+        seccao_origem: ''
       },
       filtered: [],
       searcheable: []
@@ -233,6 +248,14 @@ export default {
 
     this.$http.get("tipos.json").then((data) => {
       this.tipos = data.data.d.results
+
+      // window.mainExecution()
+    }).catch((error) => {
+      console.log(error)
+    })
+
+    this.$http.get("areas.json").then((data) => {
+      this.areas = data.data.d.results
 
       // window.mainExecution()
     }).catch((error) => {

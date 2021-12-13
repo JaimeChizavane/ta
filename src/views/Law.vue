@@ -18,61 +18,27 @@
                 <button @click="clear"><i class="icon-query"></i> Limpar</button>
               </label>
               <div class="form-row">
-                <div class="col-3">
+                <div class="col-md-3 col-sm-6">
                   <input @keyup="search" v-model="query.assunto" type="text" class="form-control bordered-box mb-20"
                          placeholder="Procurar por assunto...">
                 </div>
-                <div class="col-3">
+                <div class="col-md-3 col-sm-6">
                   <input @keyup="search" v-model="query.br" type="text" class="form-control bordered-box mb-20"
                          placeholder="Procurar por n. do BR...">
                 </div>
-                <div class="col-3">
+                <div class="col-md-3 col-sm-6">
                   <input @keyup="search" v-model="query.diploma" type="text" class="form-control bordered-box mb-20"
-                         placeholder="Procurar por n. do diploma...">
+                         placeholder="Procurar por n. da legislação...">
                 </div>
-                <div class="col-3">
+                <div class="col-md-3 col-sm-6">
                   <input @change="search" v-model="query.data" type="date"
                          class="form-control bordered-box mb-20"
-                         placeholder="Procurar por data do diploma...">
+                         placeholder="Procurar por data do BR...">
                 </div>
               </div>
             </div>
           </div><!-- /.col-xl-6 -->
         </div>
-        <div class="row mb-50" v-if="filtered.length">
-          <div class="col-12">
-            <div class="heading text-center mb-50">
-              <h2 class="heading__subtitle color-body">Resultados encontrados:</h2>
-            </div>
-            <div class="jobs-container">
-              <!-- career item #1 -->
-              <div class="job-item" v-for="(item, index) in filtered" :key="index">
-                <div class="row">
-                  <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="job__meta">
-                      <span class="job__type">N. BR: {{
-                          item.N_x00fa_mero_x0020_do_x0020_BR
-                        }}</span>
-                      <span class="job__type">
-                        N. Diploma: {{ item.N_x00fa_mero_x0020_de_x0020_Diploma }}
-                      </span>
-                      <span class="job__location">
-                        {{ item.Data_x0020_do_x0020_BR | date }}
-                      </span>
-                    </div>
-                    <h4 class="job__title">{{ item.File.Name }}</h4>
-                  </div><!-- /.col-lg-4 -->
-                  <div class="col-sm-12 col-md-12 col-lg-5">
-                    <p class="job__desc" v-html="item.File.Name"></p>
-                  </div><!-- /.col-lg-5 -->
-                  <div class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap">
-                    <a :href="getFileUrl(item.File)" target="_blank" class="btn btn__secondary">Abrir</a>
-                  </div><!-- /.col-lg-3 -->
-                </div><!-- /.row -->
-              </div><!-- /.job-item -->
-            </div>
-          </div><!-- /.col-lg-12 -->
-        </div><!-- /.row -->
         <div class="row">
           <div class="col-12">
             <div class="heading text-center mb-20">
@@ -85,21 +51,29 @@
                   <div class="col-sm-12 col-md-12 col-lg-4">
                     <div class="job__meta">
                       <span class="job__type">N. BR: {{
-                          item.N_x00fa_mero_x0020_do_x0020_BR
+                          item.N_x00fa_meroDeBR
                         }}</span>
                       <span class="job__type">
-                        N. Diploma: {{ item.N_x00fa_mero_x0020_de_x0020_Diploma }}
-                      </span>
-                      <span class="job__location">
-                        {{ item.Data_x0020_do_x0020_BR | date }}
+                        N. Legislação: {{ item.N_x00fa_meroDaLegisla_x00e7__x00 }}
                       </span>
                     </div>
-                    <h4 class="job__title">{{ item.Title || item.Tipo_x0020_de_x0020_Diploma || item.Tipo }}</h4>
+                    <div class="job__meta">
+                      <span class="job__type">Legislação {{
+                          item.Legisla_x00e7__x00e3_o_x0020_Ger
+                        }}</span>
+                      <span class="job__type">
+                        {{ item.Area_x0020_de_x0020_Apoio }}
+                      </span>
+                    </div>
+                    <h4 class="job__title" v-html="item.Assunto"></h4>
+                    <span class="job__location">
+                        {{ item.Data_x0020_do_x0020_BR | date }}
+                      </span>
                   </div><!-- /.col-lg-4 -->
-                  <div class="col-sm-12 col-md-12 col-lg-8" v-if="item.Folder.Files">
-                    <div class="row mb-5" v-for="file in item.Folder.Files.results" :key="file.UniqueId">
+                  <div class="col-sm-12 col-md-12 col-lg-8" v-if="item.AttachmentFiles.results.length">
+                    <div class="row mb-5" v-for="file in item.AttachmentFiles.results" :key="file.__metadata.id">
                       <div class="col-sm-12 col-md-12 col-lg-9">
-                        <p class="job__desc" v-html="file.Name"></p>
+                        <p class="job__desc">{{ item.Title || file.FileName }}</p>
                       </div><!-- /.col-lg-5 -->
                       <div class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap">
                         <a :href="getFileUrl(file)" target="_blank" class="btn btn__secondary">Abrir</a>
@@ -139,19 +113,16 @@ export default {
     },
     search() {
       if (this.query.assunto || this.query.br || this.query.diploma || this.query.data) {
-        this.filtered = this.searcheable
+        this.items = this.allItems
             .filter(file => (this.query.assunto === ''
-                    || file.File.Name?.toLowerCase().includes(this.query.assunto.toLowerCase())
-                    || file.Tipo?.toLowerCase().includes(this.query.assunto.toLowerCase())
                     || file.Title?.toLowerCase().includes(this.query.assunto.toLowerCase())
-                    || file.Descricao?.toLowerCase().includes(this.query.assunto.toLowerCase())
-                    || file.Sum_x00e1_rio?.toLowerCase().includes(this.query.assunto.toLowerCase()))
-                && (this.query.br === '' || file.N_x00fa_mero_x0020_do_x0020_BR?.toLowerCase().includes(this.query.br.toLowerCase()))
-                && (this.query.diploma === '' || file.N_x00fa_mero_x0020_de_x0020_Diploma?.toLowerCase().includes(this.query.diploma.toLowerCase()))
+                    || file.Assunto?.toLowerCase().includes(this.query.assunto.toLowerCase()))
+                && (this.query.br === '' || file.N_x00fa_meroDeBR?.toLowerCase().includes(this.query.br.toLowerCase()))
+                && (this.query.diploma === '' || file.N_x00fa_meroDaLegisla_x00e7__x00?.toLowerCase().includes(this.query.diploma.toLowerCase()))
                 && (this.query.data === '' || file.Data_x0020_do_x0020_BR?.toLowerCase().includes(this.query.data.toLowerCase()))
-            ).slice(0, 10)
+            )
       } else {
-        this.filtered = []
+        this.items = this.allItems
       }
     },
     getFileUrl(item) {
@@ -162,6 +133,7 @@ export default {
     return {
       allItems: [],
       items: [],
+      areas: [],
       filtered: [],
       searcheable: [],
       query: {
@@ -177,24 +149,30 @@ export default {
     window.mainExecution()
 
     this.$http.get("legislacao.json").then((data) => {
-      this.allItems = data.data.d.results.filter(item => (item?.Tipo === 'Leis' || item?.Tipo_x0020_de_x0020_Diploma === 'Lei'))
+      this.allItems = data.data.d.results.filter(item => (item?.Tipo === 'Leis' || item?.Tipo_x0020_de_x0020_Legisla_x00e === 'Lei' || item?.Tipo_x0020_de_x0020_Legisla_x00e === 'Decreto Lei'))
       this.items = this.allItems
-      this.searcheable = this.items.flatMap((item) => {
-        if (item.Folder.Files) {
-          return item.Folder.Files.results.flatMap((file) => {
-            return {
-              Tipo: item.Tipo,
-              Title: item.Title,
-              Descricao: item.Descricao,
-              Sum_x00e1_rio: item.Sum_x00e1_rio,
-              N_x00fa_mero_x0020_do_x0020_BR: item.N_x00fa_mero_x0020_do_x0020_BR,
-              N_x00fa_mero_x0020_de_x0020_Diploma: item.N_x00fa_mero_x0020_de_x0020_Diploma,
-              Data_x0020_do_x0020_BR: item.Data_x0020_do_x0020_BR,
-              File: file
-            }
-          })
-        }
-      })
+      // this.searcheable = this.items.flatMap((item) => {
+      //   if (item.AttachmentFiles.results) {
+      //     return item.AttachmentFiles.results.flatMap((file) => {
+      //       return {
+      //         Tipo: item.Tipo_x0020_de_x0020_Legisla_x00e,
+      //         Area_x0020_de_x0020_Apoio: item.Area_x0020_de_x0020_Apoio,
+      //         Tipo_x0020_de_x0020_Legisla_x00e: item.Tipo_x0020_de_x0020_Legisla_x00e,
+      //         OData__x00c1_rea_x0020_de_x0020_Apoio_: item.OData__x00c1_rea_x0020_de_x0020_Apoio_,
+      //         OData__x00c1_rea_x0020_de_x0020_Apoio_0: item.OData__x00c1_rea_x0020_de_x0020_Apoio_0,
+      //         Title: item.Title,
+      //         Descricao: item.Descricao,
+      //         Assunto: item.Assunto,
+      //         N_x00fa_meroDeBR: item.N_x00fa_meroDeBR,
+      //         N_x00fa_meroDaLegisla_x00e7__x00: item.N_x00fa_meroDaLegisla_x00e7__x00,
+      //         Data_x0020_do_x0020_BR: item.Data_x0020_do_x0020_BR,
+      //         Legisla_x00e7__x00e3_o_x0020_Ger: item.Legisla_x00e7__x00e3_o_x0020_Ger,
+      //         Cart_x00f3_rio_x0020_da_x0020_3a: item.Cart_x00f3_rio_x0020_da_x0020_3a,
+      //         File: file
+      //       }
+      //     })
+      //   }
+      // })
 
     }).catch((error) => {
       console.log(error)

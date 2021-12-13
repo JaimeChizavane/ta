@@ -14,26 +14,35 @@
         <div class="row">
           <div class="col-12">
             <div class="pagetitle__form mb-50">
+              <label class="offset-11">
+                <button @click="clear"><i class="icon-query"></i> Limpar</button>
+              </label>
               <div class="form-row">
-                <div class="col-3">
+                <div class="col-md-2 col-sm-6">
                   <select class="form-control bordered-box mb-20" @change="search" v-model="query.assunto">
                     <option value="">Todos assuntos</option>
                     <option v-for="assunto in assuntos" :key="assunto.Id"> {{ assunto.Title }}</option>
                   </select>
                 </div>
-                <div class="col-3">
+                <div class="col-md-2 col-sm-6">
+                  <select class="form-control bordered-box mb-20" @change="search" v-model="query.seccao_origem">
+                    <option value="">Todos tipos de secção</option>
+                    <option v-for="tipo in areas" :key="tipo.Id"> {{ tipo.Title }}</option>
+                  </select>
+                </div>
+                <div class="col-md-2 col-sm-6">
                   <input @keyup="search" v-model="query.processo" type="text" class="form-control bordered-box mb-20"
                          placeholder="Procurar por n. do processo...">
                 </div>
-                <div class="col-2">
+                <div class="col-md-2 col-sm-6">
                   <input @keyup="search" v-model="query.acordao" type="text" class="form-control bordered-box mb-20"
                          placeholder="Procurar por acordão/despacho...">
                 </div>
-                <div class="col-2">
+                <div class="col-md-2 col-sm-6">
                   <input @keyup="search" v-model="query.relator" type="text" class="form-control bordered-box mb-20"
                          placeholder="Procurar por relator...">
                 </div>
-                <div class="col-2">
+                <div class="col-md-2 col-sm-6">
                   <input @change="search" v-model="query.data" type="date" class="form-control bordered-box mb-20"
                          placeholder="Procurar por data do acordão...">
                 </div>
@@ -69,24 +78,25 @@
 
 
                     <div class="job__meta">
-                      <span class="job__type" v-show="item.Sec_x00e7__x00e3_o_x0020_de_x002">{{
+                      <span class="job__type">
+                        Secção de origem: {{
                           item.Sec_x00e7__x00e3_o_x0020_de_x002
                         }}</span>
                     </div>
 
                     <div class="job__meta">
-                      <span class="job__type" v-show="item.N_x00b0__x0020_do_x0020_Acord_x0">
+                      <span class="job__type">
                         N. Acórdão: {{ item.N_x00b0__x0020_do_x0020_Acord_x0 }}
                       </span>
                     </div>
                     <div class="job__meta">
-                      <span class="job__type" v-show="item.N_x002e__x00ba__x0020_do_x0020_P">
+                      <span class="job__type">
                         N. do Processo: {{ item.N_x002e__x00ba__x0020_do_x0020_P }}
                       </span>
                     </div>
 
                     <div class="job__meta">
-                      <span class="job__location" v-show="item.Data_x0020_do_x0020_Ac_x00f3_rd_">
+                      <span class="job__location">
                         {{ item.Data_x0020_do_x0020_Ac_x00f3_rd_ | date }}
                       </span>
                     </div>
@@ -95,7 +105,7 @@
 
 
                     <div class="job__meta">
-                      <span class="job__location" v-show="item.Relator" v-html="'Relator: ' + item.Relator"></span>
+                      <span class="job__location" v-html="'Relator: ' + item.Relator"></span>
                     </div>
 
                     <p v-show="item.Assunto.results.length"><strong>Assunto:</strong></p>
@@ -154,7 +164,8 @@ export default {
         acordao: '',
         pessoas: '',
         relator: '',
-        data: ''
+        data: '',
+        seccao_origem: ''
       }
 
       this.search()
@@ -163,12 +174,13 @@ export default {
       return item && item.ServerRelativeUrl ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl : '#'
     },
     search() {
-      if (this.query.assunto || this.query.relator || this.query.processo || this.query.acordao || this.query.data) {
+      if (this.query.assunto || this.query.relator || this.query.processo || this.query.acordao || this.query.data || this.query.seccao_origem) {
         this.items = this.allItems
             .filter(file => (this.query.assunto === '' || file.Assunto.results.find(i => i?.toLowerCase().includes(this.query.assunto.toLowerCase())))
                 && (this.query.relator === '' || file.Relator?.toLowerCase().includes(this.query.relator.toLowerCase()))
-                && (this.query.processo === '' || file.N_x002e__x00ba__x0020_do_x0020_P?.toLowerCase().includes(this.query.processo.toLowerCase()))
                 && (this.query.data === '' || file.Data_x0020_do_x0020_Ac_x00f3_rd_?.toLowerCase().includes(this.query.data.toLowerCase()))
+                && (this.query.seccao_origem === '' || this.query.seccao_origem.toLowerCase().includes(file.Sec_x00e7__x00e3_o_x0020_de_x002?.toLowerCase()))
+                && (this.query.processo === '' || file.N_x002e__x00ba__x0020_do_x0020_P?.toLowerCase().includes(this.query.processo.toLowerCase()))
                 && (this.query.acordao === '' || file.N_x00b0__x0020_do_x0020_Acord_x0?.toLowerCase().includes(this.query.acordao.toLowerCase()))
             )
       } else {
@@ -180,6 +192,7 @@ export default {
     return {
       items: [],
       allItems: [],
+      areas: [],
       assuntos: [],
       query: {
         assunto: '',
@@ -187,16 +200,14 @@ export default {
         acordao: '',
         pessoas: '',
         relator: '',
-        data: ''
+        data: '',
+        seccao_origem: ''
       },
       filtered: [],
       searcheable: []
     }
   },
   mounted() {
-    window.mainExecution()
-
-
     this.$http.get("jurispudencia.json").then((data) => {
       this.allItems = data.data.d.results.filter(item => item.Ac_x00f3_rd_x00e3_o_x0020_ou_x00.toLowerCase().includes("certificação"))
       this.items = this.allItems
@@ -213,6 +224,16 @@ export default {
     }).catch((error) => {
       console.log(error)
     })
+
+    this.$http.get("areas.json").then((data) => {
+      this.areas = data.data.d.results
+
+      // window.mainExecution()
+    }).catch((error) => {
+      console.log(error)
+    })
+
+    window.mainExecution()
   }
 }
 </script>
