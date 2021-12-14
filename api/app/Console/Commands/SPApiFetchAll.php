@@ -47,6 +47,7 @@ class SPApiFetchAll extends Command
         FetchAssuntosCommand::class,
         FetchTipoJurispCommand::class,
         FetchAreasCommand::class,
+        FetchSeccaoCommand::class,
     ];
 
     public function __construct()

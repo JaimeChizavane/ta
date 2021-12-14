@@ -9,14 +9,14 @@
 
 namespace App\Console\Commands;
 
-class FetchDenunciasCommand extends SPApiFetch
+class FetchSeccaoCommand extends SPApiFetch
 {
-    protected $signature   = 'sp:denuncias';
-    protected $description = 'Fetch all Denuncias';
+    protected $signature   = 'sp:seccoes';
+    protected $description = 'Fetch all sections';
     /**
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "_api/web/lists/getByTitle('Tipo Submissão de Denúncia')/items";
-    protected $path = 'denuncias.json';
+    protected $uri  = "_api/web/lists/getByTitle('Secção de Origem')/items?\$orderBy=Title";
+    protected $path = 'seccoes.json';
 }

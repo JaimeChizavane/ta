@@ -26,6 +26,7 @@ use App\Console\Commands\FetchNewsCSMJACommand;
 use App\Console\Commands\FetchOportunitiesCommand;
 use App\Console\Commands\FetchPublicacoesCommand;
 use App\Console\Commands\FetchRPCGECommand;
+use App\Console\Commands\FetchSeccaoCommand;
 use App\Console\Commands\FetchSugestoesCommand;
 use App\Console\Commands\FetchTipoJurispCommand;
 use App\Console\Commands\FetchVideosCommand;
@@ -68,6 +69,7 @@ class Kernel extends ConsoleKernel
         FetchAssuntosCommand::class,
         FetchAreasCommand::class,
         FetchTipoJurispCommand::class,
+        FetchSeccaoCommand::class,
         SPApiFetchAll::class,
     ];
 

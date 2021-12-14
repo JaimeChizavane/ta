@@ -225,13 +225,13 @@ export default {
       console.log(error)
     })
 
-    // this.$http.get("areas.json").then((data) => {
-    //   this.areas = data.data.d.results
-    //
-    //   // window.mainExecution()
-    // }).catch((error) => {
-    //   console.log(error)
-    // })
+    this.$http.get("seccoes.json").then((data) => {
+      this.areas = data.data.d.results
+
+      // window.mainExecution()
+    }).catch((error) => {
+      console.log(error)
+    })
 
     window.mainExecution()
   }
