@@ -106,7 +106,7 @@ export default {
       }
 
       if (valid) {
-        this.$http.post("/denuncias", this.denuncia).then(() => {
+        this.$http.post(process.env.VUE_APP_ROOT_SUBMIT + "/denuncias", this.denuncia).then(() => {
           this.success = 'Dados submetidos com sucesso'
           this.clear()
         }).catch((error) => {
