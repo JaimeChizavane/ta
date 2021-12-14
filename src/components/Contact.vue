@@ -97,9 +97,10 @@ export default {
       this.error = ''
       this.success = ''
 
-      for (const value of Object.entries(this.denuncia)) {
+      for (const [key, value] of Object.entries(this.denuncia)) {
         if (value == '') {
           valid = false
+          console.log(key)
           break
         }
       }
