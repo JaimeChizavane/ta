@@ -17,6 +17,6 @@ class FetchGaleriaImagensCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/GaleriaDeImagens')/Folders?\$expand=Folders/Files";
+    protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/GaleriaDeImagens')/Folders?\$expand=Folders/Files&\$orderBy=Name desc";
     protected $path = 'images.json';
 }

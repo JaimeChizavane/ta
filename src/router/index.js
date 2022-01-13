@@ -312,10 +312,18 @@ const routes = [
     path: '/jurisdiction',
     name: 'jurisdiction',
     meta: {
-      display: 'menus.jurisdiction',
+      display: 'menus.jurisdiction_name',
       parent: ''
     },
     component: () => import('@/views/Jurisdiction.vue')
+  },
+  {
+    path: '/activity_reports',
+    name: 'activity_reports',
+    meta: {
+      display: 'menus.activity_reports'
+    },
+    component: () => import('@/views/ActivityReports.vue')
   },
   {
     path: '/faq',
@@ -376,10 +384,10 @@ const routes = [
     component: () => import('@/views/csmja/Competencies.vue')
   },
   {
-    path: '/csmja/history',
+    path: '/csmja/csmja',
     name: 'csmja.history',
     meta: {
-      display: 'menus.history',
+      display: 'menus.csmja_name',
       parent: 'menus.institution'
     },
     component: () => import('@/views/csmja/SinglePage.vue')

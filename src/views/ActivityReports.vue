@@ -49,19 +49,6 @@
             </div>
           </div><!-- /.col-lg-12 -->
         </div><!-- /.row -->
-
-        <div class="row">
-          <div class="col-12">
-            <ul class="portfolio-filter d-flex flex-wrap justify-content-center list-unstyled">
-              <li><a class="filter" :class="[activeFilter ? '':'active']" href="#"
-                     @click.prevent="filterImages(null)">Todas</a></li>
-              <li v-for="(filter, index) in allItems" :key="index">
-                <a class="filter" :class="[activeFilter === filter.Tipo ? 'active':'']" href="#"
-                   @click.prevent="filterImages(filter.Tipo)">{{ filter.Title || filter.Tipo }}</a>
-              </li>
-            </ul><!-- /.portfolio-filter  -->
-          </div><!-- /.col-lg-12 -->
-        </div><!-- /.row -->
         <div class="row">
           <div class="row" v-for="(item, index) in items" :key="index">
             <!-- portfolio item #1 -->
@@ -176,7 +163,7 @@ export default {
     window.mainExecution()
 
     this.$http.get("publicacoes.json").then((data) => {
-      this.allItems = data.data.d.results.filter(i => i.Folder.Files && i.Folder.Files.results?.length)
+      this.allItems = data.data.d.results.filter(i => i.Folder.Files && i.Folder.Files.results?.length && i.Tipo === 'Relatórios de Auditorias às Contas do TA')
       this.items = this.allItems
       this.searcheable = this.items.flatMap((item) => {
         if (item.Folder.Files) {

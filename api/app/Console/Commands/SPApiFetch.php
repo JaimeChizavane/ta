@@ -13,6 +13,8 @@ use App\Services\HttpClient;
 use GuzzleHttp\Exception\GuzzleException;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Spatie\PdfToImage\Pdf;
 
 abstract class SPApiFetch extends Command
 {
@@ -107,7 +109,20 @@ abstract class SPApiFetch extends Command
                 'base_uri' => config('http.sharepoint_url') . '/_api/',
             ])->getBody()->getContents();
 
-            Storage::put('api/' . $attachement->ServerRelativeUrl, $imageContent);
+            Storage::put('api' . $attachement->ServerRelativeUrl, $imageContent);
+
+
+            if (Str::endsWith($attachement->ServerRelativeUrl, ['.pdf', '.PDF'])) {
+                try {
+
+                    $pdf = new Pdf(Storage::path('api' . $attachement->ServerRelativeUrl));
+                    Storage::put('api/thumbs' . $attachement->ServerRelativeUrl . '.png', '');
+                    $pdf->setPage(1)
+                        ->saveImage(Storage::path('api/thumbs' . $attachement->ServerRelativeUrl . '.png'));
+                } catch (\Exception $e) {
+                    $this->error($e->getMessage());
+                }
+            }
 
             $this->info($attachement->Name ?? ($attachement->FileName ?? $attachement->ServerRelativeUrl));
         }
