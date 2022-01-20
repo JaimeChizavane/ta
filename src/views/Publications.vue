@@ -132,7 +132,7 @@ export default {
       return item && item.ServerRelativeUrl ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl : '#'
     },
     getFileThumb(item) {
-      return item && item.ServerRelativeUrl ? process.env.VUE_APP_ROOT_DOCS + '/thumbs/' + item.ServerRelativeUrl + '.png' : '#'
+      return item && item.ServerRelativeUrl ? process.env.VUE_APP_ROOT_DOCS + '/thumbs/' + item.ServerRelativeUrl + '.jpg' : '#'
     },
     zoomImage(file) {
       this.slideImages = [{

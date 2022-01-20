@@ -116,9 +116,9 @@ abstract class SPApiFetch extends Command
                 try {
 
                     $pdf = new Pdf(Storage::path('api' . $attachement->ServerRelativeUrl));
-                    Storage::put('api/thumbs' . $attachement->ServerRelativeUrl . '.png', '');
+                    Storage::put('api/thumbs' . $attachement->ServerRelativeUrl . '.jpg', '');
                     $pdf->setPage(1)
-                        ->saveImage(Storage::path('api/thumbs' . $attachement->ServerRelativeUrl . '.png'));
+                        ->saveImage(Storage::path('api/thumbs' . $attachement->ServerRelativeUrl . '.jpg'));
                 } catch (\Exception $e) {
                     $this->error($e->getMessage());
                 }
