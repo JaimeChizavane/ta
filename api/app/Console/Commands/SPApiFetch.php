@@ -24,6 +24,7 @@ abstract class SPApiFetch extends Command
     protected $client;
     protected $uri  = "web/lists/getByTitle('Noticias')/items";
     protected $path = 'news.json';
+    public    $jsonContent;
 
     public function __construct(HttpClient $client)
     {
@@ -31,59 +32,14 @@ abstract class SPApiFetch extends Command
         $this->client = $client;
     }
 
+    /**
+     * @return void
+     */
     public function handle()
     {
         try {
-            $jsonContent = $this->client->get($this->uri)->getBody()->getContents();
+            $this->fetchJsonContent()->handleJsonResponse();
 
-            Storage::put('api/' . $this->path, $jsonContent);
-
-
-            $content = json_decode($jsonContent);
-
-//            if (isset($content->d->results[0]->ServerRelativeUrl)) {
-//                $this->handleAttachements($content->d->results);
-//            }
-
-            foreach ($content->d->results as $result) {
-
-                if (strtolower($result->__metadata->type) == 'sp.file') {
-                    $this->handleAttachements([$result]);
-                }
-
-                if (isset($result->AttachmentFiles->results)) {
-                    $this->handleAttachements($result->AttachmentFiles->results);
-                }
-
-                if (isset($result->File->Exists)) {
-                    $this->handleAttachements([$result->File]);
-                }
-
-                if (isset($result->Folder->Files->results)) {
-                    $this->handleAttachements($result->Folder->Files->results);
-                }
-
-                if (isset($result->Folders->results)) {
-                    foreach ($result->Folders->results as $folder) {
-                        $this->handleAttachements($folder->Files->results);
-                    }
-                }
-
-                if (isset($result->Files->results)) {
-                    $this->handleAttachements($result->Files->results);
-                }
-
-
-                if (isset($result->Folders->results)) {
-                    foreach ($result->Folders->results as $folder) {
-                        if (isset($folder->Folders->results)) {
-                            foreach ($folder->Folders->results as $innerFolder) {
-                                $this->handleAttachements($innerFolder->Files->results);
-                            }
-                        }
-                    }
-                }
-            }
 
             $this->info('Data loaded.');
         } catch (GuzzleException $exception) {
@@ -91,6 +47,12 @@ abstract class SPApiFetch extends Command
         }
     }
 
+    /**
+     * @param $attachements
+     *
+     * @return void
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
     protected function handleAttachements($attachements)
     {
         foreach ($attachements as $attachement) {
@@ -136,5 +98,74 @@ abstract class SPApiFetch extends Command
 
             $this->info($attachement->Name ?? ($attachement->FileName ?? $attachement->ServerRelativeUrl));
         }
+    }
+
+    /**
+     * @param null $content
+     *
+     * @return void
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    protected function handleJsonResponse($content = null): void
+    {
+        $content = $content ?: $this->jsonContent;
+
+        foreach ($content->d->results as $result) {
+
+            if (strtolower($result->__metadata->type) == 'sp.file') {
+                $this->handleAttachements([$result]);
+            }
+
+            if (isset($result->AttachmentFiles->results)) {
+                $this->handleAttachements($result->AttachmentFiles->results);
+            }
+
+            if (isset($result->File->Exists)) {
+                $this->handleAttachements([$result->File]);
+            }
+
+            if (isset($result->Folder->Files->results)) {
+                $this->handleAttachements($result->Folder->Files->results);
+            }
+
+            if (isset($result->Folders->results)) {
+                foreach ($result->Folders->results as $folder) {
+                    $this->handleAttachements($folder->Files->results);
+                }
+            }
+
+            if (isset($result->Files->results)) {
+                $this->handleAttachements($result->Files->results);
+            }
+
+
+            if (isset($result->Folders->results)) {
+                foreach ($result->Folders->results as $folder) {
+                    if (isset($folder->Folders->results)) {
+                        foreach ($folder->Folders->results as $innerFolder) {
+                            $this->handleAttachements($innerFolder->Files->results);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * @param null $uri
+     * @param null $path
+     *
+     * @return self
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    protected function fetchJsonContent($uri = null, $path = null): SPApiFetch
+    {
+        $json = $this->client->get($uri ?: $this->uri)->getBody()->getContents();
+
+        Storage::put('api/' . ($path ?: $this->path), $json);
+
+        $this->jsonContent = json_decode($json);
+
+        return $this;
     }
 }
