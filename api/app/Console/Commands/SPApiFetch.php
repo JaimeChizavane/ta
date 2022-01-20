@@ -109,7 +109,9 @@ abstract class SPApiFetch extends Command
                 'base_uri' => config('http.sharepoint_url') . '/_api/',
             ])->getBody()->getContents();
 
-            Storage::put('api' . $attachement->ServerRelativeUrl, $imageContent);
+            if (!Storage::exists('api' . $attachement->ServerRelativeUrl)) {
+                Storage::put('api' . $attachement->ServerRelativeUrl, $imageContent);
+            }
 
 
             if (Str::endsWith($attachement->ServerRelativeUrl, ['.pdf', '.PDF']) && Str::startsWith($attachement->ServerRelativeUrl, ['/Publicaes'])) {
@@ -123,7 +125,7 @@ abstract class SPApiFetch extends Command
                     if (!Storage::exists('api/thumbs' . $attachement->ServerRelativeUrl . '.png')) {
                         $pdf = new Pdf(Storage::path('api' . $attachement->ServerRelativeUrl));
                         Storage::put('api/thumbs' . $attachement->ServerRelativeUrl . '.png', '');
-                        $pdf->setPage(1)
+                        $pdf->setPage(1)->setCompressionQuality(10)
                             ->saveImage(Storage::path('api/thumbs' . $attachement->ServerRelativeUrl . '.png'));
                     }
 
