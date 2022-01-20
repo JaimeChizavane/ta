@@ -112,7 +112,7 @@ abstract class SPApiFetch extends Command
             Storage::put('api' . $attachement->ServerRelativeUrl, $imageContent);
 
 
-            if (Str::endsWith($attachement->ServerRelativeUrl, ['.pdf', '.PDF'])) {
+            if (Str::endsWith($attachement->ServerRelativeUrl, ['.pdf', '.PDF']) && Str::startsWith($attachement->ServerRelativeUrl, ['/Publicaes'])) {
                 try {
 
                     $pdf = new Pdf(Storage::path('api' . $attachement->ServerRelativeUrl));
