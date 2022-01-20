@@ -115,10 +115,12 @@ abstract class SPApiFetch extends Command
             if (Str::endsWith($attachement->ServerRelativeUrl, ['.pdf', '.PDF']) && Str::startsWith($attachement->ServerRelativeUrl, ['/Publicaes'])) {
                 try {
 
-                    $pdf = new Pdf(Storage::path('api' . $attachement->ServerRelativeUrl));
-                    Storage::put('api/thumbs' . $attachement->ServerRelativeUrl . '.jpg', '');
-                    $pdf->setPage(1)
-                        ->saveImage(Storage::path('api/thumbs' . $attachement->ServerRelativeUrl . '.jpg'));
+                    if (!Storage::exists('api/thumbs' . $attachement->ServerRelativeUrl . '.jpg')) {
+                        $pdf = new Pdf(Storage::path('api' . $attachement->ServerRelativeUrl));
+                        Storage::put('api/thumbs' . $attachement->ServerRelativeUrl . '.jpg', '');
+                        $pdf->setPage(1)
+                            ->saveImage(Storage::path('api/thumbs' . $attachement->ServerRelativeUrl . '.jpg'));
+                    }
                 } catch (\Exception $e) {
                     $this->error($e->getMessage());
                 }
