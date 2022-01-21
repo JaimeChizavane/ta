@@ -80,6 +80,11 @@
         "sub_menus": []
       },
       {
+        "name": "menus.decret_law",
+        "to": "decret_law",
+        "sub_menus": []
+      },
+      {
         "name": "menus.others",
         "to": "others",
         "sub_menus": []
@@ -129,11 +134,6 @@
       {
         "name": "menus.certification",
         "to": "certification",
-        "sub_menus": []
-      },
-      {
-        "name": "menus.account",
-        "to": "account",
         "sub_menus": []
       },
       {
