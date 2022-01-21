@@ -208,7 +208,7 @@ export default {
     }
   },
   mounted() {
-    this.$http.get("jurispudencia.json").then((data) => {
+    this.$http.get("jurispudenciaAll.json").then((data) => {
       this.allItems = data.data.d.results.filter(item => item.Ac_x00f3_rd_x00e3_o_x0020_ou_x00.toLowerCase().includes("certificação"))
       this.items = this.allItems
       // this.searcheable = this.items.flatMap(item => item.Folders.results.flatMap(s => s.Files.results))

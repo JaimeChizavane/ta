@@ -229,7 +229,7 @@ export default {
     }
   },
   mounted() {
-    this.$http.get("jurispudencia.json").then((data) => {
+    this.$http.get("jurispudenciaAll.json").then((data) => {
       this.allItems = data.data.d.results
       this.items = this.allItems
       // this.searcheable = this.items.flatMap(item => item.Folders.results.flatMap(s => s.Files.results))

@@ -41,7 +41,7 @@ abstract class SPApiFetch extends Command
             $this->fetchJsonContent()->handleJsonResponse();
 
 
-            $this->info('Data loaded.');
+            $this->info($this->path . ' Data loaded.');
         } catch (GuzzleException $exception) {
             $this->error($exception->getMessage());
         }
@@ -101,12 +101,12 @@ abstract class SPApiFetch extends Command
     }
 
     /**
-     * @param null $content
+     * @param $content
      *
-     * @return void
+     * @return SPApiFetch
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    protected function handleJsonResponse($content = null): void
+    protected function handleJsonResponse($content = null): SPApiFetch
     {
         $content = $content ?: $this->jsonContent;
 
@@ -149,6 +149,8 @@ abstract class SPApiFetch extends Command
                 }
             }
         }
+
+        return $this;
     }
 
     /**
@@ -162,10 +164,51 @@ abstract class SPApiFetch extends Command
     {
         $json = $this->client->get($uri ?: $this->uri)->getBody()->getContents();
 
-        Storage::put('api/' . ($path ?: $this->path), $json);
+        $path = 'api/' . ($path ?: $this->path);
+
+        $this->storeJson($path, $json);
 
         $this->jsonContent = json_decode($json);
 
         return $this;
+    }
+
+    protected function storeJson($path, $json)
+    {
+        Storage::put('api/' . $path, $json);
+    }
+
+    /**
+     * @param array $otherUris
+     * @param       $fileName
+     *
+     * @return void
+     */
+    protected function fetchMultipleUris(array $otherUris, $fileName): void
+    {
+        $combinedData = null;
+
+        foreach ($otherUris as $path => $uri) {
+            try {
+                $fetch = $this->fetchJsonContent($uri, $path)->handleJsonResponse();
+
+                if (!$combinedData) {
+                    $combinedData = $fetch->jsonContent;
+                } else {
+                    $combinedData->d->results = array_merge($combinedData->d->results, $fetch->jsonContent->d->results);
+                }
+
+
+                $this->info($path . ' Data loaded.');
+            } catch (GuzzleException $exception) {
+                $this->error($exception->getMessage());
+            }
+        }
+
+
+        if ($combinedData) {
+
+            $this->storeJson($fileName, json_encode($combinedData));
+        }
     }
 }

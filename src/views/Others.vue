@@ -160,7 +160,7 @@ export default {
   mounted() {
     window.mainExecution()
 
-    this.$http.get("legislacao.json").then((data) => {
+    this.$http.get("legislacaoAll.json").then((data) => {
       this.allItems = data.data.d.results.filter(item => item?.Tipo_x0020_de_x0020_Legisla_x00e !== 'Lei'
           && item?.Tipo_x0020_de_x0020_Legisla_x00e !== 'Decreto' && item?.Tipo_x0020_de_x0020_Legisla_x00e !== 'Despacho'
           && item?.Tipo_x0020_de_x0020_Legisla_x00e !== 'Decreto Lei'

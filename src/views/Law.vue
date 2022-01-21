@@ -160,8 +160,8 @@ export default {
   mounted() {
     window.mainExecution()
 
-    this.$http.get("legislacao.json").then((data) => {
-      this.allItems = data.data.d.results.filter(item => (item?.Tipo === 'Leis' || item?.Tipo_x0020_de_x0020_Legisla_x00e === 'Lei' || item?.Tipo_x0020_de_x0020_Legisla_x00e === 'Decreto Lei'))
+    this.$http.get("legislacaoAll.json").then((data) => {
+      this.allItems = data.data.d.results.filter(item => (item?.Tipo === 'Leis' || item?.Tipo_x0020_de_x0020_Legisla_x00e === 'Lei'))
       this.items = this.allItems
       // this.searcheable = this.items.flatMap((item) => {
       //   if (item.AttachmentFiles.results) {

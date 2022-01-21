@@ -130,6 +130,15 @@ const routes = [
     component: () => import('@/views/Law.vue')
   },
   {
+    path: '/decret_law',
+    name: 'decret_law',
+    meta: {
+      display: 'menus.decret_law',
+      parent: 'menus.legislation'
+    },
+    component: () => import('@/views/LawDecret.vue')
+  },
+  {
     path: '/others',
     name: 'others',
     meta: {

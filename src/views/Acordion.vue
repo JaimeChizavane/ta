@@ -208,8 +208,9 @@ export default {
     }
   },
   mounted() {
-    this.$http.get("jurispudencia.json").then((data) => {
-      this.allItems = data.data.d.results.filter(item => item.Ac_x00f3_rd_x00e3_o_x0020_ou_x00.toLowerCase().includes("acórdão"))
+    this.$http.get("jurispudenciaAll.json").then((data) => {
+      this.allItems = data.data.d.results.filter(item => item.Ac_x00f3_rd_x00e3_o_x0020_ou_x00.toLowerCase().includes("acórdão")
+          || item.Ac_x00f3_rd_x00e3_o_x0020_ou_x00.toLowerCase().includes("despacho"))
       this.items = this.allItems
       // this.searcheable = this.items.flatMap(item => item.Folders.results.flatMap(s => s.Files.results))
       // this.searcheable = this.items
