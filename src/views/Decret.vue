@@ -69,6 +69,9 @@
                         <span v-for="(area, areadIndex) in item.OData__x00c1_rea_x0020_de_x0020_Apoio_0.results"
                               :key="areadIndex">
                           {{ area }}
+                          <span
+                              v-show="areadIndex !== (item.OData__x00c1_rea_x0020_de_x0020_Apoio_0.results.length - 1)">,
+                          </span>
                         </span>
                       </span>
 
@@ -131,7 +134,11 @@ export default {
                     || file.Title?.toLowerCase().includes(this.query.assunto.toLowerCase())
                     || file.Assunto?.toLowerCase().includes(this.query.assunto.toLowerCase()))
                 && (this.query.br === '' || file.N_x00fa_meroDeBR?.toLowerCase().includes(this.query.br.toLowerCase()))
-                && (this.query.area === '' || file.OData__x00c1_rea_x0020_de_x0020_Apoio_?.toLowerCase().includes(this.query.area.toLowerCase()))
+                && (this.query.area === '' ||
+                    (file.OData__x00c1_rea_x0020_de_x0020_Apoio_0.results?.find(x => x.toLowerCase().includes(this.query.area.toLowerCase()))
+                        || file.OData__x00c1_rea_x0020_de_x0020_Apoio_?.toLowerCase().includes(this.query.area.toLowerCase())
+                    )
+                )
                 && (this.query.diploma === '' || file.N_x00fa_meroDaLegisla_x00e7__x00?.toLowerCase().includes(this.query.diploma.toLowerCase()))
                 && (this.query.data === '' || file.Data_x0020_do_x0020_BR?.toLowerCase().includes(this.query.data.toLowerCase()))
             )
@@ -155,7 +162,7 @@ export default {
         br: '',
         diploma: '',
         data: '',
-        area:''
+        area: ''
       },
 
     }
