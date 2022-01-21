@@ -163,10 +163,8 @@ abstract class SPApiFetch extends Command
     protected function fetchJsonContent($uri = null, $path = null): SPApiFetch
     {
         $json = $this->client->get($uri ?: $this->uri)->getBody()->getContents();
-
-        $path = 'api/' . ($path ?: $this->path);
-
-        $this->storeJson($path, $json);
+        
+        $this->storeJson($path ?: $this->path, $json);
 
         $this->jsonContent = json_decode($json);
 
