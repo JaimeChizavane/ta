@@ -30,6 +30,13 @@
                     <option v-for="tipo in areas" :key="tipo.Id"> {{ tipo.Title }}</option>
                   </select>
                 </div>
+
+                <div class="col-md-2 col-sm-6" v-show="query.seccao_origem === '3a Secção'">
+                  <select class="form-control bordered-box mb-20" @change="search" v-model="query.subseccao_origem">
+                    <option value="">Todas Subsecções de Origem</option>
+                    <option v-for="(tipo, index) in subsecs" :key="index"> {{ tipo }}</option>
+                  </select>
+                </div>
                 <div class="col-md-2 col-sm-6">
                   <input @keyup="search" v-model="query.processo" type="text" class="form-control bordered-box mb-20"
                          placeholder="Procurar por n. do processo...">
@@ -84,14 +91,20 @@
                         }}</span>
                     </div>
 
-                    <div class="job__meta">
+                    <div class="job__meta" v-show="item.Subsec_x00e7__x00e3_o">
                       <span class="job__type">
-                        N. Acórdão: {{ item.N_x00b0__x0020_do_x0020_Acord_x0 }}
+                        Subsecção: {{
+                          item.Subsec_x00e7__x00e3_o
+                        }}</span>
+                    </div>
+
+                    <div class="job__meta" v-show="item.N_x00b0__x0020_do_x0020_Acord_x0">
+                      <span class="job__type" v-html="'N. Acórdão: ' + item.N_x00b0__x0020_do_x0020_Acord_x0">
+
                       </span>
                     </div>
-                    <div class="job__meta">
-                      <span class="job__type">
-                        N. do Processo: {{ item.N_x002e__x00ba__x0020_do_x0020_P }}
+                    <div class="job__meta" v-show="item.N_x002e__x00ba__x0020_do_x0020_P">
+                      <span class="job__type" v-html="'N. do Processo: ' + item.N_x002e__x00ba__x0020_do_x0020_P">
                       </span>
                     </div>
 
@@ -165,7 +178,8 @@ export default {
         pessoas: '',
         relator: '',
         data: '',
-        seccao_origem: ''
+        seccao_origem: '',
+        subseccao_origem: ''
       }
 
       this.search()
@@ -180,6 +194,7 @@ export default {
                 && (this.query.relator === '' || file.Relator?.toLowerCase().includes(this.query.relator.toLowerCase()))
                 && (this.query.data === '' || file.Data_x0020_do_x0020_Ac_x00f3_rd_?.toLowerCase().includes(this.query.data.toLowerCase()))
                 && (this.query.seccao_origem === '' || this.query.seccao_origem.toLowerCase().includes(file.Sec_x00e7__x00e3_o_x0020_de_x002?.toLowerCase()))
+                && (this.query.subseccao_origem === '' || this.query.subseccao_origem.toLowerCase().includes(file.Subsec_x00e7__x00e3_o?.toLowerCase()))
                 && (this.query.processo === '' || file.N_x002e__x00ba__x0020_do_x0020_P?.toLowerCase().includes(this.query.processo.toLowerCase()))
                 && (this.query.acordao === '' || file.N_x00b0__x0020_do_x0020_Acord_x0?.toLowerCase().includes(this.query.acordao.toLowerCase()))
             )
@@ -194,6 +209,11 @@ export default {
       allItems: [],
       areas: [],
       assuntos: [],
+      subsecs: [
+        '1.ª Subsecção',
+        '2.ª Subsecção',
+        '3.ª Subsecção'
+      ],
       query: {
         assunto: '',
         processo: '',
@@ -201,7 +221,8 @@ export default {
         pessoas: '',
         relator: '',
         data: '',
-        seccao_origem: ''
+        seccao_origem: '',
+        subseccao_origem: ''
       },
       filtered: [],
       searcheable: []

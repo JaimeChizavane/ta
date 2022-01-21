@@ -275,7 +275,7 @@ const routes = [
     meta: {
       display: 'menus.certification'
     },
-    component: () => import('@/views/Certifications.vue')
+    component: () => import('@/views/Contas.vue')
   },
   {
     path: '/account',

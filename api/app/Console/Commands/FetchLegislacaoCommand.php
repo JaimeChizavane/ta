@@ -24,7 +24,6 @@ class FetchLegislacaoCommand extends SPApiFetch
     public function handle()
     {
         $otherUris = [
-            'legislacao.json'  => "_api/web/lists/getByTitle('Legislação')/items?\$expand=AttachmentFiles",
             'legislacao1.json' => "_api/web/lists/getByTitle('Legislação da Área de Apoio Direto')/items?\$expand=AttachmentFiles",
             'legislacao2.json' => "_api/web/lists/getByTitle('Legislação da Área de Apoio Geral')/items?\$expand=AttachmentFiles",
             'legislacao3.json' => "_api/web/lists/getByTitle('Legislação da 3ª Seccção')/items?\$expand=AttachmentFiles",

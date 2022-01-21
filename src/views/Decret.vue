@@ -64,14 +64,17 @@
                       <span class="job__type">Legislação {{
                           item.Legisla_x00e7__x00e3_o_x0020_Ger
                         }}</span>
-                      <span class="job__type">
+                      <span class="job__type" v-if="item.OData__x00c1_rea_x0020_de_x0020_Apoio_0.results">
                         Área de Apoio:
-                        {{ item.OData__x00c1_rea_x0020_de_x0020_Apoio_ }}
+                        <span v-for="(area, areadIndex) in item.OData__x00c1_rea_x0020_de_x0020_Apoio_0.results"
+                              :key="areadIndex">
+                          {{ area }}
+                        </span>
                       </span>
-                    </div>
-                    <div class="job__meta">
-                      <span class="job__type">
-                        {{ item.Area_x0020_de_x0020_Apoio }}
+
+                      <span class="job__type" v-else>
+                        Área de Apoio:
+                        {{ item.OData__x00c1_rea_x0020_de_x0020_Apoio_0 }}
                       </span>
                     </div>
                     <h4 class="job__title" v-html="item.Assunto"></h4>

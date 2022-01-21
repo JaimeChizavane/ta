@@ -17,6 +17,6 @@ class FetchContasCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/Certificao%20de%20contas')/Files";
+    protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/Certificao%20de%20contas')/Folders?\$expand=Files";
     protected $path = 'contas.json';
 }

@@ -1,5 +1,5 @@
 <template>
-  <section class="about-layout2 pt-130 pb-90">
+  <section class="about-layout2 pt-130 pb-90" v-if="filtered().OData__x0074_i27">
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5">
@@ -48,7 +48,7 @@ export default {
         return this.results.find(item => item.Id === 4)
       }
 
-      return []
+      return null
     }
   }
 }

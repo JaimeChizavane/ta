@@ -28,7 +28,7 @@ class FetchJurispudenciaCommand extends SPApiFetch
     public function handle()
     {
         $otherUris = [
-            'jurispudencia.json'  => "_api/web/lists/getByTitle('Jurisprudência')/items?\$expand=Folder,File,AttachmentFiles&\$orderBy=Sec_x00e7__x00e3_o_x0020_de_x002",
+//            'jurispudencia.json'  => "_api/web/lists/getByTitle('Jurisprudência')/items?\$expand=Folder,File,AttachmentFiles&\$orderBy=Sec_x00e7__x00e3_o_x0020_de_x002",
             'jurispudencia1.json' => "_api/web/lists/getByTitle('Jurisprudência da 3.ª Secção 1.ª Subsecção Relativo a Pessoal')/items?\$expand=Folder,File,AttachmentFiles&\$orderBy=Sec_x00e7__x00e3_o_x0020_de_x002",
             'jurispudencia2.json' => "_api/web/lists/getByTitle('Jurisprudência da 3.ª Secção 1.ª Subsecção Relativo Não Pessoal')/items?\$expand=Folder,File,AttachmentFiles&\$orderBy=Sec_x00e7__x00e3_o_x0020_de_x002",
             'jurispudencia3.json' => "_api/web/lists/getByTitle('Jurisprudência da 3.ª Secção 1.ª Subsecção Relativo a Multas')/items?\$expand=Folder,File,AttachmentFiles&\$orderBy=Sec_x00e7__x00e3_o_x0020_de_x002",
