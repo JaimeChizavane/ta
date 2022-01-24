@@ -53,9 +53,7 @@
                 <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-4">
                     <div class="job__meta">
-                      <span class="job__type">N. BR: {{
-                          item.N_x00fa_meroDeBR
-                        }}</span>
+                      <span class="job__type" v-html="'N. BR: ' + item.N_x00fa_mero_x0020_do_x0020_BR"></span>
                       <span class="job__type">
                         N. Legislação: {{ item.N_x00fa_meroDaLegisla_x00e7__x00 }}
                       </span>
@@ -133,7 +131,7 @@ export default {
             .filter(file => (this.query.assunto === ''
                     || file.Title?.toLowerCase().includes(this.query.assunto.toLowerCase())
                     || file.Assunto?.toLowerCase().includes(this.query.assunto.toLowerCase()))
-                && (this.query.br === '' || file.N_x00fa_meroDeBR?.toLowerCase().includes(this.query.br.toLowerCase()))
+                && (this.query.br === '' || file.N_x00fa_mero_x0020_do_x0020_BR?.toLowerCase().includes(this.query.br.toLowerCase()))
                 && (this.query.area === '' ||
                     (file.OData__x00c1_rea_x0020_de_x0020_Apoio_0.results?.find(x => x.toLowerCase().includes(this.query.area.toLowerCase()))
                         || file.OData__x00c1_rea_x0020_de_x0020_Apoio_?.toLowerCase().includes(this.query.area.toLowerCase())
