@@ -231,8 +231,7 @@ export default {
       tipos: [],
       subsecs: [
         '1.ª Subsecção',
-        '2.ª Subsecção',
-        '3.ª Subsecção'
+        '2.ª Subsecção'
       ],
       query: {
         assunto: '',
