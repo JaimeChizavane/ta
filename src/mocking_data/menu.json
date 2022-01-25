@@ -65,6 +65,11 @@
     "to": "legislation",
     "sub_menus": [
       {
+        "name": "menus.all",
+        "to": "others",
+        "sub_menus": []
+      },
+      {
         "name": "menus.law",
         "to": "law",
         "sub_menus": []
@@ -82,11 +87,6 @@
       {
         "name": "menus.decret_law",
         "to": "decret_law",
-        "sub_menus": []
-      },
-      {
-        "name": "menus.others",
-        "to": "others",
         "sub_menus": []
       }
     ]

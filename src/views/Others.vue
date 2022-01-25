@@ -53,6 +53,12 @@
                 <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-4">
                     <div class="job__meta">
+                      <span class="job__type">
+                        Tipo de Legislação: {{ item.Tipo_x0020_de_x0020_Legisla_x00e }}
+                      </span>
+                    </div>
+
+                    <div class="job__meta">
                       <span class="job__type" v-html="'N. BR: ' + item.N_x00fa_mero_x0020_do_x0020_BR"></span>
                       <span class="job__type">
                         N. Legislação: {{ item.N_x00fa_meroDaLegisla_x00e7__x00 }}
@@ -169,10 +175,7 @@ export default {
     window.mainExecution()
 
     this.$http.get("legislacaoAll.json").then((data) => {
-      this.allItems = data.data.d.results.filter(item => item?.Tipo_x0020_de_x0020_Legisla_x00e !== 'Lei'
-          && item?.Tipo_x0020_de_x0020_Legisla_x00e !== 'Decreto' && item?.Tipo_x0020_de_x0020_Legisla_x00e !== 'Despacho'
-          && item?.Tipo_x0020_de_x0020_Legisla_x00e !== 'Decreto Lei'
-      )
+      this.allItems = data.data.d.results
       this.items = this.allItems
       // this.searcheable = this.items.flatMap((item) => {
       //   if (item.AttachmentFiles.results) {

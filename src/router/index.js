@@ -142,7 +142,7 @@ const routes = [
     path: '/others',
     name: 'others',
     meta: {
-      display: 'menus.others',
+      display: 'menus.all',
       parent: 'menus.legislation'
     },
     component: () => import('@/views/Others.vue')
@@ -227,7 +227,7 @@ const routes = [
     meta: {
       display: 'menus.instruction_recomendation'
     },
-    component: () => import('@/views/AboutUs.vue')
+    component: () => import('@/views/Recomendation.vue')
   },
   {
     path: '/instruction_personal',
@@ -238,12 +238,44 @@ const routes = [
     component: () => import('@/views/PersonalProcess.vue')
   },
   {
+    path: '/dispatchment_instructions',
+    name: 'dispatchment_instructions',
+    meta: {
+      display: 'menus.dispatchment_instructions'
+    },
+    component: () => import('@/views/VisaIntructions.vue')
+  },
+  {
+    path: '/obligations_calendar',
+    name: 'obligations_calendar',
+    meta: {
+      display: 'menus.obligations_calendar'
+    },
+    component: () => import('@/views/ObligationsCalendar.vue')
+  },
+  {
+    path: '/sanctions',
+    name: 'sanctions',
+    meta: {
+      display: 'menus.sanctions'
+    },
+    component: () => import('@/views/Santions.vue')
+  },
+  {
+    path: '/petitions',
+    name: 'petitions',
+    meta: {
+      display: 'menus.petitions'
+    },
+    component: () => import('@/views/Petitions.vue')
+  },
+  {
     path: '/fluxogram',
     name: 'fluxogram',
     meta: {
       display: 'menus.fluxogram'
     },
-    component: () => import('@/views/AboutUs.vue')
+    component: () => import('@/views/Fluxogram.vue')
   },
   {
     path: '/report_submission',

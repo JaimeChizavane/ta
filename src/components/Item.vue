@@ -41,9 +41,11 @@
                 <div class="blog-share d-flex flex-wrap justify-content-end">
                   <strong class="mr-20 color-heading">Partilhar</strong>
                   <ul class="list-unstyled social-icons social-icons-primary d-flex mb-0">
-                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-google"></i></a></li>
+                    <li><a target="_blank"
+                           :href="'https://www.facebook.com/sharer/sharer.php?u='+getCurrentUrl()+'&picture='+getImageUrl(item)+'&title='+item.Title+'&description='+item.Title"><i
+                        class="fab fa-facebook-f"></i></a></li>
+                    <li><a target="_blank" :href="'https://twitter.com/share?text='+item.Title+'&url='+getCurrentUrl()"><i
+                        class="fab fa-twitter"></i></a></li>
                   </ul>
                 </div><!-- /.blog-share -->
               </div>
@@ -77,15 +79,15 @@
         </div><!-- /.col-lg-8 -->
         <div class="col-sm-12 col-md-12 col-lg-4">
           <aside class="sidebar">
-            <div class="widget widget-search">
-              <h5 class="widget__title">Procurar</h5>
-              <div class="widget__content">
-                <form class="widget__form-search">
-                  <input type="text" class="form-control" placeholder="Search...">
-                  <button class="btn"><i class="icon-search"></i></button>
-                </form>
-              </div><!-- /.widget-content -->
-            </div><!-- /.widget-search -->
+<!--            <div class="widget widget-search">-->
+<!--              <h5 class="widget__title">Procurar</h5>-->
+<!--              <div class="widget__content">-->
+<!--                <form class="widget__form-search">-->
+<!--                  <input type="text" class="form-control" placeholder="Search...">-->
+<!--                  <button class="btn"><i class="icon-search"></i></button>-->
+<!--                </form>-->
+<!--              </div>&lt;!&ndash; /.widget-content &ndash;&gt;-->
+<!--            </div>&lt;!&ndash; /.widget-search &ndash;&gt;-->
             <q-other-articles :items="related" :route-name="routeName"/>
             <!--            <div class="widget widget-categories">-->
             <!--              <h5 class="widget__title">Categories</h5>-->
@@ -128,6 +130,10 @@ export default {
     getImageUrl(item) {
       return item && item.Attachments ? process.env.VUE_APP_ROOT_DOCS + item.AttachmentFiles.results[0].ServerRelativeUrl : 'assets/images/blog/grid/1.jpg'
     },
+    getCurrentUrl() {
+      // return 'https://ekutivasolutions.com'
+      return window.location.href
+    }
   },
   props: {
     item: {

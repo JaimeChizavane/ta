@@ -24,12 +24,23 @@
                     </div>
                     <h4 class="job__title">{{ item.Tipo }}</h4>
                   </div><!-- /.col-lg-4 -->
-                  <div class="col-sm-12 col-md-12 col-lg-8" v-if="item.Folder">
-                    <a target="_blank" :href="getFileUrl(file)" v-for="(file, index) in item.Folder.Files.results"
-                       :key="index">
-                      <p class="job__desc mb-20">{{ file.Name }}</p>
-                    </a>
-                  </div><!-- /.col-lg-5 -->
+                  <div class="clo-sm-12 col-md-12 col-lg-8">
+                    <div class="row" v-for="(file, index) in item.Folder.Files.results" :key="index + 'File'">
+                      <div class="col-sm-12 col-md-12 col-lg-9">
+                        <p class="job__desc" v-html="file.Name"></p>
+                      </div><!-- /.col-lg-5 -->
+                      <div
+                          class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap mb-2">
+                        <a :href="getFileUrl(file)" target="_blank" class="btn btn__secondary">Abrir</a>
+                      </div><!-- /.col-lg-3 -->
+                    </div>
+                  </div>
+                  <!--                  <div class="col-sm-12 col-md-12 col-lg-8" v-if="item.Folder">-->
+                  <!--                    <a target="_blank" :href="getFileUrl(file)" v-for="(file, index) in item.Folder.Files.results"-->
+                  <!--                       :key="index">-->
+                  <!--                      <p class="job__desc mb-20">{{ file.Name }}</p>-->
+                  <!--                    </a>-->
+                  <!--                  </div>&lt;!&ndash; /.col-lg-5 &ndash;&gt;-->
                 </div><!-- /.row -->
               </div><!-- /.job-item -->
             </div>

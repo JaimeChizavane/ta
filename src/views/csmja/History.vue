@@ -48,7 +48,7 @@ export default {
         return this.results.find(item => item.Id === 4)
       }
 
-      return null
+      return {}
     }
   }
 }

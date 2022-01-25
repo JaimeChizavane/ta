@@ -15,7 +15,7 @@
               </blockquote>
             </div><!-- /.about-img -->
           </div><!-- /.col-xl-5 -->
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-1">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-1" v-if="history.Content">
             <div class="heading-layout2 mb-40">
               <h3 class="heading__title">{{ history.Title }}</h3>
             </div><!-- /heading -->
@@ -26,6 +26,19 @@
 
             </div>
           </div><!-- /.col-xl-7 -->
+
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-1" v-else>
+            <div class="text-center">
+              <h2 class="error-title">Lamentamos.</h2>
+              <p class="error-desc"> A página solicitada ainda não possui informações. Volte a tentar em uma outra
+                altura por favor.
+              </p>
+              <router-link :to="{name: 'home'}" class="btn btn__primary btn__icon">
+                <span>Ir para o Início</span> <i class="icon-arrow-right"></i>
+              </router-link>
+            </div>
+          </div>
+
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section><!-- /.About Layout 2 -->
@@ -39,7 +52,7 @@ import QHeader from "@/components/Header/Header";
 import QBreadCrumb from "@/components/BreadCrumb";
 
 export default {
-  name: "QStrategicPlan",
+  name: "QPersonalProcess",
   components: { QBreadCrumb, QHeader, QFooter },
   data() {
     return {
@@ -52,7 +65,7 @@ export default {
     window.mainExecution()
 
     this.$http.get("instituicao.json").then((data) => {
-      this.history = data.data.d.results.find(item => item.Id === 7)
+      this.history = data.data.d.results.find(item => item.Title.toLowerCase().includes('instrução e recomendação'))
     }).catch((error) => {
       console.log(error)
     })

@@ -17,7 +17,7 @@
           </div><!-- /.col-xl-5 -->
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-1">
             <div class="heading-layout2 mb-40">
-              <h3 class="heading__title">Tribunal Administrativo.</h3>
+              <h3 class="heading__title">{{ history.Title }}</h3>
             </div><!-- /heading -->
             <div class="about-text-wrapper">
               <div class="about__Text">
