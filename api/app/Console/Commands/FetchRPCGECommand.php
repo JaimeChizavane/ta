@@ -17,6 +17,6 @@ class FetchRPCGECommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/Relatrios%20e%20Pareceres%20CGE')/Files";
+    protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/Relatrios%20e%20Pareceres%20CGE')/Folders?\$expand=Files&\$orderBy=Name desc";
     protected $path = 'rpcge.json';
 }

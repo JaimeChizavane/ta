@@ -45,13 +45,6 @@ export default {
           full_name: 'Português',
           locale: 'pt',
           order: 0
-        },
-        {
-          flag: 'za',
-          name: 'EN',
-          full_name: 'English',
-          locale: 'en',
-          order: 1
         }
       ]
     }

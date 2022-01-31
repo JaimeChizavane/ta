@@ -323,7 +323,7 @@ const routes = [
     meta: {
       display: 'menus.rpcge'
     },
-    component: () => import('@/views/RPCGE.vue')
+    component: () => import('@/views/rpgce2.vue')
   },
   {
     path: '/managers',
