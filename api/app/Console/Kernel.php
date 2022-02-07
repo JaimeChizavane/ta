@@ -5,6 +5,7 @@ namespace App\Console;
 use App\Console\Commands\FetchAreasCommand;
 use App\Console\Commands\FetchAssuntosCommand;
 use App\Console\Commands\FetchAtendimentoCommand;
+use App\Console\Commands\FetchBannersCommand;
 use App\Console\Commands\FetchContasCommand;
 use App\Console\Commands\FetchDecretCSMJACommand;
 use App\Console\Commands\FetchDenunciasCommand;
@@ -70,6 +71,7 @@ class Kernel extends ConsoleKernel
         FetchAreasCommand::class,
         FetchTipoJurispCommand::class,
         FetchSeccaoCommand::class,
+        FetchBannersCommand::class,
         SPApiFetchAll::class,
     ];
 
