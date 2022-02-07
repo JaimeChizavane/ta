@@ -24,6 +24,11 @@ Vue.filter('date', function (value) {
   return moment(value).locale('pt').format('LLLL')
 })
 
+Vue.filter('date_short', function (value) {
+  if (!value) return ''
+  return moment(value).locale('pt').format('LL')
+})
+
 Vue.filter('excerpt', function (value) {
   if (!value) return ''
 

@@ -52,32 +52,42 @@
               <div class="job-item" v-for="(item, index) in items" :key="index">
                 <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="job__meta">
-                      <span class="job__type" v-html="'N. BR: ' + item.N_x00fa_mero_x0020_do_x0020_BR"></span>
-                      <span class="job__type">
-                        N. Legislação: {{ item.N_x00fa_meroDaLegisla_x00e7__x00 }}
-                      </span>
-                    </div>
-                    <div class="job__meta">
-                      <span class="job__type">Legislação {{
-                          item.Legisla_x00e7__x00e3_o_x0020_Ger
-                        }}</span>
-                      <span class="job__type" v-if="item.OData__x00c1_rea_x0020_de_x0020_Apoio_0.results">
-                        Área de Apoio:
-                        <span v-for="(area, areadIndex) in item.OData__x00c1_rea_x0020_de_x0020_Apoio_0.results"
-                              :key="areadIndex">
+                    <table border="1px">
+                      <tr>
+                        <td class="ta_table" colspan="2">
+                          <span class="font-weight-bold">Tipo de Legislação:</span>
+                          {{ item.Tipo_x0020_de_x0020_Legisla_x00e }}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="ta_table" v-html="'<span class=\'font-weight-bold\'>N. BR: </span>' + item.N_x00fa_mero_x0020_do_x0020_BR"></td>
+                        <td class="ta_table">
+                          <span class="font-weight-bold">N. Legislação:</span>
+                          {{ item.N_x00fa_meroDaLegisla_x00e7__x00 }}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="ta_table">
+                          <span class="font-weight-bold">Legislação </span>
+                          {{ item.Legisla_x00e7__x00e3_o_x0020_Ger }}
+                        </td>
+                        <td class="ta_table" v-if="item.OData__x00c1_rea_x0020_de_x0020_Apoio_0.results">
+                          <span class="font-weight-bold">Área de Apoio:</span>
+                          <span v-for="(area, areadIndex) in item.OData__x00c1_rea_x0020_de_x0020_Apoio_0.results"
+                                :key="areadIndex">
                           {{ area }}
                           <span
                               v-show="areadIndex !== (item.OData__x00c1_rea_x0020_de_x0020_Apoio_0.results.length - 1)">,
                           </span>
                         </span>
-                      </span>
-
-                      <span class="job__type" v-else>
-                        Área de Apoio:
-                        {{ item.OData__x00c1_rea_x0020_de_x0020_Apoio_0 }}
-                      </span>
-                    </div>
+                        </td>
+                        <td class="ta_table" v-else>
+                          <span class="font-weight-bold"> Área de Apoio:</span>
+                          {{ item.OData__x00c1_rea_x0020_de_x0020_Apoio_0 }}
+                        </td>
+                      </tr>
+                    </table>
+                    <hr>
                     <h4 class="job__title" v-html="item.Assunto"></h4>
                     <span class="job__location">
                         {{ item.Data_x0020_do_x0020_BR | date }}

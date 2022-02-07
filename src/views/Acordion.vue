@@ -64,56 +64,53 @@
               <div class="job-item" v-for="(item, index) in items" :key="index">
                 <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="job__meta">
-                      <span class="job__type" v-show="item.Entidade" v-html="'Entidade: '+item.Entidade"></span>
-                    </div>
-
-
-                    <div class="job__meta">
-                      <span class="job__type" v-show="item.Benefici_x00e1_rio_x0020_do_x002"
-                            v-html="'Beneficiário: '+item.Benefici_x00e1_rio_x0020_do_x002"></span>
-                    </div>
-
-                    <div class="job__meta">
-                      <span class="job__type" v-show="item.Contratante"
-                            v-html="'Contratante: '+item.Contratante"></span>
-                    </div>
-
-                    <div class="job__meta">
-                      <span class="job__type" v-show="item.Contratado" v-html="'Contratado: '+item.Contratado"></span>
-                    </div>
-
-
-                    <div class="job__meta">
-                      <span class="job__type">
-                        Secção de origem: {{
-                          item.Sec_x00e7__x00e3_o_x0020_de_x002
-                        }}</span>
-                    </div>
-
-                    <div class="job__meta" v-show="item.Subsec_x00e7__x00e3_o">
-                      <span class="job__type">
-                        Subsecção: {{
-                          item.Subsec_x00e7__x00e3_o
-                        }}</span>
-                    </div>
-
-                    <div class="job__meta" v-show="item.N_x00b0__x0020_do_x0020_Acord_x0">
-                      <span class="job__type" v-html="'N. Acórdão: ' + item.N_x00b0__x0020_do_x0020_Acord_x0">
-
-                      </span>
-                    </div>
-                    <div class="job__meta" v-show="item.N_x002e__x00ba__x0020_do_x0020_P">
-                      <span class="job__type" v-html="'N. do Processo: ' + item.N_x002e__x00ba__x0020_do_x0020_P">
-                      </span>
-                    </div>
-
+                    <table border="1px">
+                      <tr v-show="item.Entidade">
+                        <td class="ta_table"
+                            v-html="'<span class=\'font-weight-bold\'>Entidade: </span>'+item.Entidade"></td>
+                      </tr>
+                      <tr v-show="item.Benefici_x00e1_rio_x0020_do_x002">
+                        <td class="ta_table"
+                            v-html="'<span class=\'font-weight-bold\'>Beneficiário: </span>'+item.Benefici_x00e1_rio_x0020_do_x002"></td>
+                      </tr>
+                      <tr v-show="item.Contratante">
+                        <td class="ta_table"
+                            v-html="'<span class=\'font-weight-bold\'>Contratante: </span>'+item.Contratante"></td>
+                      </tr>
+                      <tr v-show="item.Contratado">
+                        <td class="ta_table"
+                            v-html="'<span class=\'font-weight-bold\'>Contratado: </span>'+item.Contratado"></td>
+                      </tr>
+                      <tr>
+                        <td class="ta_table"><span class="font-weight-bold">Tipo:</span>
+                          {{ item.Ac_x00f3_rd_x00e3_o_x0020_ou_x00 }}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="ta_table"><span class="font-weight-bold">Secção de origem:</span>
+                          {{ item.Sec_x00e7__x00e3_o_x0020_de_x002 }}
+                        </td>
+                      </tr>
+                      <tr v-show="item.Subsec_x00e7__x00e3_o">
+                        <td class="ta_table"><span class="font-weight-bold">Subsecção:</span>
+                          {{ item.Subsec_x00e7__x00e3_o }}
+                        </td>
+                      </tr>
+                      <tr v-show="item.N_x00b0__x0020_do_x0020_Acord_x0">
+                        <td class="ta_table"
+                            v-html="'<span class=\'font-weight-bold\'>N. Acórdão: </span>'+item.N_x00b0__x0020_do_x0020_Acord_x0"></td>
+                      </tr>
+                      <tr v-show="item.N_x002e__x00ba__x0020_do_x0020_P">
+                        <td class="ta_table"
+                            v-html="'<span class=\'font-weight-bold\'>N. do Processo: </span>'+item.N_x002e__x00ba__x0020_do_x0020_P"></td>
+                      </tr>
+                    </table>
+                    <hr>
                     <div class="job__meta">
                       <span class="job__location">
                         {{ item.Data_x0020_do_x0020_Ac_x00f3_rd_ | date }}
                       </span>
                     </div>
-
                     <h4 class="job__title" v-html="item.Title || item.Objecto_x0020_de_x0020_Recurso"></h4>
 
 

@@ -7357,10 +7357,15 @@ input[type=radio] {
     align-items: center;
     margin-bottom: 15px;
 }
+.ta_table{
+    font-size: 14px;
+    color: #1f314f;
+    padding: 3px 8px;
+}
 
 .job-item .job__type {
     font-size: 13px;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
     background-color: #8C1717;
     color: #ffffff;
     padding: 3px 8px;
