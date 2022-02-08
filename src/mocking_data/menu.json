@@ -239,6 +239,7 @@
   {
     "name": "menus.csmja",
     "to": "csmja.history",
+    "blank": true,
     "sub_menus": [
     ]
   }

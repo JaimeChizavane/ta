@@ -21,7 +21,7 @@ Vue.filter('upper', function (value) {
 
 Vue.filter('date', function (value) {
   if (!value) return ''
-  return moment(value).locale('pt').format('LLLL')
+  return moment(value).locale('pt').format('LLLL').slice(0, -5)
 })
 
 Vue.filter('date_short', function (value) {
@@ -29,11 +29,26 @@ Vue.filter('date_short', function (value) {
   return moment(value).locale('pt').format('LL')
 })
 
+Vue.filter('date_with_week', function (value) {
+  if (!value) return ''
+  return moment(value).locale('pt').format('LLLL').slice(0, -5)
+})
+
 Vue.filter('excerpt', function (value) {
   if (!value) return ''
 
   if (value.length > 100) {
     value = value.substring(0, 100) + '...'
+  }
+
+  return value
+})
+
+Vue.filter('excerpt_shorter', function (value) {
+  if (!value) return ''
+
+  if (value.length > 50) {
+    value = value.substring(0, 50) + '...'
   }
 
   return value

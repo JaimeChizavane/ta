@@ -402,7 +402,8 @@ const routes = [
     path: '/blog/:guid',
     name: 'blog-item',
     meta: {
-      display: 'blog'
+      display: 'blog',
+      parent: 'blog'
     },
     component: () => import('@/views/BlogItem.vue')
   },

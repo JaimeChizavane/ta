@@ -9,9 +9,9 @@
             <img :src="getImageUrl(item)" alt="thumb"></router-link>
         </div><!-- /.widget-post-img -->
         <div class="widget-post__content">
-          <span class="widget-post__date">{{ item.Data_x0020_Noticia || item.Created | date }}</span>
+          <span class="widget-post__date">{{ item.Data_x0020_Noticia || item.Created | date_short }}</span>
           <h4 class="widget-post__title">
-            <router-link :to="{name: 'blog-item', params:{guid: item.GUID}}">{{ item.Title }}</router-link>
+            <router-link :to="{name: 'blog-item', params:{guid: item.GUID}}">{{ item.Title | excerpt_shorter }}</router-link>
           </h4>
         </div><!-- /.widget-post-content -->
       </div><!-- /.widget-post-item -->

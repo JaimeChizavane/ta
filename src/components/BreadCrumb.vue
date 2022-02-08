@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <h1 class="pagetitle__heading">{{ $tc($route.meta.display, 2) }}</h1>
+          <h1 class="pagetitle__heading">{{ $tc(title, 2) }}</h1>
           <nav>
             <ol class="breadcrumb justify-content-center mb-0">
               <li class="breadcrumb-item">
@@ -24,7 +24,20 @@
 
 <script>
 export default {
-  name: "QBreadCrumb"
+  name: "QBreadCrumb",
+  mounted() {
+    this.$eventHub.$on('new-page-title', (title) => {
+      this.title = title
+    })
+  },
+  data() {
+    return {
+      title: this.$route.meta.display
+    }
+  },
+  beforeDestroy() {
+    this.$eventHub.$off('new-page-title')
+  }
 }
 </script>
 

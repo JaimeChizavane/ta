@@ -19,7 +19,7 @@
           <div class="post-item">
             <div class="post__img">
               <router-link :to="{name: 'blog-item', params: {guid : article.GUID}}">
-                <img :src="getImageUrl(article)" alt="blog image">
+                <img :src="getImageUrl(article)" alt="blog image" class="cover__image">
               </router-link>
             </div><!-- /.blog-img -->
             <div class="post__body">
@@ -32,7 +32,7 @@
                 </router-link>
               </h4>
               <div class="post__meta">
-                <span class="post__meta-date">{{ article.Data_x0020_Noticia || article.Created | date }}</span>
+                <span class="post__meta-date">{{ article.Data_x0020_Noticia || article.Created | date_with_week }}</span>
               </div>
               <p class="post__desc" v-html="$options.filters.excerpt(article.Content)"></p>
               <router-link :to="{name: 'blog-item', params: {guid : article.GUID}}"

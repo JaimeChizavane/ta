@@ -10,7 +10,7 @@
               </router-link>
             </div><!-- /.post-img -->
             <div class="post__meta d-flex align-items-center mb-20">
-              <span class="post__meta-date">{{ item.Data_x0020_Noticia || item.Created | date }}</span>
+              <span class="post__meta-date">{{ item.Data_x0020_Noticia || item.Created | date_with_week }}</span>
               <!--              <div class="post__meta-cat">-->
               <!--                <a href="#">Consulting</a><a href="#">Sales</a>-->
               <!--              </div>&lt;!&ndash; /.blog-meta-cat &ndash;&gt;-->
@@ -60,7 +60,8 @@
               </div>
               <div class="widget-nav__content">
                 <span>Artigo Anterior</span>
-                <h5 class="widget-nav__ttile mb-0">{{ navigation.previous.Title }}</h5>
+                <h5 class="widget-nav__ttile mb-0">{{ navigation.previous.Title | excerpt_shorter }}</h5>
+                <span>{{ navigation.previous.Data_x0020_Noticia || navigation.previous.Created | date_with_week }}</span>
               </div>
             </router-link>
             <span v-else></span>
@@ -72,7 +73,8 @@
               </div>
               <div class="widget-nav__content">
                 <span>Artigo Seguinte</span>
-                <h5 class="widget-nav__ttile mb-0">{{ navigation.next.Title }}</h5>
+                <h5 class="widget-nav__ttile mb-0">{{ navigation.next.Title | excerpt_shorter }}</h5>
+                <span>{{ navigation.next.Data_x0020_Noticia || navigation.next.Created | date_with_week }}</span>
               </div>
             </router-link><!-- /.widget-next  -->
           </div>

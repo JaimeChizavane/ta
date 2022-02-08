@@ -9,7 +9,7 @@
               <router-link :to="{name: itemRoute, params: {guid : item.GUID}}">
                 <img
                     :src="getImageUrl(item)"
-                    alt="blog image">
+                    alt="blog image" class="cover__image">
               </router-link>
             </div><!-- /.blog-img -->
             <div class="post__body">
@@ -22,7 +22,7 @@
                 </router-link>
               </h4>
               <div class="post__meta">
-                <span class="post__meta-date">{{ item.Data_x0020_Noticia || item.Created | date }}</span>
+                <span class="post__meta-date">{{ item.Data_x0020_Noticia || item.Created | date_with_week }}</span>
               </div>
               <p class="post__desc" v-html="$options.filters.excerpt(item.Content)"></p>
               <router-link :to="{name: itemRoute, params: {guid : item.GUID}}"

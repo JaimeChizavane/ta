@@ -30,7 +30,7 @@
                }))" :key="'IM' + index">
             <div class="portfolio-item">
               <div class="portfolio__img" @click="zoomImage(file)">
-                <img :src="file.src" alt="portfolio img">
+                <img :src="file.src" alt="portfolio img" class="cover__image">
               </div><!-- /.portfolio-img -->
               <div class="portfolio__content">
                 <h4 class="portfolio__title">

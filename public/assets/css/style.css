@@ -6047,9 +6047,16 @@ input[type=radio] {
     border-radius: 4px;
 }
 
+
 .post-item .post__img img {
     -webkit-transition: all 0.9s ease;
     transition: all 0.9s ease;
+}
+
+.post-item .post__img .cover__image {
+    width:  370px;
+    height: 246px;
+    object-fit: cover;
 }
 
 .post-item:hover .post__img img {

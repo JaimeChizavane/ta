@@ -14,7 +14,7 @@
           {{ $t(menu.name) | upper }}
         </a>
 
-        <router-link :to="{name: menu.to}" class="nav__item-link" active-class="active" v-else>
+        <router-link :to="{name: menu.to}" class="nav__item-link" active-class="active" :target="menu.blank ? '_blank' : null" v-else>
           {{ $t(menu.name) | upper }}
         </router-link>
 
