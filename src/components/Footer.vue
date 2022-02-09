@@ -27,23 +27,33 @@
             <div class="col-sm-12 col-md-12 col-lg-3 footer-widget footer-widget-about">
               <div class="footer-widget__content">
                 <div class="contact-info">
-                  <h6 class="footer-widget__title">Contacto rapido</h6>
+                  <h6 class="footer-widget__title">Contacto</h6>
                   <ul class="contact-list list-unstyled">
-                    <li class="color-gray">Entre em contacto rapido com o TA.
+                    <li class="color-gray">Entre em contacto connosco.
                     </li>
                     <li class="mt-20 mb-20">
-                      <a href="tel:01061245741" class="phone-number">
+                      <a href="tel:21345002" class="phone-number">
                         <i class="icon-phone"></i> <span>+258 21345002/3</span>
                       </a>
                     </li>
-                    <li class="color-body">Praça da Independência, N.º1117</li>
+                    <li class="mt-20 mb-20">
+                      <a href="mailto:ta@ta.gov.mz" class="phone-number">
+                        <i class="icon-mail"></i> <span>ta@ta.gov.mz</span>
+                      </a>
+                    </li>
+                    <li class="mt-20 mb-20">
+                      <a href="https://www.ta.gov.mz" class="phone-number">
+                        <i class="icon-website"></i> <span>www.ta.gov.mz</span>
+                      </a>
+                    </li>
+                    <li class="color-body">Praça da Independência, N.º1117, Maputo - Moçambique</li>
                   </ul>
                 </div><!-- /.contact-info -->
-                <ul class="social-icons list-unstyled mb-0">
-                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                </ul><!-- /.social-icons -->
+<!--                <ul class="social-icons list-unstyled mb-0">-->
+<!--                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>-->
+<!--                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>-->
+<!--                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>-->
+<!--                </ul>&lt;!&ndash; /.social-icons &ndash;&gt;-->
               </div><!-- /.footer-widget__content -->
             </div>
             <div class="col-sm-6 col-md-6 col-lg-2 footer-widget footer-widget-nav" v-for="(menu, index) in menus"
