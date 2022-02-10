@@ -83,8 +83,8 @@ a:hover {
 
 section {
     position: relative;
-    padding-top: 110px;
-    padding-bottom: 110px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 img {
@@ -4434,12 +4434,12 @@ input[type=radio] {
 
 .header-transparent + .slider .slide-item {
     padding-top: 100px;
-    height: 100vh;
+    height: 50vh;
 }
 
 .header-transparent.header-full + .slider .slide-item {
     padding-top: 135px;
-    height: 100vh;
+    height: 50vh;
 }
 
 .slider {
@@ -4447,7 +4447,7 @@ input[type=radio] {
 }
 
 .slider .slide-item {
-    height: calc(100vh - 135px);
+    height: calc(50vh - 135px);
     min-height: 520px;
 }
 

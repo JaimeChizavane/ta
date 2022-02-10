@@ -207,7 +207,8 @@ var mainExecution = function () {
   $('.slick-carousel').slick({
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 5000
+    autoplaySpeed: 5000,
+    adaptiveHeight: true
   });
 
   $('.slider-with-navs').slick({
