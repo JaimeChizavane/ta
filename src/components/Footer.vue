@@ -5,13 +5,13 @@
       <div class="container">
         <div class="footer-top pt-50 pb-30">
           <div class="row">
-            <div class="col-sm-4 col-md-2 col-lg-4">
+            <!-- <div class="col-sm-4 col-md-2 col-lg-4">
               <img src="assets/images/logo/logo-light-small.png" alt="logo" class="mb-30">
-            </div><!-- /.col-lg-2 -->
-            <div class="col-sm-8 col-md-4 col-lg-3">
+            </div> --><!-- /.col-lg-2 -->
+            <!-- <div class="col-sm-8 col-md-4 col-lg-3">
               <h6 class="footer-top__title">Subscreva a nossa NewsLetter</h6>
-            </div><!-- /.col-lg-3 -->
-            <div class="col-sm-12 col-md-6 col-lg-5">
+            </div> --><!-- /.col-lg-3 -->
+            <!-- <div class="col-sm-12 col-md-6 col-lg-5">
               <form class="footer-form d-flex mb-0">
                 <input type="text" class="form-control mr-20" placeholder="Insira seu email">
                 <button type="submit" class="btn btn__primary btn__primary-style2">
@@ -19,7 +19,7 @@
                   <i class="icon-arrow-right"></i>
                 </button>
               </form>
-            </div><!-- /.col-lg-6 -->
+            </div> --><!-- /.col-lg-6 -->
           </div><!-- /.row -->
         </div><!-- /.footer-top -->
         <div class="footer-primary">

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "pt": {
     "menus": {
       "home": "Início",
@@ -66,6 +67,75 @@
     "errors": {
       "404": "Página não encontrada!",
       "go_home": "Ir para o Início"
+=======
+    "pt": {
+        "menus": {
+            "home": "Início",
+            "institution": "instituição",
+            "history": "Breve Historial",
+            "support_services": "Serviços de Apoio",
+            "competencies": "Atribuições e Competências",
+            "structure": "Organograma",
+            "section1": "1.ª Secção",
+            "section2": "2.ª Secção",
+            "section3": "3.ª Secção",
+            "strategic_plan": "Planos Estratégicos",
+            "contests": "Concursos",
+            "work_opportunity": "Oportunidades de Emprego",
+            "international_cooperation": "Cooperação Internacional",
+            "legislation": "Legislação",
+            "law": "Leis",
+            "decret": "Decretos",
+            "decret_law": "Decretos lei",
+            "dispatchment": "Despachos",
+            "resolution": "Resoluções",
+            "jurisdiction": "Jurisdição",
+            "jurisdiction_name": "Jurisdição Administrativa",
+            "dispatch": "Vistos",
+            "statistic": "Estatísticas",
+            "sub_section": "Subsecção da Ficalização Prévia",
+            "instruction_recomendation": "Instrução e Recomendação",
+            "fluxogram": "Fluxograma de Tramitação Processual",
+            "jurispendency": "Jurisprudência",
+            "acordion": "Acórdãos e Despachos",
+            "certification": "Certificações de Contas",
+            "account": "Contas",
+            "rpcge": "Relatórios e Pareceres CGE",
+            "all": "Todos",
+            "managers": "Gestores",
+            "instruction_personal": "Instrução de Processo para Visto de Pessoal",
+            "mandatory_instructions": "Instruções Obrigatórias",
+            "dispatchment_instructions": "Instruções de Processos/Visto",
+            "obligations_calendar": "Calendário de Obrigações (prazo)",
+            "sanctions": "Sanções",
+            "petitions": "Elaboração de Petições",
+            "citizen": "Cidadão",
+            "publications": "Publicações",
+            "activity_reports": "Relatório de Auditoria de Contas do TA",
+            "doc_submitions": "Submissão de Denúncia, Sugestões",
+            "press": "Imprensa",
+            "report_submission": "Submissão de Denúncia",
+            "galery": "Galeria",
+            "videos": "Videos",
+            "faq": "Perguntas Frequentes",
+            "csmja": "CSMJA",
+            "csmja_name": "Conselho Superior de Magistratura Judicial",
+            "others": "Outros",
+            "news": "Notícias"
+        },
+        "read_more": "Ler mais",
+        "history": "Breve Historial",
+        "news": "Notícia | Notícias",
+        "blog": "Notícias",
+        "home": "Início",
+        "competencies": "@:menus.competencies",
+        "support_services": "@:menus.support_services",
+        "recent_article": "Artigo recente | Artigos recentes",
+        "not_found": "Não encontrado!",
+        "errors": {
+            "404": "Página não encontrada!",
+            "go_home": "Ir para o Início"
+        }
+>>>>>>> 4b6d92d79322e442b6b7106b03dbb611146a876f
     }
-  }
 }
