@@ -5,7 +5,7 @@
     <section class="about-layout2 pt-130 pb-90">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5">
+          <!-- <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5">
             <div class="about__img mb-40">
               <img src="assets/images/about/1.jpg" alt="about">
               <blockquote class="blockquote mb-0">
@@ -13,9 +13,9 @@
                   administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.
                 </h4>
               </blockquote>
-            </div><!-- /.about-img -->
-          </div><!-- /.col-xl-5 -->
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-1">
+            </div>
+          </div> /.col-xl-5 -->
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 offset-xl-1">
             <div class="heading-layout2 mb-40">
               <h3 class="heading__title">{{ history.Title }}</h3>
             </div><!-- /heading -->
@@ -44,22 +44,24 @@ export default {
   data() {
     return {
       history: {
-        Content: null
-      }
-    }
+        Content: null,
+      },
+    };
   },
   mounted() {
-    window.mainExecution()
+    window.mainExecution();
 
-    this.$http.get("instituicao.json").then((data) => {
-      this.history = data.data.d.results.find(item => item.Id === 11)
-    }).catch((error) => {
-      console.log(error)
-    })
-  }
-}
+    this.$http
+      .get("instituicao.json")
+      .then((data) => {
+        this.history = data.data.d.results.find((item) => item.Id === 11);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  },
+};
 </script>
 
 <style scoped>
-
 </style>
