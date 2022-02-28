@@ -30,6 +30,7 @@ use App\Console\Commands\FetchRPCGECommand;
 use App\Console\Commands\FetchSeccaoCommand;
 use App\Console\Commands\FetchSugestoesCommand;
 use App\Console\Commands\FetchTipoJurispCommand;
+use App\Console\Commands\FetchPlanoEstrategicoCommand;
 use App\Console\Commands\FetchVideosCommand;
 use App\Console\Commands\SPApiFetchAll;
 use Illuminate\Console\Scheduling\Schedule;
@@ -63,6 +64,7 @@ class Kernel extends ConsoleKernel
         FetchDecretCSMJACommand::class,
         FetchDispatchementsCSMJACommand::class,
         FetchGaleriaImagensCommand::class,
+        FetchPlanoEstrategicoCommand::class,
         FetchVideosCommand::class,
         FetchRPCGECommand::class,
         FetchContasCommand::class,
