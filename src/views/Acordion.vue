@@ -111,7 +111,7 @@
                         {{ item.Data_x0020_do_x0020_Ac_x00f3_rd_ | date }}
                       </span>
                     </div>
-                    <h4 class="job__title" v-html="item.Title || item.Objecto_x0020_de_x0020_Recurso"></h4>
+                   <!--  <h4 class="job__title" v-html="item.Title || item.Objecto_x0020_de_x0020_Recurso"></h4> -->
 
 
                     <div class="job__meta">
