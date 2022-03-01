@@ -93,7 +93,7 @@
                         {{ item.Data_x0020_do_x0020_BR | date }}
                       </span>
                   </div><!-- /.col-lg-4 -->
-                  <div class="col-sm-12 col-md-12 col-lg-8" v-if="item.AttachmentFiles.results.length">
+                      <div class="col-sm-12 col-md-12 col-lg-8" v-if="item.AttachmentFiles.results.length">
                     <div class="row mb-5" v-for="file in item.AttachmentFiles.results" :key="file.__metadata.id">
                       <div class="col-sm-12 col-md-12 col-lg-9">
                         <p class="job__desc">{{ item.Title || file.FileName }}</p>
@@ -104,8 +104,8 @@
                     </div>
                     <hr>
                      <div class="row col-sm-12"> 
-                       <span class="font-weight-bold">Sumário:</span> <br>                   
-                       <span class="job__desc" v-html="item.Assunto"></span>
+                       <span class="font-weight-bold">Sumário: <br /></span>                 
+                       <p class="job__desc" v-html="item.Assunto"></p>
                     </div>
                   </div>
                 </div><!-- /.row -->
