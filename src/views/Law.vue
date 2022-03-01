@@ -105,10 +105,7 @@
                     <hr>
                      <div class="row col-sm-12"> 
                        <span class="font-weight-bold">Sumário:</span> <br>                   
-                       <span class="job__desc" v-html="item.Assunto"></span>
-                     <!--  <span class="job__location">
-                        {{ item.Data_x0020_do_x0020_BR | date }}
-                      </span> -->
+                       <span class="row job__desc" v-html="item.Assunto"></span>
                     </div>
                   </div>
                 </div><!-- /.row -->
