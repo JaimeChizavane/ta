@@ -104,7 +104,8 @@
                     </div>
                     <hr>
                      <div class="row col-sm-12"> 
-                       <p class="font-weight-bold">Sumário: <br/></p>                 
+                       <p class="font-weight-bold">Sumário: </p>  
+                       <br>               
                        <p class="job__desc" v-html="item.Assunto"></p>
                     </div>
                   </div>
