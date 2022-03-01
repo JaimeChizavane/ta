@@ -144,9 +144,9 @@
                       <div class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap">
                         <a :href="getFileUrl(file)" target="_blank" class="btn btn__secondary">Abrir</a>
                       </div><!-- /.col-lg-3 -->
-                       <hr>
-                     
+                                          
                       </div>
+                       <hr>
                     
                   </div>
                   <div class="col-sm-12 col-md-12 col-lg-8" v-else>
