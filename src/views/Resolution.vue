@@ -179,7 +179,8 @@ export default {
     window.mainExecution()
 
     this.$http.get("legislacaoAll.json").then((data) => {
-      this.allItems = data.data.d.results.filter(item => (item?.Tipo === 'Resolução' || item?.Tipo_x0020_de_x0020_Legisla_x00e === 'Resolução'))
+     // this.allItems = data.data.d.results.filter(item => (item?.Tipo === 'Resolução' || item?.Tipo_x0020_de_x0020_Legisla_x00e === 'Resolução'))
+       this.allItems = data.data.d.results.filter(item => (item.Tipo === 'Resolução' || item.Tipo_x0020_de_x0020_Legisla_x00e === 'Resolução'))
       this.items = this.allItems
       // this.searcheable = this.items.flatMap((item) => {
       //   if (item.AttachmentFiles.results) {
