@@ -123,14 +123,13 @@
                       </span>
                     </div>
                   <!--   <h4 class="job__title" v-html="item.Title || item.Objecto_x0020_de_x0020_Recurso"></h4> -->
-                    <div class="job__meta">
+                    <div class="job__meta col-sm-12">
                       <div class="row col-sm-12">
                           <span class="font-weight-bold">Relator: </span> 
                         </div> 
                         <div class="row col-sm-12">
                           <span class="job__desc" v-html="item.Relator"></span>
-                        </div>
-                      
+                        </div> 
                     </div>
 
                     <p v-show="item.Assunto.results.length"><strong>Assunto:</strong></p>
