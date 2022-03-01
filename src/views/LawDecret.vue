@@ -87,11 +87,11 @@
                         </td>
                       </tr>
                     </table>
-                    <hr>
+              <!--       <hr>
                     <h4 class="job__title" v-html="item.Assunto"></h4>
                     <span class="job__location">
                         {{ item.Data_x0020_do_x0020_BR | date }}
-                      </span>
+                      </span> -->
                   </div><!-- /.col-lg-4 -->
                   <div class="col-sm-12 col-md-12 col-lg-8" v-if="item.AttachmentFiles.results.length">
                     <div class="row mb-5" v-for="file in item.AttachmentFiles.results" :key="file.__metadata.id">
@@ -101,6 +101,13 @@
                       <div class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap">
                         <a :href="getFileUrl(file)" target="_blank" class="btn btn__secondary">Abrir</a>
                       </div><!-- /.col-lg-3 -->
+                    </div>
+                     <div class="row col-sm-12">
+                      <hr>
+                       <span class="job__title" v-html="item.Assunto"></span>
+                      <span class="job__location">
+                        {{ item.Data_x0020_do_x0020_BR | date }}
+                      </span>
                     </div>
                   </div>
                 </div><!-- /.row -->

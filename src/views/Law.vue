@@ -102,8 +102,9 @@
                         <a :href="getFileUrl(file)" target="_blank" class="btn btn__secondary">Abrir</a>
                       </div><!-- /.col-lg-3 -->
                     </div>
-                    <div class="row">
-                       <h4 class="job__title" v-html="item.Assunto"></h4>
+                    <div class="row col-sm-12">
+                      <hr>
+                       <span class="job__title" v-html="item.Assunto"></span>
                       <span class="job__location">
                         {{ item.Data_x0020_do_x0020_BR | date }}
                       </span>
