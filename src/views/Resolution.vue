@@ -123,7 +123,7 @@ import QHeader from "@/components/Header/Header";
 import QBreadCrumb from "@/components/BreadCrumb";
 
 export default {
-  name: "QResolution",
+  name: "QLaw",
   components: { QBreadCrumb, QHeader, QFooter },
   methods: {
     clear() {
