@@ -147,6 +147,14 @@
                                           
                       </div>
                        <hr>
+                       <div class="row col-sm-12"> 
+                        <div class="row col-sm-12">
+                          <span class="font-weight-bold">Sumário: </span> 
+                        </div> 
+                        <div class="row col-sm-12">
+                          <span class="job__desc" v-html="item.Sum_x00e1_rio"></span>
+                        </div>
+                      </div>
                     
                   </div>
                   <div class="col-sm-12 col-md-12 col-lg-8" v-else>
