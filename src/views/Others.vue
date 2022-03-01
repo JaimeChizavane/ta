@@ -103,7 +103,7 @@
                       </div><!-- /.col-lg-3 -->
                     </div>
                     <hr>
-                     <div class="row"> 
+                     <div class="row col-sm-12"> 
                        <div class="row col-sm-12">
                        <span class="font-weight-bold">Sumário: </span> 
                        </div> 
