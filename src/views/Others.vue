@@ -109,9 +109,8 @@
                         </div> 
                         <div class="row col-sm-12">
                           <span class="job__desc" v-html="item.Assunto"></span>
-                        </div>         
-                       
-                    </div>
+                        </div>
+                      </div>
                   </div>
                 </div><!-- /.row -->
               </div><!-- /.job-item -->
