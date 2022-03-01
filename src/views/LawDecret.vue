@@ -103,10 +103,14 @@
                       </div><!-- /.col-lg-3 -->
                     </div>
                     <hr>
-                     <div class="row col-sm-12"> 
-                       <span class="font-weight-bold">Sumário: <br /></span>                 
-                       <p class="job__desc" v-html="item.Assunto"></p>
-                    </div>
+                    <div class="row col-sm-12"> 
+                        <div class="row col-sm-12">
+                          <span class="font-weight-bold">Sumário: </span> 
+                        </div> 
+                        <div class="row col-sm-12">
+                          <span class="job__desc" v-html="item.Assunto"></span>
+                        </div>
+                      </div>
                   </div>
                 </div><!-- /.row -->
               </div><!-- /.job-item -->
