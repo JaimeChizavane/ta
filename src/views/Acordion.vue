@@ -104,6 +104,10 @@
                         <td class="ta_table"
                             v-html="'<span class=\'font-weight-bold\'>N. do Processo: </span>'+item.N_x002e__x00ba__x0020_do_x0020_P"></td>
                       </tr>
+                       <tr v-show="item.Relator">
+                        <td class="ta_table"
+                            v-html="'<span class=\'font-weight-bold\'>Relator: </span>'+item.Relator"></td>
+                      </tr>
                     </table>
                     <hr>
                     <div class="job__meta">
@@ -114,9 +118,9 @@
                    <!--  <h4 class="job__title" v-html="item.Title || item.Objecto_x0020_de_x0020_Recurso"></h4> -->
 
 
-                    <div class="job__meta">
+                 <!--    <div class="job__meta">
                       <span class="job__location" v-html="'Relator: ' + item.Relator"></span>
-                    </div>
+                    </div> -->
 
                     <p v-show="item.Assunto.results.length"><strong>Assunto:</strong></p>
                     <div class="job__meta" v-for="(subject, index) in item.Assunto.results"
