@@ -104,8 +104,8 @@
                     </div>
                     <hr>
                      <div class="row col-sm-12"> 
-                       <span class="font-weight-bold">Sumário:</span>                  
-                       <p class="job__desc">{{item.Assunto}}</p>
+                       <span class="font-weight-bold">Sumário:</span>                 
+                       <p class="job__desc" v-html="item.Assunto"></p>
                     </div>
                   </div>
                 </div><!-- /.row -->
