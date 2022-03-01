@@ -104,7 +104,7 @@
                     </div>
                     <hr>
                      <div class="row col-sm-12"> 
-                       <span class="font-weight-bold">Sumário:</span>                    
+                       <span class="font-weight-bold">Sumário:</span> <br>                   
                        <span class="job__desc" v-html="item.Assunto"></span>
                      <!--  <span class="job__location">
                         {{ item.Data_x0020_do_x0020_BR | date }}
