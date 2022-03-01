@@ -87,8 +87,8 @@
                         </td>
                       </tr>
                     </table>
-                    <hr>
-                    <h4 class="job__title" v-html="item.Assunto"></h4>
+                       <hr>
+                
                     <span class="job__location">
                         {{ item.Data_x0020_do_x0020_BR | date }}
                       </span>
@@ -101,6 +101,11 @@
                       <div class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap">
                         <a :href="getFileUrl(file)" target="_blank" class="btn btn__secondary">Abrir</a>
                       </div><!-- /.col-lg-3 -->
+                    </div>
+                    <hr>
+                     <div class="row col-sm-12"> 
+                       <span class="font-weight-bold">Sumário: <br/></span>                 
+                       <p class="job__desc" v-html="item.Assunto"></p>
                     </div>
                   </div>
                 </div><!-- /.row -->
