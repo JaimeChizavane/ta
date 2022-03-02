@@ -97,9 +97,10 @@ export default {
     window.mainExecution()
 
     this.$http.get("images.json").then((data) => {
+     
       this.allImages = data.data.d.results.filter(f => f.Name !== 'Forms')
       this.images = this.allImages
-
+      console.log(this.images);
 
       this.allImages.forEach((folder) => {
         this.filters.push(folder.Name)
