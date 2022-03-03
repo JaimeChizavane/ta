@@ -75,7 +75,7 @@ import QHeader from "@/components/Header/Header";
 import QBreadCrumb from "@/components/BreadCrumb";
 
 export default {
-  name: "QDecret",
+  name: "QReportAuditPerformance",
   components: { QBreadCrumb, QHeader, QFooter },
   methods: {
     search() {
