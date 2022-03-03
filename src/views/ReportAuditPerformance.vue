@@ -42,10 +42,10 @@
                         {{ item.TimeLastModified | date }}
                       </span>
                                 </div>
-                                <h4 class="job__title">{{ item.Name || 'Sem titulo' }}</h4>
+                              <!--   <h4 class="job__title">{{ item.Name || 'Sem titulo' }}</h4> -->
                               </div><!-- /.col-lg-4 -->
                               <div class="col-sm-12 col-md-12 col-lg-5">
-                                <p class="job__desc" v-html="item.Name"></p>
+                                <h4 class="job__title" v-html="item.Name"></h4>
                               </div><!-- /.col-lg-5 -->
                               <div
                                   class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap">
