@@ -34,29 +34,43 @@
                       <div class="col-12">
                         <div class="jobs-container">
                           <!-- career item #1 -->
-                          <div class="job-item" v-for="(item, index) in faq.Files.results" :key="index">
-                            <div class="row">
-                  
-                              <div class="col-sm-12 col-md-12 col-lg-4">
+                          <div class="row" v-for="(item, index) in faq.Files.results" :key="index">
+                             
+                              <div class="col-sm-4 col-md-4 col-lg-3">
+                                <div class="portfolio-item">
+                                  <div class="portfolio__img" @click="zoomImage(file)">
+                                    <img :src="getFileThumb(item)" alt="portfolio img">
+                                  </div><!-- /.portfolio-img -->
+                                  <div class="portfolio__content">
+                                    <h4 class="portfolio__title">
+                                      <a :href="getFileUrl(item)" target="_blank" v-html="item.Name"></a></h4>
+                                    <div class="portfolio__cat">
+                                      <a :href="getFileUrl(item)" target="_blank"><i class="icon-download"></i>
+                                        {{ item.Name }}</a>
+                                    </div><!-- /.portfolio-cat -->
+                                    <div class="portfolio__cat">
+                                      <a class="btn btn__secondary btn__link" :href="getFileUrl(item)" target="_blank">
+                                        <span>{{ $tc('read_more') }}</span>
+                                        <i class="icon-arrow-right"></i>
+                                      </a>
+                                    </div><!-- /.portfolio-cat -->
+                                  </div><!-- /.portfolio-content -->
+                                </div><!-- /.portfolio-item -->
                                 <div class="job__meta">
-                      <span class="job__type" v-show="item.TimeLastModified">
-                        {{ item.TimeLastModified | date }}
-                      </span>
+                                  <span class="job__type" v-show="item.TimeLastModified">
+                                    {{ item.TimeLastModified | date }}
+                                  </span>
                                 </div>
                                 <h4 class="job__title">{{ item.Name || 'Sem titulo' }}</h4>
                               </div><!-- /.col-lg-4 -->
                               <div class="col-sm-12 col-md-12 col-lg-5">
                                 <p class="job__desc" v-html="item.Name"></p>
                               </div><!-- /.col-lg-5 -->
-                              <div
-                                  class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap">
+                              <div class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap">
                                 <a :href="getFileUrl(item)" target="_blank" class="btn btn__secondary">Abrir</a>
-                              </div><!-- /.col-lg-3 -->
-                            </div><!-- /.row -->
+                              </div><!-- /.col-lg-3 --> 
                           </div><!-- /.job-item -->
-
-                          
-                        </div>
+                          </div>
                       </div><!-- /.col-lg-12 -->
                     </div><!-- /.row -->
                   </div><!-- /.accordion-item-body -->
