@@ -38,9 +38,9 @@
                             <div class="row">
                               <div class="col-sm-12 col-md-12 col-lg-4">
                                 <div class="job__meta">
-                      <span class="job__type" v-show="item.TimeLastModified">
-                        {{ item.TimeLastModified | date }}
-                      </span>
+                                  <span class="job__type" v-show="item.TimeLastModified">
+                                    {{ item.TimeLastModified | date }}
+                                  </span>
                                 </div>
                               <!--   <h4 class="job__title">{{ item.Name || 'Sem titulo' }}</h4> -->
                               </div><!-- /.col-lg-4 -->
@@ -66,6 +66,11 @@
       </div><!-- /.container -->
     </section><!-- /.careers -->
     <q-footer/>
+    <CoolLightBox
+        :items="slideImages"
+        :index="index"
+        @close="index = null">
+    </CoolLightBox>
   </div>
 </template>
 
@@ -74,9 +79,12 @@ import QFooter from "@/components/Footer";
 import QHeader from "@/components/Header/Header";
 import QBreadCrumb from "@/components/BreadCrumb";
 
+import CoolLightBox from 'vue-cool-lightbox'
+import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
+
 export default {
   name: "QReportAuditPerformance",
-  components: { QBreadCrumb, QHeader, QFooter },
+  components: { QBreadCrumb, QHeader, QFooter, CoolLightBox },
   methods: {
     search() {
       if (this.query) {
