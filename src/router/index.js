@@ -310,6 +310,16 @@ const routes = [{
             import ('@/views/Petitions.vue')
     },
     {
+        path: '/structure_functioning',
+        name: 'structure_functioning',
+        meta: {
+            display: 'menus.structure_functioning'
+        },
+        component: () =>
+            import ('@/views/structure_functioning.vue')
+    },
+
+    {
         path: '/fluxogram',
         name: 'fluxogram',
         meta: {

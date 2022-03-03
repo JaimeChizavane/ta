@@ -17,6 +17,11 @@
                 "sub_menus": []
             },
             {
+                "name": "menus.structure_functioning",
+                "to": "structure_functioning",
+                "sub_menus": []
+            },
+            {
                 "name": "menus.structure",
                 "to": "structure",
                 "sub_menus": []
@@ -170,11 +175,6 @@
                 "name": "menus.sanctions",
                 "to": "sanctions",
                 "sub_menus": []
-            },
-            {
-                "name": "menus.petitions",
-                "to": "petitions",
-                "sub_menus": []
             }
         ]
     },
@@ -199,6 +199,11 @@
             {
                 "name": "menus.faq",
                 "to": "faq",
+                "sub_menus": []
+            },
+            {
+                "name": "menus.petitions",
+                "to": "petitions",
                 "sub_menus": []
             }
         ]
