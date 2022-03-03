@@ -120,11 +120,11 @@ export default {
     filterImages(name = null) {
       this.activeFilter = name
 
-      /* if (name) {
-        this.items = this.allItems.filter(i => i.Tipo === name)
+       if (name) {
+        this.items = this.allItems
       } else {
         this.items = this.allItems
-      } */
+      } 
     }
   },
   data() {
