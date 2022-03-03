@@ -15,7 +15,7 @@
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-3">
             <div class="pagetitle__form mb-50">
               <input @keyup="search" v-model="query" type="text" class="form-control bordered-box"
-                     placeholder="Procurar...aqui">
+                     placeholder="Procurar...">
             </div>
           </div><!-- /.col-xl-6 -->
         </div>
@@ -30,9 +30,7 @@
                 </div><!-- /.accordion-item-header -->
                 <div :id="'collapse' + index" class="collapse" data-parent="#accordion">
                   <div class="accordion__body">
-                    <div class="row">
-                      <div class="col-12">
-                        <div class="jobs-container">
+                    <div class="row"> 
                           <!-- career item #1 -->
                           <div class="row" v-for="(item, index) in faq.Files.results" :key="index">
                              
@@ -56,21 +54,21 @@
                                     </div><!-- /.portfolio-cat -->
                                   </div><!-- /.portfolio-content -->
                                 </div><!-- /.portfolio-item -->
-                                <div class="job__meta">
+                                <!-- <div class="job__meta">
                                   <span class="job__type" v-show="item.TimeLastModified">
                                     {{ item.TimeLastModified | date }}
                                   </span>
-                                </div>
+                                </div> -->
                                 <h4 class="job__title">{{ item.Name || 'Sem titulo' }}</h4>
-                              </div><!-- /.col-lg-4 -->
-                              <div class="col-sm-12 col-md-12 col-lg-5">
+                              </div>
+                              <!-- /.col-lg-4 -->
+                              <!-- <div class="col-sm-12 col-md-12 col-lg-5">
                                 <p class="job__desc" v-html="item.Name"></p>
-                              </div><!-- /.col-lg-5 -->
-                              <div class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap">
+                              </div> /.col-lg-5 -->
+                              <!-- <div class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap">
                                 <a :href="getFileUrl(item)" target="_blank" class="btn btn__secondary">Abrir</a>
-                              </div><!-- /.col-lg-3 --> 
-                          </div><!-- /.job-item -->
-                          </div>
+                              </div> /.col-lg-3 -->  
+                          
                       </div><!-- /.col-lg-12 -->
                     </div><!-- /.row -->
                   </div><!-- /.accordion-item-body -->
