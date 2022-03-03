@@ -318,6 +318,15 @@ const routes = [{
         component: () =>
             import ('@/views/structure_functioning.vue')
     },
+    {
+        path: '/reportAuditPerformance',
+        name: 'reportAuditPerformance',
+        meta: {
+            display: 'menus.reportAuditPerformance'
+        },
+        component: () =>
+            import ('@/views/ReportAuditPerformance.vue')
+    },
 
     {
         path: '/fluxogram',

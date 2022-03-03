@@ -145,7 +145,13 @@
                 "name": "menus.rpcge",
                 "to": "rpcge",
                 "sub_menus": []
+            },
+            {
+                "name": "menus.reportAuditPerformance",
+                "to": "reportAuditPerformance",
+                "sub_menus": []
             }
+
         ]
     },
     {
