@@ -36,28 +36,7 @@
                           <!-- career item #1 -->
                           <div class="job-item" v-for="(item, index) in faq.Files.results" :key="index">
                             <div class="row">
-                              <div class="col-sm-4 col-md-4 col-lg-3"
-                           v-for="file in item.Folder.Files.results" :key="file.UniqueId">
-                        <div class="portfolio-item">
-                          <div class="portfolio__img" @click="zoomImage(item)">
-                            <img :src="getFileThumb(item)" alt="portfolio img">
-                          </div><!-- /.portfolio-img -->
-                          <div class="portfolio__content">
-                            <h4 class="portfolio__title">
-                              <a :href="getFileUrl(item)" target="_blank" v-html="item.Name"></a></h4>
-                            <div class="portfolio__cat">
-                              <a :href="getFileUrl(item)" target="_blank"><i class="icon-download"></i>
-                                {{ item.Folder.Name }}</a>
-                            </div><!-- /.portfolio-cat -->
-                            <div class="portfolio__cat">
-                              <a class="btn btn__secondary btn__link" :href="getFileUrl(item)" target="_blank">
-                                <span>{{ $tc('read_more') }}</span>
-                                <i class="icon-arrow-right"></i>
-                              </a>
-                            </div><!-- /.portfolio-cat -->
-                          </div><!-- /.portfolio-content -->
-                        </div><!-- /.portfolio-item -->
-                      </div><!-- /.col-lg-4 -->
+                  
                               <div class="col-sm-12 col-md-12 col-lg-4">
                                 <div class="job__meta">
                       <span class="job__type" v-show="item.TimeLastModified">
@@ -75,6 +54,32 @@
                               </div><!-- /.col-lg-3 -->
                             </div><!-- /.row -->
                           </div><!-- /.job-item -->
+
+                           <div class="row"  v-for="(item, index) in faq.Files.results" :key="index">
+                      <!-- portfolio item #1 -->
+                      <div class="col-sm-4 col-md-4 col-lg-3"
+                           v-for="file in item.Folder.Files.results" :key="file.UniqueId">
+                        <div class="portfolio-item">
+                          <div class="portfolio__img" @click="zoomImage(file)">
+                            <img :src="getFileThumb(file)" alt="portfolio img">
+                          </div><!-- /.portfolio-img -->
+                          <div class="portfolio__content">
+                            <h4 class="portfolio__title">
+                              <a :href="getFileUrl(file)" target="_blank" v-html="file.Name"></a></h4>
+                            <div class="portfolio__cat">
+                              <a :href="getFileUrl(file)" target="_blank"><i class="icon-download"></i>
+                                {{ item.Folder.Name }}</a>
+                            </div><!-- /.portfolio-cat -->
+                            <div class="portfolio__cat">
+                              <a class="btn btn__secondary btn__link" :href="getFileUrl(file)" target="_blank">
+                                <span>{{ $tc('read_more') }}</span>
+                                <i class="icon-arrow-right"></i>
+                              </a>
+                            </div><!-- /.portfolio-cat -->
+                          </div><!-- /.portfolio-content -->
+                        </div><!-- /.portfolio-item -->
+                      </div><!-- /.col-lg-4 -->
+                    </div><!-- /.row -->
                         </div>
                       </div><!-- /.col-lg-12 -->
                     </div><!-- /.row -->
