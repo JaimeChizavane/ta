@@ -11,7 +11,7 @@ namespace App\Console\Commands;
 
 class FetchRelatorioAuditoriaDesempenhoCommand extends SPApiFetch
 {
-    protected $signature   = 'sp:RelatorioAuditoriaDesempenho';
+    protected $signature   = 'sp:relatorioAuditoriaDesempenho';
     protected $description = 'Fetch all Relatório de Auditoria de Desempenho';
     /**
      * @var \App\Services\HttpClient
