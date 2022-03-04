@@ -9,16 +9,14 @@
             <div class="about__img mb-40">  
                 <img :src="getImageUrl(history)" alt="blog image" class="cover__image"> 
               <blockquote class="blockquote mb-0">
-                <h4 class="blockquote__title">O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais
-                  administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.
-                </h4>
+                <h4 class="blockquote__title">{{ history.Title }}</h4>
               </blockquote>
             </div><!-- /.about-img -->
           </div><!-- /.col-xl-5 -->
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-1">
-            <div class="heading-layout2 mb-40">
+            <!-- <div class="heading-layout2 mb-40">
               <h3 class="heading__title">{{ history.Title }}</h3>
-            </div><!-- /heading -->
+            </div> /heading --> 
             <div class="about-text-wrapper">
               <div class="about__Text">
                 <p class="font-weight-bold mb-30" v-html="history.Content"></p>
