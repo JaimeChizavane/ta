@@ -8,6 +8,7 @@
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5">
             <div class="about__img mb-40">
               <img src="assets/images/about/1.jpg" alt="about">
+                <img :src="getImageUrl(history)" alt="blog image" class="cover__image">
               <blockquote class="blockquote mb-0">
                 <h4 class="blockquote__title">O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais
                   administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.
@@ -41,6 +42,11 @@ import QBreadCrumb from "@/components/BreadCrumb";
 export default {
   name: "QHistory",
   components: { QBreadCrumb, QHeader, QFooter },
+  methods: {
+    getImageUrl(item) {
+      return item && item.Attachments ? process.env.VUE_APP_ROOT_DOCS + item.AttachmentFiles.results[0].ServerRelativeUrl : 'assets/images/about/1.jpg'
+    },
+  },
   data() {
     return {
       history: {
