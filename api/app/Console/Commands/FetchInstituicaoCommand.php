@@ -17,6 +17,6 @@ class FetchInstituicaoCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "_api/web/lists/getByTitle('Instituição')/items";
+    protected $uri  = "_api/web/lists/getByTitle('Instituição')/items\$expand=AttachmentFiles";
     protected $path = 'instituicao.json';
 }
