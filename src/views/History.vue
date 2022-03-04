@@ -52,7 +52,8 @@ export default {
   data() {
     return {
       history: {
-        Content: null
+        Content: null,
+        Attachments: null
       }
     }
   },
