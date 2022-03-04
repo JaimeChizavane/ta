@@ -64,7 +64,7 @@ export default {
 
     this.news = data.data.d.results.sort((item, next) => {
       return new Date(next.Data_x0020_Noticia || next.Created) - new Date(item.Data_x0020_Noticia || item.Created);
-    }).slice(0, 6)
+    }).slice(0, 3)
 
     this.$emit('news', this.news)
   },
