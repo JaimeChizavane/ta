@@ -192,7 +192,7 @@ export default {
     this.$http.get("publicacoes.json").then((data) => {
       this.allItems = data.data.d.results.filter(i => i.Folder.Files && i.Folder.Files.results?.length
       //    && !i.Tipo.toLowerCase().trim().includes('Relatórios de Auditorias de Desempenho'.toLowerCase())
-      //    && !i.Tipo.toLowerCase().trim().includes('Relatórios de Auditorias às Contas do TA'.toLowerCase())
+         && !i.Tipo.toLowerCase().trim().includes('Relatórios de Auditorias às Contas do TA'.toLowerCase())
       )
       this.items = this.allItems
       this.searcheable = this.items.flatMap((item) => {
