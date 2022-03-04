@@ -7,10 +7,10 @@
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5">
             <div class="about__img mb-40">
-            <!--   <img src="assets/images/about/1.jpg" alt="about"> -->
-              <router-link :to="{name: 'blog-item', params: {guid : history.GUID}}">
+               <img src="assets/images/about/1.jpg" alt="about">
+              <!-- <router-link :to="{name: 'blog-item', params: {guid : history.GUID}}">
                 <img :src="getImageUrl(history)" alt="blog image" class="cover__image">
-                 </router-link>
+                 </router-link> -->
               <blockquote class="blockquote mb-0">
                 <h4 class="blockquote__title">O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais
                   administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.
@@ -61,7 +61,8 @@ export default {
     window.mainExecution()
 
     this.$http.get("instituicao.json").then((data) => {
-      this.history = data.data.d.results.find(item => item.Id === 1)
+      this.history = data.data.d.results.find(item => item.Id === 1);
+      console.log(history);
     }).catch((error) => {
       console.log(error)
     })
