@@ -10,12 +10,12 @@
               <img src="assets/images/sliders/7.jpg" alt="about">
             </div><-- /.about-img 
           </div> /.col-xl-5 --> 
-          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 offset-xl-1">
-            <div class="heading-layout2">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 offset-xl-1">
+            <div class="heading text-center">
             </div><!-- /heading -->
-            <div class="about__Text">
-              <ul class="list-items list-items-layout2 list-unstyled" v-html="services.Content">
-              </ul>
+            <div class="heading__title">
+              <span class="" v-html="services.Content">
+              </span>
             </div>
           </div><!-- /.col-xl-7 -->
         </div><!-- /.row -->
