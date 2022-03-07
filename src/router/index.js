@@ -426,7 +426,7 @@ const routes = [{
             parent: ''
         },
         component: () =>
-            import ('@/views/Jurisdiction.vue')
+            import ('@/views/FolhetoDaJurisdicao.vue')
     },
     {
         path: '/activity_reports',
