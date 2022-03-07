@@ -5,11 +5,11 @@
     <section class="about-layout1 pb-130">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-5">
+<!--           <div class="col-sm-12 col-md-12 col-lg-6 col-xl-5">
             <div class="about__img">
               <img src="assets/images/sliders/7.jpg" alt="about">
-            </div><!-- /.about-img -->
-          </div><!-- /.col-xl-5 -->
+            </div><-- /.about-img 
+          </div> /.col-xl-5 --> 
           <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 offset-xl-1">
             <div class="heading-layout2">
             </div><!-- /heading -->
@@ -44,7 +44,7 @@ export default {
     window.mainExecution()
 
     this.$http.get("instituicao.json").then((data) => {
-      this.services = data.data.d.results.find(item => item.Id === 9)
+      this.services = data.data.d.results.find(item => item.Id === 19)
     }).catch((error) => {
       console.log(error)
     })
