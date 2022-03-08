@@ -41,7 +41,7 @@ export default {
   mounted() {
     window.mainExecution()
 
-    this.$http.get("FolhetoDaJurisdicao.json").then((data) => {
+    this.$http.get("folhetoDaJurisdicao.json").then((data) => {
       this.faqs = data.data.d.results
     }).catch((error) => {
       console.log(error)

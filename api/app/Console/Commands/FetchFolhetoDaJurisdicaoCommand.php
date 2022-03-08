@@ -11,12 +11,12 @@ namespace App\Console\Commands;
 
 class FetchFolhetoDaJurisdicaoCommand extends SPApiFetch
 {
-    protected $signature   = 'sp:FolhetoDaJurisdicao';
+    protected $signature   = 'sp:folhetoDaJurisdicao';
     protected $description = 'Fetch all FolhetoDaJurisdicao';
     /**
      * @var \App\Services\HttpClient
      */
     protected $client;
     protected $uri  = "_api/web/lists/getByTitle('Folhetos da Jurisdição')/items";
-    protected $path = 'FolhetoDaJurisdicao.json';
+    protected $path = 'folhetoDaJurisdicao.json';
 }
