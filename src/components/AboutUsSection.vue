@@ -21,9 +21,9 @@
             <div class="about__Text">
               <p class="font-weight-bold mb-30" v-html="history.Content"></p>
             </div>
-            <router-link :to="{name: 'strategic_plan'}" class="btn btn__primary btn__icon mt-30">
+            <!-- <router-link :to="{name: 'strategic_plan'}" class="btn btn__primary btn__icon mt-30">
               <span>Saber mais</span><i class="icon-arrow-right"></i>
-            </router-link>
+            </router-link> -->
             <!--<ul class="list-items list-items-layout2 list-unstyled mb-0 mt-60">
               <li>Delivered in more than 450,000 client’s interactions </li>
               <li>Provided by experts to help challenge critical activities</li>
