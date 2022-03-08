@@ -6,7 +6,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5">
-            <div class="about__img mb-40">
+            <div class="about__img mb-40 sticky-top">
               <img
                 :src="getImageUrl(services)"
                 alt="blog image"
@@ -26,11 +26,11 @@
             ></div>
           </div>
           <!-- /.col-xl-5 -->
-          <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5 offset-xl-1">
+        <!--   <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5 offset-xl-1">
             <div class="sticky-top">
               <img src="assets/images/sliders/8.png" alt="banner" />
             </div>
-          </div>
+          </div> -->
           <!-- /col-lg-5 -->
         </div>
         <!-- /.row -->

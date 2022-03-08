@@ -6,7 +6,7 @@
       <div class="container">
         <div class="row">
            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5">
-            <div class="about__img mb-40">  
+            <div class="about__img mb-40 sticky-top">  
                 <img :src="getImageUrl(services)" alt="blog image" class="cover__image"> 
               <blockquote class="blockquote mb-0">
                 <h4 class="blockquote__title">{{ services.Title }}</h4>
@@ -16,11 +16,11 @@
           <div class="col-sm-12 col-md-12 col-lg-7 col-xl-6">
             <div class="heading heading-layout2 mb-50" v-html="services.Content"></div>
           </div><!-- /.col-xl-5 -->
-          <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5 offset-xl-1">
+<!--           <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5 offset-xl-1">
             <div class="sticky-top">
               <img src="assets/images/sliders/8.png" alt="banner">
             </div>
-          </div><!-- /col-lg-5 -->
+          </div> /col-lg-5 --> 
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section><!-- /.Features Layout 3 -->
