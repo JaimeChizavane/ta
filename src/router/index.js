@@ -244,7 +244,7 @@ const routes = [{
             display: 'menus.sub_section'
         },
         component: () =>
-            import ('@/views/AboutUs.vue')
+            import ('@/views/SubSection.vue')
     },
     {
         path: '/mandatory_instructions',
