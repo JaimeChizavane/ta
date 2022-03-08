@@ -26,11 +26,12 @@
 import QMenu from "@/components/Header/Menu";
 import QSearch from "@/components/Header/Search";
 import QGetQuote from "@/components/Header/GetQuote";
-import QSelectLanguage from "@/components/Header/SelectLanguage";
+//import QSelectLanguage from "@/components/Header/SelectLanguage";
 
 export default {
   name: "QHeader",
-  components: { QSelectLanguage, QGetQuote, QSearch, QMenu },
+  // components: { QSelectLanguage, QGetQuote, QSearch, QMenu },
+  components: {QGetQuote, QSearch, QMenu },
   methods: {
     openMenu() {
       document.getElementById("mainNavigation").classList.add("menu-opened");
