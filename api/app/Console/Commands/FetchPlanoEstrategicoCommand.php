@@ -17,6 +17,6 @@ class FetchPlanoEstrategicoCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/Planos Estratégicos')/Folders?\$expand=Files&\$orderBy=Name desc";
+    protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/PlanoEstrategico')/Folders?\$expand=Files&\$orderBy=Name desc";
     protected $path = 'planoEstrategico.json';
 }

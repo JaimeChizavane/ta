@@ -19,37 +19,59 @@
             </div>
           </div><!-- /.col-xl-6 -->
         </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="jobs-container">
-              <!-- career item #1 -->
-              <div class="job-item" v-for="(item, index) in history" :key="index">
-                <div class="row">
-                  <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="job__meta">
-                      <span class="job__type" v-show="item.Tipo">{{
-                          item.Tipo
-                        }}</span>
-                      <span class="job__location">
-                        {{ item.Created | date }}
-                      </span>
-                    </div>
-                    <h4 class="job__title">{{ item.Descricao || item.Title || 'Sem titulo' }}</h4>
-                  </div><!-- /.col-lg-4 -->
-                  <div class="col-sm-12 col-md-12 col-lg-5">
-                    <p class="job__desc" v-html="item.File.Name"></p>
-                  </div><!-- /.col-lg-5 -->
-                  <div class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap">
-                    <a :href="getFileUrl(item.File)" target="_blank" class="btn btn__secondary" v-show="item.File">Abrir</a>
-                  </div><!-- /.col-lg-3 -->
-                </div><!-- /.row -->
-              </div><!-- /.job-item -->
-            </div>
-          </div><!-- /.col-lg-12 -->
-        </div><!-- /.row -->
+
+
+         <div class="container">
+          <div class="row" id="accordion">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <div class="accordion-item" v-for="(faq, index) in history" :key="index">
+                <div class="accordion__header" data-toggle="collapse" :data-target="'#collapse' + index">
+                  <a class="accordion__title" @click.prevent>{{ faq.Name }}</a>
+                </div><!-- /.accordion-item-header -->
+                <div :id="'collapse' + index" class="collapse" data-parent="#accordion">
+                  <div class="accordion__body">
+ 
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="jobs-container">
+                          <!-- career item #1 -->
+                          <div class="job-item" v-for="(item, index) in faq.Files.results" :key="index">
+                            <div class="row">
+                              <div class="col-sm-12 col-md-12 col-lg-4">
+                                <div class="job__meta">
+                                  <span class="job__type" v-show="item.TimeLastModified">
+                                    {{ item.TimeLastModified | date }}
+                                  </span>
+                                </div>
+                              <!--   <h4 class="job__title">{{ item.Name || 'Sem titulo' }}</h4> -->
+                              </div><!-- /.col-lg-4 -->
+                              <div class="col-sm-12 col-md-12 col-lg-5">
+                                <h4 class="job__title" v-html="item.Name"></h4>
+                              </div><!-- /.col-lg-5 -->
+                              <div
+                                  class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap">
+                                <a :href="getFileUrl(item)" target="_blank" class="btn btn__secondary">Abrir</a>
+                              </div><!-- /.col-lg-3 -->
+                            </div><!-- /.row -->
+                          </div><!-- /.job-item -->
+                        </div>
+                      </div><!-- /.col-lg-12 -->
+                    </div><!-- /.row -->
+                  </div><!-- /.accordion-item-body -->
+                </div>
+              </div>
+            </div><!-- /.col-lg-6 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+
       </div><!-- /.container -->
     </section><!-- /.careers -->
     <q-footer/>
+    <CoolLightBox
+        :items="slideImages"
+        :index="index"
+        @close="index = null">
+    </CoolLightBox>
   </div>
 </template>
 
@@ -58,17 +80,20 @@ import QFooter from "@/components/Footer";
 import QHeader from "@/components/Header/Header";
 import QBreadCrumb from "@/components/BreadCrumb";
 
+import CoolLightBox from 'vue-cool-lightbox'
+import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
+
 export default {
   name: "QStrategicPlan",
-  components: { QBreadCrumb, QHeader, QFooter },
+  components: { QBreadCrumb, QHeader, QFooter, CoolLightBox },
   methods: {
     search() {
       if (this.query) {
         this.history = this.allItems
-            .filter(item => item.Descricao?.toLowerCase().includes(this.query.toLowerCase())
-                || item.Tipo?.toLowerCase().includes(this.query.toLowerCase())
-                || item.File?.Name?.toLowerCase().includes(this.query.toLowerCase())
-                || item.Title?.toLowerCase().includes(this.query.toLowerCase()))
+            .filter(item =>
+                item.Name?.toLowerCase().includes(this.query.toLowerCase())
+                || item.Files.results.find(f => f.Name?.toLowerCase().includes(this.query.toLowerCase()))
+            )
       } else {
         this.history = this.allItems
       }
@@ -76,6 +101,25 @@ export default {
     getFileUrl(item) {
       return item && item.ServerRelativeUrl ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl : '#'
     },
+        getFileThumb(item) {
+      return item && item.ServerRelativeUrl ? process.env.VUE_APP_ROOT_DOCS + '/thumbs/' + item.ServerRelativeUrl + '.png' : '#'
+    },
+    zoomImage(file) {
+      this.slideImages = [{
+        src: this.getFileThumb(file),
+        description: file.Name
+      }]
+      this.index = 0
+    },
+    filterImages(name = null) {
+      this.activeFilter = name
+
+       if (name) {
+        this.items = this.allItems
+      } else {
+        this.items = this.allItems
+      } 
+    }
   },
   data() {
     return {
@@ -88,7 +132,7 @@ export default {
     window.mainExecution()
 
     this.$http.get("planoEstrategico.json").then((data) => {
-      this.history = data.data.d.results
+      this.history = data.data.d.results.filter(i => i.Name !== 'Forms')
 
       this.allItems = this.history
     }).catch((error) => {
