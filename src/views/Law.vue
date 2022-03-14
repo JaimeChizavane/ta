@@ -52,7 +52,7 @@
               <div class="job-item" v-for="(item, index) in items" :key="index">
                 <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-4">
-                    <table border="1px" class="action__btn-contact">
+                    <table border="1px" class="btn__primary-style2">
                       <tr>
                         <td class="ta_table" colspan="2">
                           <span class="font-weight-bold">Tipo de Legislação:</span>
