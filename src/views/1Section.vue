@@ -58,6 +58,7 @@ export default {
     this.$http.get("instituicao.json").then((data) => {
       this.history = data.data.d.results.find(item => item.Id === 4);
       console.log(history);
+      console.log(this.history.Attachments.results.length)
     }).catch((error) => {
       console.log(error)
     })
