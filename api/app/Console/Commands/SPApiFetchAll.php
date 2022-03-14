@@ -52,6 +52,7 @@ class SPApiFetchAll extends Command
         FetchPlanoEstrategicoCommand::class,
         FetchRelatorioAuditoriaDesempenhoCommand::class,
         FetchFolhetoDaJurisdicaoCommand::class,
+        FetchFolhetoCSMJACommand::class,
     ];
 
     public function __construct()

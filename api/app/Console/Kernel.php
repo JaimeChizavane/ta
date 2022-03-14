@@ -34,6 +34,7 @@ use App\Console\Commands\FetchPlanoEstrategicoCommand;
 use App\Console\Commands\FetchVideosCommand;
 use App\Console\Commands\FetchRelatorioAuditoriaDesempenhoCommand;
 use App\Console\Commands\FetchFolhetoDaJurisdicaoCommand;
+use App\Console\Commands\FetchFolhetoCSMJACommand;
 use App\Console\Commands\SPApiFetchAll;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
@@ -78,6 +79,7 @@ class Kernel extends ConsoleKernel
         FetchBannersCommand::class,
         FetchRelatorioAuditoriaDesempenhoCommand::class,
         FetchFolhetoDaJurisdicaoCommand::class,
+        FetchFolhetoCSMJACommand::class,
         SPApiFetchAll::class,
     ];
 
