@@ -12,8 +12,8 @@
                 <a class="accordion__title" @click.prevent>{{ faq.Title }}</a>
               </div><!-- /.accordion-item-header -->
               <div :id="'collapse' + index" class="collapse" data-parent="#accordion">
-                <div class="accordion__body">
-                  <p>{{ faq.Content }}</p>
+                <div class="accordion__body" >
+                  <p class="font-weight-bold" v-html="faq.Content"></p>
                 </div><!-- /.accordion-item-body -->
               </div>
             </div>
