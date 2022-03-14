@@ -5,8 +5,8 @@
     <section class="about-layout2 pt-130 pb-90">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5">
-            <div class="about__img mb-40 sticky-top">  
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5" v-if="history.AttachmentFiles.results.length">
+            <div class="about__img mb-40 sticky-top" >  
                 <img :src="getImageUrl(history)" alt="blog image" class="cover__image"> 
               <blockquote class="blockquote mb-0">
                 <h4 class="blockquote__title">{{ history.Title }}</h4>
