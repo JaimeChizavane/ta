@@ -24,7 +24,7 @@
         </div><!-- /.footer-top -->
         <div class="footer-primary">
           <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-3 footer-widget footer-widget-about">
+            <div class="col-sm-4 col-md-4 col-lg-4 footer-widget footer-widget-about">
               <div class="footer-widget__content">
                 <div class="contact-info">
                   <h6 class="footer-widget__title">Contacto</h6>
@@ -49,6 +49,7 @@
                     <li class="color-body">Praça da Independência, N.º1117, Maputo - Moçambique</li>
                   </ul>
                 </div><!-- /.contact-info -->
+               
 <!--                <ul class="social-icons list-unstyled mb-0">-->
 <!--                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>-->
 <!--                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>-->
@@ -56,7 +57,29 @@
 <!--                </ul>&lt;!&ndash; /.social-icons &ndash;&gt;-->
               </div><!-- /.footer-widget__content -->
             </div>
-            <div class="col-sm-6 col-md-6 col-lg-2 footer-widget footer-widget-nav" v-for="(menu, index) in menus"
+             <div class="col-sm-4 col-md-4 col-lg-4 footer-widget footer-widget-about">
+              <div class="contact-info">
+                  <h6 class="footer-widget__title">Links Importantes</h6>
+                  <ul class="contact-list list-unstyled">
+                    <li><a href="https://www.portaldogoverno.gov.mz/por/" target="_blank"> Portal do Governo </a>
+                    </li>
+            
+                  </ul>
+                </div>
+              </div> <!--links importantes-->
+              <div class="col-sm-4 col-md-4 col-lg-4 footer-widget footer-widget-about">
+              <div class="contact-info">
+                  <h6 class="footer-widget__title">Redes Sociais</h6>
+                  <ul class="social-icons list-unstyled">
+                  <li><a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+                  </li>
+                 <li><a href="#"><i class="fab fa-instagram"></i>instagram</a>
+                 </li>
+                 <li><a href="#"><i class="fab fa-twitter"></i>twitter</a></li>
+               </ul>
+                </div>
+              </div> <!--redes sociais-->
+           <!--  <div class="col-sm-6 col-md-6 col-lg-2 footer-widget footer-widget-nav" v-for="(menu, index) in menus"
                  :key="index">
               <h6 class="footer-widget__title">{{ $t(menu.name) | upper }}</h6>
               <div class="footer-widget__content">
@@ -69,8 +92,8 @@
                     </li>
                   </ul>
                 </nav>
-              </div><!-- /.footer-widget__content -->
-            </div>
+              </div><!/.footer-widget__content 
+            </div> -->
           </div>
         </div>
         <div class="row">
