@@ -24,6 +24,16 @@ const routes = [{
             import ('@/views/SupportService.vue')
     },
     {
+        path: '/folhetoCSMJA',
+        name: 'folhetoCSMJA',
+        meta: {
+            display: 'menus.folhetoCSMJA',
+            //parent: 'menus.folhetoCSMJA'
+        },
+        component: () =>
+            import ('@/views/csmja/FolhetoDaCSMJA.vue')
+    },
+    {
         path: '/competencies',
         name: 'competencies',
         meta: {
