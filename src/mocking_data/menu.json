@@ -95,6 +95,11 @@
                 "name": "menus.resolution",
                 "to": "resolution",
                 "sub_menus": []
+            },
+            {
+                "name": "menus.diplom",
+                "to": "diplom",
+                "sub_menus": []
             }
         ]
     },

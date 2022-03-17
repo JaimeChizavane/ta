@@ -143,6 +143,16 @@ const routes = [{
             import ('@/views/Law.vue')
     },
     {
+        path: '/diplom',
+        name: 'diplom',
+        meta: {
+            display: 'menus.diplom',
+            parent: 'menus.legislation'
+        },
+        component: () =>
+            import ('@/views/MinisterialDiploma.vue')
+    },
+    {
         path: '/decret_law',
         name: 'decret_law',
         meta: {
