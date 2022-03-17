@@ -36,6 +36,9 @@ use App\Console\Commands\FetchRelatorioAuditoriaDesempenhoCommand;
 use App\Console\Commands\FetchFolhetoDaJurisdicaoCommand;
 use App\Console\Commands\FetchFolhetoCSMJACommand;
 use App\Console\Commands\FetchInstrucoesERecomendacoesCommand;
+
+
+
 use App\Console\Commands\SPApiFetchAll;
 use Illuminate\Console\Scheduling\Schedule;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;

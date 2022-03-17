@@ -17,6 +17,6 @@ class FetchInstrucoesERecomendacoesCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/InstrucoesEReclamacoes')/Files";
+    protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/InstrucoesEReclamacoes')/Folders";
     protected $path = 'instrucoesEReclamacoes.json';
 }

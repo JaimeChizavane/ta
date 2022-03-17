@@ -262,7 +262,7 @@ const routes = [{
             display: 'menus.instruction_recomendation'
         },
         component: () =>
-            import ('@/views/Recomendation.vue')
+            import ('@/views/Instructions_Recommendations.vue')
     },
     {
         path: '/instruction_personal',
