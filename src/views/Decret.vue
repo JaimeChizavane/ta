@@ -54,9 +54,11 @@
                   <div class="col-sm-12 col-md-12 col-lg-4">
                     <table border="1px">
                       <tr>
-                        <td class="ta_table" colspan="2">
-                          <span class="font-weight-bold">Tipo de Legislação:</span>
-                          {{ item.Tipo_x0020_de_x0020_Legisla_x00e }}
+                      <td class="ta_table job__type" colspan="2">
+                           <div class="job__meta">
+                              <span class="font-weight-bold">Tipo de Legislação:</span>
+                              {{ item.Tipo_x0020_de_x0020_Legisla_x00e }}
+                           </div>
                         </td>
                       </tr>
                       <tr>
