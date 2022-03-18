@@ -16,6 +16,11 @@
             </ul>
           </div>
         </div><!-- /.col-xl-7 -->
+        <div class="col-sm-12">
+            <router-link class="navbar-brand" :to="{name : 'folhetoCSMJA'}">
+              <span>Saiba mais sobre o csmja</span>
+        </router-link>
+        </div>
       </div><!-- /.row -->
     </div><!-- /.container -->
   </section>

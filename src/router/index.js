@@ -27,7 +27,7 @@ const routes = [{
         path: '/folhetoCSMJA',
         name: 'folhetoCSMJA',
         meta: {
-            display: 'menus.folhetoCSMJA',
+            display: 'Conheça o CSMJA',
             //parent: 'menus.folhetoCSMJA'
         },
         component: () =>
