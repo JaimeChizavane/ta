@@ -27,13 +27,8 @@
                 </div><!-- /.accordion-item-header -->
                 <div :id="'collapse' + index" class="collapse" data-parent="#accordion">
                   <div class="accordion__body">
-                  </div>
-                </div>
-              </div>
-            </div>
-           </div>
-          <div class="col-sm-6 col-md-6 col-lg-4"
-               v-for="(file, index) in folder.Folders.results.flatMap(f => f.Files.results.map((file) => {
+                    <div class="col-sm-6 col-md-6 col-lg-4"
+               v-for="(file, index) in folder.Files.results.flatMap(f => f.Files.results.map((file) => {
                  file.FolderName = f.Name
                  file.Title = f.Title || f.Name
                  file.src = getFileUrl(file)
@@ -55,6 +50,12 @@
               </div><!-- /.portfolio-content -->
             </div><!-- /.portfolio-item -->
           </div><!-- /.col-lg-4 -->
+                  </div>
+                </div>
+              </div>
+            </div>
+           </div>
+          
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section><!-- /.portfolio layout 3  -->
