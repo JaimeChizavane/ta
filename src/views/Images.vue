@@ -28,25 +28,18 @@
                 <div :id="'collapse' + index" class="collapse" data-parent="#accordion">
                   <div class="accordion__body">
                     <div class="col-sm-6 col-md-6 col-lg-4"
-               v-for="(file, index) in folder.flatMap(f => f.Files.results.map((file) => {
-                 file.FolderName = f.Name
-                 file.Title = f.Title || f.Name
-                 file.src = getFileUrl(file)
-                 file.description = f.Name
-
-                 return file
-               }))" :key="'IM' + index">
+               v-for="(file, index) in folder.Files.results" :key="'IM' + index">
             <div class="portfolio-item">
               <div class="portfolio__img" @click="zoomImage(file)">
-                <img :src="file.src" alt="portfolio img" class="cover__image">
+                <img :src="getFileUrl(file)" alt="portfolio img" class="cover__image">
               </div><!-- /.portfolio-img -->
               <div class="portfolio__content">
                 <h4 class="portfolio__title">
                   <a href="#">{{ file.Title }}</a></h4>
-                <div class="portfolio__cat">
+                <!-- <div class="portfolio__cat">
                   <a href="#">{{ file.FolderName }}</a>
                   <a href="#">{{ folder.Name }}</a>
-                </div><!-- /.portfolio-cat -->
+                </div>/.portfolio-cat -->
               </div><!-- /.portfolio-content -->
             </div><!-- /.portfolio-item -->
           </div><!-- /.col-lg-4 -->
