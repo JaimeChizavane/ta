@@ -29,7 +29,7 @@
                })" :key="'IM' + index">
             <div class="portfolio-item">
               <div class="portfolio__img" @click="zoomImage(file)">
-                <img src="assets/images/blog/grid/1.jpg" alt="portfolio img">
+                <img src="assets/images/blog/grid/youtube-2.png" alt="portfolio img">
               </div><!-- /.portfolio-img -->
               <div class="portfolio__content">
                 <h4 class="portfolio__title">
