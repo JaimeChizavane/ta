@@ -19,30 +19,29 @@
         </div><!-- /.row -->
         <div class="row" v-for="(folder, index) in images" :key="'F-'+index">
           <!-- portfolio item #1 -->
-           <div class="row" id="accordion">
+           <div class="row" id="accordion" v-for="(folder, index) in folder.Folders.results" :key="'FF-'+index">
             <div class="col-sm-12 col-md-12 col-lg-12">
-              <div class="accordion-item" v-for="(folder, index) in folder.Folders.results" :key="'FF-'+index">
+              <div class="accordion-item">
                 <div class="accordion__header" data-toggle="collapse" :data-target="'#collapse' + index">
                   <a class="accordion__title" @click.prevent>{{ folder.Name }}</a>
                 </div><!-- /.accordion-item-header -->
                 <div :id="'collapse' + index" class="collapse" data-parent="#accordion">
                   <div class="accordion__body">
-                    <div class="col-sm-6 col-md-6 col-lg-4"
-               v-for="(file, index) in folder.Files.results" :key="'IM' + index">
-            <div class="portfolio-item">
-              <div class="portfolio__img" @click="zoomImage(file)">
-                <img :src="getFileUrl(file)" alt="portfolio img" class="cover__image">
-              </div><!-- /.portfolio-img -->
-              <div class="portfolio__content">
-                <h4 class="portfolio__title">
-                  <a href="#">{{ file.Title }}</a></h4>
-                <!-- <div class="portfolio__cat">
-                  <a href="#">{{ file.FolderName }}</a>
-                  <a href="#">{{ folder.Name }}</a>
-                </div>/.portfolio-cat -->
-              </div><!-- /.portfolio-content -->
-            </div><!-- /.portfolio-item -->
-          </div><!-- /.col-lg-4 -->
+                    <div class="col-sm-6 col-md-6 col-lg-4" v-for="(file, index) in folder.Files.results" :key="'IM' + index">
+                      <div class="portfolio-item">
+                        <div class="portfolio__img" @click="zoomImage(file)">
+                          <img :src="getFileUrl(file)" alt="portfolio img" class="cover__image">
+                        </div><!-- /.portfolio-img -->
+                        <div class="portfolio__content">
+                          <h4 class="portfolio__title">
+                            <a href="#">{{ file.Title }}</a></h4>
+                          <!-- <div class="portfolio__cat">
+                            <a href="#">{{ file.FolderName }}</a>
+                            <a href="#">{{ folder.Name }}</a>
+                          </div>/.portfolio-cat -->
+                        </div><!-- /.portfolio-content -->
+                      </div><!-- /.portfolio-item -->
+                     </div><!-- /.col-lg-4 -->
                   </div>
                 </div>
               </div>
