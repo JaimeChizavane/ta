@@ -8,11 +8,11 @@
         <div class="row">
           <div class="col-12">
             <ul class="portfolio-filter d-flex flex-wrap justify-content-center list-unstyled">
-              <li><a class="filter" :class="[activeFilter ? '':'active']" href="#"
-                     @click.prevent="filterImages(null)">Todas</a></li>
+              <li>
+                <a class="filter" :class="[activeFilter ? '':'active']" href="#" @click.prevent="filterImages(null)">Todas</a>
+              </li>
               <li v-for="(filter, index) in filters" :key="index">
-                <a class="filter" :class="[activeFilter === filter ? 'active':'']" href="#"
-                   @click.prevent="filterImages(filter)">{{ filter }}</a>
+                <a class="filter" :class="[activeFilter === filter ? 'active':'']" href="#"  @click.prevent="filterImages(filter)">{{ filter }}</a>
               </li>
             </ul><!-- /.portfolio-filter  -->
           </div><!-- /.col-lg-12 -->
