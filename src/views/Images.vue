@@ -28,7 +28,7 @@
                 <div :id="'collapse' + index" class="collapse" data-parent="#accordion">
                   <div class="accordion__body">
                     <div class="col-sm-6 col-md-6 col-lg-4"
-               v-for="(file, index) in folder.Folders.results.flatMap(f => f.Files.results.map((file) => {
+               v-for="(file, index) in folder.flatMap(f => f.Files.results.map((file) => {
                  file.FolderName = f.Name
                  file.Title = f.Title || f.Name
                  file.src = getFileUrl(file)
