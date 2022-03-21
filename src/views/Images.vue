@@ -18,13 +18,6 @@
           </div><!-- /.col-lg-12 -->
         </div><!-- /.row -->
         <div class="row" v-for="(folder, index) in images" :key="'F-'+index">
-          <div class="accordion-item" v-for="(folder, index) in images" :key="'F-'+index">
-                <div class="accordion__header" data-toggle="collapse" :data-target="'#collapse' + index">
-                  <a class="accordion__title" @click.prevent>{{ folder.Name }}</a>
-                </div><!-- /.accordion-item-header -->
-                <div :id="'collapse' + index" class="collapse" data-parent="#accordion">
-                </div>
-          </div>
           <!-- portfolio item #1 -->
           <div class="col-sm-6 col-md-6 col-lg-4"
                v-for="(file, index) in folder.Folders.results.flatMap(f => f.Files.results.map((file) => {
