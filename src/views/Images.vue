@@ -19,9 +19,9 @@
         </div><!-- /.row -->
         <div class="row" v-for="(folder, index) in images" :key="'F-'+index">
           <!-- portfolio item #1 -->
-           <div class="row" id="accordion" v-for="(folder, index) in folder.Folders.results" :key="'FF-'+index">
+           <div class="row" id="accordion">
             <div class="col-sm-12 col-md-12 col-lg-12">
-              <div class="accordion-item">
+              <div class="row accordion-item" v-for="(folder, index) in folder.Folders.results" :key="'FF-'+index">
                 <div class="accordion__header" data-toggle="collapse" :data-target="'#collapse' + index">
                   <a class="accordion__title" @click.prevent>{{ folder.Name }}</a>
                 </div><!-- /.accordion-item-header -->
