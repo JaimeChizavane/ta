@@ -19,7 +19,7 @@
         </div><!-- /.row -->
         <div class="row" v-for="(folder, index) in images" :key="'F-'+index">
           <!-- portfolio item #1 -->
-           <div class="row" id="accordion">
+           <div class="row col-12" id="accordion">
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="accordion-item" v-for="(folder, index) in folder.Folders.results" :key="'FF-'+index">
                 <div class="accordion__header" data-toggle="collapse" :data-target="'#collapse' + index">
@@ -28,8 +28,7 @@
                 <div :id="'collapse' + index" class="collapse" data-parent="#accordion">
 
                   <div class="accordion__body">
-                    <div class="row">
-                      <div class="col-12">
+                    <div class="row"> 
                         <div class="col-sm-6 col-md-6 col-lg-4" v-for="(file, index) in folder.Files.results" :key="'IM' + index">
                           <div class="portfolio-item">
                             <div class="portfolio__img" @click="zoomImage(file)">
@@ -45,9 +44,9 @@
                             </div><!-- /.portfolio-content -->
                           </div><!-- /.portfolio-item -->
                         </div><!-- /.col-lg-4 -->
-                      </div>
-                     </div>
+                    </div>
                   </div>
+                  
                 </div>
               </div>
             </div>
