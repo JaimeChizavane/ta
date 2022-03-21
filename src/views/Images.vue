@@ -23,7 +23,7 @@
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="accordion-item" v-for="(folderr, index) in folder.Folders" :key="'FF-'+index">
                 <div class="accordion__header" data-toggle="collapse" :data-target="'#collapse' + index">
-                  <a class="accordion__title" @click.prevent>{{ folderr.Name }}</a>
+                  <a class="accordion__title" @click.prevent>{{ folderr.FolderName }}</a>
                 </div><!-- /.accordion-item-header -->
                 <div :id="'collapse' + index" class="collapse" data-parent="#accordion">
                   <div class="accordion__body">
