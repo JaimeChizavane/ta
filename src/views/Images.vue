@@ -29,21 +29,23 @@
 
                   <div class="accordion__body">
                     <div class="row">
-                      <div class="col-sm-6 col-md-6 col-lg-4" v-for="(file, index) in folder.Files.results" :key="'IM' + index">
-                        <div class="portfolio-item">
-                          <div class="portfolio__img" @click="zoomImage(file)">
-                            <img :src="getFileUrl(file)" alt="portfolio img" class="cover__image">
-                          </div><!-- /.portfolio-img -->
-                          <div class="portfolio__content">
-                            <h4 class="portfolio__title">
-                              <a href="#">{{ file.Title }}</a></h4>
-                            <!-- <div class="portfolio__cat">
-                              <a href="#">{{ file.FolderName }}</a>
-                              <a href="#">{{ folder.Name }}</a>
-                            </div>/.portfolio-cat -->
-                          </div><!-- /.portfolio-content -->
-                        </div><!-- /.portfolio-item -->
-                      </div><!-- /.col-lg-4 -->
+                      <div class="col-12">
+                        <div class="col-sm-6 col-md-6 col-lg-4" v-for="(file, index) in folder.Files.results" :key="'IM' + index">
+                          <div class="portfolio-item">
+                            <div class="portfolio__img" @click="zoomImage(file)">
+                              <img :src="getFileUrl(file)" alt="portfolio img" class="cover__image">
+                            </div><!-- /.portfolio-img -->
+                            <div class="portfolio__content">
+                              <h4 class="portfolio__title">
+                                <a href="#">{{ file.Title }}</a></h4>
+                              <!-- <div class="portfolio__cat">
+                                <a href="#">{{ file.FolderName }}</a>
+                                <a href="#">{{ folder.Name }}</a>
+                              </div>/.portfolio-cat -->
+                            </div><!-- /.portfolio-content -->
+                          </div><!-- /.portfolio-item -->
+                        </div><!-- /.col-lg-4 -->
+                      </div>
                      </div>
                   </div>
                 </div>
