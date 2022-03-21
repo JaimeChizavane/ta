@@ -5,7 +5,7 @@
     <q-blog/>
     <q-about-us-section/>
     <!--    <q-structure/>-->
-    <q-galery/>
+    <q-galery/> 
     <q-contact/>
     <q-footer/>
   </div>
@@ -21,10 +21,11 @@ import QGalery from "@/components/Galery";
 import QBlog from "@/components/Blog";
 import QHeader from "@/components/Header/Header";
 import QFooter from "@/components/Footer";
+//import QSliderGallery from "@/components/SliderGallery";
 
 export default {
   name: 'QHome',
-  components: { QBlog, QGalery, QContact, QAboutUsSection, QSlider, QFooter, QHeader },
+  components: { QBlog, QGalery, QContact, QAboutUsSection, QSlider, QFooter, QHeader},
   data() {
     return {
       topNews: []
