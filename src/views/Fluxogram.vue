@@ -6,19 +6,17 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5">
-            <div class="about__img mb-40">
-              <img src="assets/images/about/1.jpg" alt="about">
+            <div class="about__img mb-40 sticky-top">  
+                <img :src="getImageUrl(history)" alt="blog image" class="cover__image"> 
               <blockquote class="blockquote mb-0">
-                <h4 class="blockquote__title">O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais
-                  administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.
-                </h4>
+                <h4 class="blockquote__title">{{ history.Title }}</h4>
               </blockquote>
             </div><!-- /.about-img -->
           </div><!-- /.col-xl-5 -->
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-1" v-if="history.Content">
-            <div class="heading-layout2 mb-40">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-1">
+            <!-- <div class="heading-layout2 mb-40">
               <h3 class="heading__title">{{ history.Title }}</h3>
-            </div><!-- /heading -->
+            </div> /heading --> 
             <div class="about-text-wrapper">
               <div class="about__Text">
                 <p class="font-weight-bold mb-30" v-html="history.Content"></p>
@@ -26,18 +24,6 @@
 
             </div>
           </div><!-- /.col-xl-7 -->
-
-          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-1" v-else>
-            <div class="text-center">
-              <h2 class="error-title">Lamentamos.</h2>
-              <p class="error-desc"> A página solicitada ainda não possui informações. Volte a tentar em uma outra
-                altura por favor.
-              </p>
-              <router-link :to="{name: 'home'}" class="btn btn__primary btn__icon">
-                <span>Ir para o Início</span> <i class="icon-arrow-right"></i>
-              </router-link>
-            </div>
-          </div>
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section><!-- /.About Layout 2 -->
@@ -51,12 +37,18 @@ import QHeader from "@/components/Header/Header";
 import QBreadCrumb from "@/components/BreadCrumb";
 
 export default {
-  name: "QPersonalProcess",
+  name: "QHistory",
   components: { QBreadCrumb, QHeader, QFooter },
+  methods: {
+    getImageUrl(item) {
+      return item && item.Attachments ? process.env.VUE_APP_ROOT_DOCS + item.AttachmentFiles.results[0].ServerRelativeUrl : 'assets/images/about/1.jpg'
+    },
+  },
   data() {
     return {
       history: {
-        Content: null
+        Content: null,
+        Attachments: null
       }
     }
   },
@@ -64,7 +56,8 @@ export default {
     window.mainExecution()
 
     this.$http.get("instituicao.json").then((data) => {
-      this.history = data.data.d.results.find(item => item.Id === 18)
+      this.history = data.data.d.results.find(item => item.Id === 18);
+      console.log(history);
     }).catch((error) => {
       console.log(error)
     })
