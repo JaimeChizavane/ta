@@ -64,7 +64,7 @@ export default {
     window.mainExecution()
 
     this.$http.get("instituicao.json").then((data) => {
-      this.history = data.data.d.results.find(item => item.Id === 12)
+      this.history = data.data.d.results.find(item => item.Id === 18)
     }).catch((error) => {
       console.log(error)
     })
