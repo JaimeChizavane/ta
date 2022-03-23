@@ -52,7 +52,8 @@
               <div class="job-item" v-for="(item, index) in items" :key="index">
                 <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-4">
-                    <table border="1px">
+                     <div class="table-responsive">
+                      <table border="1px" class="table">
                       <tr>
                         <td class="ta_table" colspan="2">
                           <span class="font-weight-bold">Tipo de Legislação:</span>
@@ -87,6 +88,7 @@
                         </td>
                       </tr>
                     </table>
+                     </div>
                     <hr>
                     <h4 class="job__title" v-html="item.Assunto"></h4>
                     <span class="job__location">

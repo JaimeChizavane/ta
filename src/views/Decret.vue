@@ -52,7 +52,8 @@
               <div class="job-item" v-for="(item, index) in items" :key="index">
                 <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-4">
-                    <table border="1px">
+                     <div class="table-responsive">
+                      <table border="1px" class="table">
                       <tr>
                       <td class="ta_table job__type" colspan="2">
                            <div class="job__meta">
@@ -89,6 +90,7 @@
                         </td>
                       </tr>
                     </table>
+                     </div>
                     <hr>
                 
                     <span class="job__location">
