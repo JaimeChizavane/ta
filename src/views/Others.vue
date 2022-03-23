@@ -57,7 +57,7 @@
                       <tr>
                         <td class="ta_table job__type" colspan="2">
                            <div class="job__meta">
-                              <span class="font-weight-bold">Tipo de Legislação:</span>
+                              <span class="font-weight-bold">Tipo de Legislação:</span> &nbsp;&nbsp;&nbsp;&nbsp;
                               {{ item.Tipo_x0020_de_x0020_Legisla_x00e }}
                            </div>
                         </td>
