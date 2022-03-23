@@ -74,52 +74,56 @@
               <div class="job-item" v-for="(item, index) in items" :key="index">
                 <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-4">
-
-                    <table border="1px">
-                      <tr v-show="item.Entidade">
-                        <td class="ta_table"
-                            v-html="'<span class=\'font-weight-bold\'>Entidade: </span>'+item.Entidade"></td>
-                      </tr>
-                      <tr v-show="item.Benefici_x00e1_rio_x0020_do_x002">
-                        <td class="ta_table"
-                            v-html="'<span class=\'font-weight-bold\'>Beneficiário: </span>'+item.Benefici_x00e1_rio_x0020_do_x002"></td>
-                      </tr>
-                      <tr v-show="item.Contratante">
-                        <td class="ta_table"
-                            v-html="'<span class=\'font-weight-bold\'>Contratante: </span>'+item.Contratante"></td>
-                      </tr>
-                      <tr v-show="item.Contratado">
-                        <td class="ta_table"
-                            v-html="'<span class=\'font-weight-bold\'>Contratado: </span>'+item.Contratado"></td>
-                      </tr>
-                      <tr>
-                        <td class="ta_table"><span class="font-weight-bold">Tipo:</span>
-                          {{ item.Ac_x00f3_rd_x00e3_o_x0020_ou_x00 }}
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="ta_table"><span class="font-weight-bold">Secção de origem:</span>
-                          {{ item.Sec_x00e7__x00e3_o_x0020_de_x002 }}
-                        </td>
-                      </tr>
-                      <tr v-show="item.Subsec_x00e7__x00e3_o">
-                        <td class="ta_table"><span class="font-weight-bold">Subsecção:</span>
-                          {{ item.Subsec_x00e7__x00e3_o }}
-                        </td>
-                      </tr>
-                      <tr v-show="item.N_x00b0__x0020_do_x0020_Acord_x0">
-                        <td class="ta_table"
-                            v-html="'<span class=\'font-weight-bold\'>N. Acórdão: </span>'+item.N_x00b0__x0020_do_x0020_Acord_x0"></td>
-                      </tr>
-                      <tr v-show="item.N_x002e__x00ba__x0020_do_x0020_P">
-                        <td class="ta_table"
-                            v-html="'<span class=\'font-weight-bold\'>N. do Processo: </span>'+item.N_x002e__x00ba__x0020_do_x0020_P"></td>
-                      </tr>
-                       <tr v-show="item.Relator">
-                        <td class="ta_table"
-                            v-html="'<span class=\'font-weight-bold\'>Relator: </span>'+item.Relator"></td>
-                      </tr>
-                    </table>
+                    <div class="table-responsive">
+                      <table border="1px" class="table">
+                        <tr v-show="item.Entidade">
+                          <td class="ta_table"
+                              v-html="'<span class=\'font-weight-bold\'>Entidade: </span>'+item.Entidade"></td>
+                        </tr>
+                        <tr v-show="item.Benefici_x00e1_rio_x0020_do_x002">
+                          <td class="ta_table"
+                              v-html="'<span class=\'font-weight-bold\'>Beneficiário: </span>'+item.Benefici_x00e1_rio_x0020_do_x002"></td>
+                        </tr>
+                        <tr v-show="item.Contratante">
+                          <td class="ta_table"
+                              v-html="'<span class=\'font-weight-bold\'>Contratante: </span>'+item.Contratante"></td>
+                        </tr>
+                        <tr v-show="item.Contratado">
+                          <td class="ta_table"
+                              v-html="'<span class=\'font-weight-bold\'>Contratado: </span>'+item.Contratado"></td>
+                        </tr>
+                        <tr>
+                          <td class="ta_table job__type">
+                            <div class="job__meta">
+                              <span class="font-weight-bold">Tipo:</span> &nbsp;&nbsp;&nbsp;&nbsp;
+                            {{ item.Ac_x00f3_rd_x00e3_o_x0020_ou_x00 }}
+                             </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="ta_table"><span class="font-weight-bold">Secção de origem:</span>
+                            {{ item.Sec_x00e7__x00e3_o_x0020_de_x002 }}
+                          </td>
+                        </tr>
+                        <tr v-show="item.Subsec_x00e7__x00e3_o">
+                          <td class="ta_table"><span class="font-weight-bold">Subsecção:</span>
+                            {{ item.Subsec_x00e7__x00e3_o }}
+                          </td>
+                        </tr>
+                        <tr v-show="item.N_x00b0__x0020_do_x0020_Acord_x0">
+                          <td class="ta_table"
+                              v-html="'<span class=\'font-weight-bold\'>N. Acórdão: </span>'+item.N_x00b0__x0020_do_x0020_Acord_x0"></td>
+                        </tr>
+                        <tr v-show="item.N_x002e__x00ba__x0020_do_x0020_P">
+                          <td class="ta_table"
+                              v-html="'<span class=\'font-weight-bold\'>N. do Processo: </span>'+item.N_x002e__x00ba__x0020_do_x0020_P"></td>
+                        </tr>
+                        <tr v-show="item.Relator">
+                          <td class="ta_table"
+                              v-html="'<span class=\'font-weight-bold\'>Relator: </span>'+item.Relator"></td>
+                        </tr>
+                      </table>
+                    </div>
                     <hr>
                     <div class="job__meta">
                       <span class="job__location">
