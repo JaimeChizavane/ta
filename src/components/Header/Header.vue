@@ -4,7 +4,7 @@
       <div class="container">
         <router-link class="navbar-brand" :to="{name : 'home'}">
           <img src="assets/images/logo/logo.png" class="logo-light" alt="logo">
-          <img src="assets/images/logo/logo-dark.png" class="logo-dark" alt="logo">
+          <!-- <img src="assets/images/logo/logo-dark.png" class="logo-dark" alt="logo"> -->
         </router-link>
         <button class="navbar-toggler" type="button" @click="openMenu()">
           <span class="menu-lines"><span></span></span>
