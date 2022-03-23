@@ -155,7 +155,7 @@
                                           
                       </div>
                        <hr>
-                       <div class="row col-sm-12"> 
+                       <div class="row col-sm-12" v-show="item.Sum_x00e1_rio"> 
                         <div class="row col-sm-12">
                           <span class="font-weight-bold">Sumário: </span> 
                         </div> 
