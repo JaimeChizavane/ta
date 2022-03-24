@@ -30,13 +30,10 @@
              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 offset-xl-1">
               <!-- <div class="heading-layout2 mb-40">
                 <h3 class="heading__title">{{ history.Title }}</h3>
-              </div> /heading --> 
-              <div class="about-text-wrapper">
+              </div> /heading -->               
                 <div class="about__Text">
                   <p class="font-weight-bold mb-30" v-html="history.Content"></p>
-                </div>
-
-              </div>
+                </div> 
             </div><!-- /.col-xl-7 -->
           </div>
         </div><!-- /.row -->
