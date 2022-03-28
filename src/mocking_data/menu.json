@@ -112,6 +112,11 @@
                 "sub_menus": []
             },
             {
+                "name": "menus.visa_consultation",
+                "to": "visa_consultation",
+                "sub_menus": []
+            },
+            {
                 "name": "menus.sub_section",
                 "to": "sub_section",
                 "sub_menus": []

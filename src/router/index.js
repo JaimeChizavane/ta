@@ -240,6 +240,16 @@ const routes = [{
             import ('@/views/AboutUs.vue')
     },
     {
+        path: '/visa_consultation',
+        name: 'visa_consultation',
+        beforeEnter() { location.href = 'http://consultavisto.ta.gov.mz:8080/vistoPublic/login/auth' },
+        meta: {
+            display: 'menus.visa_consultation'
+        },
+        component: () =>
+            import ('@/views/AboutUs.vue')
+    },
+    {
         path: '/dispatch',
         name: 'dispatch',
         meta: {
