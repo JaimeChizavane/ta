@@ -19,7 +19,7 @@
               <h4 class="cta__title my-3 pr-30">
                 Encontre a nossa galeria de imagens online.
               </h4>
-              <router-link :to="{name: 'videos'}" class="btn btn__primary btn__primary-style2">
+              <router-link :to="{name: 'galery'}" class="btn btn__primary btn__primary-style2">
                 <span> Ver mais </span>
                 <i class="icon-arrow-right"></i>
               </router-link>
