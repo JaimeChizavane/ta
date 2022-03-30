@@ -242,7 +242,9 @@ const routes = [{
     {
         path: '/visa_consultation',
         name: 'visa_consultation',
-        beforeEnter() { location.href = 'http://consultavisto.ta.gov.mz:8080/vistoPublic/login/auth' },
+        beforeEnter() {
+            window.open('http://consultavisto.ta.gov.mz:8080/vistoPublic/login/auth', '_blank');
+        }, // location.href = 'http://consultavisto.ta.gov.mz:8080/vistoPublic/login/auth' },
         meta: {
             display: 'menus.visa_consultation'
         },
