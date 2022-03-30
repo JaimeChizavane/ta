@@ -1,36 +1,17 @@
 <template> 
   <section class="slider" >
-    <div class="slick-carousel carousel-arrows-light carousel-dots-light m-slides-0"
-         data-slick='{"slidesToShow": 1, "arrows": true, "dots": true, "speed": 700,"fade": true,"cssEase": "linear", "autoplay": true}'>
-      <div class="slide-item align-v-h bg-overlay bg-overlay-gradient" v-for="(item, index) in sliders" :key="index">
-        <div class="bg-img"><img :src="item.img" alt="slide img"></div>
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <div class="slide__content">
-<!--                <span class="slide__subtitle" v-html="item.subtitle"></span>-->
-<!--                <h2 class="slide__title">{{ item.title }}</h2>-->
-                <!-- <h1 class="pagetitle__heading">{{ item.title }}</h1>
-                <p class="slide__desc" v-html="item.subtitle"></p> -->
-<!--                <div class="d-flex flex-wrap align-items-center">-->
-<!--                  <router-link :to="item.to" class="btn btn__primary btn__primary-style2 mr-30">-->
-<!--                    <i class="icon-arrow-right"></i>-->
-<!--                    <span> Saber Mais</span>-->
-<!--                  </router-link>-->
-<!--                </div>-->
-              </div><!-- /.slide-content -->
-            </div><!-- /.col-xl-7 -->
-
-
-          </div><!-- /.row -->
-        </div><!-- /.container -->
-      </div><!-- /.slide-item -->
-    </div><!-- /.carousel -->
+  <div id="slider">
+  <img class="image" v-for="(image, i) in images" :src="image" :key="i" @click="index = i">
+  <vue-gallery-slideshow :images="images" :index="index" @close="index = null"></vue-gallery-slideshow>
+</div>
   </section><!-- /.slider -->
 </template>
 
 <script>
+
 export default {
+  
+
   name: "QSliderGallery",
   watch: {
     news: function () {

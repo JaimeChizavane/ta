@@ -70,14 +70,12 @@
               <div class="col-sm-4 col-md-4 col-lg-4 footer-widget footer-widget-about">
               <div class="contact-info">
                   <h6 class="footer-widget__title">Redes Sociais</h6>
-                  <ul class="social-icons list-unstyled">
-                  <li><a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
-                  </li>
-                 <li><a href="#"><i class="fab fa-instagram"></i>instagram</a>
-                 </li>
-                 <li><a href="#"><i class="fab fa-twitter"></i>twitter</a></li>
-               </ul>
-                </div>
+                  <ul class="contact-list list-unstyled">
+                    <li class="mt-20 mb-20"><a href="#"  class="phone-number"><i class="fab fa-facebook"></i><span> facebook</span> </a> </li>
+                    <li class="mt-20 mb-20"><a href="#"  class="phone-number"><i class="fab fa-instagram"></i> <span> instagram</span> </a> </li>
+                    <li class="mt-20 mb-20"><a href="#"  class="phone-number"><i class="fab fa-twitter"></i> <span> twitter </span></a></li>
+                  </ul>
+              </div>
               </div> <!--redes sociais-->
            <!--  <div class="col-sm-6 col-md-6 col-lg-2 footer-widget footer-widget-nav" v-for="(menu, index) in menus"
                  :key="index">
