@@ -17,7 +17,7 @@
             </div><!-- /.tab-content -->
             <div class="cta-banner mt-30 mb-30 d-flex flex-wrap align-items-center">
               <h4 class="cta__title my-3 pr-30">
-                Encontre a nossa galeria online, com todos as coberturas de eventos:
+                Encontre a nossa galeria de imagens online.
               </h4>
               <router-link :to="{name: 'videos'}" class="btn btn__primary btn__primary-style2">
                 <span> Ver mais </span>
@@ -29,7 +29,7 @@
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-5">
           <div class="heading mb-70">
             <h2 class="heading__subtitle color-primary">Galeria</h2>
-            <h3 class="heading__title color-white">Encontre a nossa galeria digital! </h3>
+           <!-- <h3 class="heading__title color-white">Encontre a nossa galeria digital! </h3>-->
           </div>
           <nav class="nav nav-tabs">
             <!-- process Item #1 -->
