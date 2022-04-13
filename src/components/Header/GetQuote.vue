@@ -2,12 +2,12 @@
   <li>
     <ul class="navbar-actions list-unstyled mb-0 d-flex align-items-center">
       <li class="d-none d-xl-block">
-        <span class="">
-        Online
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
-            2
+        
+        Visitas : 
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary" id="count_visitors">
+            
            </span>
-        </span>
+      
  
       </li>
          <li class="d-none d-xl-block">
@@ -24,8 +24,15 @@
 </template>
 
 <script>
+
 export default {
-  name: "QGetQuote"
+  name: "QGetQuote",
+   mounted(){
+
+   },
+  methods: {
+    
+  }
 }
 </script>
 

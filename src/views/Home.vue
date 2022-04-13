@@ -13,7 +13,7 @@
 </template>
 
 <script>
-
+import countapi from 'countapi-js';
 import QSlider from "@/components/Slider";
 import QAboutUsSection from "@/components/AboutUsSection";
 import QContact from "@/components/Contact";
@@ -21,8 +21,9 @@ import QContact from "@/components/Contact";
 import QGalery from "@/components/Galery";
 import QBlog from "@/components/Blog";
 import QHeader from "@/components/Header/Header";
-import QFooter from "@/components/Footer";
-//import QSliderGallery from "@/components/SliderGallery";
+import QFooter from "@/components/Footer"; 
+
+
 
 export default {
   name: 'QHome',
@@ -32,13 +33,22 @@ export default {
       topNews: []
     }
   },
-  mounted() {
+  mounted: function() {
     // window.mainExecution()
+    this.getVisitesUrl();
   },
   methods: {
     getImageUrl(item) {
       return item && item.Attachments ? process.env.VUE_APP_ROOT_DOCS + item.AttachmentFiles.results[0].ServerRelativeUrl : 'assets/images/blog/grid/1.jpg'
+    }, 
+    getVisitesUrl(){ 
+      countapi.visits("extranet.ta.gov.mz","19dd30fa-bd8f-4ac0-a04a-eb035f08dfc4").then((result) => {
+            document.getElementById("count_visitors").innerText = result.value;
+      });
     }
+   
+
+
     // addToSlider(news) {
     //   news.forEach((article) => {
     //     this.topNews.push({
@@ -53,3 +63,6 @@ export default {
   }
 }
 </script>
+
+
+
