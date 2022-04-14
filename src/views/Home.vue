@@ -44,6 +44,7 @@ export default {
     getVisitesUrl(){ 
       countapi.visits("extranet.ta.gov.mz","19dd30fa-bd8f-4ac0-a04a-eb035f08dfc4").then((result) => {
             document.getElementById("count_visitors").innerText = result.value;
+            console.log(result.value);
       });
     }
    
