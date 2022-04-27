@@ -3,7 +3,7 @@
     "pt": {
         "menus": {
             "home": "Início",
-            "institution": "instituição",
+            "institution": "Instituição",
             "history": "Breve Historial",
             "support_services": "Serviços de Apoio",
             "competencies": "Atribuições e Competências",
@@ -76,7 +76,7 @@
     "en": {
         "menus": {
             "home": "Início",
-            "institution": "instituição",
+            "institution": "Instituição",
             "history": "Breve Historial",
             "support_services": "Serviços de Apoio",
             "competencies": "Atribuições e Competências",
