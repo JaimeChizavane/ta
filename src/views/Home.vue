@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import countapi from 'countapi-js';
+//import countapi from 'countapi-js';
 import QSlider from "@/components/Slider";
 import QAboutUsSection from "@/components/AboutUsSection";
 import QContact from "@/components/Contact";
@@ -42,10 +42,12 @@ export default {
       return item && item.Attachments ? process.env.VUE_APP_ROOT_DOCS + item.AttachmentFiles.results[0].ServerRelativeUrl : 'assets/images/blog/grid/1.jpg'
     }, 
     getVisitesUrl(){ 
+      /*
       countapi.visits("extranet.ta.gov.mz","19dd30fa-bd8f-4ac0-a04a-eb035f08dfc4").then((result) => {
             document.getElementById("count_visitors").innerText = result.value;
             console.log(result.value);
       });
+      */
     }
    
 
