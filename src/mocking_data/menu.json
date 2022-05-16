@@ -107,13 +107,13 @@
         "name": "menus.dispatch",
         "to": "dispatch",
         "sub_menus": [{
-                "name": "menus.statistic",
-                "to": "statistic",
+                "name": "menus.visa_consultation",
+                "to": "visa_consultation",
                 "sub_menus": []
             },
             {
-                "name": "menus.visa_consultation",
-                "to": "visa_consultation",
+                "name": "menus.statistic",
+                "to": "statistic",
                 "sub_menus": []
             },
             {
