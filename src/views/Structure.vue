@@ -14,8 +14,9 @@
             <div class="heading text-center">
             </div><!-- /heading -->
             <div class="heading__title">
-              <span class="" v-html="services.Content">
+              <span class="" v-html="services.Content">                
               </span>
+              <img :src="getImageUrl(services)" alt="blog image" class="cover__image"> 
             </div>
           </div><!-- /.col-xl-7 -->
         </div><!-- /.row -->
