@@ -208,7 +208,7 @@ var mainExecution = function () {
     infinite: true,
     autoplay: true,
     autoplaySpeed: 5000,
-    adaptiveHeight: true
+    adaptiveHeight: false
   });
 
   $('.slider-with-navs').slick({

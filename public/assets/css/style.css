@@ -4612,6 +4612,12 @@ input[type=radio] {
         margin-top: 0 !important;
     }
 
+    .slide__content .pagetitle__heading {
+        font-size: 28px !important;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
     .slider .slide-item {
         min-height: 0;
         padding: 100px 10px;

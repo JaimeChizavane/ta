@@ -8,8 +8,6 @@
           <div class="row align-items-center">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
               <div class="slide__content">
-<!--                <span class="slide__subtitle" v-html="item.subtitle"></span>-->
-<!--                <h2 class="slide__title">{{ item.title }}</h2>-->
                 <h1 class="pagetitle__heading">{{ item.title }}</h1>
                 <p class="slide__desc" v-html="item.subtitle"></p>
 <!--                <div class="d-flex flex-wrap align-items-center">-->
