@@ -6,15 +6,15 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <div class="pagetitle__form mb-50">
+            <div class="pagetitle__form">
               <label class="offset-11">
                 <button @click="clear"><i class="icon-query"></i> Limpar</button>
               </label>
               <form @submit.prevent="search">
                 <div class="form-row">
                   <div class="col-12">
-                    <input v-model="query.assunto" type="text" class="form-control bordered-box mb-20"
-                           placeholder="Procurar...">
+                    <input v-model="query.assunto" type="text" class="form-control bordered-box"
+                           placeholder="Escreva o que procurar e pise em ENTER">
                   </div>
                 </div>
               </form>
@@ -23,7 +23,7 @@
         </div>
       </div>
     </section>
-    <section class="careers" v-if="legisltationItems.length">
+    <section class="careers" v-if="query.assunto && legisltationItems.length">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
@@ -115,7 +115,7 @@
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section><!-- /.careers -->
-    <section class="careers" v-if="jurisdictionItems.length">
+    <section class="careers" v-if="query.assunto && jurisdictionItems.length">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
@@ -240,7 +240,7 @@
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section><!-- /.careers -->
-    <section class="portfolio-grid" v-if="publicationItems.length">
+    <section class="portfolio-grid" v-if="query.assunto && publicationItems.length">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
@@ -284,7 +284,7 @@
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section><!-- /.portfolio layout 3  -->
-    <section class="blog-grid pb-50" v-if="newsItems.length">
+    <section class="blog-grid pb-50" v-if="query.assunto && newsItems.length">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
@@ -384,13 +384,14 @@ export default {
       })
     },
     search() {
+      this.$route.query.query = this.query.assunto
+
       Promise.all([
         this.fetchFromApi("legislacaoAll.json"),
         this.fetchFromApi("jurispudenciaAll.json"),
         this.fetchFromApi("publicacoes.json"),
         this.fetchFromApi("news.json")
       ]).then((datas) => {
-        console.log(datas)
         this.legisltationItems = datas[0].data.d.results.filter(file => (this.query.assunto === ''
             || file.Title?.toLowerCase().includes(this.query.assunto.toLowerCase())
             || file.Assunto?.toLowerCase().includes(this.query.assunto.toLowerCase()))
@@ -400,8 +401,8 @@ export default {
             .filter(file => (this.query.assunto === ''
                 || file.Assunto.results.find(i => i?.toLowerCase().includes(this.query.assunto.toLowerCase()))
                 || file.Relator?.toLowerCase().includes(this.query.relator.toLowerCase())
-                || file.N_x002e__x00ba__x0020_do_x0020_P?.toLowerCase().includes(this.query.processo.toLowerCase())
-                || file.N_x00b0__x0020_do_x0020_Acord_x0?.toLowerCase().includes(this.query.acordao.toLowerCase()))
+                || file.N_x002e__x00ba__x0020_do_x0020_P?.toLowerCase().includes(this.query.assunto.toLowerCase())
+                || file.N_x00b0__x0020_do_x0020_Acord_x0?.toLowerCase().includes(this.query.assunto.toLowerCase()))
             )
 
 
@@ -427,7 +428,7 @@ export default {
         this.newsItems = datas[3].data.d.results.sort((item, next) => {
           return new Date(next.Data_x0020_Noticia || next.Created) - new Date(item.Data_x0020_Noticia || item.Created);
         }).filter(article =>
-            (this.query.assunto === '' || article.Title.toLowerCase().includes(this.query.assunto.toLowerCase()))
+            (this.query.assunto === '' || article?.Title?.toLowerCase().includes(this.query.assunto.toLowerCase()))
         ).slice(0, 10)
 
 
