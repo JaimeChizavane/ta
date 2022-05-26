@@ -400,7 +400,7 @@ export default {
         this.jurisdictionItems = datas[1].data.d.results
             .filter(file => (this.query.assunto === ''
                 || file.Assunto.results.find(i => i?.toLowerCase().includes(this.query.assunto.toLowerCase()))
-                || file.Relator?.toLowerCase().includes(this.query.relator.toLowerCase())
+                || file.Relator?.toLowerCase().includes(this.query.assunto.toLowerCase())
                 || file.N_x002e__x00ba__x0020_do_x0020_P?.toLowerCase().includes(this.query.assunto.toLowerCase())
                 || file.N_x00b0__x0020_do_x0020_Acord_x0?.toLowerCase().includes(this.query.assunto.toLowerCase()))
             )
