@@ -11,7 +11,7 @@
         </button>
         <div class="header__top-right">
           <ul class="list-unstyled d-flex justify-content-end align-items-center mb-0">
-            <q-select-language/>
+<!--            <q-select-language/>-->
             <q-get-quote/>
           </ul>
         </div><!-- /.header-top-right -->

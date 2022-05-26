@@ -183,6 +183,15 @@ const routes = [{
             import ('@/views/Others.vue')
     },
     {
+        path: '/search',
+        name: 'search',
+        meta: {
+            display: 'search'
+        },
+        component: () =>
+            import ('@/views/Search.vue')
+    },
+    {
         path: '/decret',
         name: 'decret',
         meta: {

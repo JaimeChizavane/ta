@@ -49,49 +49,52 @@
                     <li class="color-body">Praça da Independência, N.º1117, Maputo - Moçambique</li>
                   </ul>
                 </div><!-- /.contact-info -->
-               
-<!--                <ul class="social-icons list-unstyled mb-0">-->
-<!--                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>-->
-<!--                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>-->
-<!--                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>-->
-<!--                </ul>&lt;!&ndash; /.social-icons &ndash;&gt;-->
+
+                <!--                <ul class="social-icons list-unstyled mb-0">-->
+                <!--                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>-->
+                <!--                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>-->
+                <!--                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>-->
+                <!--                </ul>&lt;!&ndash; /.social-icons &ndash;&gt;-->
               </div><!-- /.footer-widget__content -->
             </div>
-             <div class="col-sm-4 col-md-4 col-lg-4 footer-widget footer-widget-about">
+            <div class="col-sm-4 col-md-4 col-lg-4 footer-widget footer-widget-about">
               <div class="contact-info">
-                  <h6 class="footer-widget__title">Links Importantes</h6>
-                  <ul class="contact-list list-unstyled">
-                    <li><a href="https://www.portaldogoverno.gov.mz/por/" target="_blank"> Portal do Governo </a>
-                    </li>
-            
-                  </ul>
-                </div>
-              </div> <!--links importantes-->
-              <div class="col-sm-4 col-md-4 col-lg-4 footer-widget footer-widget-about">
-              <div class="contact-info">
-                  <h6 class="footer-widget__title">Redes Sociais</h6>
-                  <ul class="contact-list list-unstyled">
-                    <li class="mt-20 mb-20"><a href="#"  class="phone-number"><i class="fab fa-facebook"></i><span> facebook</span> </a> </li>
-                    <li class="mt-20 mb-20"><a href="#"  class="phone-number"><i class="fab fa-instagram"></i> <span> instagram</span> </a> </li>
-                    <li class="mt-20 mb-20"><a href="#"  class="phone-number"><i class="fab fa-twitter"></i> <span> twitter </span></a></li>
-                  </ul>
+                <h6 class="footer-widget__title">Links Importantes</h6>
+                <ul class="contact-list list-unstyled">
+                  <li><a href="https://www.portaldogoverno.gov.mz/por/" target="_blank"> Portal do Governo </a>
+                  </li>
+
+                </ul>
               </div>
-              </div> <!--redes sociais-->
-           <!--  <div class="col-sm-6 col-md-6 col-lg-2 footer-widget footer-widget-nav" v-for="(menu, index) in menus"
-                 :key="index">
-              <h6 class="footer-widget__title">{{ $t(menu.name) | upper }}</h6>
-              <div class="footer-widget__content">
-                <nav>
-                  <ul class="list-unstyled">
-                    <li v-for="(sub, index) in menu.sub_menus" :key="'sub'+index">
-                      <router-link :to="{name: sub.to}">
-                        {{ $t(sub.name) | upper }}
-                      </router-link>
-                    </li>
-                  </ul>
-                </nav>
-              </div><!/.footer-widget__content 
-            </div> -->
+            </div> <!--links importantes-->
+            <div class="col-sm-4 col-md-4 col-lg-4 footer-widget footer-widget-about">
+              <div class="contact-info">
+                <h6 class="footer-widget__title">Redes Sociais</h6>
+                <ul class="contact-list list-unstyled">
+                  <li class="mt-20 mb-20"><a href="#" class="phone-number"><i class="fab fa-facebook"></i><span> facebook</span>
+                  </a></li>
+                  <li class="mt-20 mb-20"><a href="#" class="phone-number"><i class="fab fa-instagram"></i> <span> instagram</span>
+                  </a></li>
+                  <li class="mt-20 mb-20"><a href="#" class="phone-number"><i class="fab fa-twitter"></i>
+                    <span> twitter </span></a></li>
+                </ul>
+              </div>
+            </div> <!--redes sociais-->
+            <!--  <div class="col-sm-6 col-md-6 col-lg-2 footer-widget footer-widget-nav" v-for="(menu, index) in menus"
+                  :key="index">
+               <h6 class="footer-widget__title">{{ $t(menu.name) | upper }}</h6>
+               <div class="footer-widget__content">
+                 <nav>
+                   <ul class="list-unstyled">
+                     <li v-for="(sub, index) in menu.sub_menus" :key="'sub'+index">
+                       <router-link :to="{name: sub.to}">
+                         {{ $t(sub.name) | upper }}
+                       </router-link>
+                     </li>
+                   </ul>
+                 </nav>
+               </div><!/.footer-widget__content
+             </div> -->
           </div>
         </div>
         <div class="row">
@@ -142,8 +145,9 @@
 
     <div class="search-popup">
       <button type="button" class="search-popup__close"><i class="fas fa-times"></i></button>
-      <form class="search-popup__form">
-        <input type="text" class="search-popup__form__input" placeholder="Type Words Then Enter">
+      <form class="search-popup__form" @submit.prevent="search">
+        <input type="text" class="search-popup__form__input" placeholder="Escreva e pressione ENTER"
+               v-model="searchQuery">
         <button class="search-popup__btn"><i class="icon-search"></i></button>
       </form>
     </div><!-- /. search-popup -->
@@ -155,11 +159,24 @@ import menus from '@/mocking_data/menu.json'
 
 export default {
   name: "QFooter",
+  data() {
+    return {
+      searchQuery: ''
+    }
+  },
   computed: {
     menus: function () {
       return menus.filter((menu) => {
         return menu.sub_menus && menu.sub_menus.length
       })
+    }
+  },
+  methods: {
+    search() {
+      window.$(".search-popup__close")[0].click()
+
+
+      this.$router.push({ name: 'search', query:{ query: this.searchQuery } })
     }
   }
 }

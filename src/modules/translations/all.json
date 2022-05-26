@@ -59,6 +59,7 @@
             "others": "Outros",
             "news": "Notícias"
         },
+        "search": "Pesquisar",
         "read_more": "Ler mais",
         "history": "Breve Historial",
         "news": "Notícia | Notícias",
@@ -130,6 +131,7 @@
             "news": "Notícias"
         },
         "read_more": "Ler mais",
+        "search": "Search",
         "history": "Breve Historial",
         "news": "Notícia | Notícias",
         "blog": "Notícias",
