@@ -390,6 +390,7 @@ export default {
         this.fetchFromApi("publicacoes.json"),
         this.fetchFromApi("news.json")
       ]).then((...datas) => {
+        console.log(datas)
         this.legisltationItems = datas[0].data.d.results.filter(file => (this.query.assunto === ''
             || file.Title?.toLowerCase().includes(this.query.assunto.toLowerCase())
             || file.Assunto?.toLowerCase().includes(this.query.assunto.toLowerCase()))
