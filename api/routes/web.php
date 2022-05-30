@@ -14,10 +14,30 @@
 */
 
 use App\Services\HttpClient;
+use Illuminate\Auth\GenericUser;
+use Illuminate\Support\Facades\Broadcast;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Str;
 
 $router->get('/', function () use ($router) {
     return 'Tribunal Administrativo';
+});
+
+$router->post('broadcasting/auth', function () use ($router) {
+
+    $user = new GenericUser(['id' => microtime()]);
+
+    request()->setUserResolver(function () use ($user) {
+        return $user;
+    });
+
+    return Broadcast::auth(request());
+
+//    return ['id' => Str::random(), 'user' => Str::random()];
+});
+
+Broadcast::channel('chat', function () {
+    return true;
 });
 
 $router->post('/api/denuncias', function () use ($router) {

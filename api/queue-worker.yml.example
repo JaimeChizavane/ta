@@ -1,0 +1,6 @@
+apps:
+  - name:
+    script: websocket.sh
+    exec_mode: fork
+    interpreter: bash
+    instances: 1
