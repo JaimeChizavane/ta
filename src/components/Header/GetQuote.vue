@@ -31,15 +31,25 @@
 import Echo from 'laravel-echo'
 
 window.io = require('socket.io-client')
+window.Pusher = require('pusher-js')
 
-const echoinstance = process.env.VUE_APP_WEBSOCKET_URL ? new Echo({
-  broadcaster: 'socket.io',
-  // host: window.location.hostname + ':8081',
-  transports: ['polling', 'websocket', 'flashsocket'], // Fix CORS error!
-  // broadcaster: 'socket.io',
-  host: process.env.VUE_APP_WEBSOCKET_URL,
-  // path: process.env.VUE_APP_WEBSOCKET_PATH,
-  // namespace: 'App.Events'
+const echoinstance = process.env.VUE_APP_WEBSOCKET_HOST ? new Echo({
+  key: process.env.VUE_APP_WEBSOCKET_KEY,
+  wsHost: process.env.VUE_APP_WEBSOCKET_HOST,
+  // wsPort: process.env.VUE_APP_WEBSOCKET_PORT,
+  // wssPort: process.env.VUE_APP_WEBSOCKET_PORT,
+  authEndpoint: process.env.VUE_APP_WEBSOCKET_AUTH,
+  broadcaster: 'pusher',
+  // key: "a08cd5563a35608a631a71bf7d66ea68",
+  //     ws://localhost:6001/app/
+  // wsHost: "localhost",
+  wsPort: 6001,
+  wssPort: 6001,
+  forceTLS: false,
+  encrypted: true,
+  disableStats: true,
+  enabledTransports: ['ws', 'wss'],
+  // authEndpoint: "https://api.ta.test/broadcasting/auth"
 }) : {}
 
 export default {

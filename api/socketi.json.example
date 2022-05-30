@@ -1,0 +1,17 @@
+{
+    "debug": true,
+    "port": 6001,
+    "database": {
+        "redis": {
+            "host": "127.0.0.1",
+            "port": "6379"
+        }
+    },
+    "appManager.array.apps": [
+        {
+            "id": "",
+            "key": "",
+            "secret": "123456"
+        }
+    ]
+}

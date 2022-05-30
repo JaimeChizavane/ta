@@ -27,3 +27,4 @@ pnpm-debug.log*
 /api/portal-externo-ta-bf951276a36a.json
 api/laravel-echo-server.json
 api/queue-worker.yml
+api/socketi.json
