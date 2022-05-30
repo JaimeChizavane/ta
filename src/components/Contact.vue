@@ -6,17 +6,6 @@
           <div class="contact-panel d-flex flex-wrap">
             <div class="stats-banner contact-panel__info d-flex flex-column justify-content-between">
               <div class="bg-img"><img src="assets/images/backgrounds/1.jpg" alt="banner"></div>
-              <div class="slick-carousel carousel-dots-light counters-light mb-40"
-                   data-slick='{"slidesToShow": 1, "arrows": false, "dots": true, "speed": 700}'>
-                <div class="counter-item">
-                  <h4 class="counter color-white">654</h4>
-                  <p class="counter__desc">Processos respondidos</p>
-                </div><!-- /.counter-item -->
-                <div class="counter-item">
-                  <h4 class="counter color-white">154</h4>
-                  <p class="counter__desc">Artigos publicados</p>
-                </div><!-- /.counter-item -->
-              </div><!-- /.slick-carousel -->
               <div>
                 <h4 class="stats-banner__ttile mb-20">O nosso canal digital permite uma melhor cobertura e transparência
                   de modo que possa-se tornar visivel os resultados do TA.
