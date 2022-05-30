@@ -35,7 +35,7 @@ window.io = require('socket.io-client')
 const echoinstance = process.env.VUE_APP_WEBSOCKET_URL ? new Echo({
   broadcaster: 'socket.io',
   // host: window.location.hostname + ':8081',
-  transports: ['websocket', 'polling', 'flashsocket'], // Fix CORS error!
+  transports: ['polling', 'websocket', 'flashsocket'], // Fix CORS error!
   // broadcaster: 'socket.io',
   host: process.env.VUE_APP_WEBSOCKET_URL,
   // path: process.env.VUE_APP_WEBSOCKET_PATH,
