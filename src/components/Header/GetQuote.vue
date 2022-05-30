@@ -43,8 +43,8 @@ const echoinstance = process.env.VUE_APP_WEBSOCKET_HOST ? new Echo({
   // key: "a08cd5563a35608a631a71bf7d66ea68",
   //     ws://localhost:6001/app/
   // wsHost: "localhost",
-  wsPort: 8081,
-  wssPort: 8081,
+  wsPort: 8082,
+  wssPort: 8082,
   forceTLS: false,
   encrypted: true,
   disableStats: true,
