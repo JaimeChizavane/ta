@@ -233,11 +233,6 @@
                 "sub_menus": []
             },
             {
-                "name": "menus.report_submission",
-                "to": "report_submission",
-                "sub_menus": []
-            },
-            {
                 "name": "menus.galery",
                 "to": "galery",
                 "sub_menus": []
