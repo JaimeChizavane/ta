@@ -95,7 +95,7 @@ export default {
   data() {
     return {
       sliders: [
-        {
+       /*  {
           img: "assets/images/about/1.jpg",
           subtitle:
             "Seja bem-vindo ao site do Tribunal Administrativo de Moçambique.",
@@ -109,7 +109,7 @@ export default {
           title: "Tribunal Administrativo em prol da Justiça",
           desc: "O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.",
           to: { name: "history" },
-        },
+        }, */
       ],
     };
   },
