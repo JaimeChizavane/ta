@@ -27,11 +27,18 @@
                   <div class="container">
                     <div class="row align-items-center">
                       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <div class="slide__content text-center mt-0 text-block__title"> 
-                            <span
-                              class="text-light "
-                              v-html="item.subtitle"
-                            ></span> 
+                        <div
+                          class="
+                            slide__content
+                            text-center
+                            mt-0
+                            text-block__title
+                          "
+                        >
+                          <span
+                            class="text-light"
+                            v-html="item.subtitle"
+                          ></span>
 
                           <!--             <h1 class="process-item__title">{{ item.title }}</h1>    <div class="d-flex flex-wrap align-items-center">-->
                           <!--                  <router-link :to="item.to" class="btn btn__primary btn__primary-style2 mr-30">-->
@@ -114,7 +121,35 @@ export default {
         : "assets/images/blog/grid/1.jpg";
     },
   },
-  mounted() {},
+  mounted() {
+    this.$http
+      .get("images.json")
+      .then((data) => {
+        this.sliders = data.data.d.results
+          .filter((f) => f.Name !== "Forms")
+          .flatMap((f) =>
+            f.Folders.results.flatMap((fo) =>
+              fo.Files.results.map((file) => {
+                file.Title =
+                  file.Title && file.Title.trim() ? file.Title : fo.Name;
+                file.src = this.getFileUrl(file);
+
+                return {
+                  img: this.getFileUrl(file),
+                  subtitle: file.Title,
+                  title: file.Title,
+                  desc: "",
+                  to: { name: "history" },
+                };
+              })
+            )
+          )
+          .slice(0, 5);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  },
 };
 </script>
 
