@@ -239,7 +239,7 @@ const routes = [{
         component: () =>
             import ('@/views/AboutUs.vue')
     },
-  
+
     {
         path: '/visa_consultation',
         name: 'visa_consultation',

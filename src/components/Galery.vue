@@ -38,7 +38,7 @@
                :key="index">
               <div class="process-item__content">
                 <h4 class="process-item__title">{{ image.Title }}</h4>
-                <p class="process-item__desc">{{ image.Name }}</p>
+               <!-- <p class="process-item__desc">{{ image.Name }}</p>-->
               </div>
             </a><!-- /.process-item -->
           </nav>
