@@ -96,11 +96,12 @@ export default {
       }
 
       if (valid) {
-        this.sendEmail();
+       
         this.$http
           .post(process.env.VUE_APP_ROOT_SUBMIT + "/denuncias", this.denuncia)
           .then(() => {
             this.success = "Dados submetidos com sucesso";
+            this.sendEmail();
             this.clear();
           })
           .catch((error) => {
@@ -125,15 +126,12 @@ export default {
     },
     sendEmail() {
       try {
-      
-      //  emailjs.init(process.env.EMAILJS_PUBLIC_KEY);
-        emailjs.init('-9nG4BUAre3illL3y');
-        //  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target,
+        emailjs.init(process.env.EMAILJS_PUBLIC_KEY); 
         emailjs
-          .send('service_re137ti','template_cv9hga3', {
+          .send(process.env.EMAILJS_SERVICE_ID,process.env.EMAILJS_TEMPLATE_ID, {
             name: this.denuncia.Nome,
             email: this.denuncia.Email,
-            message: "A sua "+this.denuncia.Title+", foi submetida com sucesso!",
+            message: "A sua "+this.denuncia.Title+", foi submetida com sucesso!"
             
 
           })
