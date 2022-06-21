@@ -2,12 +2,13 @@
   <div class="wrapper">
     <q-header/>
     <q-slider/>
-    <q-blog/>
-    <q-about-us-section/>
-    <!--    <q-structure/>-->
+    <q-blog/> 
+ 
     <q-galery/> 
-    <q-contact/>
-<!--    <q-slidergallery/>-->
+       <!--    <q-structure/>-->
+     <q-about-us-section/>
+<!--    <q-contact/>
+--    <q-slidergallery/>-->
     <q-footer/>
   </div>
 </template>
@@ -16,7 +17,7 @@
 //import countapi from 'countapi-js';
 import QSlider from "@/components/Slider";
 import QAboutUsSection from "@/components/AboutUsSection";
-import QContact from "@/components/Contact";
+//import QContact from "@/components/Contact";
 // import QStructure from "@/components/Structure";
 import QGalery from "@/components/Galery";
 import QBlog from "@/components/Blog";
@@ -27,7 +28,7 @@ import QFooter from "@/components/Footer";
 
 export default {
   name: 'QHome',
-  components: { QBlog, QGalery, QContact, QAboutUsSection, QSlider, QFooter, QHeader},
+  components: { QBlog, QGalery,  QAboutUsSection, QSlider, QFooter, QHeader},
   data() {
     return {
       topNews: []
