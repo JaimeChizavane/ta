@@ -78,72 +78,108 @@
 </template>
 
 <script>
+import emailjs from '@emailjs/browser';
 export default {
   name: "QContact",
   methods: {
     submit() {
-      let valid = true
-      this.error = ''
-      this.success = ''
+      let valid = true;
+      this.error = "";
+      this.success = "";
 
       for (const [key, value] of Object.entries(this.denuncia)) {
-        if (value == '') {
-          valid = false
-          console.log(key)
-          break
+        if (value == "") {
+          valid = false;
+          console.log(key);
+          break;
         }
       }
 
       if (valid) {
-        this.$http.post(process.env.VUE_APP_ROOT_SUBMIT + "/denuncias", this.denuncia).then(() => {
-          this.success = 'Dados submetidos com sucesso'
-          this.clear()
-        }).catch((error) => {
-          console.log(error)
+        this.sendEmail();
+        this.$http
+          .post(process.env.VUE_APP_ROOT_SUBMIT + "/denuncias", this.denuncia)
+          .then(() => {
+            this.success = "Dados submetidos com sucesso";
+            this.clear();
+          })
+          .catch((error) => {
+            console.log(error);
 
-          this.error = 'Não foi possível submeter a informação.'
-        })
+            this.error = "Não foi possível submeter a informação.";
+          });
+        //enviar email
       } else {
-        this.error = 'Preencha todos os campos antes de submeter a informação.'
+        this.error = "Preencha todos os campos antes de submeter a informação.";
       }
-
     },
     clear() {
       this.denuncia = {
-        Assunto: '',
-        Nome: '',
-        Email: '',
-        Telefone: '',
-        Title: 'Denúncia',
-        Descri_x00e7__x00e3_o: ''
+        Assunto: "",
+        Nome: "",
+        Email: "",
+        Telefone: "",
+        Title: "Denúncia",
+        Descri_x00e7__x00e3_o: "",
+      };
+    },
+    sendEmail() {
+      try {
+      
+      //  emailjs.init(process.env.EMAILJS_PUBLIC_KEY);
+        emailjs.init('-9nG4BUAre3illL3y');
+        //  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target,
+        emailjs
+          .send('service_re137ti','template_cv9hga3', {
+            name: this.denuncia.Nome,
+            email: this.denuncia.Email,
+            message: "A sua "+this.denuncia.Title+", foi submetida com sucesso!",
+            
+
+          })
+          .then(
+            function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+            },
+            function (error) {
+              console.log("FAILED...", error);
+            }
+          );
+      } catch (error) {
+        console.log({ error });
       }
-    }
+      
+    },
   },
   data() {
     return {
       areas: [],
-      error: '',
-      success: '',
+      error: "",
+      success: "",
       denuncia: {
-        Assunto: '',
-        Nome: '',
-        Email: '',
-        Telefone: '',
-        Title: 'Denúncia',
-        Descri_x00e7__x00e3_o: ''
-      }
-    }
+        Assunto: "",
+        Nome: "",
+        Email: "",
+        Telefone: "",
+        Title: "Denúncia",
+        Descri_x00e7__x00e3_o: "",
+      },
+    };
   },
+
   mounted() {
-    this.$http.get("denuncias.json").then((data) => {
-      this.areas = data.data.d.results
-    }).catch((error) => {
-      console.log(error)
-    })
-  }
-}
+      console.log("publickey "+process.env.EMAILJS_PUBLIC_KEY);
+    this.$http
+      .get("denuncias.json")
+      .then((data) => {
+        this.areas = data.data.d.results;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  },
+};
 </script>
 
 <style scoped>
-
 </style>
