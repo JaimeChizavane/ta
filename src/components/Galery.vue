@@ -114,11 +114,10 @@ export default {
     };
   },
   methods: {
-    getImageUrl(item) {
-      return item && item.Attachments
-        ? process.env.VUE_APP_ROOT_DOCS +
-            item.AttachmentFiles.results[0].ServerRelativeUrl
-        : "assets/images/blog/grid/1.jpg";
+    getFileUrl(item) {
+      return item && item.ServerRelativeUrl
+        ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl
+        : "#";
     },
   },
   mounted() {
