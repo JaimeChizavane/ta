@@ -18,11 +18,11 @@
               >
                 <div
                   class="slide-item"
-                  v-for="(item, index) in allImages"
+                  v-for="(image, index) in allImages"
                   :key="index"
                 >
                   <div class="bg-img text-center">
-                    <img :src="item.img" alt="slide img" />
+                    <img :src="image.src" alt="slide img" />
                   </div>
                   <div class="container">
                     <div class="row align-items-center">
@@ -37,7 +37,7 @@
                         >
                           <span
                             class="text-light bg-primary"
-                            v-html="item.subtitle"
+                            v-html="image.Title"
                           ></span>
 
                           <!--             <h1 class="process-item__title">{{ item.title }}</h1>    <div class="d-flex flex-wrap align-items-center">-->
@@ -128,19 +128,13 @@ export default {
         this.allImages = data.data.d.results
           .filter((f) => f.Name !== "Forms")
           .flatMap((f) =>
-            f.Folders.results.flatMap((fo) =>
+           f.Folders.results.flatMap((fo) =>
               fo.Files.results.map((file) => {
                 file.Title =
                   file.Title && file.Title.trim() ? file.Title : fo.Name;
                 file.src = this.getFileUrl(file);
 
-                return {
-                  img: this.getFileUrl(file),
-                  subtitle: file.Title,
-                  title: file.Title,
-                  desc: "",
-                  to: { name: "history" },
-                };
+                return file;
               })
             )
           )
