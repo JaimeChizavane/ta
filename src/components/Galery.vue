@@ -7,7 +7,7 @@
       <div class="row justify-content-sm-center">
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
           <div class="banners-wrapper sticky-top">
-            <section class="slider" v-if="sliders.length">
+            <section class="slider" v-if="allImages.length">
               <div
                 class="
                   slick-carousel
@@ -18,7 +18,7 @@
               >
                 <div
                   class="slide-item"
-                  v-for="(item, index) in sliders"
+                  v-for="(item, index) in allImages"
                   :key="index"
                 >
                   <div class="bg-img text-center">
@@ -36,7 +36,7 @@
                           "
                         >
                           <span
-                            class="text-light"
+                            class="text-light bg-primary"
                             v-html="item.subtitle"
                           ></span>
 
@@ -94,8 +94,8 @@ export default {
   },
   data() {
     return {
-      sliders: [
-       /*  {
+      allImages: [
+        /* {
           img: "assets/images/about/1.jpg",
           subtitle:
             "Seja bem-vindo ao site do Tribunal Administrativo de Moçambique.",
@@ -125,7 +125,7 @@ export default {
     this.$http
       .get("images.json")
       .then((data) => {
-        this.sliders = data.data.d.results
+        this.allImages = data.data.d.results
           .filter((f) => f.Name !== "Forms")
           .flatMap((f) =>
             f.Folders.results.flatMap((fo) =>
