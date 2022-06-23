@@ -95,7 +95,7 @@ export default {
   data() {
     return {
       sliders: [
-        {
+       /* {
           img: "assets/images/about/1.jpg",
           subtitle:
             "Abertura do ano Judicial",
@@ -109,7 +109,7 @@ export default {
           title: "Tribunal Administrativo em prol da Justiça",
           desc: "O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.",
           to: { name: "history" },
-        },
+        },*/
       ],
       activeIndex: 0,
     };
@@ -122,7 +122,7 @@ export default {
     },
   },
   mounted() {
-    /*this.$http
+    this.$http
       .get("images.json")
       .then((data) => {
         this.sliders = data.data.d.results
@@ -148,7 +148,7 @@ export default {
       })
       .catch((error) => {
         console.log(error);
-      });*/
+      });
   },
 };
 </script>
