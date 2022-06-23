@@ -128,9 +128,11 @@ export default {
     },
     sendEmail() {
       try {
-        emailjs.init(process.env.EMAILJS_PUBLIC_KEY); 
+        //emailjs.init(process.env.EMAILJS_PUBLIC_KEY); 
+        emailjs.init('yytkK3EOJG8Mmeuk_'); 
         emailjs
-          .send(process.env.EMAILJS_SERVICE_ID,process.env.EMAILJS_TEMPLATE_ID, {
+          .send('service_js218vk','template_s5srp5j', {
+         // .send(process.env.EMAILJS_SERVICE_ID,process.env.EMAILJS_TEMPLATE_ID, {
             name: this.denuncia.Nome,
             email: this.denuncia.Email,
             message: "A sua "+this.denuncia.Title+", foi submetida com sucesso!"
