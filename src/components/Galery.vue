@@ -149,6 +149,7 @@ export default {
       .catch((error) => {
         console.log(error);
       });
+      console.log('All Images length:'+this.allImages.length);
   },
 };
 </script>
