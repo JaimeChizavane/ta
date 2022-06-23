@@ -20,7 +20,6 @@
                   class="slide-item align-v-h bg-overlay bg-overlay-gradient"
                   v-for="(item, index) in sliders"
                   :key="index"
-                  :class="[activeIndex === index ? 'show active' : '']"
                 >
                   <div class="bg-img">
                     <img :src="item.img" alt="slide img" />
@@ -96,7 +95,7 @@ export default {
   data() {
     return {
       sliders: [
-        /* {
+        {
           img: "assets/images/about/1.jpg",
           subtitle:
             "Seja bem-vindo ao site do Tribunal Administrativo de Moçambique.",
@@ -110,7 +109,7 @@ export default {
           title: "Tribunal Administrativo em prol da Justiça",
           desc: "O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.",
           to: { name: "history" },
-        },*/
+        },
       ],
       activeIndex: 0,
     };
@@ -123,7 +122,7 @@ export default {
     },
   },
   mounted() {
-    this.$http
+    /*this.$http
       .get("images.json")
       .then((data) => {
         this.sliders = data.data.d.results
@@ -149,8 +148,7 @@ export default {
       })
       .catch((error) => {
         console.log(error);
-      });
-    console.log(this.sliders[0].img);
+      });*/
   },
 };
 </script>
