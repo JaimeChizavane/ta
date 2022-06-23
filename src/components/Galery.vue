@@ -8,10 +8,23 @@
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
           <div class="banners-wrapper sticky-top">
             <section class="slider" v-if="sliders.length">
-              <div class="slick-carousel carousel-arrows-light carousel-dots-light m-slides-0"
-         data-slick='{"slidesToShow": 1, "arrows": true, "dots": true, "speed": 700,"fade": true,"cssEase": "linear", "autoplay": true}'>
-      <div class="slide-item align-v-h bg-overlay bg-overlay-gradient" v-for="(item, index) in sliders" :key="index">
-        <div class="bg-img"><img :src="item.img" alt="slide img"></div>
+              <div
+                class="
+                  slick-carousel
+                  carousel-arrows-light carousel-dots-light
+                  m-slides-0
+                "
+                data-slick='{"slidesToShow": 1, "arrows": true, "dots": true, "speed": 700,"fade": true,"cssEase": "linear", "autoplay": true}'
+              >
+                <div
+                  class="slide-item align-v-h bg-overlay bg-overlay-gradient"
+                  v-for="(item, index) in sliders"
+                  :key="index"
+                  :class="[activeIndex === index ? 'show active' : '']"
+                >
+                  <div class="bg-img">
+                    <img :src="item.img" alt="slide img" />
+                  </div>
                   <div class="container">
                     <div class="row align-items-center">
                       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -83,7 +96,7 @@ export default {
   data() {
     return {
       sliders: [
-        {
+        /* {
           img: "assets/images/about/1.jpg",
           subtitle:
             "Seja bem-vindo ao site do Tribunal Administrativo de Moçambique.",
@@ -97,12 +110,13 @@ export default {
           title: "Tribunal Administrativo em prol da Justiça",
           desc: "O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.",
           to: { name: "history" },
-        },
+        },*/
       ],
+      activeIndex: 0,
     };
   },
   methods: {
-  getFileUrl(item) {
+    getFileUrl(item) {
       return item && item.ServerRelativeUrl
         ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl
         : "#";
@@ -122,7 +136,7 @@ export default {
                 file.src = this.getFileUrl(file);
 
                 return {
-                  img:  file.src,
+                  img: file.src,
                   subtitle: file.Title,
                   title: file.Title,
                   desc: "",
@@ -136,7 +150,7 @@ export default {
       .catch((error) => {
         console.log(error);
       });
-     // console.log(sliders);
+    console.log(this.sliders[0].img);
   },
 };
 </script>
