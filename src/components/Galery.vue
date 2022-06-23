@@ -7,7 +7,7 @@
       <div class="row justify-content-sm-center">
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
           <div class="banners-wrapper sticky-top">
-            <section class="slider" v-if="allImages.length">
+            <section class="slider" v-if="sliders.length">
               <div
                 class="
                   slick-carousel
@@ -18,11 +18,11 @@
               >
                 <div
                   class="slide-item"
-                  v-for="(image, index) in allImages"
+                  v-for="(item, index) in sliders"
                   :key="index"
                 >
                   <div class="bg-img text-center">
-                    <img :src="image.src" alt="slide img" />
+                    <img :src="item.img" alt="slide img" />
                   </div>
                   <div class="container">
                     <div class="row align-items-center">
@@ -37,7 +37,7 @@
                         >
                           <span
                             class="text-light bg-primary"
-                            v-html="image.Title"
+                            v-html="item.subtitle"
                           ></span>
 
                           <!--             <h1 class="process-item__title">{{ item.title }}</h1>    <div class="d-flex flex-wrap align-items-center">-->
@@ -94,7 +94,7 @@ export default {
   },
   data() {
     return {
-      allImages: [
+      sliders: [
         /* {
           img: "assets/images/about/1.jpg",
           subtitle:
@@ -109,12 +109,12 @@ export default {
           title: "Tribunal Administrativo em prol da Justiça",
           desc: "O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.",
           to: { name: "history" },
-        }, */
+        },*/ 
       ],
     };
   },
   methods: {
-    getFileUrl(item) {
+  getFileUrl(item) {
       return item && item.ServerRelativeUrl
         ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl
         : "#";
@@ -124,16 +124,22 @@ export default {
     this.$http
       .get("images.json")
       .then((data) => {
-        this.allImages = data.data.d.results
+        this.sliders = data.data.d.results
           .filter((f) => f.Name !== "Forms")
           .flatMap((f) =>
-           f.Folders.results.flatMap((fo) =>
+            f.Folders.results.flatMap((fo) =>
               fo.Files.results.map((file) => {
                 file.Title =
                   file.Title && file.Title.trim() ? file.Title : fo.Name;
                 file.src = this.getFileUrl(file);
 
-                return file;
+                return {
+                  img:  file.src,
+                  subtitle: file.Title,
+                  title: file.Title,
+                  desc: "",
+                  to: { name: "history" },
+                };
               })
             )
           )
@@ -142,7 +148,6 @@ export default {
       .catch((error) => {
         console.log(error);
       });
-      console.log('All Images length:'+this.allImages.length);
   },
 };
 </script>
