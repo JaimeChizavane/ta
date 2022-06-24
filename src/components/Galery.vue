@@ -28,8 +28,8 @@
                     <div class="row align-items-center">
                       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
                         <div class="slide__content">
-                          <span v-html="item.Title"></span>
-                          <!--          <h1 class="pagetitle__heading">{{ item.title }}</h1>      <div class="d-flex flex-wrap align-items-center">-->
+                          
+                          <!--      <span v-html="item.Title"></span>    <h1 class="pagetitle__heading">{{ item.title }}</h1>      <div class="d-flex flex-wrap align-items-center">-->
                           
                           <!--                  <router-link :to="item.to" class="btn btn__primary btn__primary-style2 mr-30">-->
                           <!--                    <i class="icon-arrow-right"></i>-->
@@ -84,8 +84,8 @@ export default {
   data() {
     return {
       allImages: [
-        /* {
-          img: "assets/images/gallery02/s1.jpg",
+        {
+          img: "assets/images/gallery02/IMG_0148.jpg",
           subtitle:
             "Abertura do ano Judicial",
           title: "O Tribunal Administrativo",
@@ -93,7 +93,7 @@ export default {
           to: { name: "history" },
         },
         {
-          img: "assets/images/gallery02/s3.jpg",
+          img: "assets/images/gallery02/IMG_0152.jpg",
           subtitle:
             "Abertura do ano Judicial",
           title: "O Tribunal Administrativo",
@@ -101,13 +101,20 @@ export default {
           to: { name: "history" },
         },
         {
-          img: "assets/images/gallery02/s2.jpg",
+          img: "assets/images/gallery02/IMG_0159.jpg",
           subtitle: "Abertura do ano Judicial",
           title: "Tribunal Administrativo em prol da Justiça",
           desc: "O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.",
           to: { name: "history" },
         },
-       */
+        {
+          img: "assets/images/gallery02/IMG_0179.jpg",
+          subtitle: "Abertura do ano Judicial",
+          title: "Tribunal Administrativo em prol da Justiça",
+          desc: "O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.",
+          to: { name: "history" },
+        },
+       
       ],
       activeIndex: 0,
     };
