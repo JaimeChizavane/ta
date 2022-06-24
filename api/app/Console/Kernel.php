@@ -36,6 +36,7 @@ use App\Console\Commands\FetchRelatorioAuditoriaDesempenhoCommand;
 use App\Console\Commands\FetchFolhetoDaJurisdicaoCommand;
 use App\Console\Commands\FetchFolhetoCSMJACommand;
 use App\Console\Commands\FetchInstrucoesERecomendacoesCommand;
+use App\Console\Commands\FetchGaleriaDestaqueCommand;
 
 
 
@@ -85,6 +86,7 @@ class Kernel extends ConsoleKernel
         FetchFolhetoDaJurisdicaoCommand::class,
         FetchFolhetoCSMJACommand::class,
         FetchInstrucoesERecomendacoesCommand::class,
+        FetchGaleriaDestaqueCommand::class,
         SPApiFetchAll::class,
     ];
 

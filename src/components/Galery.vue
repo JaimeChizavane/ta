@@ -124,47 +124,28 @@ export default {
     };
   },
   methods: {
-    getFileUrl(item) {
-      return item && item.ServerRelativeUrl
-        ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl
-        : "#";
-    },
+ getImageUrl(item) {
+      return item && item.Attachments ? process.env.VUE_APP_ROOT_DOCS + item.AttachmentFiles.results[0].ServerRelativeUrl : 'assets/images/blog/grid/1.jpg'
+    }
   },
   mounted() {
-   /* this.$http
-      .get("images.json")
-      .then((data) => {
-        data.data.d.results
-          .filter((f) => f.Name !== "Forms")
-          .flatMap((f) =>
-            f.Folders.results.flatMap((fo) =>
-              fo.Files.results.map((file) => {
-                file.Title =
-                  file.Title && file.Title.trim() ? file.Title : fo.Name;
-                file.src = this.getFileUrl(file);
-                this.sliders.push({
-                  img: file.src,
-                  subtitle: file.Title,
-                  title: file.Title,
-                  desc: "",
-                  to: { name: "history" },
-                });
-                return {
-                  img: file.src,
-                  subtitle: file.Title,
-                  title: file.Title,
-                  desc: "",
-                  to: { name: "history" },
-                };
-              })
-            )
-          )
-          .slice(0, 5);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-      */
+    this.$http.get("galeriaDestaque.json").then((data) => {
+      if (data.data.d.results.length) {
+        this.sliders = data.data.d.results.map((banner) => {
+          return {
+            img: this.getImageUrl(banner),
+            subtitle: banner.Subtitle,
+            title: banner.Title,
+            desc: '',
+            to: { name: 'blog' }
+          }
+        })
+      }
+    }).catch((error) => {
+      console.log(error)
+    }).finally(() => {
+      window.mainExecution()
+    })
   },
 };
 </script>
