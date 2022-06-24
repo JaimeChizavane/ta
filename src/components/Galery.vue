@@ -37,7 +37,7 @@
                         >
                           <span
                             class="text-light bg-primary"
-                            v-html="item.subtitle"
+                            v-html="item.Title"
                           ></span>
 
                           <!--             <h1 class="process-item__title">{{ item.title }}</h1>    <div class="d-flex flex-wrap align-items-center">-->
@@ -137,12 +137,14 @@ export default {
             subtitle: gD.Subtitle,
             title: gD.Title,
             desc: '',
-            to: { name: 'history' }
+            to: { name: 'blog' }
           }
         })
       }
     }).catch((error) => {
       console.log(error)
+    }).finally(() => {
+      window.mainExecution()
     });
   },
 };
