@@ -8,32 +8,48 @@
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
           <div class="banners-wrapper sticky-top">
             <section class="slider" v-if="allImages.length">
-            <div class="slick-carousel carousel-arrows-light carousel-dots-light m-slides-0" data-slick='{"slidesToShow": 1, "arrows": true, "dots": true, "speed": 700,"fade": true,"cssEase": "linear", "autoplay": true}'>
-               <div class="slide-item align-v-h bg-overlay bg-overlay-gradient" v-for="(item, index) in allImages" :key="index">
-                <div class="bg-img"><img :src="item.img" alt="slide img"></div>
-                <div class="container">
-                  <div class="row align-items-center">
-                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                      <div class="slide__content">
-                        <h1 class="pagetitle__heading">{{ item.title }}</h1>
-                        <p class="slide__desc" v-html="item.subtitle"></p>
-<!--                <div class="d-flex flex-wrap align-items-center">-->
-<!--                  <router-link :to="item.to" class="btn btn__primary btn__primary-style2 mr-30">-->
-<!--                    <i class="icon-arrow-right"></i>-->
-<!--                    <span> Saber Mais</span>-->
-<!--                  </router-link>-->
-<!--                </div>-->
-                        </div><!-- /.slide-content -->
-                      </div><!-- /.col-xl-7 -->
-
-
-                    </div><!-- /.row -->
-                  </div><!-- /.container -->
-                </div><!-- /.slide-item -->
+              <div
+                class="
+                  slick-carousel
+                  carousel-arrows-light carousel-dots-light
+                  m-slides-0
+                "
+                data-slick='{"slidesToShow": 1, "arrows": true, "dots": true, "speed": 700,"fade": true,"cssEase": "linear", "autoplay": true}'
+              >
+                <div
+                  class="slide-item align-v-h bg-overlay bg-overlay-gradient"
+                  v-for="(item, index) in allImages"
+                  :key="index"
+                >
+                  <div class="bg-img">
+                    <img :src="item.img" alt="slide img" />
+                  </div>
+                  <div class="container">
+                    <div class="row align-items-center">
+                      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div class="slide__content">
+                          <span v-html="item.Title"></span>
+                          <!--          <h1 class="pagetitle__heading">{{ item.title }}</h1>      <div class="d-flex flex-wrap align-items-center">-->
+                          
+                          <!--                  <router-link :to="item.to" class="btn btn__primary btn__primary-style2 mr-30">-->
+                          <!--                    <i class="icon-arrow-right"></i>-->
+                          <!--                    <span> Saber Mais</span>-->
+                          <!--                  </router-link>-->
+                          <!--                </div>-->
+                        </div>
+                        <!-- /.slide-content -->
+                      </div>
+                      <!-- /.col-xl-7 -->
+                    </div>
+                    <!-- /.row -->
+                  </div>
+                  <!-- /.container -->
+                </div>
                 <!-- /.slide-item -->
               </div>
               <!-- /.carousel -->
             </section>
+            <!-- /.slider -->
             <div
               class="cta-banner mt-30 mb-30 d-flex flex-wrap align-items-center"
             >
@@ -68,7 +84,7 @@ export default {
   data() {
     return {
       allImages: [
-       /* {
+        /* {
           img: "assets/images/gallery02/s1.jpg",
           subtitle:
             "Abertura do ano Judicial",
@@ -97,26 +113,32 @@ export default {
     };
   },
   methods: {
- getImageUrl(item) {
-      return item && item.Attachments ? process.env.VUE_APP_ROOT_DOCS + item.AttachmentFiles.results[0].ServerRelativeUrl : 'assets/images/blog/grid/1.jpg'
+    getImageUrl(item) {
+      return item && item.Attachments
+        ? process.env.VUE_APP_ROOT_DOCS +
+            item.AttachmentFiles.results[0].ServerRelativeUrl
+        : "assets/images/blog/grid/1.jpg";
     },
   },
   mounted() {
-    this.$http.get("galeriadestaque.json").then((data) => {
-      if (data.data.d.results.length) {
-        this.allImages = data.data.d.results.map((gD) => {
-          return {
-            img: this.getImageUrl(gD),
-            subtitle: gD.Subtitle,
-            title: gD.Title,
-            desc: '',
-            to: { name: 'blog' }
-          }
-        })
-      }
-    }).catch((error) => {
-      console.log(error)
-    })
+    this.$http
+      .get("galeriadestaque.json")
+      .then((data) => {
+        if (data.data.d.results.length) {
+          this.allImages = data.data.d.results.map((gD) => {
+            return {
+              img: this.getImageUrl(gD),
+              subtitle: gD.Subtitle,
+              title: gD.Title,
+              desc: "",
+              to: { name: "blog" },
+            };
+          });
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   },
 };
 </script>
