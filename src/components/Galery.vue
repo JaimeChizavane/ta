@@ -17,11 +17,11 @@
                 data-slick='{"slidesToShow": 1, "arrows": true, "dots": true, "speed": 700,"fade": true,"cssEase": "linear", "autoplay": true}'
               >
                 <div
-                  class="slide-item align-v-h bg-overlay bg-overlay-gradient"
+                  class="slide-item bg-overlay bg-overlay-gradient"
                   v-for="(item, index) in sliders"
                   :key="index"
                 >
-                  <div class="bg-img">
+                  <div class="bg-img text-center">
                     <img :src="item.img" alt="slide img" />
                   </div>
                   <div class="container">
@@ -131,10 +131,10 @@ export default {
     },
   },
   mounted() {
-    /*this.$http
+    this.$http
       .get("images.json")
       .then((data) => {
-        this.sliders = data.data.d.results
+        data.data.d.results
           .filter((f) => f.Name !== "Forms")
           .flatMap((f) =>
             f.Folders.results.flatMap((fo) =>
@@ -142,14 +142,20 @@ export default {
                 file.Title =
                   file.Title && file.Title.trim() ? file.Title : fo.Name;
                 file.src = this.getFileUrl(file);
-
-                return {
+                this.sliders.push({
                   img: file.src,
                   subtitle: file.Title,
                   title: file.Title,
                   desc: "",
                   to: { name: "history" },
-                };
+                });
+               /* return {
+                  img: file.src,
+                  subtitle: file.Title,
+                  title: file.Title,
+                  desc: "",
+                  to: { name: "history" },
+                };*/
               })
             )
           )
@@ -158,7 +164,7 @@ export default {
       .catch((error) => {
         console.log(error);
       });
-      */
+      
   },
 };
 </script>
