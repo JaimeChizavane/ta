@@ -7,7 +7,7 @@
       <div class="row justify-content-sm-center">
         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
           <div class="banners-wrapper sticky-top">
-            <section class="slider" v-if="sliders.length">
+            <section class="slider" v-if="allImages.length">
               <div
                 class="
                   slick-carousel
@@ -18,7 +18,7 @@
               >
                 <div
                   class="slide-item bg-overlay bg-overlay-gradient"
-                  v-for="(item, index) in sliders"
+                  v-for="(item, index) in allImages"
                   :key="index"
                 >
                   <div class="bg-img text-center">
@@ -94,7 +94,7 @@ export default {
   },
   data() {
     return {
-      sliders: [
+      allImages: [
        /* {
           img: "assets/images/gallery02/s1.jpg",
           subtitle:
@@ -131,7 +131,7 @@ export default {
   mounted() {
     this.$http.get("galeriaDestaque.json").then((data) => {
       if (data.data.d.results.length) {
-        this.sliders = data.data.d.results.map((banner) => {
+        this.allImages = data.data.d.results.map((banner) => {
           return {
             img: this.getImageUrl(banner),
             subtitle: banner.Subtitle,
