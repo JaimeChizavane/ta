@@ -131,7 +131,7 @@ export default {
     },
   },
   mounted() {
-    this.$http
+   /* this.$http
       .get("images.json")
       .then((data) => {
         data.data.d.results
@@ -149,13 +149,13 @@ export default {
                   desc: "",
                   to: { name: "history" },
                 });
-               /* return {
+                return {
                   img: file.src,
                   subtitle: file.Title,
                   title: file.Title,
                   desc: "",
                   to: { name: "history" },
-                };*/
+                };
               })
             )
           )
@@ -164,7 +164,7 @@ export default {
       .catch((error) => {
         console.log(error);
       });
-      
+      */
   },
 };
 </script>
