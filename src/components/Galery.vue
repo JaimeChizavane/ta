@@ -14,8 +14,8 @@
                   <div class="container">
                     <div class="row align-items-center">
                       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <div class="slide__content text-center  mt-0 text-block__title">
-                          <span  class="text-light bg-primary" v-html="item.title"></span> 
+                        <div class="slide__content text-center">
+                          <span  class="text-light bg-primary" v-html="item.title"></span>
                         </div>
                         <!-- /.slide-content -->
                       </div>
@@ -65,7 +65,7 @@ export default {
   data() {
     return {
       allImages: [
-        /*{
+       /* {
           img: "assets/images/gallery02/s1.jpg",
           subtitle:
             "Abertura do ano Judicial",
