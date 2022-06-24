@@ -11,7 +11,7 @@ namespace App\Console\Commands;
 
 class FetchGaleriaDestaqueCommand extends SPApiFetch
 {
-    protected $signature   = 'sp:galeriaDestaque';
+    protected $signature   = 'sp:galeriadestaque';
     protected $description = 'Fetch all banners';
     /**
      * @var \App\Services\HttpClient
@@ -19,5 +19,5 @@ class FetchGaleriaDestaqueCommand extends SPApiFetch
     protected $client;
     protected $uri  = "_api/web/lists/getByTitle('Galeria em Destaque')/items?\$expand=AttachmentFiles&\$orderBy=Created desc&\$filter=Em_x0020_Destaque ne false";
 //    protected $uri  = "_api/web/lists/getByTitle('Banner de Imagens')/items?\$expand=AttachmentFiles&\$orderBy=Created desc";
-    protected $path = 'galeriaDestaque.json';
+    protected $path = 'galeriadestaque.json';
 }

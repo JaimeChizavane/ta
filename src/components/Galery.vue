@@ -85,7 +85,7 @@
 
 <script>
 export default {
-  name: "QSlider",
+  name: "QGallery",
   watch: {
     news: function () {
       // this.sliders = this.sliders.concat(newVal)
@@ -126,26 +126,24 @@ export default {
   methods: {
  getImageUrl(item) {
       return item && item.Attachments ? process.env.VUE_APP_ROOT_DOCS + item.AttachmentFiles.results[0].ServerRelativeUrl : 'assets/images/blog/grid/1.jpg'
-    }
+    },
   },
   mounted() {
-    this.$http.get("galeriaDestaque.json").then((data) => {
+    this.$http.get("galeriadestaque.json").then((data) => {
       if (data.data.d.results.length) {
-        this.allImages = data.data.d.results.map((banner) => {
+        this.allImages = data.data.d.results.map((gD) => {
           return {
-            img: this.getImageUrl(banner),
-            subtitle: banner.Subtitle,
-            title: banner.Title,
+            img: this.getImageUrl(gD),
+            subtitle: gD.Subtitle,
+            title: gD.Title,
             desc: '',
-            to: { name: 'blog' }
+            to: { name: 'history' }
           }
         })
       }
     }).catch((error) => {
       console.log(error)
-    }).finally(() => {
-      window.mainExecution()
-    })
+    });
   },
 };
 </script>
