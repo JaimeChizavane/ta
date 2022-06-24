@@ -14,8 +14,8 @@
                   <div class="container">
                     <div class="row align-items-center">
                       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <div class="slide__content"> 
-                           <p class="slide__desc bg-primary" v-html="item.Title"></p>
+                        <div class="slide__content text-center"> 
+                           <p class="text-light bg-primary">{{ item.title }}</p>
                         </div>
                         <!-- /.slide-content -->
                       </div>
