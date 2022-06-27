@@ -26,6 +26,19 @@
                     </div>
 
                     <img :src="image.src" />
+
+                    <button
+                      class="carousel-control left text-light"
+                      @click="prev()"
+                    >
+                      <i class="fa fa-arrow-left"></i>
+                    </button>
+                    <button
+                      class="carousel-control right text-light"
+                      @click="next()"
+                    >
+                      <i class="fa fa-arrow-right"></i>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -65,34 +78,34 @@ export default {
   data() {
     return {
       allImages: [
- /*        {
-          img: "assets/images/gallery02/IMG_0148.jpg",
+/*         {
+          src: "assets/images/gallery02/IMG_0148.jpg",
           subtitle: "Abertura do ano Judicial",
-          title: "O Tribunal Administrativo",
+          Title: "O Tribunal Administrativo1",
           desc:
             "É o órgão superior da hierarquia dos tribunais administrativos.",
           to: { name: "history" },
         },
         {
-          img: "assets/images/gallery02/IMG_0152.jpg",
+          src: "assets/images/gallery02/IMG_0148.jpg",
+          subtitle: "Abertura do ano Judicial",
+          Title: "O Tribunal Administrativo1",
+          desc:
+            "É o órgão superior da hierarquia dos tribunais administrativos.",
+          to: { name: "history" },
+        },
+        {
+          scr: "assets/images/gallery02/IMG_0152.jpg",
           subtitle: "Abertura do ano Judicial 2",
-          title: "O Tribunal Administrativo",
+          Title: "O Tribunal Administrativo2",
           desc:
             "É o órgão superior da hierarquia dos tribunais administrativos.",
           to: { name: "history" },
         },
         {
-          img: "assets/images/gallery02/IMG_0159.jpg",
+          src: "assets/images/gallery02/IMG_0159.jpg",
           subtitle: "Abertura do ano Judicial",
-          title: "Tribunal Administrativo em prol da Justiça",
-          desc:
-            "O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.",
-          to: { name: "history" },
-        },
-        {
-          img: "assets/images/gallery02/IMG_0179.jpg",
-          subtitle: "Abertura do ano Judicial",
-          title: "Tribunal Administrativo em prol da Justiça",
+          Title: "Tribunal Administrativo em prol da Justiça",
           desc:
             "O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.",
           to: { name: "history" },
@@ -111,9 +124,19 @@ export default {
     setActiveIndex(index) {
       this.activeIndex = index;
     },
+    next() {
+      const index =
+        this.activeIndex < this.allImages.length - 1 ? this.activeIndex + 1 : 0;
+      this.setActiveIndex(index);
+    },
+    prev() {
+      const index =
+        this.activeIndex >0 ? this.activeIndex - 1 : this.allImages.length - 1;
+      this.setActiveIndex(index);
+    },
   },
   mounted() {
-    this.$http
+      this.$http
       .get("images.json")
       .then((data) => {
         this.allImages = data.data.d.results
@@ -133,12 +156,10 @@ export default {
       })
       .catch((error) => {
         console.log(error);
-      });
+      }); 
     this.slideInterval = setInterval(() => {
-      const index =
-        this.activeIndex < this.allImages.length - 1 ? this.activeIndex + 1 : 0;
-      this.setActiveIndex(index);
-    }, 10000);
+      this.next();
+    }, 7000);
   },
   beforeUnmount() {
     clearInterval(this.slideInterval);
@@ -162,5 +183,32 @@ export default {
   position: relative;
 
   overflow: hidden;
+}
+.slide-in-enter-active,
+.slide-in-leave-active {
+  transition: all 1s ease-in-out;
+}
+.slide-in-enter-from {
+  transform: translateX(-100%);
+}
+.slide-in-leave-to {
+  transform: translateX(100%);
+}
+.carousel-control {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  display: inline-block;
+  position: absolute;
+  height: 50px;
+  width: 70px;
+  top: calc(50%);
+  color: brown;
+  cursor: pointer;
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
 }
 </style>
