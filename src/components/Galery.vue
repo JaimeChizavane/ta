@@ -12,7 +12,7 @@
                 <div class="carousel-inner">
                   <div
                     class="carousel-iten"
-                    v-for="(item, index) in allImages"
+                    v-for="(image, index) in allImages"
                     :key="index"
                     :activeIndex="activeIndex"
                     :index="index"
@@ -21,11 +21,11 @@
                     <div class="bg-primary col-sm-12 text-center">
                       <span
                         class="slide__desc text-light text-uppercase "
-                        v-html="item.subtitle"
+                        v-html="image.Title"
                       ></span>
                     </div>
 
-                    <img :src="item.img" />
+                    <img :src="image.src" />
                   </div>
                 </div>
               </div>
@@ -65,7 +65,7 @@ export default {
   data() {
     return {
       allImages: [
-        {
+ /*        {
           img: "assets/images/gallery02/IMG_0148.jpg",
           subtitle: "Abertura do ano Judicial",
           title: "O Tribunal Administrativo",
@@ -96,18 +96,17 @@ export default {
           desc:
             "O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.",
           to: { name: "history" },
-        },
+        }, */
       ],
       activeIndex: 0,
       slideInterval: null,
     };
   },
   methods: {
-    getImageUrl(item) {
-      return item && item.Attachments
-        ? process.env.VUE_APP_ROOT_DOCS +
-            item.AttachmentFiles.results[0].ServerRelativeUrl
-        : "assets/images/blog/grid/1.jpg";
+    getFileUrl(item) {
+      return item && item.ServerRelativeUrl
+        ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl
+        : "#";
     },
     setActiveIndex(index) {
       this.activeIndex = index;
@@ -115,19 +114,22 @@ export default {
   },
   mounted() {
     this.$http
-      .get("galeriadestaque.json")
+      .get("images.json")
       .then((data) => {
-        if (data.data.d.results.length) {
-          this.allImages = data.data.d.results.map((gD) => {
-            return {
-              img: this.getImageUrl(gD),
-              subtitle: gD.Subtitle,
-              title: gD.Title,
-              desc: "",
-              to: { name: "blog" },
-            };
-          });
-        }
+        this.allImages = data.data.d.results
+          .filter((f) => f.Name !== "Forms")
+          .flatMap((f) =>
+            f.Folders.results.flatMap((fo) =>
+              fo.Files.results.map((file) => {
+                file.Title =
+                  file.Title && file.Title.trim() ? file.Title : fo.Name;
+                file.src = this.getFileUrl(file);
+
+                return file;
+              })
+            )
+          )
+          .slice(0, 5);
       })
       .catch((error) => {
         console.log(error);
