@@ -4,51 +4,32 @@
       <img src="assets/images/backgrounds/2.jpg" alt="background" />
     </div>
     <div class="container">
-      <div class="row justify-content-sm-center">
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+      <div class="row d-flex justify-content-center ">
+        <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 ">
           <div class="banners-wrapper sticky-top">
-            <section class="slider" v-if="allImages.length">
-              <div
-                class="
-                  slick-carousel
-                  carousel-arrows-light carousel-dots-light
-                  m-slides-0
-                "
-                data-slick='{"slidesToShow": 1, "arrows": true, "dots": true, "speed": 700,"fade": true,"cssEase": "linear", "autoplay": true}'
-              >
-                <div
-                  class="slide-item align-v-h bg-overlay bg-overlay-gradient"
-                  v-for="(item, index) in allImages"
-                  :key="index"
-                >
-                  <div class="bg-img">
-                    <img :src="item.img" alt="slide img" />
-                  </div>
-                  <div class="container">
-                    <div class="row align-items-center">
-                      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <div class="slide__content">
-                          
-                          <!--      <span v-html="item.Title"></span>    <h1 class="pagetitle__heading">{{ item.title }}</h1>      <div class="d-flex flex-wrap align-items-center">-->
-                          
-                          <!--                  <router-link :to="item.to" class="btn btn__primary btn__primary-style2 mr-30">-->
-                          <!--                    <i class="icon-arrow-right"></i>-->
-                          <!--                    <span> Saber Mais</span>-->
-                          <!--                  </router-link>-->
-                          <!--                </div>-->
-                        </div>
-                        <!-- /.slide-content -->
-                      </div>
-                      <!-- /.col-xl-7 -->
+            <div class="tab-content mb-50">
+              <div class="carousel" v-if="allImages.length">
+                <div class="carousel-inner">
+                  <div
+                    class="carousel-iten"
+                    v-for="(item, index) in allImages"
+                    :key="index"
+                    :activeIndex="activeIndex"
+                    :index="index"
+                    v-show="activeIndex === index"
+                  >
+                    <div class="bg-primary col-sm-12 text-center">
+                      <span
+                        class="slide__desc text-light text-uppercase "
+                        v-html="item.subtitle"
+                      ></span>
                     </div>
-                    <!-- /.row -->
+
+                    <img :src="item.img" />
                   </div>
-                  <!-- /.container -->
                 </div>
-                <!-- /.slide-item -->
               </div>
-              <!-- /.carousel -->
-            </section>
+            </div>
             <!-- /.slider -->
             <div
               class="cta-banner mt-30 mb-30 d-flex flex-wrap align-items-center"
@@ -76,7 +57,7 @@
 export default {
   name: "QGallery",
   watch: {
-    news: function () {
+    news: function() {
       // this.sliders = this.sliders.concat(newVal)
       // window.$('.slick-carousel').slick();
     },
@@ -86,37 +67,39 @@ export default {
       allImages: [
         {
           img: "assets/images/gallery02/IMG_0148.jpg",
-          subtitle:
-            "Abertura do ano Judicial",
+          subtitle: "Abertura do ano Judicial",
           title: "O Tribunal Administrativo",
-          desc: "É o órgão superior da hierarquia dos tribunais administrativos.",
+          desc:
+            "É o órgão superior da hierarquia dos tribunais administrativos.",
           to: { name: "history" },
         },
         {
           img: "assets/images/gallery02/IMG_0152.jpg",
-          subtitle:
-            "Abertura do ano Judicial",
+          subtitle: "Abertura do ano Judicial 2",
           title: "O Tribunal Administrativo",
-          desc: "É o órgão superior da hierarquia dos tribunais administrativos.",
+          desc:
+            "É o órgão superior da hierarquia dos tribunais administrativos.",
           to: { name: "history" },
         },
         {
           img: "assets/images/gallery02/IMG_0159.jpg",
           subtitle: "Abertura do ano Judicial",
           title: "Tribunal Administrativo em prol da Justiça",
-          desc: "O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.",
+          desc:
+            "O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.",
           to: { name: "history" },
         },
         {
           img: "assets/images/gallery02/IMG_0179.jpg",
           subtitle: "Abertura do ano Judicial",
           title: "Tribunal Administrativo em prol da Justiça",
-          desc: "O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.",
+          desc:
+            "O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.",
           to: { name: "history" },
         },
-       
       ],
       activeIndex: 0,
+      slideInterval: null,
     };
   },
   methods: {
@@ -125,6 +108,9 @@ export default {
         ? process.env.VUE_APP_ROOT_DOCS +
             item.AttachmentFiles.results[0].ServerRelativeUrl
         : "assets/images/blog/grid/1.jpg";
+    },
+    setActiveIndex(index) {
+      this.activeIndex = index;
     },
   },
   mounted() {
@@ -146,9 +132,33 @@ export default {
       .catch((error) => {
         console.log(error);
       });
+    this.slideInterval = setInterval(() => {
+      const index =
+        this.activeIndex < this.allImages.length - 1 ? this.activeIndex + 1 : 0;
+      this.setActiveIndex(index);
+    }, 7000);
+  },
+  beforeUnmount() {
+    clearInterval(this.slideInterval);
   },
 };
 </script>
 
 <style scoped>
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.carousel {
+  display: flex;
+  justify-content: center;
+}
+.carousel-inner {
+  position: relative;
+
+  overflow: hidden;
+}
 </style>

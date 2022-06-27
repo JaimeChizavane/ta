@@ -2,7 +2,7 @@
   <div class="wrapper">
     <q-header/>
     <q-slider/>
-    <q-blog/> 
+     <q-blog/>   
  
     <q-galery/> 
        <!--    <q-structure/>-->
