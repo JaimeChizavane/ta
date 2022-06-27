@@ -24,17 +24,18 @@
                         v-html="image.Title"
                       ></span>
                     </div>
-
-                    <img :src="image.src" />
+                    <div class="video__banner">
+                      <img :src="image.src" class="rounded" alt="banner" />
+                    </div>
 
                     <button
-                      class="carousel-control left text-light"
+                      class="carousel-control left text-light "
                       @click="prev()"
                     >
                       <i class="fa fa-arrow-left"></i>
                     </button>
                     <button
-                      class="carousel-control right text-light"
+                      class="carousel-control right text-light slick-next"
                       @click="next()"
                     >
                       <i class="fa fa-arrow-right"></i>
@@ -78,7 +79,7 @@ export default {
   data() {
     return {
       allImages: [
-/*         {
+        /*         {
           src: "assets/images/gallery02/IMG_0148.jpg",
           subtitle: "Abertura do ano Judicial",
           Title: "O Tribunal Administrativo1",
@@ -131,12 +132,12 @@ export default {
     },
     prev() {
       const index =
-        this.activeIndex >0 ? this.activeIndex - 1 : this.allImages.length - 1;
+        this.activeIndex > 0 ? this.activeIndex - 1 : this.allImages.length - 1;
       this.setActiveIndex(index);
     },
   },
   mounted() {
-      this.$http
+    this.$http
       .get("images.json")
       .then((data) => {
         this.allImages = data.data.d.results
@@ -156,7 +157,7 @@ export default {
       })
       .catch((error) => {
         console.log(error);
-      }); 
+      });
     this.slideInterval = setInterval(() => {
       this.next();
     }, 7000);
