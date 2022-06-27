@@ -129,7 +129,7 @@ export default {
               })
             )
           )
-          .slice(0, 5);
+          .slice(0, 10);
       })
       .catch((error) => {
         console.log(error);
@@ -138,7 +138,7 @@ export default {
       const index =
         this.activeIndex < this.allImages.length - 1 ? this.activeIndex + 1 : 0;
       this.setActiveIndex(index);
-    }, 7000);
+    }, 10000);
   },
   beforeUnmount() {
     clearInterval(this.slideInterval);
