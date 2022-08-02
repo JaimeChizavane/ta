@@ -183,15 +183,6 @@ const routes = [{
             import ('@/views/Others.vue')
     },
     {
-        path: '/search',
-        name: 'search',
-        meta: {
-            display: 'search'
-        },
-        component: () =>
-            import ('@/views/Search.vue')
-    },
-    {
         path: '/decret',
         name: 'decret',
         meta: {
@@ -239,7 +230,7 @@ const routes = [{
         component: () =>
             import ('@/views/AboutUs.vue')
     },
-
+  
     {
         path: '/visa_consultation',
         name: 'visa_consultation',
@@ -255,6 +246,9 @@ const routes = [{
     {
         path: '/statistic',
         name: 'statistic',
+        beforeEnter() {
+            window.open('http://10.0.0.17:8090/dashboard/public/reportViewer?code=DASHBOARD+-+VISTO', '_blank');
+        }, // location.href = 'http://consultavisto.ta.gov.mz:8080/vistoPublic/login/auth' },
         meta: {
             display: 'menus.statistic'
         },
