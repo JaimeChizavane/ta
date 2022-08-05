@@ -5,11 +5,6 @@
     <section class="about-layout1 pb-130">
       <div class="container">
         <div class="row">
-<!--           <div class="col-sm-12 col-md-12 col-lg-6 col-xl-5">
-            <div class="about__img">
-              <img src="assets/images/sliders/7.jpg" alt="about">
-            </div><-- /.about-img 
-          </div> /.col-xl-5 --> 
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 offset-xl-1">
             <div class="heading text-center">
             </div><!-- /heading -->
@@ -34,6 +29,11 @@ import QBreadCrumb from "@/components/BreadCrumb";
 export default {
   name: "QCompetencies",
   components: { QBreadCrumb, QHeader, QFooter },
+   methods: {
+    getImageUrl(item) {
+      return item && item.Attachments ? process.env.VUE_APP_ROOT_DOCS + item.AttachmentFiles.results[0].ServerRelativeUrl : 'assets/images/about/1.jpg'
+    },
+  },
   data() {
     return {
       services: {
