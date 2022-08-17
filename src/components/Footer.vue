@@ -99,7 +99,7 @@
         </div>
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12 text-center pb-40">
-            <span class="fz-14">&copy; 2021, Todos Direitos reservados. Desenvolvido com </span>
+            <span class="fz-14">&copy; {{year}}, Todos Direitos reservados. Desenvolvido com </span>
             <a class="fz-14 color-primary" href="#">AMBISIG</a>
           </div><!-- /.col-lg-12 -->
         </div><!-- /.row -->
@@ -161,7 +161,8 @@ export default {
   name: "QFooter",
   data() {
     return {
-      searchQuery: ''
+      searchQuery: '',
+      year:''
     }
   },
   computed: {
@@ -178,6 +179,9 @@ export default {
 
       this.$router.push({ name: 'search', query:{ query: this.searchQuery } })
     }
+  },
+  mounted() {
+    this.year = new Date().getFullYear()
   }
 }
 </script>
