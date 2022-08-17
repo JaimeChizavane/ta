@@ -83,8 +83,9 @@ export default {
 
     this.$http.get("rpcge.json").then((data) => {
       this.history = data.data.d.results
+      this.allItems = this.history
 
-      this.allItems = this.history.sort((a, b) => a['Name'].localeCompare(b['Name']))
+      //this.allItems = this.history.sort((a, b) => a['Name'].localeCompare(b['Name']))
     }).catch((error) => {
       console.log(error)
     })
