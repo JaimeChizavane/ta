@@ -18,7 +18,7 @@
           <div class="post-item">
             <div class="post__img">
               <router-link :to="{name: 'csmja.blog-item', params: {guid : article.GUID}}">
-                <img :src="getImageUrl(article)" alt="blog image">
+                <img v-lazy="getImageUrl(article)" alt="blog image">
               </router-link>
             </div><!-- /.blog-img -->
             <div class="post__body">

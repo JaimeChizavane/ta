@@ -8,7 +8,7 @@
             <div class="post__img">
               <router-link :to="{name: itemRoute, params: {guid : item.GUID}}">
                 <img
-                    :src="getImageUrl(item)"
+                    v-lazy="getImageUrl(item)"
                     alt="blog image" class="cover__image">
               </router-link>
             </div><!-- /.blog-img -->

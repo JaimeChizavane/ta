@@ -27,7 +27,7 @@
                    v-for="(file, index) in filtered" :key="index">
                 <div class="portfolio-item">
                   <div class="portfolio__img" @click="zoomImage(file.File)">
-                    <img :src="getFileThumb(file.File)" alt="portfolio img">
+                    <img v-lazy="getFileThumb(file.File)" alt="portfolio img">
                   </div><!-- /.portfolio-img -->
                   <div class="portfolio__content">
                     <h4 class="portfolio__title">
@@ -77,7 +77,7 @@
                            v-for="file in item.Folder.Files.results" :key="file.UniqueId">
                         <div class="portfolio-item">
                           <div class="portfolio__img" @click="zoomImage(file)">
-                            <img :src="getFileThumb(file)" alt="portfolio img">
+                            <img v-lazy="getFileThumb(file)" alt="portfolio img">
                           </div><!-- /.portfolio-img -->
                           <div class="portfolio__content">
                             <h4 class="portfolio__title">

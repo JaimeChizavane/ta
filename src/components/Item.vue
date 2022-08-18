@@ -6,7 +6,7 @@
           <div class="post-item mb-0">
             <div class="post__img">
               <router-link :to="{name: ''}">
-                <img :src="getImageUrl(item)" alt="blog image">
+                <img v-lazy="getImageUrl(item)" alt="blog image">
               </router-link>
             </div><!-- /.post-img -->
             <div class="post__meta d-flex align-items-center mb-20">
@@ -56,7 +56,7 @@
                          class="widget-nav__prev d-flex flex-wrap" v-if="navigation.previous.Title">
               <div class="widget-nav__img">
                 <div class="widget-nav__overlay"></div>
-                <img :src="getImageUrl(navigation.previous)" alt="blog thumb">
+                <img v-lazy="getImageUrl(navigation.previous)" alt="blog thumb">
               </div>
               <div class="widget-nav__content">
                 <span>Artigo Anterior</span>
@@ -69,7 +69,7 @@
                          class="widget-nav__next d-flex flex-wrap" v-if="navigation.next.Title">
               <div class="widget-nav__img">
                 <div class="widget-nav__overlay"></div>
-                <img :src="getImageUrl(navigation.next)" alt="blog thumb">
+                <img v-lazy="getImageUrl(navigation.next)" alt="blog thumb">
               </div>
               <div class="widget-nav__content">
                 <span>Artigo Seguinte</span>

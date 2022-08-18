@@ -28,11 +28,11 @@
                 <div :id="'collapse' + index" class="collapse" data-parent="#accordion">
 
                   <div class="accordion__body">
-                    <div class="row"> 
+                    <div class="row">
                         <div class="col-sm-6 col-md-6 col-lg-4" v-for="(file, index) in folder.Files.results" :key="'IM' + index">
                           <div class="portfolio-item">
                             <div class="portfolio__img" @click="zoomImage(file)">
-                              <img :src="getFileUrl(file)" alt="portfolio img" class="cover__image">
+                              <img v-lazy="getFileUrl(file)" alt="portfolio img" class="cover__image">
                             </div><!-- /.portfolio-img -->
                             <div class="portfolio__content">
                               <h4 class="portfolio__title">
@@ -46,12 +46,12 @@
                         </div><!-- /.col-lg-4 -->
                     </div>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
            </div>
-          
+
         </div><!-- /.row -->
       </div><!-- /.container -->
     </section><!-- /.portfolio layout 3  -->
@@ -107,7 +107,7 @@ export default {
     window.mainExecution()
 
     this.$http.get("images.json").then((data) => {
-     
+
       this.allImages = data.data.d.results.filter(f => f.Name !== 'Forms')
       this.images = this.allImages
       console.log(this.images);

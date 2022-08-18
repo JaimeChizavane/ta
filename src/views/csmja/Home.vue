@@ -7,7 +7,8 @@
     <!--    <q-structure/>-->
     <q-galery/>
     <q-contact/>
-    <q-footer/>  
+    <q-footer/>
+  </div>
 </template>
 
 <script>

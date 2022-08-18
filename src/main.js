@@ -6,12 +6,19 @@ import VueAxios from 'vue-axios'
 import axios from './axios'
 import moment from 'moment'
 import 'moment/locale/pt'
+import VueLazyload from 'vue-lazyload'
+
+const loadimage = require('./assets/loading2.gif')
 
 
 Vue.config.productionTip = false
 Vue.prototype.$eventHub = new Vue()
 
 Vue.use(VueAxios, axios)
+Vue.use(VueLazyload, {
+  error: loadimage,
+  loading: loadimage
+})
 
 Vue.filter('upper', function (value) {
   if (!value) return ''
