@@ -153,6 +153,15 @@ const routes = [{
             import ('@/views/Law.vue')
     },
     {
+        path: '/search',
+        name: 'search',
+        meta: {
+            display: 'search'
+        },
+        component: () =>
+            import ('@/views/Search.vue')
+    },
+    {
         path: '/diplom',
         name: 'diplom',
         meta: {
@@ -230,7 +239,7 @@ const routes = [{
         component: () =>
             import ('@/views/AboutUs.vue')
     },
-  
+
     {
         path: '/visa_consultation',
         name: 'visa_consultation',

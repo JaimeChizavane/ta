@@ -471,6 +471,9 @@ export default {
       if (value === '') {
         this.clear()
       }
+    },
+    '$route.query.query': function (value) {
+      this.query.assunto = value
     }
   },
   mounted() {
