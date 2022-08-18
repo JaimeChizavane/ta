@@ -71,7 +71,7 @@
               <div class="contact-info">
                 <h6 class="footer-widget__title">Redes Sociais</h6>
                 <ul class="contact-list list-unstyled">
-                  <li class="mt-20 mb-20"><a href="#" class="phone-number"><i class="fab fa-facebook"></i><span> facebook</span>
+                  <li class="mt-20 mb-20"><a target="_blank" href="https://www.facebook.com/Tribunal-Administrativo-de-Mo%C3%A7ambique-102816889005908" class="phone-number"><i class="fab fa-facebook"></i><span> facebook</span>
                   </a></li>
                   <li class="mt-20 mb-20"><a href="#" class="phone-number"><i class="fab fa-instagram"></i> <span> instagram</span>
                   </a></li>

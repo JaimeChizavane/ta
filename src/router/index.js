@@ -153,15 +153,6 @@ const routes = [{
             import ('@/views/Law.vue')
     },
     {
-        path: '/search',
-        name: 'search',
-        meta: {
-            display: 'search'
-        },
-        component: () =>
-            import ('@/views/Search.vue')
-    },
-    {
         path: '/diplom',
         name: 'diplom',
         meta: {
@@ -239,7 +230,7 @@ const routes = [{
         component: () =>
             import ('@/views/AboutUs.vue')
     },
-
+  
     {
         path: '/visa_consultation',
         name: 'visa_consultation',
@@ -256,7 +247,7 @@ const routes = [{
         path: '/statistic',
         name: 'statistic',
         beforeEnter() {
-            window.open('http://10.0.0.17:8090/dashboard/public/reportViewer?code=DASHBOARD+-+VISTO', '_blank');
+            window.open('http://consultavisto.ta.gov.mz:8080/dashboard/public/reportViewer?code=ESTATISTICAS+DO+VISTO', '_blank');
         }, // location.href = 'http://consultavisto.ta.gov.mz:8080/vistoPublic/login/auth' },
         meta: {
             display: 'menus.statistic'
