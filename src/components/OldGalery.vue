@@ -10,7 +10,7 @@
                    v-for="(image, index) in allImages"
                    :key="index">
                 <div class="video__banner">
-                  <img :src="image.src" class="rounded" alt="banner">
+                  <img v-lazy="image.src" class="rounded" alt="banner">
                 </div><!-- /.video__banner -->
               </div>
             </div><!-- /.tab-content -->

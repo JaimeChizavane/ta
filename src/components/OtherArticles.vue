@@ -6,7 +6,7 @@
       <div class="widget-post-item d-flex align-items-center" v-for="(item, index) in items" :key="index">
         <div class="widget-post__img">
           <router-link :to="{name: 'blog-item', params:{guid: item.GUID}}">
-            <img :src="getImageUrl(item)" alt="thumb"></router-link>
+            <img v-lazy="getImageUrl(item)" alt="thumb"></router-link>
         </div><!-- /.widget-post-img -->
         <div class="widget-post__content">
           <span class="widget-post__date">{{ item.Data_x0020_Noticia || item.Created | date_short }}</span>

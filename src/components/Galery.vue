@@ -25,7 +25,7 @@
                       ></span>
                     </div>
                     <div class="video__banner">
-                      <img :src="image.src" class="rounded" alt="banner" />
+                      <img v-lazy="image.src" class="rounded" alt="banner" />
                     </div>
 
                     <button
