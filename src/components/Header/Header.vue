@@ -17,6 +17,10 @@
         </div><!-- /.header-top-right -->
         <q-menu/>
         <q-search/>
+        <!-- <router-link class="navbar-brand ml-40" :to="{name : 'home'}">
+          <img src="assets/images/logo/Logotipo.jpg" class="logo-light" alt="logo">
+        
+        </router-link> -->
       </div><!-- /.container -->
     </nav><!-- /.navabr -->
   </header><!-- /.Header -->

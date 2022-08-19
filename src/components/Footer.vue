@@ -61,7 +61,11 @@
               <div class="contact-info">
                 <h6 class="footer-widget__title">Links Importantes</h6>
                 <ul class="contact-list list-unstyled">
-                  <li><a href="https://www.portaldogoverno.gov.mz/por/" target="_blank"> Portal do Governo </a>
+                  <li><a href="https://www.portaldogoverno.gov.mz/por/" target="_blank" class="phone-number"> Portal do Governo de Moçambique </a>
+                  </li>
+                   <li><a href="https://www.pgr.gov.mz/por#" target="_blank" class="phone-number"> Procuradoria-Geral da Republica </a>
+                  </li>
+                   <li><a href="https://www.presidencia.gov.mz/#" target="_blank" class="phone-number"> Presidência da Republica de Moçambique </a>
                   </li>
 
                 </ul>
