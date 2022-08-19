@@ -34,7 +34,7 @@
               <!-- career item #1 -->
               <div
                 class="job-item"
-                v-for="(item, index) in history"
+                v-for="(item, index) in history.Files.results.sort((a,b)=>a[name].localeCompare(b[name]))"
                 :key="index"
               >
                 <div class="row">
