@@ -116,17 +116,15 @@ export default {
     this.$http
       .get("rpcge.json")
       .then((data) => {
+        console.log(data.data.d.results.slice(0, 4));
         this.history = data.data.d.results.flatMap((f) =>
           f.Folders.results.flatMap((fo) =>
-            fo.Files.results.sort((a, b) =>
-              a["Name"].localeCompare(b["Name"]).map((file) => {
-                return file;
-              })
-            )
+            fo.Files.results.sort()
           )
         )
 
         this.allItems = this.history;
+        console.log(this.allItems);
 
         //this.allItems = this.history.sort((a, b) => a['Name'].localeCompare(b['Name']))
       })
