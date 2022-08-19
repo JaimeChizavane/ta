@@ -119,7 +119,7 @@ export default {
         console.log(data.data.d.results.slice(0, 4));
         this.history = data.data.d.results.flatMap((f) =>
           f.Folders.results.flatMap((fo) =>
-            fo.Files.results.sort()
+            fo.Files.results.sort((a, b) => a.name.localeCompare(b.name))
           )
         )
 

@@ -107,7 +107,7 @@ export default {
       this.history = data.data.d.results.filter(i => i.Name !== 'Forms')
 this.allItems = this.history.flatMap((f) =>
           f.Folders.results.flatMap((fo) =>
-            fo.Files.results.sort()
+             fo.Files.results.sort((a, b) => a.name.localeCompare(b.name))
           )
         )
      // this.allItems = this.history.sort((a, b) => a['Name'].localeCompare(b['Name']))
