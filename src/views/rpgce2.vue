@@ -34,7 +34,7 @@
                       <div class="col-12">
                         <div class="jobs-container">
                           <!-- career item #1 -->
-                          <div class="job-item" v-for="(item, index) in faq.Files.results.sort((a,b)=>a[name].localeCompare(b[name]))" :key="index">
+                          <div class="job-item" v-for="(item, index) in faq.Files.results" :key="index">
                             <div class="row">
                               <div class="col-sm-12 col-md-12 col-lg-4">
                                 <div class="job__meta">

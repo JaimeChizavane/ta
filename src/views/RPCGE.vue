@@ -34,7 +34,7 @@
               <!-- career item #1 -->
               <div
                 class="job-item"
-                v-for="(item, index) in history.Files.results.sort((a,b)=>a[name].localeCompare(b[name]))"
+                v-for="(item, index) in history.Files.results"
                 :key="index"
               >
                 <div class="row">
@@ -117,11 +117,7 @@ export default {
       .get("rpcge.json")
       .then((data) => {
         console.log(data.data.d.results.slice(0, 4));
-        this.history = data.data.d.results.flatMap((f) =>
-          f.Folders.results.flatMap((fo) =>
-            fo.Files.results.sort((a, b) => a.name.localeCompare(b.name))
-          )
-        )
+        this.history = data.data.d.results
 
         this.allItems = this.history;
         console.log(this.allItems);
