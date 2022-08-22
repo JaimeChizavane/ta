@@ -7,7 +7,7 @@
             src="assets/images/logo/logo.png"
             class="logo-light"
             alt="logo"
-            style="max-height: 100px;"
+            style="height:70px; width: 200px; max-height: 100px;"
           />
           <!-- <img src="assets/images/logo/logo-dark.png" class="logo-dark" alt="logo"> -->
         </router-link>
@@ -31,7 +31,7 @@
             src="assets/images/logo/Logotipo.jpg"
             class="logo-light"
             alt="logo"
-            style="max-height: 100px;"
+            style="height:70px; width: 200px; max-height: 100px;"
           />
         </router-link>
       </div>
