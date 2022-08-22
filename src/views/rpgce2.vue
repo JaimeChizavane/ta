@@ -104,6 +104,7 @@ export default {
     window.mainExecution()
 
     this.$http.get("rpcge.json").then((data) => {
+        console.log(data.data.d.results.slice(0, 4));
       this.history = data.data.d.results.filter(i => i.Name !== 'Forms')
 /* this.allItems = this.history.flatMap((f) =>
           f.Folders.results.flatMap((fo) =>
