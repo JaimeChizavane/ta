@@ -34,7 +34,7 @@
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div
                 class="accordion-item"
-                v-for="(faq, index) in history"
+                v-for="(faq, index) in history.sort((a, b) => a.Name.localeCompare(b.Name)).reverse()"
                 :key="index"
               >
                 <div
@@ -57,7 +57,8 @@
                           <!-- career item #1 -->
                           <div
                             class="job-item"
-                            v-for="(item, index) in faq.Files.results.sort((a, b) => a.Name.localeCompare(b.Name))"
+                            v-for="(item, index) in faq.Files.results.sort((a, b) => a.Name.localeCompare(b.Name)
+     )"
                             :key="index"
                           >
                             <div class="row">
@@ -203,8 +204,6 @@ export default {
     window.mainExecution();
     this.$http.get("rpcge.json").then((data) => { 
       this.history = data.data.d.results.filter(i => i.Name !== 'Forms')
-      this.history= this.history.sort((a, b) => a.Name.localeCompare(b.Name)).reverse();
-      
 
      this.allItems = this.history
     }).catch((error) => {
