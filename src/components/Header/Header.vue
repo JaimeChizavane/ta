@@ -1,16 +1,20 @@
 <template>
   <header class="header header-transparent header-full">
     <nav class="navbar navbar-expand-lg sticky-navbar">
+     
+      
       <div class="container">
-        <router-link class="navbar-brand" :to="{ name: 'home' }" style="margin-right:15px">
+         <router-link class="navbar-brand" :to="{ name: 'home' }" style="margin-right:15px;">
           <img
             src="assets/images/logo/logo.png"
             class="logo-light"
             alt="logo"
-            style="height:70px; width: 200px; max-height: 100px;"
+            
           />
+          
           <!-- <img src="assets/images/logo/logo-dark.png" class="logo-dark" alt="logo"> -->
         </router-link>
+       
         <button class="navbar-toggler" type="button" @click="openMenu()">
           <span class="menu-lines"><span></span></span>
         </button>
@@ -24,17 +28,19 @@
         </div>
         <!-- /.header-top-right -->
         <q-menu />
-        <q-search />
-        <li class="d-none d-xl-block"></li>
-        <router-link class="navbar-brand" :to="{ name: 'home' }" style="margin-left:15px">
+        <q-search /> 
+
+       
+         <router-link class="navbar-brands" :to="{ name: 'home' }" style="margin-left:15px; width:100%">
           <img
             src="assets/images/logo/Logotipo.jpg"
             class="logo-light"
-            alt="logo"
-            style="height:70px; width: 200px; max-height: 100px;"
+            alt="logo" 
           />
-        </router-link>
+        </router-link> 
       </div>
+      
+      
       <!-- /.container -->
     </nav>
     <!-- /.navabr -->
