@@ -150,51 +150,51 @@ export default {
     return {
       allItems: [],
       history: [
-        {
-          Activities: {},
-          Exists: true,
-          Files: {
-            results: [
-              {
-                Name: "Relatório e Parecer CGE 03",
-              },
-              {
-                Name: "Relatório e Parecer CGE 02",
-              },
-            ],
-          },
-          Name: "Relatório e Parecer CGE 2022",
-        },
-        {
-          Activities: {},
-          Exists: true,
-          Files: {
-            results: [
-              {
-                Name: "Relatório e Parecer CGE 01",
-              },
-              {
-                Name: "Relatório e Parecer CGE 02",
-              },
-            ],
-          },
-          Name: "Relatório e Parecer CGE 2020",
-        },
-        {
-          Activities: {},
-          Exists: true,
-          Files: {
-            results: [
-              {
-                Name: "Relatório e Parecer CGE 01",
-              },
-              {
-                Name: "Relatório e Parecer CGE 02",
-              },
-            ],
-          },
-          Name: "Relatório e Parecer CGE 2023",
-        },
+        // {
+        //   Activities: {},
+        //   Exists: true,
+        //   Files: {
+        //     results: [
+        //       {
+        //         Name: "Relatório e Parecer CGE 03",
+        //       },
+        //       {
+        //         Name: "Relatório e Parecer CGE 02",
+        //       },
+        //     ],
+        //   },
+        //   Name: "Relatório e Parecer CGE 2022",
+        // },
+        // {
+        //   Activities: {},
+        //   Exists: true,
+        //   Files: {
+        //     results: [
+        //       {
+        //         Name: "Relatório e Parecer CGE 01",
+        //       },
+        //       {
+        //         Name: "Relatório e Parecer CGE 02",
+        //       },
+        //     ],
+        //   },
+        //   Name: "Relatório e Parecer CGE 2020",
+        // },
+        // {
+        //   Activities: {},
+        //   Exists: true,
+        //   Files: {
+        //     results: [
+        //       {
+        //         Name: "Relatório e Parecer CGE 01",
+        //       },
+        //       {
+        //         Name: "Relatório e Parecer CGE 02",
+        //       },
+        //     ],
+        //   },
+        //   Name: "Relatório e Parecer CGE 2023",
+        // },
       ],
 
       query: "",
