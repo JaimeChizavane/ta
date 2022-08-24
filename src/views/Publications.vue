@@ -197,7 +197,9 @@ export default {
       this.items = this.allItems
       this.searcheable = this.items.flatMap((item) => {
         if (item.Folder.Files) {
-          return item.Folder.Files.results.flatMap((file) => {
+          return item.Folder.Files.results.sort((a, b) =>
+            a.Name.localeCompare(b.Name)
+          ).flatMap((file) => {
             return {
               Tipo: item.Tipo,
               Title: item.Title || item.Folder.Name,
