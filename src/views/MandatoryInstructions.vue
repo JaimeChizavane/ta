@@ -82,7 +82,7 @@ export default {
     window.mainExecution()
 
     this.$http.get("instrucoesobrigatorias.json").then((data) => {
-      this.history = data.data.d.results
+      this.history = data.data.d.results.filter(i => i.Name !== 'Forms').sort((a, b) => a.Name.localeCompare(b.Name))
 
       this.allItems = this.history
     }).catch((error) => {
