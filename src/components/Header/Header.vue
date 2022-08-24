@@ -4,7 +4,7 @@
      
       
       <div class="container">
-         <router-link class="navbar-brand" :to="{ name: 'home' }" style="margin-right:15px;">
+         <router-link class="navbar-brand" :to="{ name: 'home' }" style="margin-right:15px; width:100%">
           <img
             src="assets/images/logo/logo.png"
             class="logo-light"
@@ -30,7 +30,7 @@
         <q-menu />
         <q-search /> 
 
-       
+       <li class="d-none d-xl-block">
          <router-link class="navbar-brands" :to="{ name: 'home' }" style="margin-left:15px; width:100%">
           <img
             src="assets/images/logo/Logotipo.jpg"
@@ -38,6 +38,7 @@
             alt="logo" 
           />
         </router-link> 
+        </li>
       </div>
       
       
