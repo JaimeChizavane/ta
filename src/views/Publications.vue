@@ -199,7 +199,7 @@ export default {
         if (item.Folder.Files) {
           return item.Folder.Files.results.sort((a, b) =>
             a.Name.localeCompare(b.Name)
-          ).flatMap((file) => {
+          ).reverse().flatMap((file) => {
             return {
               Tipo: item.Tipo,
               Title: item.Title || item.Folder.Name,
