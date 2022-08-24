@@ -104,9 +104,15 @@ export default {
     window.mainExecution()
 
     this.$http.get("contas.json").then((data) => {
-      this.history = data.data.d.results.filter(i => i.Name !== 'Forms')
+      this.history = data.data.d.results.filter(i => i.Name !== 'Forms').sort((a, b) => a.Name.localeCompare(b.Name)).reverse();
+       this.history.forEach((item) => {
+          item.Files.results = item.Files.results.sort((a, b) =>
+            a.Name.localeCompare(b.Name)
+          )
+          this.allItems.push(item);
+        });
 
-      this.allItems = this.history
+     this.history= this.allItems;
     }).catch((error) => {
       console.log(error)
     })
