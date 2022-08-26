@@ -1,20 +1,24 @@
 <template>
   <header class="header header-transparent header-full">
     <nav class="navbar navbar-expand-lg sticky-navbar">
-     
-      
-      <div class="container">
-         <router-link class="navbar-brand" :to="{ name: 'home' }" style="margin-right:15px; width:100%">
+       
+         <router-link class="navbar-brand" :to="{ name: 'home' }" style="margin-left:15px; right:10px">
           <img
             src="assets/images/logo/logo.png"
-            class="logo-light"
+            class="logo-light logo-lighte d-flex align-items-center mb-2 mb-lg-0 pull-right"
             alt="logo"
+
+           
             
           />
           
-          <!-- <img src="assets/images/logo/logo-dark.png" class="logo-dark" alt="logo"> -->
-        </router-link>
+            </router-link> 
+      <div class="container">
+        
        
+       
+         
+          
         <button class="navbar-toggler" type="button" @click="openMenu()">
           <span class="menu-lines"><span></span></span>
         </button>
@@ -28,24 +32,38 @@
         </div>
         <!-- /.header-top-right -->
         <q-menu />
-        <q-search /> 
+        <q-search />
+        <!-- <li class="d-none d-xl-block">
 
-       <li class="d-none d-xl-block">
-         <router-link class="navbar-brands" :to="{ name: 'home' }" style="margin-left:15px; width:100%">
-          <img
-            src="assets/images/logo/Logotipo.jpg"
-            class="logo-light"
-            alt="logo" 
-          />
-        </router-link> 
-        </li>
+         </li> -->
+        
+         
+          
+
+         
+      
       </div>
+      <router-link class="navbar-bran" :to="{ name: 'home' }" style="margin-right:15px; right:10px">
+            <img
+            src="assets/images/logo/Logotipo.jpg"
+            class="d-flex align-items-center mb-2 mb-lg-0 pull-right"
+            alt="logo"  
+            
+          />
+         </router-link>
+      
+    
+ 
+       
+      
       
       
       <!-- /.container -->
     </nav>
+     
     <!-- /.navabr -->
   </header>
+  
   <!-- /.Header -->
 </template>
 
