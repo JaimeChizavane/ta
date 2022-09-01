@@ -258,11 +258,13 @@ export default {
     }
   },
   mounted() {
+  
     this.$http.get("jurispudenciaPlenario.json").then((data) => {
       this.allItems = data.data.d.results
       this.items = this.allItems
       // this.searcheable = this.items.flatMap(item => item.Folders.results.flatMap(s => s.Files.results))
       // this.searcheable = this.items
+      console.log('tamanho'+this.items.length)
     }).catch((error) => {
       console.log(error)
     })
