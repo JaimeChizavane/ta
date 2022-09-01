@@ -52,12 +52,15 @@
             "press": "Imprensa",
             "report_submission": "Submissão de Denúncia",
             "galery": "Galeria",
+
             "videos": "Videos",
             "faq": "Perguntas Frequentes",
             "csmja": "CSMJA",
             "csmja_name": "Conselho Superior de Magistratura Judicial Administrativa",
             "others": "Outros",
-            "news": "Notícias"
+            "news": "Notícias",
+            "jurispendency_plenario": "Jurisprudência do Plenário",
+            "plenary": "Plenário"
         },
         "search": "Pesquisar",
         "read_more": "Ler mais",

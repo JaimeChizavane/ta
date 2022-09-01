@@ -230,7 +230,7 @@ const routes = [{
         component: () =>
             import ('@/views/AboutUs.vue')
     },
-  
+
     {
         path: '/visa_consultation',
         name: 'visa_consultation',
@@ -272,6 +272,15 @@ const routes = [{
         },
         component: () =>
             import ('@/views/JurisAll.vue')
+    },
+    {
+        path: '/jurispendency_plenario',
+        name: 'jurispendency_plenario',
+        meta: {
+            display: 'menus.jurispendency_plenario'
+        },
+        component: () =>
+            import ('@/views/JurisPlenario.vue')
     },
     {
         path: '/sub_section',

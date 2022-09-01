@@ -142,6 +142,11 @@
                 "sub_menus": []
             },
             {
+                "name": "menus.plenary",
+                "to": "jurispendency_plenario",
+                "sub_menus": []
+            },
+            {
                 "name": "menus.acordion",
                 "to": "acordion",
                 "sub_menus": []
