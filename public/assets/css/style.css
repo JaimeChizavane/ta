@@ -1022,6 +1022,7 @@ select {
 .bg-img {
     position: relative;
     z-index: 1;
+    width: 100%;
 }
 
 .background-size-auto {
@@ -1587,6 +1588,11 @@ h6 {
 }
 
 .btn__primary {
+    background-color: #6e1a3e;
+    color: #ffffff;
+}
+
+.bg__primary {
     background-color: #6e1a3e;
     color: #ffffff;
 }
@@ -3220,16 +3226,20 @@ input[type=radio] {
     border-bottom: 1px solid #e7ebef;
 }
 
+.secondary-nav .nav-tabs .nav__link {
+    background-color: #6e1a3e;
+}
+
 .secondary-nav .nav-tabs .nav__link:after {
-    background-color: #091d3e;
+    background-color: #6e1a3e;
 }
 
 .secondary-nav-sticky,
 .secondary-nav-layout2 {
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
-    background-color: #091d3e;
-    border-bottom-color: #091d3e;
+    background-color: #6e1a3e;
+    border-bottom-color: #6e1a3e;
 }
 
 .secondary-nav-sticky .nav-tabs .nav__link,

@@ -40,20 +40,20 @@ export default {
   data() {
     return {
       sliders: [
-        // {
-        //   img: 'assets/images/sliders/1.jpg',
-        //   subtitle: 'Seja bem-vindo ao site do Tribunal Administrativo de Moçambique.',
-        //   title: 'O Tribunal Administrativo',
-        //   desc: 'É o órgão superior da hierarquia dos tribunais administrativos.',
-        //   to: { name: 'history' }
-        // },
-        // {
-        //   img: 'assets/images/sliders/2.jpg',
-        //   subtitle: 'Atribuições e Competências do Tribunal Administrativo',
-        //   title: 'Tribunal Administrativo em prol da Justiça',
-        //   desc: 'O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.',
-        //   to: { name: 'history' }
-        // }
+        {
+          img: 'assets/images/sliders/1.jpg',
+          subtitle: 'Seja bem-vindo ao site do Tribunal Administrativo de Moçambique.',
+          title: 'O Tribunal Administrativo',
+          desc: 'É o órgão superior da hierarquia dos tribunais administrativos.',
+          to: { name: 'history' }
+        },
+        {
+          img: 'assets/images/sliders/2.jpg',
+          subtitle: 'Atribuições e Competências do Tribunal Administrativo',
+          title: 'Tribunal Administrativo em prol da Justiça',
+          desc: 'O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.',
+          to: { name: 'history' }
+        }
       ]
     }
   },

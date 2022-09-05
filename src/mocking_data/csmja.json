@@ -1,32 +1,37 @@
-[
-  {
-    "name": "menus.institution",
-    "to": "csmja.history",
-    "sub_menus": []
-  },
-  {
-    "name": "menus.law",
-    "to": "csmja.law",
-    "sub_menus": []
-  },
-  {
-    "name": "menus.decret",
-    "to": "csmja.decret",
-    "sub_menus": []
-  },
-  {
-    "name": "menus.resolution",
-    "to": "csmja.dispatchment",
-    "sub_menus": []
-  },
-  {
-    "name": "menus.news",
-    "to": "csmja.publications",
-    "sub_menus": []
-  },
-  {
-    "name": "menus.faq",
-    "to": "csmja.faq",
-    "sub_menus": []
-  }
+[{
+        "name": "menus.institution",
+        "to": "csmja.history",
+        "sub_menus": []
+    },
+    {
+        "name": "menus.legislation",
+        "to": "legislation",
+        "sub_menus": [{
+                "name": "menus.law",
+                "to": "csmja.law",
+                "sub_menus": []
+            },
+            {
+                "name": "menus.decret",
+                "to": "csmja.decret",
+                "sub_menus": []
+            },
+            {
+                "name": "menus.resolution",
+                "to": "csmja.dispatchment",
+                "sub_menus": []
+            }
+        ]
+    },
+
+    {
+        "name": "menus.news",
+        "to": "csmja.publications",
+        "sub_menus": []
+    },
+    {
+        "name": "menus.faq",
+        "to": "csmja.faq",
+        "sub_menus": []
+    }
 ]
