@@ -123,21 +123,22 @@
           <div class="col-12">
             <div class="jobs-container" v-if="items.length">
               <div class="table-responsive p-0" style="height: 600px;">
-              <table class="table table-striped">
-                <thead class="ta_table">
-                  <th>#</th>
-                  <th>Tipo</th>
-                  <th>Secção de origem</th>
-                  <th>N. Acórdão</th>
-                  <th>N. do Processo</th>
-                  <th>Relator</th>
-                  <th>Assunto</th>
-                  <th>Documento</th>
+              <table class="table table-striped table-bordered">
+                <thead class="btn__primary">
+                  <th class="col-1">#</th>
+                  <th class="col-1">Tipo</th>
+                  <th class="col-1">Secção de origem</th>
+                  <th class="col-1">N. Acórdão</th>
+                  <th class="col-1">N. do Processo</th>
+                  <th class="col-1">Relator</th>
+                  <th  class="col-2">Assunto</th>
+                  <th class="col-2">Sumário </th>
+                  <th class="col-1">Documento</th>
                 </thead>
                 <tbody>
                   <tr v-for="(item, index) in items" :key="index">
                     <td>
-                      {{ index }}
+                      {{ index+1 }}
                     </td>
                     <td>
                       {{ item.Ac_x00f3_rd_x00e3_o_x0020_ou_x00 }}
@@ -166,6 +167,16 @@
                       </div>
                     </td>
                     <td>
+                       
+                          <div class="row col-sm-12">
+                            <span
+                              class="job__desc"
+                              v-html="item.Sum_x00e1_rio"
+                            ></span>
+                          </div>
+                        
+                    </td>
+                    <td>
                       <div
                         class="col-sm-12 col-md-12 col-lg-8"
                         v-if="item.AttachmentFiles.results.length"
@@ -181,8 +192,6 @@
                           <!-- /.col-lg-5 -->
                           <div
                             class="
-                          col-sm-12 col-md-12 col-lg-3
-                          d-flex
                           align-items-center
                           justify-content-end
                           btn-wrap
@@ -198,17 +207,7 @@
                           <!-- /.col-lg-3 -->
                         </div>
                         <hr />
-                        <div class="row col-sm-12" v-show="item.Sum_x00e1_rio">
-                          <div class="row col-sm-12">
-                            <span class="font-weight-bold">Sumário: </span>
-                          </div>
-                          <div class="row col-sm-12">
-                            <span
-                              class="job__desc"
-                              v-html="item.Sum_x00e1_rio"
-                            ></span>
-                          </div>
-                        </div>
+                       
                       </div>
                     </td>
                   </tr>
@@ -217,7 +216,7 @@
               </div>
             </div>           
             
-            <div class="heading text-center mb-20" v-else>
+            <div class="heading text-center mb-20"  v-else>
               <h3 class="heading__title">Sem resultados...</h3>
             </div>
           </div>
