@@ -123,7 +123,7 @@
           <div class="col-12">
             <div class="jobs-container" v-if="items.length">
               <div class="table-responsive p-0" style="height: 700px;">
-              <table class="table table-striped table-bordered">
+              <table class="table table-striped table-bordered table-head-fixed">
                 <thead class="btn__primary">
                   <th class="col-1">#</th>
                   <th class="col-1">Tipo</th>
