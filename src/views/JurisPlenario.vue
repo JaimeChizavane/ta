@@ -122,7 +122,7 @@
         <div class="row">
           <div class="col-12">
             <div class="jobs-container" v-if="items.length">
-              <div class="table-responsive p-0" style="height: 600px;">
+              <div class="table-responsive p-0" style="height: 700px;">
               <table class="table table-striped table-bordered">
                 <thead class="btn__primary">
                   <th class="col-1">#</th>
@@ -130,7 +130,7 @@
                   <th class="col-1">Secção de origem</th>
                   <th class="col-1">N. Acórdão</th>
                   <th class="col-1">N. do Processo</th>
-                  <th class="col-1">Relator</th>
+                  <th class="col-2">Relator</th>
                   <th  class="col-2">Assunto</th>
                   <th class="col-2">Sumário </th>
                   <th class="col-1">Documento</th>
@@ -171,7 +171,7 @@
                           <div class="row col-sm-12">
                             <span 
                               class="job__desc"
-                              v-html="item.Sum_x00e1_rio.substr(1,70)"
+                              v-html="item.Sum_x00e1_rio.substr(0,100)"
                             ></span>
                           </div>
                         
