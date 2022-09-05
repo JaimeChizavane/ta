@@ -169,9 +169,9 @@
                     <td>
                        
                           <div class="row col-sm-12">
-                            <span
+                            <span 
                               class="job__desc"
-                              v-html="item.Sum_x00e1_rio"
+                              v-html="item.Sum_x00e1_rio.substr(1,70)"
                             ></span>
                           </div>
                         
