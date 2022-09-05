@@ -122,7 +122,7 @@
         <div class="row">
           <div class="col-12">
             <div class="jobs-container" v-if="items.length">
-              <div class="table-responsive">
+              <div class="table-responsive p-0" style="height: 600px;">
               <table class="table table-striped">
                 <thead class="ta_table">
                   <th>#</th>
