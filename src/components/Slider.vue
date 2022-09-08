@@ -3,7 +3,7 @@
     <div class="slick-carousel carousel-arrows-light carousel-dots-light m-slides-0"
          data-slick='{"slidesToShow": 1, "arrows": true, "dots": true, "speed": 700,"fade": true,"cssEase": "linear", "autoplay": true}'>
       <div class="slide-item align-v-h bg-overlay bg-overlay-gradient" v-for="(item, index) in sliders" :key="index">
-        <div class="bg-img"><img :src="item.img" alt="slide img"></div>
+        <div class="bg-img"><img :src="item.img" alt="slide img" class="img-fluid"></div>
         <div class="container">
           <div class="row align-items-center">
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">

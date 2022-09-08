@@ -122,102 +122,101 @@
         <div class="row">
           <div class="col-12">
             <div class="jobs-container" v-if="items.length">
-              
-
-              <div id="table" class="col-xs-12 table-responsive">
-                <datatable
-                  :columns="columns"
-                  :data="items"
-                  class="table table-striped table-bordered"
-                  width="100%"
-                >
-                  <template scope="{ row }">
-                    <tr>
-                      <td>{{ row.Ac_x00f3_rd_x00e3_o_x0020_ou_x00 }}</td>
-                      <td>
-                        {{ row.Sec_x00e7__x00e3_o_x0020_de_x002 }}
-                      </td>
-                      <td>
-                        {{ row.N_x00b0__x0020_do_x0020_Acord_x0 }}
-                      </td>
-                      <td>
-                        {{ row.N_x002e__x00ba__x0020_do_x0020_P }}
-                      </td>
-                      <td>
-                        {{ row.Relator }}
-                      </td>
-                      <td>
+              <div class="table-responsive p-0" style="height: 700px;">
+              <table class="table table-striped table-bordered table-head-fixed">
+                <thead class="btn__primary">
+                  <th class="col-1">#</th>
+                  <th class="col-1">Tipo</th>
+                  <th class="col-1">Secção de origem</th>
+                  <th class="col-1">N. Acórdão</th>
+                  <th class="col-1">N. do Processo</th>
+                  <th class="col-2">Relator</th>
+                  <th  class="col-2">Assunto</th>
+                  <th class="col-2">Sumário </th>
+                  <th class="col-1">Documento</th>
+                </thead>
+                <tbody>
+                  <tr v-for="(item, index) in items" :key="index">
+                    <td>
+                      {{ index+1 }}
+                    </td>
+                    <td>
+                      {{ item.Ac_x00f3_rd_x00e3_o_x0020_ou_x00 }}
+                    </td>
+                    <td>
+                      {{ item.Sec_x00e7__x00e3_o_x0020_de_x002 }}
+                    </td>
+                    <td>
+                      {{ item.N_x00b0__x0020_do_x0020_Acord_x0 }}
+                    </td>
+                    <td>
+                      {{ item.N_x002e__x00ba__x0020_do_x0020_P }}
+                    </td>
+                    <td>
+                      {{ item.Relator }}
+                    </td>
+                    <td>
+                      <div
+                        class="job__meta"
+                        v-for="(subject, index) in item.Assunto.results"
+                        :key="'subject' + index"
+                      >
+                        <span class="job__location">
+                          {{ subject }}
+                        </span>
+                      </div>
+                    </td>
+                    <td>
+                       
+                          <div class="row col-sm-12">
+                            <span 
+                              class="job__desc"
+                              v-html="item.Sum_x00e1_rio.substr(0,100)"
+                            ></span>
+                          </div>
+                        
+                    </td>
+                    <td>
+                      <div
+                        class="col-sm-12 col-md-12 col-lg-8"
+                        v-if="item.AttachmentFiles.results.length"
+                      >
                         <div
-                          class="job__meta"
-                          v-for="(subject, index) in row.Assunto.results"
-                          :key="'subject' + index"
+                          class="row mb-5"
+                          v-for="(file, index) in item.AttachmentFiles.results"
+                          :key="'file' + index"
                         >
-                          <span class="job__location">
-                            {{ subject }}
-                          </span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="row col-sm-12">
-                          <span
-                            class="job__desc"
-                            v-html="row.Sum_x00e1_rio.substr(0, 100)"
-                          ></span>
-                        </div>
-                      </td>
-                      <td>
-                        <div
-                          class="col-sm-12 col-md-12 col-lg-8"
-                          v-if="row.AttachmentFiles.results.length"
-                        >
+                          <div class="col-sm-12 col-md-12 col-lg-9">
+                            <p class="job__desc" v-html="file.FileName"></p>
+                          </div>
+                          <!-- /.col-lg-5 -->
                           <div
-                            class="row mb-5"
-                            v-for="(file, index) in row.AttachmentFiles.results"
-                            :key="'file' + index"
-                          >
-                            <div class="col-sm-12 col-md-12 col-lg-9">
-                              <p class="job__desc" v-html="file.FileName"></p>
-                            </div>
-                            <!-- /.col-lg-5 -->
-                            <div
-                              class="
+                            class="
                           align-items-center
                           justify-content-end
                           btn-wrap
                         "
+                          >
+                            <a
+                              :href="getFileUrl(file)"
+                              target="_blank"
+                              class="btn btn__secondary"
+                              >Abrir</a
                             >
-                              <a
-                                :href="getFileUrl(file)"
-                                target="_blank"
-                                class="btn btn__secondary"
-                                >Abrir</a
-                              >
-                            </div>
-                            <!-- /.col-lg-3 -->
                           </div>
-                          <hr />
+                          <!-- /.col-lg-3 -->
                         </div>
-                      </td>
-                    </tr>
-                  </template>
-                </datatable>
-                <datatable-pager
-                  v-model="page"
-                  type="abbreviated"
-                  :page="page"
-                  :per-page="20"
-                ></datatable-pager>
+                        <hr />
+                       
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
               </div>
-                     <div class="row">
-    <div class="col-xs-12 form-inline">
-        <datatable-pager v-model="page" type="abbreviated" :per-page="per_page"></datatable-pager>
-    </div>
-</div>
-
-            </div>
-     
-
-            <div class="heading text-center mb-20" v-else>
+            </div>           
+            
+            <div class="heading text-center mb-20"  v-else>
               <h3 class="heading__title">Sem resultados...</h3>
             </div>
           </div>
@@ -231,6 +230,7 @@
     <q-footer />
   </div>
 </template>
+
 <script>
 import QFooter from "@/components/Footer";
 import QHeader from "@/components/Header/Header";
@@ -335,50 +335,6 @@ export default {
       },
       filtered: [],
       searcheable: [],
-      columns: [
-        {
-          label: "Tipo",
-          field: "user.username",
-          headerClass: "btn__primary col-2",
-        },
-        {
-          label: "Secção de origem",
-          headerClass: "btn__primary col-3",
-          field: "user.firstName",
-        },
-        {
-          label: "N. Acórdão",
-          headerClass: "btn__primary col-2",
-          field: "user.lastName",
-        },
-        {
-          label: "N. do Processo",
-          headerClass: "btn__primary col-2",
-          field: "user.email",
-        },
-        {
-          label: "Relator",
-          headerClass: "btn__primary col-2",
-          field: "user.email",
-        },
-        {
-          label: "Assunto",
-          headerClass: "btn__primary col-3",
-          field: "user.email",
-        },
-        {
-          label: "Sumário",
-          headerClass: "btn__primary col-3",
-          field: "user.email",
-        },
-        {
-          label: "Documento",
-          headerClass: "btn__primary col-2",
-          field: "user.email",
-        },
-      ],
-      page: 1,
-      per_page: 10,
     };
   },
   mounted() {
