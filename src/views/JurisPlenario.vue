@@ -131,6 +131,11 @@
                 :fields="fields"
                 small
               >
+                <template v-slot:cell(Data_do_Acórdão)="data">
+                  <span class="job__location">
+                    {{ data.item.Data_x0020_do_x0020_Ac_x00f3_rd_ | date }}
+                  </span>
+                </template>
                 <template v-slot:cell(Assunto)="data">
                   <div
                     class="job__meta"
@@ -313,55 +318,55 @@ export default {
           key: "Ac_x00f3_rd_x00e3_o_x0020_ou_x00",
           label: "Tipo",
           sortable: true,
-          class: "btn__primary",
+          thClasss: "btn__primary",
         },
         {
           key: "Sec_x00e7__x00e3_o_x0020_de_x002",
           label: "Secção de origem",
           sortable: true,
-          class: "btn__primary",
+          thClass: "btn__primary",
         },
         {
           key: "N_x00b0__x0020_do_x0020_Acord_x0",
           label: "N. Acórdão",
           sortable: true,
-          class: "btn__primary",
+          thClass: "btn__primary",
         },
         {
           key: "N_x002e__x00ba__x0020_do_x0020_P",
           label: "N. do Processo",
           sortable: true,
-          class: "btn__primary",
+          thClass: "btn__primary",
         },
         {
-          key: "Data_x0020_do_x0020_Ac_x00f3_rd_",
+          key: "Data_do_Acórdão",
           label: "Data do Acórdão",
           sortable: true,
-          class: "btn__primary",
+          thClass: "btn__primary",
         },
         {
           key: "Relator",
           label: "Relator",
           sortable: true,
-          class: "btn__primary",
+          thClass: "btn__primary",
         },
         {
           key: "Assunto",
           label: "Assunto",
           sortable: true,
-          class: "btn__primary",
+          thClass: "btn__primary",
         },
         {
           key: "Sum_x00e1_rio",
           label: "Sumário",
           sortable: true,
-          class: "btn__primary col-3",
+          thClass: "btn__primary col-3",
         },
         {
           key: "Document",
-          label: "Document",
+          label: "Documento",
           sortable: true,
-          class: "btn__primary",
+          thClass: "btn__primary",
         },
         "",
       ],
