@@ -151,7 +151,7 @@
                 </template>
                 <template v-slot:cell(Sumario)="data">
                   <span class="job__location">
-                    {{ data.item.Sum_x00e1_rio | excerpt_shorter }}
+                    {{ data.item.Sum_x00e1_rio | excerpt }}
                   </span>
                 </template>
                 <template v-slot:cell(Assunto)="data">
@@ -323,12 +323,12 @@ export default {
       perPage: 10,
       currentPage: 1,
       fields: [
-        {
+        /* {
           key: "Ac_x00f3_rd_x00e3_o_x0020_ou_x00",
           label: "Tipo",
           sortable: true,
           thClasss: "btn__primary",
-        },
+        }, */
         {
           key: "Sec_x00e7__x00e3_o_x0020_de_x002",
           label: "Secção de origem",
