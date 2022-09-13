@@ -1,19 +1,6 @@
 <template>
   <div class="overflow-auto">
     <p class="mt-3">Current Page: {{ currentPage }}</p>
-
-    <b-table
-      id="my-table"
-      :items="items"
-      :per-page="perPage"
-      :current-page="currentPage"
-      :fields="fields"
-      small
-    >
-      <template v-slot:cell(Document)="data">
-        <b-button variant="danger">{{ data.item.id }}</b-button>
-      </template>
-    </b-table>
     <b-pagination
       v-model="currentPage"
       :total-rows="rows"
@@ -21,8 +8,24 @@
       striped
       hover
       aria-controls="my-table"
-      align="fill"
+      align="center"
     ></b-pagination>
+    <b-table
+      id="my-table"
+      :items="items"
+      :per-page="perPage"
+      :current-page="currentPage"
+      :fields="fields"
+      :small="true"
+      :striped="true"
+      :hover="true"
+      :responsive="true"
+      :foot-clone="true"
+    >
+      <template v-slot:cell(Document)="data">
+        <b-button variant="danger">{{ data.item.id }}</b-button>
+      </template>
+    </b-table>
   </div>
 </template>
 
@@ -30,7 +33,7 @@
 export default {
   data() {
     return {
-      perPage: 3,
+      perPage: 10,
       currentPage: 1,
       fields: [
         { key: "first_name", label: "First Name", sortable: true },
@@ -46,6 +49,32 @@ export default {
         { id: 6, first_name: "Bamm Bamm", last_name: "Rubble" },
         { id: 7, first_name: "The Great", last_name: "Gazzoo" },
         { id: 8, first_name: "Rockhead", last_name: "Slate" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
+        { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
         { id: 9, first_name: "Pearl", last_name: "Slaghoople" },
       ],
     };

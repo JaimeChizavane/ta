@@ -123,17 +123,35 @@
         <div class="row">
           <div class="col-12">
             <div class="jobs-container" v-if="items.length">
+              <b-pagination
+                v-model="currentPage"
+                :total-rows="items.length"
+                :per-page="perPage"
+                striped
+                hover
+                aria-controls="my-table"
+                align="center"
+              ></b-pagination>
               <b-table
                 id="my-table"
                 :items="items"
                 :per-page="perPage"
                 :current-page="currentPage"
                 :fields="fields"
-                small
+                :small="true"
+                :striped="true"
+                :hover="true"
+                :responsive="true"
+                :foot-clone="true"
               >
                 <template v-slot:cell(Data_do_Acórdão)="data">
                   <span class="job__location">
                     {{ data.item.Data_x0020_do_x0020_Ac_x00f3_rd_ | date }}
+                  </span>
+                </template>
+                <template v-slot:cell(Sumario)="data">
+                  <span class="job__location">
+                    {{ data.item.Sum_x00e1_rio | excerpt_shorter }}
                   </span>
                 </template>
                 <template v-slot:cell(Assunto)="data">
@@ -181,15 +199,6 @@
                   </div>
                 </template>
               </b-table>
-              <b-pagination
-                v-model="currentPage"
-                :total-rows="items.length"
-                :per-page="perPage"
-                striped
-                hover
-                aria-controls="my-table"
-                align="fill"
-              ></b-pagination>
             </div>
 
             <div class="heading text-center mb-20" v-else>
@@ -357,7 +366,7 @@ export default {
           thClass: "btn__primary",
         },
         {
-          key: "Sum_x00e1_rio",
+          key: "Sumario",
           label: "Sumário",
           sortable: true,
           thClass: "btn__primary col-3",
