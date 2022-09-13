@@ -2,6 +2,7 @@
   <div class="wrapper">
     <q-header />
     <q-bread-crumb />
+
     <section class="careers">
       <div class="container">
         <div class="row">
@@ -122,100 +123,69 @@
         <div class="row">
           <div class="col-12">
             <div class="jobs-container" v-if="items.length">
-              
-
-              <div id="table" class="col-xs-12 table-responsive">
-                <datatable
-                  :columns="columns"
-                  :data="items"
-                  class="table table-striped table-bordered"
-                  width="100%"
-                >
-                  <template scope="{ row }">
-                    <tr>
-                      <td>{{ row.Ac_x00f3_rd_x00e3_o_x0020_ou_x00 }}</td>
-                      <td>
-                        {{ row.Sec_x00e7__x00e3_o_x0020_de_x002 }}
-                      </td>
-                      <td>
-                        {{ row.N_x00b0__x0020_do_x0020_Acord_x0 }}
-                      </td>
-                      <td>
-                        {{ row.N_x002e__x00ba__x0020_do_x0020_P }}
-                      </td>
-                      <td>
-                        {{ row.Relator }}
-                      </td>
-                      <td>
-                        <div
-                          class="job__meta"
-                          v-for="(subject, index) in row.Assunto.results"
-                          :key="'subject' + index"
-                        >
-                          <span class="job__location">
-                            {{ subject }}
-                          </span>
-                        </div>
-                      </td>
-                      <td>
-                        <div class="row col-sm-12">
-                          <span
-                            class="job__desc"
-                            v-html="row.Sum_x00e1_rio.substr(0, 100)"
-                          ></span>
-                        </div>
-                      </td>
-                      <td>
-                        <div
-                          class="col-sm-12 col-md-12 col-lg-8"
-                          v-if="row.AttachmentFiles.results.length"
-                        >
-                          <div
-                            class="row mb-5"
-                            v-for="(file, index) in row.AttachmentFiles.results"
-                            :key="'file' + index"
-                          >
-                            <div class="col-sm-12 col-md-12 col-lg-9">
-                              <p class="job__desc" v-html="file.FileName"></p>
-                            </div>
-                            <!-- /.col-lg-5 -->
-                            <div
-                              class="
+              <b-table
+                id="my-table"
+                :items="items"
+                :per-page="perPage"
+                :current-page="currentPage"
+                :fields="fields"
+                small
+              >
+                <template v-slot:cell(Assunto)="data">
+                  <div
+                    class="job__meta"
+                    v-for="(subject, index) in data.item.Assunto.results"
+                    :key="'subject' + index"
+                  >
+                    <span class="job__location">
+                      {{ subject }}
+                    </span>
+                  </div>
+                </template>
+                <template v-slot:cell(Document)="data">
+                  <div
+                    class="col-sm-12 col-md-12 col-lg-8"
+                    v-if="data.item.AttachmentFiles.results.length"
+                  >
+                    <div
+                      class="row mb-5"
+                      v-for="(file, index) in data.item.AttachmentFiles.results"
+                      :key="'file' + index"
+                    >
+                      <div class="col-sm-12 col-md-12 col-lg-9">
+                        <p class="job__desc" v-html="file.FileName"></p>
+                      </div>
+                      <!-- /.col-lg-5 -->
+                      <div
+                        class="
                           align-items-center
                           justify-content-end
                           btn-wrap
                         "
-                            >
-                              <a
-                                :href="getFileUrl(file)"
-                                target="_blank"
-                                class="btn btn__secondary"
-                                >Abrir</a
-                              >
-                            </div>
-                            <!-- /.col-lg-3 -->
-                          </div>
-                          <hr />
-                        </div>
-                      </td>
-                    </tr>
-                  </template>
-                </datatable>
-                <datatable-pager
-                  v-model="page"
-                  type="abbreviated"
-                  :page="page"
-                  :per-page="20"
-                ></datatable-pager>
-              </div>
-                     <div class="row">
-    <div class="col-xs-12 form-inline">
-        <datatable-pager v-model="page" type="abbreviated" :per-page="per_page"></datatable-pager>
-    </div>
-</div>
-
+                      >
+                        <a
+                          :href="getFileUrl(file)"
+                          target="_blank"
+                          class="btn btn__secondary"
+                          >Abrir</a
+                        >
+                      </div>
+                      <!-- /.col-lg-3 -->
+                    </div>
+                    <hr />
+                  </div>
+                </template>
+              </b-table>
+              <b-pagination
+                v-model="currentPage"
+                :total-rows="items.length"
+                :per-page="perPage"
+                striped
+                hover
+                aria-controls="my-table"
+                align="fill"
+              ></b-pagination>
             </div>
-     
 
             <div class="heading text-center mb-20" v-else>
               <h3 class="heading__title">Sem resultados...</h3>
@@ -235,6 +205,7 @@
 import QFooter from "@/components/Footer";
 import QHeader from "@/components/Header/Header";
 import QBreadCrumb from "@/components/BreadCrumb";
+//import Datatable from "@/components/Datatable/Datatable.vue";
 
 export default {
   name: "QAboutUs",
@@ -335,50 +306,34 @@ export default {
       },
       filtered: [],
       searcheable: [],
-      columns: [
+      perPage: 10,
+      currentPage: 1,
+      fields: [
         {
+          key: "Ac_x00f3_rd_x00e3_o_x0020_ou_x00",
           label: "Tipo",
-          field: "user.username",
-          headerClass: "btn__primary col-2",
+          sortable: true,
         },
         {
+          key: "Sec_x00e7__x00e3_o_x0020_de_x002",
           label: "Secção de origem",
-          headerClass: "btn__primary col-3",
-          field: "user.firstName",
+          sortable: true,
         },
         {
+          key: "N_x00b0__x0020_do_x0020_Acord_x0",
           label: "N. Acórdão",
-          headerClass: "btn__primary col-2",
-          field: "user.lastName",
+          sortable: true,
         },
         {
+          key: "N_x002e__x00ba__x0020_do_x0020_P",
           label: "N. do Processo",
-          headerClass: "btn__primary col-2",
-          field: "user.email",
+          sortable: true,
         },
-        {
-          label: "Relator",
-          headerClass: "btn__primary col-2",
-          field: "user.email",
-        },
-        {
-          label: "Assunto",
-          headerClass: "btn__primary col-3",
-          field: "user.email",
-        },
-        {
-          label: "Sumário",
-          headerClass: "btn__primary col-3",
-          field: "user.email",
-        },
-        {
-          label: "Documento",
-          headerClass: "btn__primary col-2",
-          field: "user.email",
-        },
+        { key: "Relator", label: "Relator", sortable: true },
+        { key: "Assunto.results", label: "Assunto", sortable: true },
+        { key: "Sum_x00e1_rio", label: "Sumário", sortable: true },
+        "Document",
       ],
-      page: 1,
-      per_page: 10,
     };
   },
   mounted() {
