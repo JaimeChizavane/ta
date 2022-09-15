@@ -361,7 +361,13 @@ export default {
         //this.allItems = data.data.d.results.filter(item => item.Ac_x00f3_rd_x00e3_o_x0020_ou_x00.toLowerCase().includes("acórdão")
         //    || item.Ac_x00f3_rd_x00e3_o_x0020_ou_x00.toLowerCase().includes("despacho"))
         this.allItems = data.data.d.results;
-        this.items = this.allItems;
+        this.items = this.allItems
+          .sort(
+            (a, b) =>
+              new Date(a.Data_x0020_do_x0020_Ac_x00f3_rd_) -
+              new Date(b.Data_x0020_do_x0020_Ac_x00f3_rd_)
+          )
+          .reverse();
         // this.searcheable = this.items.flatMap(item => item.Folders.results.flatMap(s => s.Files.results))
         // this.searcheable = this.items
       })

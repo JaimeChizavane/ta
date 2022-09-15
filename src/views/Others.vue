@@ -313,7 +313,13 @@ export default {
       .get("legislacaoAll.json")
       .then((data) => {
         this.allItems = data.data.d.results;
-        this.items = this.allItems;
+        this.items = this.allItems
+          .sort(
+            (a, b) =>
+              new Date(a.Data_x0020_do_x0020_BR) -
+              new Date(b.Data_x0020_do_x0020_BR)
+          )
+          .reverse();
         // this.searcheable = this.items.flatMap((item) => {
         //   if (item.AttachmentFiles.results) {
         //     return item.AttachmentFiles.results.flatMap((file) => {
