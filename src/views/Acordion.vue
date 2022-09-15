@@ -159,9 +159,9 @@
                       v-for="(file, index) in data.item.AttachmentFiles.results"
                       :key="'file' + index"
                     >
-                      <div class="col-sm-12 col-md-12 col-lg-9">
+                      <!--  <div class="col-sm-12 col-md-12 col-lg-9">
                         <p class="job__desc" v-html="file.FileName"></p>
-                      </div>
+                      </div> -->
                       <!-- /.col-lg-5 -->
                       <div
                         class="
