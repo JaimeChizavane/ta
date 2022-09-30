@@ -97,7 +97,7 @@
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div
                 class="accordion-item"
-                v-for="(filter, index) in allItems"
+                v-for="(faq, index) in allItems"
                 :key="index"
               >
                 <div
@@ -105,9 +105,7 @@
                   data-toggle="collapse"
                   :data-target="'#collapse' + index"
                 >
-                  <a class="accordion__title" @click.prevent>{{
-                    filter.Title || filter.Tipo
-                  }}</a>
+                  <a class="accordion__title" @click.prevent>{{ faq.Name }}</a>
                 </div>
                 <!-- /.accordion-item-header -->
                 <div
@@ -116,59 +114,50 @@
                   data-parent="#accordion"
                 >
                   <div class="accordion__body">
-                    <div
-                      class="row"
-                      v-for="(item, index) in items.filter(
-                        (i) => i.Tipo === filter.Tipo
-                      )"
-                      :key="index"
-                    >
-                      <!-- portfolio item #1 -->
-                      <div
-                        class="col-sm-4 col-md-4 col-lg-3"
-                        v-for="file in item.Folder.Files.results"
-                        :key="file.UniqueId"
-                      >
-                        <div class="portfolio-item">
-                          <div class="portfolio__img" @click="zoomImage(file)">
-                            <img
-                              v-lazy="getFileThumb(file)"
-                              alt="portfolio img"
-                            />
-                          </div>
-                          <!-- /.portfolio-img -->
-                          <div class="portfolio__content">
-                            <h4 class="portfolio__title">
-                              <a
-                                :href="getFileUrl(file)"
-                                target="_blank"
-                                v-html="file.Name"
-                              ></a>
-                            </h4>
-                            <div class="portfolio__cat">
-                              <a :href="getFileUrl(file)" target="_blank"
-                                ><i class="icon-download"></i>
-                                {{ item.Folder.Name }}</a
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="jobs-container">
+                          <!-- career item #1 -->
+                          <div
+                            class="job-item"
+                            v-for="(item, index) in faq.Files.results"
+                            :key="index"
+                          >
+                            <div class="row">
+                              <div class="col-sm-12 col-md-12 col-lg-4">
+                                <div class="job__meta">
+                                  <span
+                                    class="job__type"
+                                    v-show="item.TimeLastModified"
+                                  >
+                                    {{ item.TimeLastModified | date }}
+                                  </span>
+                                </div>
+                                <!--   <h4 class="job__title">{{ item.Name || 'Sem titulo' }}</h4> -->
+                              </div>
+                              <!-- /.col-lg-4 -->
+                              <div class="col-sm-12 col-md-12 col-lg-5">
+                                <h4 class="job__title" v-html="item.Name"></h4>
+                              </div>
+                              <!-- /.col-lg-5 -->
+                              <div
+                                class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap"
                               >
+                                <a
+                                  :href="getFileUrl(item)"
+                                  target="_blank"
+                                  class="btn btn__secondary"
+                                  >Abrir</a
+                                >
+                              </div>
+                              <!-- /.col-lg-3 -->
                             </div>
-                            <!-- /.portfolio-cat -->
-                            <div class="portfolio__cat">
-                              <a
-                                class="btn btn__secondary btn__link"
-                                :href="getFileUrl(file)"
-                                target="_blank"
-                              >
-                                <span>{{ $tc("read_more") }}</span>
-                                <i class="icon-arrow-right"></i>
-                              </a>
-                            </div>
-                            <!-- /.portfolio-cat -->
+                            <!-- /.row -->
                           </div>
-                          <!-- /.portfolio-content -->
+                          <!-- /.job-item -->
                         </div>
-                        <!-- /.portfolio-item -->
                       </div>
-                      <!-- /.col-lg-4 -->
+                      <!-- /.col-lg-12 -->
                     </div>
                     <!-- /.row -->
                   </div>
@@ -180,6 +169,7 @@
           </div>
           <!-- /.row -->
         </div>
+        <!-- /.container -->
         <!-- /.container -->
       </div>
       <!-- /.container -->
@@ -297,10 +287,9 @@ export default {
           if (item.Folder.Files) {
             return item.Folder.Files.results
               .sort((a, b) => a.Name.localeCompare(b.Name))
-              .reverse()
               .flatMap((file) => {
                 return {
-                  Tipo: item.Tipo,
+                  Tipo: item.Folder.Name,
                   Title: item.Title || item.Folder.Name,
                   File: file,
                 };
