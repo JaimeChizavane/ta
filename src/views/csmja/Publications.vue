@@ -84,7 +84,7 @@
                                 <div class="portfolio__cat">
                                   <a :href="getFileUrl(file)" target="_blank"
                                     ><i class="icon-download"></i>
-                                    {{ item.Folder.Name }}</a
+                                    {{ file.Folder.Name }}</a
                                   >
                                 </div>
                                 <!-- /.portfolio-cat -->
