@@ -1,8 +1,8 @@
 <template>
   <div class="wrapper">
-    <q-header/>
-    <q-bread-crumb/>
-    <sub-menu/>
+    <q-header />
+    <q-bread-crumb />
+    <sub-menu />
     <section class="careers">
       <div class="container">
         <div class="row">
@@ -165,7 +165,7 @@
       </div>
       <!-- /.container -->
     </section>
-    <q-footer/>
+    <q-footer />
   </div>
 </template>
 
@@ -255,7 +255,7 @@ export default {
       currentPage: 1,
       fields: [
         {
-          key: "Tipo_x0020_de_x0020_Legisla_x00e",
+          key: "Tipo_x0020_de_x0020_Diploma",
           label: "Tipo de Legislação",
           sortable: true,
           thClass: "btn__primary",
@@ -307,13 +307,13 @@ export default {
     };
   },
   mounted() {
-    window.mainExecution()
+    window.mainExecution();
 
-    this.$http.get("cmsjalaws.json").then((data) => {
+    this.$http
+      .get("csmjalaws.json")
+      .then((data) => {
         this.allItems = data.data.d.results.filter(
-          (item) =>
-            item?.Tipo === "Decreto" ||
-            item?.Tipo_x0020_de_x0020_Legisla_x00e === "Decreto"
+          (item) => item?.Tipo_x0020_de_x0020_Diploma === "Decreto"
         );
         this.items = this.allItems
           .sort(
@@ -344,9 +344,10 @@ export default {
         //     })
         //   }
         // })
-      }).catch((error) => {
-      console.log(error)
-    })
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     this.$http
       .get("areas.json")
       .then((data) => {
@@ -357,10 +358,8 @@ export default {
       .catch((error) => {
         console.log(error);
       });
-  }
-}
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
