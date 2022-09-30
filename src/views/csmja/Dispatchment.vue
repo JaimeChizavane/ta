@@ -108,18 +108,18 @@
                 </template>
                 <template v-slot:cell(Sumario)="data">
                   <span class="job__location">
-                    {{ data.item.Assunto | excerpt }}
+                    {{ data.item.Sum_x00e1_rio | excerpt }}
                   </span>
                 </template>
-                <template v-slot:cell(Área_de_Apoio)="data">
+                <!--  <template v-slot:cell(Área_de_Apoio)="data">
                   <span
                     v-for="(area, areadIndex) in data.item
-                      .OData__x00c1_rea_x0020_de_x0020_Apoio_0.results"
+                      .OData__x00c1_rea_x0020_de_x0020_Apoio.results"
                     :key="areadIndex"
                   >
                     {{ area }}
                   </span>
-                </template>
+                </template> -->
                 <template v-slot:cell(Document)="data">
                   <div
                     class="col-sm-12 col-md-12 col-lg-8"
@@ -261,13 +261,13 @@ export default {
           thClass: "btn__primary",
         },
         {
-          key: "N_x00fa_mero_x0020_do_x0020_BR",
+          key: "Title",
           label: "Número do BR",
           sortable: true,
           thClass: "btn__primary",
         },
         {
-          key: "N_x00fa_meroDaLegisla_x00e7__x00",
+          key: "N_x00fa_mero_x0020_de_x0020_Dipl",
           label: "Número de Legislação",
           sortable: true,
           thClass: "btn__primary",
@@ -284,12 +284,12 @@ export default {
           sortable: true,
           thClass: "btn__primary",
         },
-        {
+        /*  {
           key: "Área de Apoio",
           label: "Área de Apoio",
           sortable: true,
           thClass: "btn__primary",
-        },
+        }, */
 
         {
           key: "Sumario",

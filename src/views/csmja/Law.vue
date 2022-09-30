@@ -111,7 +111,7 @@
                     {{ data.item.Sum_x00e1_rio | excerpt }}
                   </span>
                 </template>
-                <template v-slot:cell(Área_de_Apoio)="data">
+                <!--  <template v-slot:cell(Área_de_Apoio)="data">
                   <span
                     v-for="(area, areadIndex) in data.item
                       .OData__x00c1_rea_x0020_de_x0020_Apoio.results"
@@ -119,7 +119,7 @@
                   >
                     {{ area }}
                   </span>
-                </template>
+                </template> -->
                 <template v-slot:cell(Document)="data">
                   <div
                     class="col-sm-12 col-md-12 col-lg-8"
@@ -284,12 +284,12 @@ export default {
           sortable: true,
           thClass: "btn__primary",
         },
-        {
+        /*  {
           key: "Área de Apoio",
           label: "Área de Apoio",
           sortable: true,
           thClass: "btn__primary",
-        },
+        }, */
 
         {
           key: "Sumario",
