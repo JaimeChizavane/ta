@@ -212,9 +212,9 @@ export default {
               file.OData__x00c1_rea_x0020_de_x0020_Apoio_0.results?.find((x) =>
                 x.toLowerCase().includes(this.query.area.toLowerCase())
               ) ||
-                file.OData__x00c1_rea_x0020_de_x0020_Apoio_?.toLowerCase().includes(
-                  this.query.area.toLowerCase()
-                )) &&
+              file.OData__x00c1_rea_x0020_de_x0020_Apoio_?.toLowerCase().includes(
+                this.query.area.toLowerCase()
+              )) &&
             (this.query.diploma === "" ||
               file.N_x00fa_meroDaLegisla_x00e7__x00?.toLowerCase().includes(
                 this.query.diploma.toLowerCase()
@@ -248,6 +248,59 @@ export default {
         data: "",
         area: "",
       },
+      perPage: 10,
+      currentPage: 1,
+      fields: [
+        {
+          key: "Tipo_x0020_de_x0020_Legisla_x00e",
+          label: "Tipo de Legislação",
+          sortable: true,
+          thClass: "btn__primary",
+        },
+        {
+          key: "N_x00fa_mero_x0020_do_x0020_BR",
+          label: "Número do BR",
+          sortable: true,
+          thClass: "btn__primary",
+        },
+        {
+          key: "N_x00fa_meroDaLegisla_x00e7__x00",
+          label: "Número de Legislação",
+          sortable: true,
+          thClass: "btn__primary",
+        },
+        {
+          key: "Legisla_x00e7__x00e3_o_x0020_Ger",
+          label: "Legislação",
+          sortable: true,
+          thClass: "btn__primary",
+        },
+        {
+          key: "Data_do_BR",
+          label: "Data do BR",
+          sortable: true,
+          thClass: "btn__primary",
+        },
+        {
+          key: "Área de Apoio",
+          label: "Área de Apoio",
+          sortable: true,
+          thClass: "btn__primary",
+        },
+
+        {
+          key: "Sumario",
+          label: "Sumário",
+          sortable: true,
+          thClass: "btn__primary col-3",
+        },
+        {
+          key: "Document",
+          label: "Documento",
+          sortable: true,
+          thClass: "btn__primary",
+        },
+      ],
     };
   },
   mounted() {
