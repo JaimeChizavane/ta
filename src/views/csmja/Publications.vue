@@ -2,6 +2,7 @@
   <div class="wrapper">
     <q-header />
     <q-bread-crumb />
+    <sub-menu />
     <section class="careers">
       <div class="container">
         <div class="row">
@@ -121,13 +122,14 @@
 import QFooter from "@/components/Footer";
 import QHeader from "@/components/Header/Header";
 import QBreadCrumb from "@/components/BreadCrumb";
+import SubMenu from "@/views/csmja/components/SubMenu";
 
 import CoolLightBox from "vue-cool-lightbox";
 import "vue-cool-lightbox/dist/vue-cool-lightbox.min.css";
 
 export default {
   name: "QStrategicPlan",
-  components: { QBreadCrumb, QHeader, QFooter, CoolLightBox },
+  components: { QBreadCrumb, QHeader, QFooter, CoolLightBox, SubMenu },
   methods: {
     search() {
       if (this.query) {
@@ -187,9 +189,16 @@ export default {
     this.$http
       .get("csmjapublicacoes.json")
       .then((data) => {
-        this.history = data.data.d.results.filter((i) => i.Name !== "Forms");
+        this.history = data.data.d.results
+          .filter((i) => i.Name !== "Forms")
+          .sort((a, b) => a.Name.localeCompare(b.Name));
 
-        this.allItems = this.history;
+        this.history.forEach((item) => {
+          item.Files.results = item.Files.results
+            .sort((a, b) => a.TimeLastModified - b.TimeLastModified)
+            .reverse();
+          this.allItems.push(item);
+        });
       })
       .catch((error) => {
         console.log(error);
