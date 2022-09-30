@@ -56,48 +56,54 @@
                       <div class="col-12">
                         <div class="jobs-container">
                           <!-- career item #1 -->
+
                           <div
-                            class="job-item"
-                            v-for="(item, index) in faq.Files.results"
-                            :key="index"
+                            class="col-sm-4 col-md-4 col-lg-3"
+                            v-for="file in faq.Files.results"
+                            :key="file.UniqueId"
                           >
-                            <div class="row">
-                              <div class="col-sm-12 col-md-12 col-lg-4">
-                                <div class="job__meta">
-                                  <span
-                                    class="job__type"
-                                    v-show="item.TimeLastModified"
-                                  >
-                                    {{ item.TimeLastModified | date }}
-                                  </span>
-                                </div>
-                                <!--   <h4 class="job__title">{{ item.Name || 'Sem titulo' }}</h4> -->
-                              </div>
-                              <!-- /.col-lg-4 -->
-                              <div class="col-sm-12 col-md-12 col-lg-5">
-                                <h4 class="job__title" v-html="item.Name"></h4>
-                              </div>
-                              <!-- /.col-lg-5 -->
+                            <div class="portfolio-item">
                               <div
-                                class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap"
+                                class="portfolio__img"
+                                @click="zoomImage(file)"
                               >
-                                <a
-                                  :href="getFileUrl(item)"
-                                  target="_blank"
-                                  class="btn btn__secondary"
-                                  >Abrir</a
-                                >
+                                <img
+                                  v-lazy="getFileThumb(file)"
+                                  alt="portfolio img"
+                                />
                               </div>
-                              <!-- /.col-lg-3 -->
+                              <!-- /.portfolio-img -->
+                              <div class="portfolio__content">
+                                <h4 class="portfolio__title">
+                                  <a
+                                    :href="getFileUrl(file)"
+                                    target="_blank"
+                                    v-html="file.Name"
+                                  ></a>
+                                </h4>
+
+                                <!-- /.portfolio-cat -->
+                                <div class="portfolio__cat">
+                                  <a
+                                    class="btn btn__secondary btn__link"
+                                    :href="getFileUrl(file)"
+                                    target="_blank"
+                                  >
+                                    <span>{{ $tc("read_more") }}</span>
+                                    <i class="icon-arrow-right"></i>
+                                  </a>
+                                </div>
+                                <!-- /.portfolio-cat -->
+                              </div>
+                              <!-- /.portfolio-content -->
+                              <!-- /.portfolio-item -->
                             </div>
-                            <!-- /.row -->
                           </div>
                           <!-- /.job-item -->
                         </div>
                       </div>
                       <!-- /.col-lg-12 -->
                     </div>
-                    <!-- /.row -->
                     <!-- /.row -->
                   </div>
                   <!-- /.accordion-item-body -->
