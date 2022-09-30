@@ -23,10 +23,14 @@
             }
         ]
     },
-
     {
         "name": "menus.news",
         "to": "csmja.publications",
+        "sub_menus": []
+    },
+    {
+        "name": "menus.publications",
+        "to": "csmja.publications01",
         "sub_menus": []
     },
     {

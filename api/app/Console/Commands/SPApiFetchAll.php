@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Criado por Maizer Aly de O. Gomes para api.
  * Email: maizer.gomes@gmail.com / maizer.gomes@ekutivasolutions / maizer.gomes@outlook.com
@@ -56,6 +57,7 @@ class SPApiFetchAll extends Command
         FetchInstrucoesERecomendacoesCommand::class,
         FetchGaleriaDestaqueCommand::class,
         FetchJurispudenciaPlenarioCommand::class,
+        FetchPublicacoesCSMJACommand::class,
     ];
 
     public function __construct()
