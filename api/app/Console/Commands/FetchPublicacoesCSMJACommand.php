@@ -18,6 +18,6 @@ class FetchPublicacoesCSMJACommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "CSMJA/_api/web/GetFolderByServerRelativeUrl('/CSMJA')/Folders?\$expand=Files&\$orderBy=Name asc";
+    protected $uri  = "CSMJA/_api/web/GetFolderByServerRelativeUrl('/CSMJA/CSMJA')/Folders?\$expand=Files&\$orderBy=Name asc";
     protected $path = 'csmjapublicacoes.json';
 }
