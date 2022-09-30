@@ -81,12 +81,7 @@
                                     v-html="file.Name"
                                   ></a>
                                 </h4>
-                                <div class="portfolio__cat">
-                                  <a :href="getFileUrl(file)" target="_blank"
-                                    ><i class="icon-download"></i>
-                                    {{ file.Folder.Name }}</a
-                                  >
-                                </div>
+
                                 <!-- /.portfolio-cat -->
                                 <div class="portfolio__cat">
                                   <a
