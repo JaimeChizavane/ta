@@ -2,6 +2,7 @@
   <div class="wrapper">
     <q-header />
     <q-bread-crumb />
+
     <section class="careers">
       <div class="container">
         <div class="row">
@@ -122,101 +123,85 @@
         <div class="row">
           <div class="col-12">
             <div class="jobs-container" v-if="items.length">
-              <div class="table-responsive p-0" style="height: 700px;">
-              <table class="table table-striped table-bordered table-head-fixed">
-                <thead class="btn__primary">
-                  <th class="col-1">#</th>
-                  <th class="col-1">Tipo</th>
-                  <th class="col-1">Secção de origem</th>
-                  <th class="col-1">N. Acórdão</th>
-                  <th class="col-1">N. do Processo</th>
-                  <th class="col-2">Relator</th>
-                  <th  class="col-2">Assunto</th>
-                  <th class="col-2">Sumário </th>
-                  <th class="col-1">Documento</th>
-                </thead>
-                <tbody>
-                  <tr v-for="(item, index) in items" :key="index">
-                    <td>
-                      {{ index+1 }}
-                    </td>
-                    <td>
-                      {{ item.Ac_x00f3_rd_x00e3_o_x0020_ou_x00 }}
-                    </td>
-                    <td>
-                      {{ item.Sec_x00e7__x00e3_o_x0020_de_x002 }}
-                    </td>
-                    <td>
-                      {{ item.N_x00b0__x0020_do_x0020_Acord_x0 }}
-                    </td>
-                    <td>
-                      {{ item.N_x002e__x00ba__x0020_do_x0020_P }}
-                    </td>
-                    <td>
-                      {{ item.Relator }}
-                    </td>
-                    <td>
-                      <div
-                        class="job__meta"
-                        v-for="(subject, index) in item.Assunto.results"
-                        :key="'subject' + index"
-                      >
-                        <span class="job__location">
-                          {{ subject }}
-                        </span>
+              <b-pagination
+                v-model="currentPage"
+                :total-rows="items.length"
+                :per-page="perPage"
+                striped
+                hover
+                aria-controls="my-table"
+                align="center"
+              ></b-pagination>
+              <b-table
+                id="my-table"
+                :items="items"
+                :per-page="perPage"
+                :current-page="currentPage"
+                :fields="fields"
+                :small="true"
+                :striped="true"
+                :hover="true"
+                :responsive="true"
+                :foot-clone="true"
+              >
+                <template v-slot:cell(Data_do_Acórdão)="data">
+                  <span class="job__location">
+                    {{ data.item.Data_x0020_do_x0020_Ac_x00f3_rd_ | date }}
+                  </span>
+                </template>
+                <template v-slot:cell(Sumario)="data">
+                  <span class="job__location">
+                    {{ data.item.Sum_x00e1_rio | excerpt }}
+                  </span>
+                </template>
+                <template v-slot:cell(Assunto)="data">
+                  <div
+                    class="job__meta"
+                    v-for="(subject, index) in data.item.Assunto.results"
+                    :key="'subject' + index"
+                  >
+                    <span class="job__location">
+                      {{ subject }}
+                    </span>
+                  </div>
+                </template>
+                <template v-slot:cell(Document)="data">
+                  <div
+                    class="col-sm-12 col-md-12 col-lg-8"
+                    v-if="data.item.AttachmentFiles.results.length"
+                  >
+                    <div
+                      class="row mb-5"
+                      v-for="(file, index) in data.item.AttachmentFiles.results"
+                      :key="'file' + index"
+                    >
+                      <div class="col-sm-12 col-md-12 col-lg-9">
+                        <p class="job__desc" v-html="file.FileName"></p>
                       </div>
-                    </td>
-                    <td>
-                       
-                          <div class="row col-sm-12">
-                            <span 
-                              class="job__desc"
-                              v-html="item.Sum_x00e1_rio.substr(0,100)"
-                            ></span>
-                          </div>
-                        
-                    </td>
-                    <td>
+                      <!-- /.col-lg-5 -->
                       <div
-                        class="col-sm-12 col-md-12 col-lg-8"
-                        v-if="item.AttachmentFiles.results.length"
-                      >
-                        <div
-                          class="row mb-5"
-                          v-for="(file, index) in item.AttachmentFiles.results"
-                          :key="'file' + index"
-                        >
-                          <div class="col-sm-12 col-md-12 col-lg-9">
-                            <p class="job__desc" v-html="file.FileName"></p>
-                          </div>
-                          <!-- /.col-lg-5 -->
-                          <div
-                            class="
+                        class="
                           align-items-center
                           justify-content-end
                           btn-wrap
                         "
-                          >
-                            <a
-                              :href="getFileUrl(file)"
-                              target="_blank"
-                              class="btn btn__secondary"
-                              >Abrir</a
-                            >
-                          </div>
-                          <!-- /.col-lg-3 -->
-                        </div>
-                        <hr />
-                       
+                      >
+                        <a
+                          :href="getFileUrl(file)"
+                          target="_blank"
+                          class="btn btn__secondary"
+                          >Abrir</a
+                        >
                       </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              </div>
-            </div>           
-            
-            <div class="heading text-center mb-20"  v-else>
+                      <!-- /.col-lg-3 -->
+                    </div>
+                    <hr />
+                  </div>
+                </template>
+              </b-table>
+            </div>
+
+            <div class="heading text-center mb-20" v-else>
               <h3 class="heading__title">Sem resultados...</h3>
             </div>
           </div>
@@ -230,11 +215,11 @@
     <q-footer />
   </div>
 </template>
-
 <script>
 import QFooter from "@/components/Footer";
 import QHeader from "@/components/Header/Header";
 import QBreadCrumb from "@/components/BreadCrumb";
+//import Datatable from "@/components/Datatable/Datatable.vue";
 
 export default {
   name: "QAboutUs",
@@ -335,6 +320,65 @@ export default {
       },
       filtered: [],
       searcheable: [],
+      perPage: 10,
+      currentPage: 1,
+      fields: [
+        /* {
+          key: "Ac_x00f3_rd_x00e3_o_x0020_ou_x00",
+          label: "Tipo",
+          sortable: true,
+          thClasss: "btn__primary",
+        }, */
+        {
+          key: "Sec_x00e7__x00e3_o_x0020_de_x002",
+          label: "Secção de origem",
+          sortable: true,
+          thClass: "btn__primary",
+        },
+        {
+          key: "N_x00b0__x0020_do_x0020_Acord_x0",
+          label: "N. Acórdão",
+          sortable: true,
+          thClass: "btn__primary",
+        },
+        {
+          key: "N_x002e__x00ba__x0020_do_x0020_P",
+          label: "N. do Processo",
+          sortable: true,
+          thClass: "btn__primary",
+        },
+        {
+          key: "Data_do_Acórdão",
+          label: "Data do Acórdão",
+          sortable: true,
+          thClass: "btn__primary",
+        },
+        {
+          key: "Relator",
+          label: "Relator",
+          sortable: true,
+          thClass: "btn__primary",
+        },
+        {
+          key: "Assunto",
+          label: "Assunto",
+          sortable: true,
+          thClass: "btn__primary",
+        },
+        {
+          key: "Sumario",
+          label: "Sumário",
+          sortable: true,
+          thClass: "btn__primary col-3",
+        },
+        {
+          key: "Document",
+          label: "Documento",
+          sortable: true,
+          thClass: "btn__primary",
+        },
+        "",
+      ],
     };
   },
   mounted() {
