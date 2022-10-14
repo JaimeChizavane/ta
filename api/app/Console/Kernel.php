@@ -39,6 +39,9 @@ use App\Console\Commands\FetchInstrucoesERecomendacoesCommand;
 use App\Console\Commands\FetchGaleriaDestaqueCommand;
 use App\Console\Commands\FetchJurispudenciaPlenarioCommand;
 use App\Console\Commands\FetchPublicacoesCSMJACommand;
+use App\Console\Commands\FetchInstituicaoTFCMCommand;
+use App\Console\Commands\FetchInstituicaoTFPMCommand;
+use App\Console\Commands\FetchInstituicaoTFPSCommand;
 
 
 
@@ -91,6 +94,9 @@ class Kernel extends ConsoleKernel
         FetchGaleriaDestaqueCommand::class,
         FetchJurispudenciaPlenarioCommand::class,
         FetchPublicacoesCSMJACommand::class,
+        FetchInstituicaoTFCMCommand::class,
+        FetchInstituicaoTFPMCommand::class,
+        FetchInstituicaoTFPSCommand::class,
         SPApiFetchAll::class,
     ];
 
