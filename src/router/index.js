@@ -927,6 +927,36 @@ const routes = [{
             import ('@/views/fiscal/tfps/Faq.vue'),
     },
     {
+        path: '/tfps/law',
+        name: 'tfps.law',
+        meta: {
+            display: 'menus.law',
+            parent: 'menus.legislation',
+        },
+        component: () =>
+            import ('@/views/fiscal/tfps/Law.vue'),
+    },
+    {
+        path: '/tfps/decret',
+        name: 'tfps.decret',
+        meta: {
+            display: 'menus.decret',
+            parent: 'menus.legislation',
+        },
+        component: () =>
+            import ('@/views/fiscal/tfps/Decret.vue'),
+    },
+    {
+        path: '/tfps/dispatchment',
+        name: 'tfps.dispatchment',
+        meta: {
+            display: 'menus.resolution',
+            parent: 'menus.legislation',
+        },
+        component: () =>
+            import ('@/views/fiscal/tfps/Dispatchment.vue'),
+    },
+    {
         path: '*',
         name: '404',
         meta: {
