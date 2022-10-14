@@ -1,5 +1,4 @@
 {
-
     "pt": {
         "menus": {
             "home": "Início",
@@ -52,7 +51,6 @@
             "press": "Imprensa",
             "report_submission": "Submissão de Denúncia",
             "galery": "Galeria",
-
             "videos": "Videos",
             "faq": "Perguntas Frequentes",
             "csmja": "CSMJA",
@@ -60,7 +58,16 @@
             "others": "Outros",
             "news": "Notícias",
             "jurispendency_plenario": "Jurisprudência do Plenário",
-            "plenary": "Plenário"
+            "plenary": "Plenário",
+            "tax_courts": "Tribunais Fiscais",
+            "customs_courts": "Tribunais Aduaneiros",
+            "administrative_courts": "Tribunais Administrativos",
+            "maputo": "Provicia de Maputo",
+            "sofala": "Provincia de Sofala",
+            "cmaputo": "Cidade de Maputo",
+            "tfcm": "Tribunal Fiscal da Cidade de Maputo",
+            "tfpm": "Tribunal Fiscal da Provincia de Maputo",
+            "tfps": "Tribunal Fiscal da Provincia de Sofala"
         },
         "search": "Pesquisar",
         "read_more": "Ler mais",
@@ -99,7 +106,7 @@
             "dispatchment": "Despachos",
             "resolution": "Resoluções",
             "diplom": "Diploma Ministerial",
-            "jurisdiction": "Jurisdição",
+            "jurisdiction": "Jurisdição Administrativa",
             "jurisdiction_name": "Jurisdição Administrativa",
             "dispatch": "Vistos",
             "statistic": "Estatísticas",
@@ -131,7 +138,8 @@
             "csmja": "CSMJA",
             "csmja_name": "Conselho Superior de Magistratura Judicial Administrativo",
             "others": "Outros",
-            "news": "Notícias"
+            "news": "Notícias",
+            "maputo": "Provicia de Maputo"
         },
         "read_more": "Ler mais",
         "search": "Search",
@@ -147,6 +155,5 @@
             "404": "Página não encontrada!",
             "go_home": "Ir para o Início"
         }
-
     }
 }

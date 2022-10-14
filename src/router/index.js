@@ -1,876 +1,903 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
+import Vue from 'vue';
+import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
 const routes = [{
-        path: "/",
-        name: "home",
+        path: '/',
+        name: 'home',
         meta: {
-            display: "menus.home",
-            display_title: "Tribunal Administrativo de Moçambique",
+            display: 'menus.home',
+            display_title: 'Tribunal Administrativo de Moçambique',
         },
         component: () =>
-            import ("@/views/Home.vue"),
+            import ('@/views/Home.vue'),
     },
     {
-        path: "/support_services",
-        name: "support_services",
+        path: '/support_services',
+        name: 'support_services',
         meta: {
-            display: "menus.support_services",
-            parent: "menus.institution",
+            display: 'menus.support_services',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/SupportService.vue"),
+            import ('@/views/SupportService.vue'),
     },
     {
-        path: "/folhetoCSMJA",
-        name: "folhetoCSMJA",
+        path: '/folhetoCSMJA',
+        name: 'folhetoCSMJA',
         meta: {
-            display: "Conheça o CSMJA",
+            display: 'Conheça o CSMJA',
             //parent: 'menus.folhetoCSMJA'
         },
         component: () =>
-            import ("@/views/csmja/FolhetoDaCSMJA.vue"),
+            import ('@/views/csmja/FolhetoDaCSMJA.vue'),
     },
     {
-        path: "/competencies",
-        name: "competencies",
+        path: '/competencies',
+        name: 'competencies',
         meta: {
-            display: "menus.competencies",
-            parent: "menus.institution",
+            display: 'menus.competencies',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/Competencies.vue"),
+            import ('@/views/Competencies.vue'),
     },
     {
-        path: "/history",
-        name: "history",
+        path: '/history',
+        name: 'history',
         meta: {
-            display: "menus.history",
-            parent: "menus.institution",
+            display: 'menus.history',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/History.vue"),
+            import ('@/views/History.vue'),
     },
     {
-        path: "/structure",
-        name: "structure",
+        path: '/structure',
+        name: 'structure',
         meta: {
-            display: "menus.structure",
-            parent: "menus.institution",
+            display: 'menus.structure',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/Structure.vue"),
+            import ('@/views/Structure.vue'),
     },
     {
-        path: "/section1",
-        name: "section1",
+        path: '/section1',
+        name: 'section1',
         meta: {
-            display: "menus.section1",
-            parent: "menus.institution",
+            display: 'menus.section1',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/1Section.vue"),
+            import ('@/views/1Section.vue'),
     },
     {
-        path: "/section2",
-        name: "section2",
+        path: '/section2',
+        name: 'section2',
         meta: {
-            display: "menus.section2",
-            parent: "menus.institution",
+            display: 'menus.section2',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/2Section.vue"),
+            import ('@/views/2Section.vue'),
     },
     {
-        path: "/section3",
-        name: "section3",
+        path: '/section3',
+        name: 'section3',
         meta: {
-            display: "menus.section3",
-            parent: "menus.institution",
+            display: 'menus.section3',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/3Section.vue"),
+            import ('@/views/3Section.vue'),
     },
     {
-        path: "/strategic_plan",
-        name: "strategic_plan",
+        path: '/strategic_plan',
+        name: 'strategic_plan',
         meta: {
-            display: "menus.strategic_plan",
-            parent: "menus.institution",
+            display: 'menus.strategic_plan',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/StrategicPlan.vue"),
+            import ('@/views/StrategicPlan.vue'),
     },
     {
-        path: "/contests",
-        name: "contests",
+        path: '/contests',
+        name: 'contests',
         meta: {
-            display: "menus.contests",
-            parent: "menus.institution",
+            display: 'menus.contests',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/Contests.vue"),
+            import ('@/views/Contests.vue'),
     },
     {
-        path: "/work_opportunity",
-        name: "work_opportunity",
+        path: '/work_opportunity',
+        name: 'work_opportunity',
         meta: {
-            display: "menus.work_opportunity",
-            parent: "menus.institution",
+            display: 'menus.work_opportunity',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/Opportunities.vue"),
+            import ('@/views/Opportunities.vue'),
     },
     {
-        path: "/international_cooperation",
-        name: "international_cooperation",
+        path: '/international_cooperation',
+        name: 'international_cooperation',
         meta: {
-            display: "menus.international_cooperation",
-            parent: "menus.institution",
+            display: 'menus.international_cooperation',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/InternationalCooperation.vue"),
+            import ('@/views/InternationalCooperation.vue'),
     },
     {
-        path: "/legislation",
-        name: "legislation",
+        path: '/legislation',
+        name: 'legislation',
         meta: {
-            display: "menus.legislation",
+            display: 'menus.legislation',
         },
         component: () =>
-            import ("@/views/AboutUs.vue"),
+            import ('@/views/AboutUs.vue'),
     },
     {
-        path: "/law",
-        name: "law",
+        path: '/law',
+        name: 'law',
         meta: {
-            display: "menus.law",
-            parent: "menus.legislation",
+            display: 'menus.law',
+            parent: 'menus.legislation',
         },
         component: () =>
-            import ("@/views/Law.vue"),
+            import ('@/views/Law.vue'),
     },
     {
-        path: "/diplom",
-        name: "diplom",
+        path: '/diplom',
+        name: 'diplom',
         meta: {
-            display: "menus.diplom",
-            parent: "menus.legislation",
+            display: 'menus.diplom',
+            parent: 'menus.legislation',
         },
         component: () =>
-            import ("@/views/MinisterialDiploma.vue"),
+            import ('@/views/MinisterialDiploma.vue'),
     },
     {
-        path: "/decret_law",
-        name: "decret_law",
+        path: '/decret_law',
+        name: 'decret_law',
         meta: {
-            display: "menus.decret_law",
-            parent: "menus.legislation",
+            display: 'menus.decret_law',
+            parent: 'menus.legislation',
         },
         component: () =>
-            import ("@/views/LawDecret.vue"),
+            import ('@/views/LawDecret.vue'),
     },
     {
-        path: "/others",
-        name: "others",
+        path: '/others',
+        name: 'others',
         meta: {
-            display: "menus.all",
-            parent: "menus.legislation",
+            display: 'menus.all',
+            parent: 'menus.legislation',
         },
         component: () =>
-            import ("@/views/Others.vue"),
+            import ('@/views/Others.vue'),
     },
     {
-        path: "/decret",
-        name: "decret",
+        path: '/decret',
+        name: 'decret',
         meta: {
-            display: "menus.decret",
-            parent: "menus.legislation",
+            display: 'menus.decret',
+            parent: 'menus.legislation',
         },
         component: () =>
-            import ("@/views/Decret.vue"),
+            import ('@/views/Decret.vue'),
     },
     {
-        path: "/resolution",
-        name: "resolution",
+        path: '/resolution',
+        name: 'resolution',
         meta: {
-            display: "menus.resolution",
-            parent: "menus.legislation",
+            display: 'menus.resolution',
+            parent: 'menus.legislation',
         },
         component: () =>
-            import ("@/views/Resolution.vue"),
+            import ('@/views/Resolution.vue'),
     },
     {
-        path: "/dispatchment",
-        name: "dispatchment",
+        path: '/dispatchment',
+        name: 'dispatchment',
         meta: {
-            display: "menus.dispatchment",
-            parent: "menus.legislation",
+            display: 'menus.dispatchment',
+            parent: 'menus.legislation',
         },
         component: () =>
-            import ("@/views/Dispatchment.vue"),
+            import ('@/views/Dispatchment.vue'),
     },
     {
-        path: "/dispatch",
-        name: "dispatch",
+        path: '/dispatch',
+        name: 'dispatch',
         meta: {
-            display: "menus.dispatch",
+            display: 'menus.dispatch',
         },
         component: () =>
-            import ("@/views/AboutUs.vue"),
+            import ('@/views/AboutUs.vue'),
     },
     {
-        path: "/dispatch",
-        name: "dispatch",
+        path: '/dispatch',
+        name: 'dispatch',
         meta: {
-            display: "menus.dispatch",
+            display: 'menus.dispatch',
         },
         component: () =>
-            import ("@/views/AboutUs.vue"),
-    },
-
-    {
-        path: "/visa_consultation",
-        name: "visa_consultation",
-        beforeEnter() {
-            window.open(
-                "http://consultavisto.ta.gov.mz:8080/vistoPublic/login/auth",
-                "_blank"
-            );
-        }, // location.href = 'http://consultavisto.ta.gov.mz:8080/vistoPublic/login/auth' },
-        meta: {
-            display: "menus.visa_consultation",
-        },
-        component: () =>
-            import ("@/views/AboutUs.vue"),
-    },
-    {
-        path: "/statistic",
-        name: "statistic",
-        beforeEnter() {
-            window.open(
-                "http://consultavisto.ta.gov.mz:8080/dashboard/public/reportViewer?code=ESTATISTICAS+DO+VISTO",
-                "_blank"
-            );
-        }, // location.href = 'http://consultavisto.ta.gov.mz:8080/vistoPublic/login/auth' },
-        meta: {
-            display: "menus.statistic",
-        },
-        component: () =>
-            import ("@/views/AboutUs.vue"),
-    },
-    {
-        path: "/dispatch",
-        name: "dispatch",
-        meta: {
-            display: "menus.dispatch",
-        },
-        component: () =>
-            import ("@/views/AboutUs.vue"),
-    },
-    {
-        path: "/jurispendency_all",
-        name: "jurispendency_all",
-        meta: {
-            display: "menus.all",
-        },
-        component: () =>
-            import ("@/views/JurisAll.vue"),
-    },
-    {
-        path: "/jurispendency_plenario",
-        name: "jurispendency_plenario",
-        meta: {
-            display: "menus.jurispendency_plenario",
-        },
-        component: () =>
-            import ("@/views/JurisPlenario.vue"),
-    },
-    {
-        path: "/sub_section",
-        name: "sub_section",
-        meta: {
-            display: "menus.sub_section",
-        },
-        component: () =>
-            import ("@/views/SubSection.vue"),
-    },
-    {
-        path: "/mandatory_instructions",
-        name: "mandatory_instructions",
-        meta: {
-            display: "menus.mandatory_instructions",
-        },
-        component: () =>
-            import ("@/views/MandatoryInstructions.vue"),
-    },
-    {
-        path: "/instruction_recomendation",
-        name: "instruction_recomendation",
-        meta: {
-            display: "menus.instruction_recomendation",
-        },
-        component: () =>
-            import ("@/views/Instructions_Recommendations.vue"),
-    },
-    {
-        path: "/instruction_personal",
-        name: "instruction_personal",
-        meta: {
-            display: "menus.instruction_personal",
-        },
-        component: () =>
-            import ("@/views/PersonalProcess.vue"),
-    },
-    {
-        path: "/dispatchment_instructions",
-        name: "dispatchment_instructions",
-        meta: {
-            display: "menus.dispatchment_instructions",
-        },
-        component: () =>
-            import ("@/views/VisaIntructions.vue"),
-    },
-    {
-        path: "/obligations_calendar",
-        name: "obligations_calendar",
-        meta: {
-            display: "menus.obligations_calendar",
-        },
-        component: () =>
-            import ("@/views/ObligationsCalendar.vue"),
-    },
-    {
-        path: "/sanctions",
-        name: "sanctions",
-        meta: {
-            display: "menus.sanctions",
-        },
-        component: () =>
-            import ("@/views/Santions.vue"),
-    },
-    {
-        path: "/petitions",
-        name: "petitions",
-        meta: {
-            display: "menus.petitions",
-        },
-        component: () =>
-            import ("@/views/Petitions.vue"),
-    },
-    {
-        path: "/structure_functioning",
-        name: "structure_functioning",
-        meta: {
-            display: "menus.structure_functioning",
-        },
-        component: () =>
-            import ("@/views/structure_functioning.vue"),
-    },
-    {
-        path: "/reportAuditPerformance",
-        name: "reportAuditPerformance",
-        meta: {
-            display: "menus.reportAuditPerformance",
-        },
-        component: () =>
-            import ("@/views/ReportAuditPerformance.vue"),
+            import ('@/views/AboutUs.vue'),
     },
 
     {
-        path: "/fluxogram",
-        name: "fluxogram",
+        path: '/visa_consultation',
+        name: 'visa_consultation',
+        beforeEnter() {
+            window.open(
+                'http://consultavisto.ta.gov.mz:8080/vistoPublic/login/auth',
+                '_blank'
+            );
+        }, // location.href = 'http://consultavisto.ta.gov.mz:8080/vistoPublic/login/auth' },
         meta: {
-            display: "menus.fluxogram",
+            display: 'menus.visa_consultation',
         },
         component: () =>
-            import ("@/views/Fluxogram.vue"),
+            import ('@/views/AboutUs.vue'),
     },
     {
-        path: "/report_submission",
-        name: "report_submission",
+        path: '/statistic',
+        name: 'statistic',
+        beforeEnter() {
+            window.open(
+                'http://consultavisto.ta.gov.mz:8080/dashboard/public/reportViewer?code=ESTATISTICAS+DO+VISTO',
+                '_blank'
+            );
+        }, // location.href = 'http://consultavisto.ta.gov.mz:8080/vistoPublic/login/auth' },
         meta: {
-            display: "menus.report_submission",
+            display: 'menus.statistic',
         },
         component: () =>
-            import ("@/views/ReporCase.vue"),
+            import ('@/views/AboutUs.vue'),
     },
     {
-        path: "/jurispendency",
-        name: "jurispendency",
+        path: '/dispatch',
+        name: 'dispatch',
         meta: {
-            display: "menus.jurispendency",
+            display: 'menus.dispatch',
         },
         component: () =>
-            import ("@/views/AboutUs.vue"),
+            import ('@/views/AboutUs.vue'),
     },
     {
-        path: "/acordion",
-        name: "acordion",
+        path: '/jurispendency_all',
+        name: 'jurispendency_all',
         meta: {
-            display: "menus.acordion",
+            display: 'menus.all',
         },
         component: () =>
-            import ("@/views/Acordion.vue"),
+            import ('@/views/JurisAll.vue'),
     },
     {
-        path: "/certification",
-        name: "certification",
+        path: '/jurispendency_plenario',
+        name: 'jurispendency_plenario',
         meta: {
-            display: "menus.certification",
+            display: 'menus.jurispendency_plenario',
         },
         component: () =>
-            import ("@/views/Contas.vue"),
+            import ('@/views/JurisPlenario.vue'),
     },
     {
-        path: "/account",
-        name: "account",
+        path: '/sub_section',
+        name: 'sub_section',
         meta: {
-            display: "menus.account",
+            display: 'menus.sub_section',
         },
         component: () =>
-            import ("@/views/Contas.vue"),
+            import ('@/views/SubSection.vue'),
     },
     {
-        path: "/rpcge",
-        name: "rpcge",
+        path: '/mandatory_instructions',
+        name: 'mandatory_instructions',
         meta: {
-            display: "menus.rpcge",
+            display: 'menus.mandatory_instructions',
         },
         component: () =>
-            import ("@/views/rpgce2.vue"),
+            import ('@/views/MandatoryInstructions.vue'),
     },
     {
-        path: "/managers",
-        name: "managers",
+        path: '/instruction_recomendation',
+        name: 'instruction_recomendation',
         meta: {
-            display: "menus.managers",
+            display: 'menus.instruction_recomendation',
         },
         component: () =>
-            import ("@/views/AboutUs.vue"),
+            import ('@/views/Instructions_Recommendations.vue'),
     },
     {
-        path: "/galery",
-        name: "galery",
+        path: '/instruction_personal',
+        name: 'instruction_personal',
         meta: {
-            display: "menus.galery",
+            display: 'menus.instruction_personal',
         },
         component: () =>
-            import ("@/views/Images.vue"),
+            import ('@/views/PersonalProcess.vue'),
     },
     {
-        path: "/videos",
-        name: "videos",
+        path: '/dispatchment_instructions',
+        name: 'dispatchment_instructions',
         meta: {
-            display: "menus.videos",
+            display: 'menus.dispatchment_instructions',
         },
         component: () =>
-            import ("@/views/Videos.vue"),
+            import ('@/views/VisaIntructions.vue'),
     },
     {
-        path: "/jurisdiction",
-        name: "jurisdiction",
+        path: '/obligations_calendar',
+        name: 'obligations_calendar',
         meta: {
-            display: "menus.jurisdiction_name",
-            parent: "",
+            display: 'menus.obligations_calendar',
         },
         component: () =>
-            import ("@/views/FolhetoDaJurisdicao.vue"),
+            import ('@/views/ObligationsCalendar.vue'),
     },
     {
-        path: "/activity_reports",
-        name: "activity_reports",
+        path: '/sanctions',
+        name: 'sanctions',
         meta: {
-            display: "menus.activity_reports",
+            display: 'menus.sanctions',
         },
         component: () =>
-            import ("@/views/ActivityReports.vue"),
+            import ('@/views/Santions.vue'),
     },
     {
-        path: "/faq",
-        name: "faq",
+        path: '/petitions',
+        name: 'petitions',
         meta: {
-            display: "menus.faq",
+            display: 'menus.petitions',
         },
         component: () =>
-            import ("@/views/Faq.vue"),
+            import ('@/views/Petitions.vue'),
     },
     {
-        path: "/publications",
-        name: "publications",
+        path: '/structure_functioning',
+        name: 'structure_functioning',
         meta: {
-            display: "menus.publications",
+            display: 'menus.structure_functioning',
         },
         component: () =>
-            import ("@/views/Publications.vue"),
+            import ('@/views/structure_functioning.vue'),
     },
     {
-        path: "/news",
-        name: "news",
+        path: '/reportAuditPerformance',
+        name: 'reportAuditPerformance',
         meta: {
-            display: "blog",
+            display: 'menus.reportAuditPerformance',
         },
         component: () =>
-            import ("@/views/BlogList.vue"),
+            import ('@/views/ReportAuditPerformance.vue'),
+    },
+
+    {
+        path: '/fluxogram',
+        name: 'fluxogram',
+        meta: {
+            display: 'menus.fluxogram',
+        },
+        component: () =>
+            import ('@/views/Fluxogram.vue'),
     },
     {
-        path: "/blog",
-        name: "blog",
+        path: '/report_submission',
+        name: 'report_submission',
         meta: {
-            display: "blog",
+            display: 'menus.report_submission',
         },
         component: () =>
-            import ("@/views/BlogList.vue"),
+            import ('@/views/ReporCase.vue'),
     },
     {
-        path: "/blog/:guid",
-        name: "blog-item",
+        path: '/jurispendency',
+        name: 'jurispendency',
         meta: {
-            display: "blog",
-            parent: "blog",
+            display: 'menus.jurispendency',
         },
         component: () =>
-            import ("@/views/BlogItem.vue"),
+            import ('@/views/AboutUs.vue'),
     },
     {
-        path: "/csmja/csmja/support_services",
-        name: "csmja.support_services",
+        path: '/acordion',
+        name: 'acordion',
         meta: {
-            display: "menus.support_services",
-            parent: "menus.institution",
+            display: 'menus.acordion',
         },
         component: () =>
-            import ("@/views/csmja/SupportService.vue"),
+            import ('@/views/Acordion.vue'),
     },
     {
-        path: "/csmja/competencies",
-        name: "csmja.competencies",
+        path: '/certification',
+        name: 'certification',
         meta: {
-            display: "menus.competencies",
-            parent: "menus.institution",
+            display: 'menus.certification',
         },
         component: () =>
-            import ("@/views/csmja/Competencies.vue"),
+            import ('@/views/Contas.vue'),
     },
     {
-        path: "/csmja/csmja",
-        name: "csmja.history",
+        path: '/account',
+        name: 'account',
         meta: {
-            display: "menus.csmja_name",
-            parent: "menus.institution",
+            display: 'menus.account',
         },
         component: () =>
-            import ("@/views/csmja/SinglePage.vue"),
+            import ('@/views/Contas.vue'),
     },
     {
-        path: "/csmja/structure",
-        name: "csmja.structure",
+        path: '/rpcge',
+        name: 'rpcge',
         meta: {
-            display: "menus.structure",
-            parent: "menus.institution",
+            display: 'menus.rpcge',
         },
         component: () =>
-            import ("@/views/csmja/Structure.vue"),
+            import ('@/views/rpgce2.vue'),
     },
     {
-        path: "/csmja/section1",
-        name: "csmja.section1",
+        path: '/managers',
+        name: 'managers',
         meta: {
-            display: "menus.section1",
-            parent: "menus.institution",
+            display: 'menus.managers',
         },
         component: () =>
-            import ("@/views/csmja/1Section.vue"),
+            import ('@/views/AboutUs.vue'),
     },
     {
-        path: "/csmja/section2",
-        name: "csmja.section2",
+        path: '/galery',
+        name: 'galery',
         meta: {
-            display: "menus.section2",
-            parent: "menus.institution",
+            display: 'menus.galery',
         },
         component: () =>
-            import ("@/views/csmja/2Section.vue"),
+            import ('@/views/Images.vue'),
     },
     {
-        path: "/csmja/section3",
-        name: "csmja.section3",
+        path: '/videos',
+        name: 'videos',
         meta: {
-            display: "menus.section3",
-            parent: "menus.institution",
+            display: 'menus.videos',
         },
         component: () =>
-            import ("@/views/csmja/3Section.vue"),
+            import ('@/views/Videos.vue'),
     },
     {
-        path: "/csmja/strategic_plan",
-        name: "csmja.strategic_plan",
+        path: '/jurisdiction',
+        name: 'jurisdiction',
         meta: {
-            display: "menus.strategic_plan",
-            parent: "menus.institution",
+            display: 'menus.jurisdiction_name',
+            parent: '',
         },
         component: () =>
-            import ("@/views/csmja/StrategicPlan.vue"),
+            import ('@/views/FolhetoDaJurisdicao.vue'),
     },
     {
-        path: "/csmja/contests",
-        name: "csmja.contests",
+        path: '/activity_reports',
+        name: 'activity_reports',
         meta: {
-            display: "menus.contests",
-            parent: "menus.institution",
+            display: 'menus.activity_reports',
         },
         component: () =>
-            import ("@/views/csmja/AboutUs.vue"),
+            import ('@/views/ActivityReports.vue'),
     },
     {
-        path: "/csmja/work_opportunity",
-        name: "csmja.work_opportunity",
+        path: '/faq',
+        name: 'faq',
         meta: {
-            display: "menus.work_opportunity",
-            parent: "menus.institution",
+            display: 'menus.faq',
         },
         component: () =>
-            import ("@/views/csmja/AboutUs.vue"),
+            import ('@/views/Faq.vue'),
     },
     {
-        path: "/csmja/international_cooperation",
-        name: "csmja.international_cooperation",
+        path: '/publications',
+        name: 'publications',
         meta: {
-            display: "menus.international_cooperation",
-            parent: "menus.institution",
+            display: 'menus.publications',
         },
         component: () =>
-            import ("@/views/csmja/AboutUs.vue"),
+            import ('@/views/Publications.vue'),
     },
     {
-        path: "/csmja/legislation",
-        name: "csmja.legislation",
+        path: '/news',
+        name: 'news',
         meta: {
-            display: "menus.legislation",
+            display: 'blog',
         },
         component: () =>
-            import ("@/views/csmja/AboutUs.vue"),
+            import ('@/views/BlogList.vue'),
     },
     {
-        path: "/csmja/law",
-        name: "csmja.law",
+        path: '/blog',
+        name: 'blog',
         meta: {
-            display: "menus.law",
-            parent: "menus.legislation",
+            display: 'blog',
         },
         component: () =>
-            import ("@/views/csmja/Law.vue"),
+            import ('@/views/BlogList.vue'),
     },
     {
-        path: "/csmja/publications",
-        name: "csmja.publications01",
+        path: '/blog/:guid',
+        name: 'blog-item',
         meta: {
-            display: "menus.publications",
+            display: 'blog',
+            parent: 'blog',
         },
         component: () =>
-            import ("@/views/csmja/Publications.vue"),
+            import ('@/views/BlogItem.vue'),
     },
     {
-        path: "/csmja/decret",
-        name: "csmja.decret",
+        path: '/csmja/csmja/support_services',
+        name: 'csmja.support_services',
         meta: {
-            display: "menus.decret",
-            parent: "menus.legislation",
+            display: 'menus.support_services',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/csmja/Decret.vue"),
+            import ('@/views/csmja/SupportService.vue'),
     },
     {
-        path: "/csmja/dispatchment",
-        name: "csmja.dispatchment",
+        path: '/csmja/competencies',
+        name: 'csmja.competencies',
         meta: {
-            display: "menus.resolution",
-            parent: "menus.legislation",
+            display: 'menus.competencies',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/csmja/Dispatchment.vue"),
+            import ('@/views/csmja/Competencies.vue'),
     },
     {
-        path: "/csmja/dispatch",
-        name: "csmja.dispatch",
+        path: '/csmja/csmja',
+        name: 'csmja.history',
         meta: {
-            display: "menus.dispatch",
+            display: 'menus.csmja_name',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/csmja/AboutUs.vue"),
+            import ('@/views/csmja/SinglePage.vue'),
     },
     {
-        path: "/csmja/dispatch",
-        name: "csmja.dispatch",
+        path: '/csmja/structure',
+        name: 'csmja.structure',
         meta: {
-            display: "menus.dispatch",
+            display: 'menus.structure',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/csmja/AboutUs.vue"),
+            import ('@/views/csmja/Structure.vue'),
     },
     {
-        path: "/csmja/statistic",
-        name: "csmja.statistic",
+        path: '/csmja/section1',
+        name: 'csmja.section1',
         meta: {
-            display: "menus.statistic",
+            display: 'menus.section1',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/csmja/AboutUs.vue"),
+            import ('@/views/csmja/1Section.vue'),
     },
     {
-        path: "/csmja/dispatch",
-        name: "csmja.dispatch",
+        path: '/csmja/section2',
+        name: 'csmja.section2',
         meta: {
-            display: "menus.dispatch",
+            display: 'menus.section2',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/csmja/AboutUs.vue"),
+            import ('@/views/csmja/2Section.vue'),
     },
     {
-        path: "/csmja/sub_section",
-        name: "csmja.sub_section",
+        path: '/csmja/section3',
+        name: 'csmja.section3',
         meta: {
-            display: "menus.sub_section",
+            display: 'menus.section3',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/csmja/AboutUs.vue"),
+            import ('@/views/csmja/3Section.vue'),
     },
     {
-        path: "/csmja/instruction_recomendation",
-        name: "csmja.instruction_recomendation",
+        path: '/csmja/strategic_plan',
+        name: 'csmja.strategic_plan',
         meta: {
-            display: "menus.instruction_recomendation",
+            display: 'menus.strategic_plan',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/csmja/AboutUs.vue"),
+            import ('@/views/csmja/StrategicPlan.vue'),
     },
     {
-        path: "/csmja/fluxogram",
-        name: "csmja.fluxogram",
+        path: '/csmja/contests',
+        name: 'csmja.contests',
         meta: {
-            display: "menus.fluxogram",
+            display: 'menus.contests',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/csmja/AboutUs.vue"),
+            import ('@/views/csmja/AboutUs.vue'),
     },
     {
-        path: "/csmja/jurispendency",
-        name: "csmja.jurispendency",
+        path: '/csmja/work_opportunity',
+        name: 'csmja.work_opportunity',
         meta: {
-            display: "menus.jurispendency",
+            display: 'menus.work_opportunity',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/csmja/AboutUs.vue"),
+            import ('@/views/csmja/AboutUs.vue'),
     },
     {
-        path: "/csmja/acordion",
-        name: "csmja.acordion",
+        path: '/csmja/international_cooperation',
+        name: 'csmja.international_cooperation',
         meta: {
-            display: "menus.acordion",
+            display: 'menus.international_cooperation',
+            parent: 'menus.institution',
         },
         component: () =>
-            import ("@/views/csmja/Acordion.vue"),
+            import ('@/views/csmja/AboutUs.vue'),
     },
     {
-        path: "/csmja/certification",
-        name: "csmja.certification",
+        path: '/csmja/legislation',
+        name: 'csmja.legislation',
         meta: {
-            display: "menus.certification",
+            display: 'menus.legislation',
         },
         component: () =>
-            import ("@/views/csmja/AboutUs.vue"),
+            import ('@/views/csmja/AboutUs.vue'),
     },
     {
-        path: "/csmja/account",
-        name: "csmja.account",
+        path: '/csmja/law',
+        name: 'csmja.law',
         meta: {
-            display: "menus.account",
+            display: 'menus.law',
+            parent: 'menus.legislation',
         },
         component: () =>
-            import ("@/views/csmja/AboutUs.vue"),
+            import ('@/views/csmja/Law.vue'),
     },
     {
-        path: "/csmja/rpcge",
-        name: "csmja.rpcge",
+        path: '/csmja/publications',
+        name: 'csmja.publications01',
         meta: {
-            display: "menus.rpcge",
+            display: 'menus.publications',
         },
         component: () =>
-            import ("@/views/csmja/AboutUs.vue"),
+            import ('@/views/csmja/Publications.vue'),
     },
     {
-        path: "/csmja/managers",
-        name: "csmja.managers",
+        path: '/csmja/decret',
+        name: 'csmja.decret',
         meta: {
-            display: "menus.managers",
+            display: 'menus.decret',
+            parent: 'menus.legislation',
         },
         component: () =>
-            import ("@/views/csmja/AboutUs.vue"),
+            import ('@/views/csmja/Decret.vue'),
     },
     {
-        path: "/csmja/galery",
-        name: "csmja.galery",
+        path: '/csmja/dispatchment',
+        name: 'csmja.dispatchment',
         meta: {
-            display: "menus.galery",
+            display: 'menus.resolution',
+            parent: 'menus.legislation',
         },
         component: () =>
-            import ("@/views/csmja/AboutUs.vue"),
+            import ('@/views/csmja/Dispatchment.vue'),
     },
     {
-        path: "/csmja/videos",
-        name: "csmja.videos",
+        path: '/csmja/dispatch',
+        name: 'csmja.dispatch',
         meta: {
-            display: "menus.videos",
+            display: 'menus.dispatch',
         },
         component: () =>
-            import ("@/views/csmja/AboutUs.vue"),
+            import ('@/views/csmja/AboutUs.vue'),
     },
     {
-        path: "/csmja/faq",
-        name: "csmja.faq",
+        path: '/csmja/dispatch',
+        name: 'csmja.dispatch',
         meta: {
-            display: "menus.faq",
+            display: 'menus.dispatch',
         },
         component: () =>
-            import ("@/views/csmja/Faq.vue"),
+            import ('@/views/csmja/AboutUs.vue'),
     },
     {
-        path: "/csmja/news",
-        name: "csmja.publications",
+        path: '/csmja/statistic',
+        name: 'csmja.statistic',
         meta: {
-            display: "blog",
+            display: 'menus.statistic',
         },
         component: () =>
-            import ("@/views/csmja/BlogList.vue"),
+            import ('@/views/csmja/AboutUs.vue'),
     },
     {
-        path: "/csmja/blog",
-        name: "csmja.blog",
+        path: '/csmja/dispatch',
+        name: 'csmja.dispatch',
         meta: {
-            display: "blog",
+            display: 'menus.dispatch',
         },
         component: () =>
-            import ("@/views/csmja/BlogList.vue"),
+            import ('@/views/csmja/AboutUs.vue'),
     },
     {
-        path: "/csmja/blog/:guid",
-        name: "csmja.blog-item",
+        path: '/csmja/sub_section',
+        name: 'csmja.sub_section',
         meta: {
-            display: "blog",
+            display: 'menus.sub_section',
         },
         component: () =>
-            import ("@/views/csmja/BlogItem.vue"),
+            import ('@/views/csmja/AboutUs.vue'),
     },
     {
-        path: "*",
-        name: "404",
+        path: '/csmja/instruction_recomendation',
+        name: 'csmja.instruction_recomendation',
         meta: {
-            display: "not_found",
+            display: 'menus.instruction_recomendation',
         },
         component: () =>
-            import ("@/views/404.vue"),
+            import ('@/views/csmja/AboutUs.vue'),
+    },
+    {
+        path: '/csmja/fluxogram',
+        name: 'csmja.fluxogram',
+        meta: {
+            display: 'menus.fluxogram',
+        },
+        component: () =>
+            import ('@/views/csmja/AboutUs.vue'),
+    },
+    {
+        path: '/csmja/jurispendency',
+        name: 'csmja.jurispendency',
+        meta: {
+            display: 'menus.jurispendency',
+        },
+        component: () =>
+            import ('@/views/csmja/AboutUs.vue'),
+    },
+    {
+        path: '/csmja/acordion',
+        name: 'csmja.acordion',
+        meta: {
+            display: 'menus.acordion',
+        },
+        component: () =>
+            import ('@/views/csmja/Acordion.vue'),
+    },
+    {
+        path: '/csmja/certification',
+        name: 'csmja.certification',
+        meta: {
+            display: 'menus.certification',
+        },
+        component: () =>
+            import ('@/views/csmja/AboutUs.vue'),
+    },
+    {
+        path: '/csmja/account',
+        name: 'csmja.account',
+        meta: {
+            display: 'menus.account',
+        },
+        component: () =>
+            import ('@/views/csmja/AboutUs.vue'),
+    },
+    {
+        path: '/csmja/rpcge',
+        name: 'csmja.rpcge',
+        meta: {
+            display: 'menus.rpcge',
+        },
+        component: () =>
+            import ('@/views/csmja/AboutUs.vue'),
+    },
+    {
+        path: '/csmja/managers',
+        name: 'csmja.managers',
+        meta: {
+            display: 'menus.managers',
+        },
+        component: () =>
+            import ('@/views/csmja/AboutUs.vue'),
+    },
+    {
+        path: '/csmja/galery',
+        name: 'csmja.galery',
+        meta: {
+            display: 'menus.galery',
+        },
+        component: () =>
+            import ('@/views/csmja/AboutUs.vue'),
+    },
+    {
+        path: '/csmja/videos',
+        name: 'csmja.videos',
+        meta: {
+            display: 'menus.videos',
+        },
+        component: () =>
+            import ('@/views/csmja/AboutUs.vue'),
+    },
+    {
+        path: '/csmja/faq',
+        name: 'csmja.faq',
+        meta: {
+            display: 'menus.faq',
+        },
+        component: () =>
+            import ('@/views/csmja/Faq.vue'),
+    },
+    {
+        path: '/csmja/news',
+        name: 'csmja.publications',
+        meta: {
+            display: 'blog',
+        },
+        component: () =>
+            import ('@/views/csmja/BlogList.vue'),
+    },
+    {
+        path: '/csmja/blog',
+        name: 'csmja.blog',
+        meta: {
+            display: 'blog',
+        },
+        component: () =>
+            import ('@/views/csmja/BlogList.vue'),
+    },
+    {
+        path: '/csmja/blog/:guid',
+        name: 'csmja.blog-item',
+        meta: {
+            display: 'blog',
+        },
+        component: () =>
+            import ('@/views/csmja/BlogItem.vue'),
+    },
+    {
+        path: '/tfcm/home',
+        name: 'tfcm.home',
+        meta: {
+            display: 'menus.tfcm',
+        },
+        component: () =>
+            import ('@/views/fiscal/tfcm/Home.vue'),
+    },
+    {
+        path: '/tfpm/home',
+        name: 'tfpm.home',
+        meta: {
+            display: 'menus.tfpm',
+        },
+        component: () =>
+            import ('@/views/fiscal/tfpm/Home.vue'),
+    },
+    {
+        path: '/tfps/home',
+        name: 'tfps.home',
+        meta: {
+            display: 'menus.tfps',
+        },
+        component: () =>
+            import ('@/views/fiscal/tfps/Home.vue'),
+    },
+    {
+        path: '*',
+        name: '404',
+        meta: {
+            display: 'not_found',
+        },
+        component: () =>
+            import ('@/views/404.vue'),
     },
 ];
 
@@ -879,10 +906,10 @@ const router = new VueRouter({
         if (to.hash) {
             return {
                 selector: to.hash,
-                behavior: "smooth",
+                behavior: 'smooth',
             };
         }
-        return { x: 0, y: 0, behavior: "smooth" };
+        return { x: 0, y: 0, behavior: 'smooth' };
     },
     routes,
 });
