@@ -18,7 +18,7 @@ import QFooter from '@/components/Footer';
 import QHeader from '@/components/Header/Header';
 import QBreadCrumb from '@/components/BreadCrumb';
 import QItem from '@/components/Item';
-import SubMenu from '@/views/csmja/components/SubMenu';
+import SubMenu from '@/views/fiscal/tfps/components/SubMenu';
 
 export default {
   name: 'QBlogItem',
