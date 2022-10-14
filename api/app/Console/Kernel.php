@@ -42,6 +42,9 @@ use App\Console\Commands\FetchPublicacoesCSMJACommand;
 use App\Console\Commands\FetchInstituicaoTFCMCommand;
 use App\Console\Commands\FetchInstituicaoTFPMCommand;
 use App\Console\Commands\FetchInstituicaoTFPSCommand;
+use App\Console\Commands\FetchNewsTFPSCommand;
+use App\Console\Commands\FetchNewsTFPMCommand;
+use App\Console\Commands\FetchNewsTFCMCommand;
 
 
 
