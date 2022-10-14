@@ -956,6 +956,73 @@ const routes = [{
         component: () =>
             import ('@/views/fiscal/tfps/Dispatchment.vue'),
     },
+
+    {
+        path: '/tfpm/news',
+        name: 'tfpm.publications',
+        meta: {
+            display: 'blog',
+        },
+        component: () =>
+            import ('@/views/fiscal/tfpm/BlogList.vue'),
+    },
+    {
+        path: '/tfpm/blog',
+        name: 'tfpm.blog',
+        meta: {
+            display: 'blog',
+        },
+        component: () =>
+            import ('@/views/fiscal/tfpm//BlogList.vue'),
+    },
+    {
+        path: '/tfpm/blog/:guid',
+        name: 'tfpm.blog-item',
+        meta: {
+            display: 'blog',
+        },
+        component: () =>
+            import ('@/views/fiscal/tfpm/BlogItem.vue'),
+    },
+    {
+        path: '/tfpm/faq',
+        name: 'tfpm.faq',
+        meta: {
+            display: 'menus.faq',
+        },
+        component: () =>
+            import ('@/views/fiscal/tfpm/Faq.vue'),
+    },
+    {
+        path: '/tfpm/law',
+        name: 'tfpm.law',
+        meta: {
+            display: 'menus.law',
+            parent: 'menus.legislation',
+        },
+        component: () =>
+            import ('@/views/fiscal/tfpm/Law.vue'),
+    },
+    {
+        path: '/tfpm/decret',
+        name: 'tfpm.decret',
+        meta: {
+            display: 'menus.decret',
+            parent: 'menus.legislation',
+        },
+        component: () =>
+            import ('@/views/fiscal/tfpm/Decret.vue'),
+    },
+    {
+        path: '/tfpm/dispatchment',
+        name: 'tfpm.dispatchment',
+        meta: {
+            display: 'menus.resolution',
+            parent: 'menus.legislation',
+        },
+        component: () =>
+            import ('@/views/fiscal/tfpm/Dispatchment.vue'),
+    },
     {
         path: '*',
         name: '404',
