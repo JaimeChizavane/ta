@@ -1,32 +1,62 @@
 <template>
   <div class="wrapper">
-    <q-header/>
-    <q-slider/>
-    <q-blog/>
-    <q-about-us-section/>
-    <!--    <q-structure/>-->
-    <q-galery/>
-    <q-contact/>
-    <q-footer/>
+    <q-header />
+    <q-bread-crumb />
+    <sub-menu />
+    <q-c-s-j-a-blog />
+    <q-c-s-strategic-plan :results="services" />
+    <hr />
+    <q-c-s-support-services :results="services" />
+    <hr />
+    <q-c-s-history :results="services" />
+    <hr />
+    <q-c-s-competencies :results="services" />
+    <q-footer />
   </div>
 </template>
 
 <script>
-
-import QSlider from "@/components/Slider";
-import QAboutUsSection from "@/components/AboutUsSection";
-import QContact from "@/components/Contact";
-// import QStructure from "@/components/Structure";
-import QGalery from "@/components/Galery";
-import QBlog from "@/components/Blog";
-import QHeader from "@/components/Header/Header";
-import QFooter from "@/components/Footer";
+import QFooter from '@/components/Footer';
+import QHeader from '@/components/Header/Header';
+import QBreadCrumb from '@/components/BreadCrumb';
+import SubMenu from '@/views/csmja/components/SubMenu';
+import QCSSupportServices from '@/views/csmja/SupportService';
+import QCSStrategicPlan from '@/views/csmja/StrategicPlan';
+import QCSHistory from '@/views/csmja/History';
+import QCSCompetencies from '@/views/csmja/Competencies';
+import QCSJABlog from '@/components/CSMJABlog';
 
 export default {
-  name: 'QHome',
-  components: { QBlog, QGalery, QContact, QAboutUsSection, QSlider, QFooter, QHeader },
+  name: 'QSectionOne',
+  components: {
+    QCSJABlog,
+    QCSCompetencies,
+    QCSHistory,
+    QCSStrategicPlan,
+    QCSSupportServices,
+    SubMenu,
+    QBreadCrumb,
+    QHeader,
+    QFooter,
+  },
+  data() {
+    return {
+      services: [],
+    };
+  },
   mounted() {
-    window.mainExecution()
-  }
-}
+    window.mainExecution();
+
+    this.$http
+      .get('tfcminstituicao.json')
+      .then((data) => {
+        this.services = data.data.d.results;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  },
+};
 </script>
+
+<style scoped></style>
