@@ -45,6 +45,9 @@ use App\Console\Commands\FetchInstituicaoTFPSCommand;
 use App\Console\Commands\FetchNewsTFPSCommand;
 use App\Console\Commands\FetchNewsTFPMCommand;
 use App\Console\Commands\FetchNewsTFCMCommand;
+use App\Console\Commands\FetchFAQTFCMCommand;
+use App\Console\Commands\FetchFAQTFPMCommand;
+use App\Console\Commands\FetchFAQTFPSCommand;
 
 
 
@@ -103,6 +106,9 @@ class Kernel extends ConsoleKernel
         FetchNewsTFPSCommand::class,
         FetchNewsTFPMCommand::class,
         FetchNewsTFCMCommand::class,
+        FetchFAQTFCMCommand::class,
+        FetchFAQTFPMCommand::class,
+        FetchFAQTFPSCommand::class,
         SPApiFetchAll::class,
     ];
 
