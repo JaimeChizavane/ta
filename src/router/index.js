@@ -918,6 +918,15 @@ const routes = [{
             import ('@/views/fiscal/tfps/BlogItem.vue'),
     },
     {
+        path: '/tfps/faq',
+        name: 'tfps.faq',
+        meta: {
+            display: 'menus.faq',
+        },
+        component: () =>
+            import ('@/views/fiscal/tfps/Faq.vue'),
+    },
+    {
         path: '*',
         name: '404',
         meta: {

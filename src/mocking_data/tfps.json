@@ -1,6 +1,6 @@
 [{
         "name": "menus.institution",
-        "to": "tfps.history",
+        "to": "tfps.home",
         "sub_menus": []
     },
     {
