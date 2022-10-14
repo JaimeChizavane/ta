@@ -100,6 +100,9 @@ class Kernel extends ConsoleKernel
         FetchInstituicaoTFCMCommand::class,
         FetchInstituicaoTFPMCommand::class,
         FetchInstituicaoTFPSCommand::class,
+        FetchNewsTFPSCommand::class,
+        FetchNewsTFPMCommand::class,
+        FetchNewsTFCMCommand::class,
         SPApiFetchAll::class,
     ];
 

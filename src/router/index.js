@@ -891,6 +891,33 @@ const routes = [{
             import ('@/views/fiscal/tfps/Home.vue'),
     },
     {
+        path: '/tfps/news',
+        name: 'tfps.publications',
+        meta: {
+            display: 'blog',
+        },
+        component: () =>
+            import ('@/views/fiscal/tfps/BlogList.vue'),
+    },
+    {
+        path: '/tfps/blog',
+        name: 'tfps.blog',
+        meta: {
+            display: 'blog',
+        },
+        component: () =>
+            import ('@/views/fiscal/tfps//BlogList.vue'),
+    },
+    {
+        path: '/tfps/blog/:guid',
+        name: 'tfps.blog-item',
+        meta: {
+            display: 'blog',
+        },
+        component: () =>
+            import ('@/views/fiscal/tfps/BlogItem.vue'),
+    },
+    {
         path: '*',
         name: '404',
         meta: {

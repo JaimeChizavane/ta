@@ -62,12 +62,12 @@
             "tax_courts": "Tribunais Fiscais",
             "customs_courts": "Tribunais Aduaneiros",
             "administrative_courts": "Tribunais Administrativos",
-            "maputo": "Provicia de Maputo",
-            "sofala": "Provincia de Sofala",
+            "maputo": "Província de Maputo",
+            "sofala": "Província de Sofala",
             "cmaputo": "Cidade de Maputo",
             "tfcm": "Tribunal Fiscal da Cidade de Maputo",
-            "tfpm": "Tribunal Fiscal da Provincia de Maputo",
-            "tfps": "Tribunal Fiscal da Provincia de Sofala"
+            "tfpm": "Tribunal Fiscal da Província de Maputo",
+            "tfps": "Tribunal Fiscal da Província de Sofala"
         },
         "search": "Pesquisar",
         "read_more": "Ler mais",
