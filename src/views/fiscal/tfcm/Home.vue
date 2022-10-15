@@ -24,7 +24,7 @@ import QCSSupportServices from '@/views/fiscal/tfcm/SupportService';
 import QCSStrategicPlan from '@/views/fiscal/tfcm/StrategicPlan';
 import QCSHistory from '@/views/fiscal/tfcm/History';
 import QCSCompetencies from '@/views/fiscal/tfcm/Competencies';
-import QCSJABlog from '@/components/CSMJABlog';
+import QCSJABlog from '@/components/TFCMBlog';
 
 export default {
   name: 'QSectionOne',
