@@ -5,7 +5,7 @@
         <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
           <div class="heading text-center mb-40">
             <h3 class="heading__title">
-              <router-link :to="{ name: 'tfps.blog' }">
+              <router-link :to="{ name: 'tfcm.blog' }">
                 {{ $tc('recent_article', 2) }}
               </router-link>
             </h3>
@@ -26,7 +26,7 @@
             <div class="post__img">
               <router-link
                 :to="{
-                  name: 'tfps.blog-item',
+                  name: 'tfcm.blog-item',
                   params: { guid: article.GUID },
                 }"
               >
@@ -41,7 +41,7 @@
               <h4 class="post__title">
                 <router-link
                   :to="{
-                    name: 'tfps.blog-item',
+                    name: 'tfcm.blog-item',
                     params: { guid: article.GUID },
                   }"
                 >
@@ -59,7 +59,7 @@
               ></p>
               <router-link
                 :to="{
-                  name: 'tfps.blog-item',
+                  name: 'tfcm.blog-item',
                   params: { guid: article.GUID },
                 }"
                 class="btn btn__secondary btn__link"
@@ -94,7 +94,7 @@ export default {
     },
   },
   async mounted() {
-    const data = await this.$http.get('tfpsnews.json');
+    const data = await this.$http.get('tfcmnews.json');
 
     this.news = data.data.d.results
       .sort((item, next) => {
