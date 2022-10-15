@@ -10,7 +10,7 @@
             <img :src="bannerImage()" alt="about" />
             <blockquote class="blockquote mb-0">
               <h4 class="blockquote__title">
-                Tribunal Fiscal da Província de Maputo
+                Tribunal Fiscal da Cidade de Maputo
               </h4>
             </blockquote>
           </div>

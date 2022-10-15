@@ -20,11 +20,11 @@ import QFooter from '@/components/Footer';
 import QHeader from '@/components/Header/Header';
 import QBreadCrumb from '@/components/BreadCrumb';
 import SubMenu from '@/views/fiscal/tfpm/components/SubMenu';
-import QCSSupportServices from '@/views/csmja/SupportService';
-import QCSStrategicPlan from '@/views/csmja/StrategicPlan';
-import QCSHistory from '@/views/csmja/History';
-import QCSCompetencies from '@/views/csmja/Competencies';
-import QCSJABlog from '@/components/CSMJABlog';
+import QCSSupportServices from '@/views/fiscal/tfpm/SupportService';
+import QCSStrategicPlan from '@/views/fiscal/tfpm/StrategicPlan';
+import QCSHistory from '@/views/fiscal/tfpm/History';
+import QCSCompetencies from '@/views/fiscal/tfpm/Competencies';
+import QCSJABlog from '@/components/TFPMBlog';
 
 export default {
   name: 'QSectionOne',
