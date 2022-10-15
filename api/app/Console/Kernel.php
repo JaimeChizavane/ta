@@ -51,6 +51,9 @@ use App\Console\Commands\FetchFAQTFPSCommand;
 use App\Console\Commands\FetchLawTFCMCommand;
 use App\Console\Commands\FetchLawTFPMCommand;
 use App\Console\Commands\FetchLawTFPSCommand;
+use App\Console\Commands\FetchPublicacoesTFCMCommand;
+use App\Console\Commands\FetchPublicacoesTFPMCommand;
+use App\Console\Commands\FetchPublicacoesTFPSCommand;
 
 
 
@@ -115,6 +118,9 @@ class Kernel extends ConsoleKernel
         FetchLawTFCMCommand::class,
         FetchLawTFPMCommand::class,
         FetchLawTFPSCommand::class,
+        FetchPublicacoesTFCMCommand::class,
+        FetchPublicacoesTFPMCommand::class,
+        FetchPublicacoesTFPSCommand::class,
         SPApiFetchAll::class,
     ];
 
