@@ -29,6 +29,11 @@
         "sub_menus": []
     },
     {
+        "name": "menus.publications",
+        "to": "tfps.publication",
+        "sub_menus": []
+    },
+    {
         "name": "menus.faq",
         "to": "tfps.faq",
         "sub_menus": []

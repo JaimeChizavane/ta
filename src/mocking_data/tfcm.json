@@ -29,6 +29,11 @@
         "sub_menus": []
     },
     {
+        "name": "menus.publications",
+        "to": "tfcm.publication",
+        "sub_menus": []
+    },
+    {
         "name": "menus.faq",
         "to": "tfcm.faq",
         "sub_menus": []

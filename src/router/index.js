@@ -1092,6 +1092,43 @@ const routes = [{
     },
 
     {
+        path: '/csmja/publications',
+        name: 'csmja.publication',
+        meta: {
+            display: 'menus.publications',
+        },
+        component: () =>
+            import ('@/views/csmja/Publications.vue'),
+    },
+    {
+        path: '/tfps/publications',
+        name: 'tfps.publication',
+        meta: {
+            display: 'menus.publications',
+        },
+        component: () =>
+            import ('@/views/fiscal/tfps/Publications.vue'),
+    },
+    {
+        path: '/tfpm/publications',
+        name: 'tfpm.publication',
+        meta: {
+            display: 'menus.publications',
+        },
+        component: () =>
+            import ('@/views/fiscal/tfpm/Publications.vue'),
+    },
+    {
+        path: '/tfcm/publications',
+        name: 'tfcm.publication',
+        meta: {
+            display: 'menus.publications',
+        },
+        component: () =>
+            import ('@/views/fiscal/tfcm/Publications.vue'),
+    },
+
+    {
         path: '*',
         name: '404',
         meta: {
