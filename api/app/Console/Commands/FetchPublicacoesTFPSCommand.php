@@ -18,6 +18,6 @@ class FetchPublicacoesTFPSCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "TFPS/_api/web/GetFolderByServerRelativeUrl('/publication')/Folders?\$expand=Files&\$orderBy=Created desc";
+    protected $uri  = "TFPS/_api/web/GetFolderByServerRelativeUrl('publication')/Folders?\$expand=Files&\$orderBy=Created desc";
     protected $path = 'tfps_publicacao.json';
 }

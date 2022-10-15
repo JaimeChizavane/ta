@@ -12,7 +12,7 @@ namespace App\Console\Commands;
 
 class FetchLawTFCMCommand extends SPApiFetch
 {
-    protected $signature   = 'sp:tfpm-law';
+    protected $signature   = 'sp:tfcm-law';
     protected $description = 'Fetch all tfcm-law';
     /**
      * @var \App\Services\HttpClient
