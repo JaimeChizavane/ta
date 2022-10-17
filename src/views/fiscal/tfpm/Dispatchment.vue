@@ -310,7 +310,7 @@ export default {
     window.mainExecution();
 
     this.$http
-      .get('tfpmlaws.json')
+      .get('tfpmlaw.json')
       .then((data) => {
         this.allItems = data.data.d.results.filter(
           (item) => item?.Tipo_x0020_de_x0020_Diploma === 'Resolução'
