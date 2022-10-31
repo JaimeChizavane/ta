@@ -73,6 +73,10 @@ class SPApiFetchAll extends Command
         FetchPublicacoesTFCMCommand::class,
         FetchPublicacoesTFPMCommand::class,
         FetchPublicacoesTFPSCommand::class,
+        FetchInstituicaoTADCMCommand::class,
+        FetchNewsTADCMCommand::class,
+        FetchLawTADCMCommand::class,
+        FetchFAQTADCMCommand::class,
     ];
 
     public function __construct()

@@ -54,7 +54,10 @@ use App\Console\Commands\FetchLawTFPSCommand;
 use App\Console\Commands\FetchPublicacoesTFCMCommand;
 use App\Console\Commands\FetchPublicacoesTFPMCommand;
 use App\Console\Commands\FetchPublicacoesTFPSCommand;
-
+use App\Console\Commands\FetchInstituicaoTADCMCommand;
+use App\Console\Commands\FetchNewsTADCMCommand;
+use App\Console\Commands\FetchLawTADCMCommand;
+use App\Console\Commands\FetchFAQTADCMCommand;
 
 
 use App\Console\Commands\SPApiFetchAll;
@@ -93,6 +96,7 @@ class Kernel extends ConsoleKernel
         FetchVideosCommand::class,
         FetchRPCGECommand::class,
         FetchContasCommand::class,
+        FetchInstituicaoTADCMCommand::class,
         FetchInstrucoesObrigatoriasCommand::class,
         FetchAssuntosCommand::class,
         FetchAreasCommand::class,
@@ -121,7 +125,11 @@ class Kernel extends ConsoleKernel
         FetchPublicacoesTFCMCommand::class,
         FetchPublicacoesTFPMCommand::class,
         FetchPublicacoesTFPSCommand::class,
+        FetchNewsTADCMCommand::class,
+        FetchLawTADCMCommand::class,
+        FetchFAQTADCMCommand::class,
         SPApiFetchAll::class,
+
     ];
 
     /**
