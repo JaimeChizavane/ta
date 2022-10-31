@@ -1203,7 +1203,17 @@ const routes = [{
         },
         component: () =>
             import ('@/views/aduaneiro/tadcm/Dispatchment.vue'),
-    }
+    },
+    {
+        path: '/tadcm/home',
+        name: 'tadcm.home',
+        meta: {
+            display: 'menus.tadcm',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tfcm/Home.vue'),
+    },
+
 
 ];
 

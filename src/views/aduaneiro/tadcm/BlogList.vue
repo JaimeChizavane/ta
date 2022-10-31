@@ -7,7 +7,7 @@
       <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
         <div class="heading text-center mb-0 mt-40">
           <h3 class="heading__title">
-            <router-link :to="{ name: 'tfcm.blog' }">
+            <router-link :to="{ name: 'tadcm.blog' }">
               {{ $tc('recent_article', 2) }}
             </router-link>
           </h3>
@@ -17,7 +17,7 @@
       <!-- /.col-lg-6 -->
     </div>
     <!-- /.row -->
-    <q-item-list :items="news" itemRoute="tfcm.blog-item" />
+    <q-item-list :items="news" itemRoute="tadcm.blog-item" />
     <q-footer />
   </div>
 </template>
@@ -27,7 +27,7 @@ import QFooter from '@/components/Footer';
 import QHeader from '@/components/Header/Header';
 import QBreadCrumb from '@/components/BreadCrumb';
 import QItemList from '@/components/ItemList';
-import SubMenu from '@/views/fiscal/tfcm/components/SubMenu';
+import SubMenu from '@/views/aduaneiro/tadcm/components/SubMenu';
 
 export default {
   name: 'QBlogList',
@@ -41,7 +41,7 @@ export default {
     window.mainExecution();
 
     this.$http
-      .get('tfcmnews.json')
+      .get('tadcmnews.json')
       .then((data) => {
         this.news = data.data.d.results.sort((item, next) => {
           return (

@@ -267,6 +267,11 @@
                     "name": "menus.maputo",
                     "to": "jurisdictions",
                     "sub_menus": []
+                },
+                {
+                    "name": "menus.cmaputo",
+                    "to": "tadcm.home",
+                    "sub_menus": []
                 }]
             },
             {
