@@ -1137,6 +1137,74 @@ const routes = [{
         component: () =>
             import ('@/views/404.vue'),
     },
+
+    {
+        path: '/tadcm/news',
+        name: 'tadcm.publications',
+        meta: {
+            display: 'blog',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadcm/BlogList.vue'),
+    },
+    {
+        path: '/tadcm/blog',
+        name: 'tadcm.blog',
+        meta: {
+            display: 'blog',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadcm//BlogList.vue'),
+    },
+    {
+        path: '/tadcm/blog/:guid',
+        name: 'tadcm.blog-item',
+        meta: {
+            display: 'blog',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadcm/BlogItem.vue'),
+    },
+    {
+        path: '/tadcm/faq',
+        name: 'tadcm.faq',
+        meta: {
+            display: 'menus.faq',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadcm/Faq.vue'),
+    },
+    {
+        path: '/tadcm/law',
+        name: 'tadcm.law',
+        meta: {
+            display: 'menus.law',
+            parent: 'menus.legislation',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadcm/Law.vue'),
+    },
+    {
+        path: '/tadcm/decret',
+        name: 'tadcm.decret',
+        meta: {
+            display: 'menus.decret',
+            parent: 'menus.legislation',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadcm/Decret.vue'),
+    },
+    {
+        path: '/tadcm/dispatchment',
+        name: 'tadcm.dispatchment',
+        meta: {
+            display: 'menus.resolution',
+            parent: 'menus.legislation',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadcm/Dispatchment.vue'),
+    }
+
 ];
 
 const router = new VueRouter({

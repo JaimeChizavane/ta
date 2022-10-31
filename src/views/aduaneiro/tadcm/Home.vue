@@ -19,12 +19,12 @@
 import QFooter from '@/components/Footer';
 import QHeader from '@/components/Header/Header';
 import QBreadCrumb from '@/components/BreadCrumb';
-import SubMenu from '@/views/aduaneiro/tacm/components/SubMenu';
-import QCSSupportServices from '@/views/aduaneiro/tacm/SupportService';
-import QCSStrategicPlan from '@/views/aduaneiro/tacm/StrategicPlan';
-import QCSHistory from '@/views/aduaneiro/tacm/History';
-import QCSCompetencies from '@/views/aduaneiro/tacm/Competencies';
-import QCSJABlog from '@/components/TFCMBlog';
+import SubMenu from '@/views/aduaneiro/tadcm/components/SubMenu';
+import QCSSupportServices from '@/views/aduaneiro/tadcm/SupportService';
+import QCSStrategicPlan from '@/views/aduaneiro/tadcm/StrategicPlan';
+import QCSHistory from '@/views/aduaneiro/tadcm/History';
+import QCSCompetencies from '@/views/aduaneiro/tadcm/Competencies';
+import QCSJABlog from '@/components/TADCMBlog';
 
 export default {
   name: 'QSectionOne',
@@ -48,7 +48,7 @@ export default {
     window.mainExecution();
 
     this.$http
-      .get('tacminstituicao.json')
+      .get('tadcminstituicao.json')
       .then((data) => {
         this.services = data.data.d.results;
       })

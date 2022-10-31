@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import menus from '@/mocking_data/tfcm.json';
+import menus from '@/mocking_data/tadcm.json';
 
 export default {
   name: 'SubMenu',
