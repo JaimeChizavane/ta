@@ -123,7 +123,7 @@
 import QFooter from '@/components/Footer';
 import QHeader from '@/components/Header/Header';
 import QBreadCrumb from '@/components/BreadCrumb';
-import SubMenu from '@/views/aduaneiro/tadcm/components/SubMenu';
+import SubMenu from '@/views/aduaneiro/tadpn/components/SubMenu';
 
 import CoolLightBox from 'vue-cool-lightbox';
 import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css';
@@ -188,7 +188,7 @@ export default {
     window.mainExecution();
 
     this.$http
-      .get('tadcm_publicacao.json')
+      .get('tadpn_publicacao.json')
       .then((data) => {
         this.history = data.data.d.results
           .filter((i) => i.Name !== 'Forms')

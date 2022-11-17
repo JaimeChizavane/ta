@@ -50,7 +50,7 @@
 import QFooter from '@/components/Footer';
 import QHeader from '@/components/Header/Header';
 import QBreadCrumb from '@/components/BreadCrumb';
-import SubMenu from '@/views/fiscal/tfptt/components/SubMenu';
+import SubMenu from '@/views/aduaneiro/tadpz/components/SubMenu';
 
 export default {
   name: 'QFaq',
@@ -64,7 +64,7 @@ export default {
     window.mainExecution();
 
     this.$http
-      .get('tfpttfaq.json')
+      .get('tadpzfaq.json')
       .then((data) => {
         this.faqs = data.data.d.results;
       })

@@ -173,7 +173,7 @@
 import QFooter from '@/components/Footer';
 import QHeader from '@/components/Header/Header';
 import QBreadCrumb from '@/components/BreadCrumb';
-import SubMenu from '@/views/fiscal/tfpm/components/SubMenu';
+import SubMenu from '@/views/fiscal/tfptt/components/SubMenu';
 
 export default {
   name: 'QLaw',
@@ -310,7 +310,7 @@ export default {
     window.mainExecution();
 
     this.$http
-      .get('tfpmlaw.json')
+      .get('tfpttlaw.json')
       .then((data) => {
         this.allItems = data.data.d.results.filter(
           (item) => item?.Tipo_x0020_de_x0020_Diploma === 'Resolução'

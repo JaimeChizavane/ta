@@ -1211,7 +1211,159 @@ const routes = [{
             display: 'menus.tadcm',
         },
         component: () =>
-            import ('@/views/aduaneiro/tfcm/Home.vue'),
+            import ('@/views/aduaneiro/tadcm/Home.vue'),
+    },
+
+    {
+        path: '/tadpn/news',
+        name: 'tadpn.publications',
+        meta: {
+            display: 'blog',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadpn/BlogList.vue'),
+    },
+    {
+        path: '/tadpn/blog',
+        name: 'tadpn.blog',
+        meta: {
+            display: 'blog',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadpn//BlogList.vue'),
+    },
+    {
+        path: '/tadpn/blog/:guid',
+        name: 'tadpn.blog-item',
+        meta: {
+            display: 'blog',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadpn/BlogItem.vue'),
+    },
+    {
+        path: '/tadpn/faq',
+        name: 'tadpn.faq',
+        meta: {
+            display: 'menus.faq',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadpn/Faq.vue'),
+    },
+    {
+        path: '/tadpn/law',
+        name: 'tadpn.law',
+        meta: {
+            display: 'menus.law',
+            parent: 'menus.legislation',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadpn/Law.vue'),
+    },
+    {
+        path: '/tadpn/decret',
+        name: 'tadpn.decret',
+        meta: {
+            display: 'menus.decret',
+            parent: 'menus.legislation',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadpn/Decret.vue'),
+    },
+    {
+        path: '/tadpn/dispatchment',
+        name: 'tadpn.dispatchment',
+        meta: {
+            display: 'menus.resolution',
+            parent: 'menus.legislation',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadpn/Dispatchment.vue'),
+    },
+    {
+        path: '/tadpn/home',
+        name: 'tadpn.home',
+        meta: {
+            display: 'menus.tadpn',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadpn/Home.vue'),
+    },
+
+    {
+        path: '/tadps/news',
+        name: 'tadps.publications',
+        meta: {
+            display: 'blog',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadps/BlogList.vue'),
+    },
+    {
+        path: '/tadps/blog',
+        name: 'tadps.blog',
+        meta: {
+            display: 'blog',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadps//BlogList.vue'),
+    },
+    {
+        path: '/tadps/blog/:guid',
+        name: 'tadps.blog-item',
+        meta: {
+            display: 'blog',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadps/BlogItem.vue'),
+    },
+    {
+        path: '/tadps/faq',
+        name: 'tadps.faq',
+        meta: {
+            display: 'menus.faq',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadps/Faq.vue'),
+    },
+    {
+        path: '/tadps/law',
+        name: 'tadps.law',
+        meta: {
+            display: 'menus.law',
+            parent: 'menus.legislation',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadps/Law.vue'),
+    },
+    {
+        path: '/tadps/decret',
+        name: 'tadps.decret',
+        meta: {
+            display: 'menus.decret',
+            parent: 'menus.legislation',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadps/Decret.vue'),
+    },
+    {
+        path: '/tadps/dispatchment',
+        name: 'tadps.dispatchment',
+        meta: {
+            display: 'menus.resolution',
+            parent: 'menus.legislation',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadps/Dispatchment.vue'),
+    },
+    {
+        path: '/tadps/home',
+        name: 'tadps.home',
+        meta: {
+            display: 'menus.tadps',
+        },
+        component: () =>
+            import ('@/views/aduaneiro/tadps/Home.vue'),
     },
 
 

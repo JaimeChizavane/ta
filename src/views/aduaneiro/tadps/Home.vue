@@ -3,7 +3,8 @@
     <q-header />
     <q-bread-crumb />
     <sub-menu />
-    <q-c-s-j-a-blog />
+    <q-c-s-j-a-blog/>
+
     <q-c-s-strategic-plan :results="services" />
     <hr />
     <q-c-s-support-services :results="services" />
@@ -19,12 +20,12 @@
 import QFooter from '@/components/Footer';
 import QHeader from '@/components/Header/Header';
 import QBreadCrumb from '@/components/BreadCrumb';
-import SubMenu from '@/views/fiscal/tfps/components/SubMenu';
-import QCSSupportServices from '@/views/fiscal/tfps/SupportService';
-import QCSStrategicPlan from '@/views/fiscal/tfps/StrategicPlan';
-import QCSHistory from '@/views/fiscal/tfps/History';
-import QCSCompetencies from '@/views/fiscal/tfps/Competencies';
-import QCSJABlog from '@/components/TFPSBlog';
+import SubMenu from '@/views/aduaneiro/tadps/components/SubMenu';
+import QCSSupportServices from '@/views/aduaneiro/tadps/SupportService';
+import QCSStrategicPlan from '@/views/aduaneiro/tadps/StrategicPlan';
+import QCSHistory from '@/views/aduaneiro/tadps/History';
+import QCSCompetencies from '@/views/aduaneiro/tadps/Competencies';
+import QCSJABlog from '@/components/TADPSBlog';
 
 export default {
   name: 'QSectionOne',
@@ -48,7 +49,7 @@ export default {
     window.mainExecution();
 
     this.$http
-      .get('tfpsinstituicao.json')
+      .get('tadpsinstituicao.json')
       .then((data) => {
         this.services = data.data.d.results;
       })

@@ -67,7 +67,10 @@
             "cmaputo": "Cidade de Maputo",
             "tfcm": "Tribunal Fiscal da Cidade de Maputo",
             "tfpm": "Tribunal Fiscal da Província de Maputo",
-            "tfps": "Tribunal Fiscal da Província de Sofala"
+            "tfps": "Tribunal Fiscal da Província de Sofala",
+            "tadcm": "Tribunal Aduaneiro da Cidade de Maputo"
+
+
         },
         "search": "Pesquisar",
         "read_more": "Ler mais",
