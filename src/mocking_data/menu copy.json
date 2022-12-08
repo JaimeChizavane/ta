@@ -251,7 +251,45 @@
     {
         "name": "menus.jurisdiction",
         "to": "jurisdiction",
-        "sub_menus": []
+        "sub_menus": [{
+                "name": "menus.customs_courts",
+                "to": "jurisdictionss",
+                "sub_menus": [{
+                        "name": "menus.maputo",
+                        "to": "jurisdictions",
+                        "sub_menus": []
+                    },
+                    {
+                        "name": "menus.cmaputo",
+                        "to": "tadcm.home",
+                        "sub_menus": []
+                    }
+                ]
+            },
+            {
+                "name": "menus.tax_courts",
+                "to": "jurisdictionss",
+                "sub_menus": [{
+                        "name": "menus.cmaputo",
+                        "to": "tfcm.home",
+                        "blank": true,
+                        "sub_menus": []
+                    },
+                    {
+                        "name": "menus.maputo",
+                        "to": "tfpm.home",
+                        "blank": true,
+                        "sub_menus": []
+                    },
+                    {
+                        "name": "menus.sofala",
+                        "to": "tfps.home",
+                        "blank": true,
+                        "sub_menus": []
+                    }
+                ]
+            }
+        ]
     },
     {
         "name": "menus.csmja",

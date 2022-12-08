@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Criado por Maizer Aly de O. Gomes para api.
  * Email: maizer.gomes@gmail.com / maizer.gomes@ekutivasolutions / maizer.gomes@outlook.com
@@ -17,7 +18,7 @@ class FetchRPCGECommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-  //  protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/Relatrios%20e%20Pareceres%20CGE')/Folders?\$expand=Files&\$orderBy=Name desc";
-    protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/Relatrios%20e%20Pareceres%20CGE')/Folders?\$expand=Files&\$orderBy=Created desc";
+    //  protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/Relatrios%20e%20Pareceres%20CGE')/Folders?\$expand=Files&\$orderBy=Name desc";
+    protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/RPCGE')/Folders?\$expand=Files&\$orderBy=Created desc";
     protected $path = 'rpcge.json';
 }

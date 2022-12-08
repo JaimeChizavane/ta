@@ -1,7 +1,7 @@
 <template>
   <li>
     <ul class="navbar-actions list-unstyled mb-0 d-flex align-items-center">
-      <li class="d-none d-xl-block">
+      <li class="d-none">
         <span>
           Online:
           <span
@@ -13,7 +13,7 @@
         </span>
       </li>
       <li class="d-none d-xl-block"></li>
-      <li class="d-none d-xl-block">
+      <li class="d-none">
         <span>
           Visitas :
           <span
@@ -38,21 +38,21 @@
           <i class="icon-user"></i><span>{{ $tc('Entrar') }}</span>
         </button> -->
       </li>
-       <li class="d-none d-xl-block"></li>
-       <li class="d-none d-xl-block"></li>
-       <li class="d-none d-xl-block"></li>
-       <li class="d-none d-xl-block"></li>
-       <li class="d-none d-xl-block"></li>
+      <li class="d-none d-xl-block"></li>
+      <li class="d-none d-xl-block"></li>
+      <li class="d-none d-xl-block"></li>
+      <li class="d-none d-xl-block"></li>
+      <li class="d-none d-xl-block"></li>
     </ul>
     <!-- /.navbar-actions -->
   </li>
 </template>
 
 <script>
-import Echo from "laravel-echo";
+import Echo from 'laravel-echo';
 
-window.io = require("socket.io-client");
-window.Pusher = require("pusher-js");
+window.io = require('socket.io-client');
+window.Pusher = require('pusher-js');
 
 const echoinstance = process.env.VUE_APP_WEBSOCKET_HOST
   ? new Echo({
@@ -61,7 +61,7 @@ const echoinstance = process.env.VUE_APP_WEBSOCKET_HOST
       // wsPort: process.env.VUE_APP_WEBSOCKET_PORT,
       // wssPort: process.env.VUE_APP_WEBSOCKET_PORT,
       authEndpoint: process.env.VUE_APP_WEBSOCKET_AUTH,
-      broadcaster: "pusher",
+      broadcaster: 'pusher',
       // key: "a08cd5563a35608a631a71bf7d66ea68",
       //     ws://localhost:6001/app/
       // wsHost: "localhost",
@@ -70,13 +70,13 @@ const echoinstance = process.env.VUE_APP_WEBSOCKET_HOST
       forceTLS: false,
       encrypted: true,
       disableStats: true,
-      enabledTransports: ["ws", "wss"],
+      enabledTransports: ['ws', 'wss'],
       // authEndpoint: "https://api.ta.test/broadcasting/auth"
     })
   : {};
 
 export default {
-  name: "QGetQuote",
+  name: 'QGetQuote',
   data() {
     return {
       users: [],
@@ -87,7 +87,7 @@ export default {
     echoinstance.connect();
 
     echoinstance
-      .join("chat")
+      .join('chat')
       .here((users) => {
         this.users = users;
         this.usersCount = users.length;
