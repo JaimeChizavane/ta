@@ -71,7 +71,7 @@
                                   </span>
                                 </div>
                                 <h4 class="job__title">
-                                  {{ item.Name || "Sem titulo" }}
+                                  {{ item.Name || 'Sem titulo' }}
                                 </h4>
                               </div>
                               <!-- /.col-lg-4 -->
@@ -118,12 +118,12 @@
 </template>
 
 <script>
-import QFooter from "@/components/Footer";
-import QHeader from "@/components/Header/Header";
-import QBreadCrumb from "@/components/BreadCrumb";
+import QFooter from '@/components/Footer';
+import QHeader from '@/components/Header/Header';
+import QBreadCrumb from '@/components/BreadCrumb';
 
 export default {
-  name: "QDecret",
+  name: 'QDecret',
   components: { QBreadCrumb, QHeader, QFooter },
   methods: {
     search() {
@@ -142,81 +142,37 @@ export default {
     getFileUrl(item) {
       return item && item.ServerRelativeUrl
         ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl
-        : "#";
+        : '#';
     },
   },
   data() {
     return {
       allItems: [],
-      history: [
-        // {
-        //   Activities: {},
-        //   Exists: true,
-        //   Files: {
-        //     results: [
-        //       {
-        //         Name: "Relatório e Parecer CGE 03",
-        //       },
-        //       {
-        //         Name: "Relatório e Parecer CGE 02",
-        //       },
-        //     ],
-        //   },
-        //   Name: "Relatório e Parecer CGE 2022",
-        // },
-        // {
-        //   Activities: {},
-        //   Exists: true,
-        //   Files: {
-        //     results: [
-        //       {
-        //         Name: "Relatório e Parecer CGE 01",
-        //       },
-        //       {
-        //         Name: "Relatório e Parecer CGE 02",
-        //       },
-        //     ],
-        //   },
-        //   Name: "Relatório e Parecer CGE 2020",
-        // },
-        // {
-        //   Activities: {},
-        //   Exists: true,
-        //   Files: {
-        //     results: [
-        //       {
-        //         Name: "Relatório e Parecer CGE 01",
-        //       },
-        //       {
-        //         Name: "Relatório e Parecer CGE 02",
-        //       },
-        //     ],
-        //   },
-        //   Name: "Relatório e Parecer CGE 2023",
-        // },
-      ],
-
-      query: "",
+      history: [],
+      query: '',
     };
   },
   mounted() {
     window.mainExecution();
 
     this.$http
-      .get("rpcge.json")
+      .get('contas.json')
       .then((data) => {
         this.history = data.data.d.results
-          .filter((i) => i.Name !== "Forms")
+          .filter(
+            (i) =>
+              i.Name !== 'Forms' &&
+              i.Name.toLowerCase().includes('relatórios e pareceres')
+          )
           .sort((a, b) => a.Name.localeCompare(b.Name))
           .reverse();
-        // this.history = this.history.filter(i => i.Name !== 'Forms').sort((a, b) => a.Name.localeCompare(b.Name)).reverse()
-
         this.history.forEach((item) => {
           item.Files.results = item.Files.results.sort((a, b) =>
             a.Name.localeCompare(b.Name)
-          )
+          );
           this.allItems.push(item);
         });
+
         this.history = this.allItems;
       })
       .catch((error) => {
