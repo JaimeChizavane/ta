@@ -1,38 +1,44 @@
 <template>
   <div class="wrapper">
-    <q-header/>
-    <q-slider/>
-     <q-blog/>   
- 
-    <q-galery/> 
-       <!--    <q-structure/>-->
-     <q-about-us-section/>
-<!--    <q-contact/>
+    <q-header />
+    <q-slider />
+    <q-slider-show />
+    <q-blog />
+
+    <q-galery />
+    <!--    <q-structure/>-->
+    <q-about-us-section />
+    <!--    <q-contact/>
 --    <q-slidergallery/>-->
-    <q-footer/>
+    <q-footer />
   </div>
 </template>
 
 <script>
 //import countapi from 'countapi-js';
-import QSlider from "@/components/Slider";
-import QAboutUsSection from "@/components/AboutUsSection";
+import QSlider from '@/components/Slider';
+import QAboutUsSection from '@/components/AboutUsSection';
 //import QContact from "@/components/Contact";
 // import QStructure from "@/components/Structure";
-import QGalery from "@/components/Galery";
-import QBlog from "@/components/Blog";
-import QHeader from "@/components/Header/Header";
-import QFooter from "@/components/Footer"; 
-
-
+import QGalery from '@/components/Galery';
+import QBlog from '@/components/Blog';
+import QHeader from '@/components/Header/Header';
+import QFooter from '@/components/Footer';
 
 export default {
   name: 'QHome',
-  components: { QBlog, QGalery,  QAboutUsSection, QSlider, QFooter, QHeader},
+  components: {
+    QBlog,
+    QGalery,
+    QAboutUsSection,
+    QSlider,
+    QFooter,
+    QHeader,
+  },
   data() {
     return {
-      topNews: []
-    }
+      topNews: [],
+    };
   },
   mounted: function() {
     // window.mainExecution()
@@ -40,18 +46,19 @@ export default {
   },
   methods: {
     getImageUrl(item) {
-      return item && item.Attachments ? process.env.VUE_APP_ROOT_DOCS + item.AttachmentFiles.results[0].ServerRelativeUrl : 'assets/images/blog/grid/1.jpg'
-    }, 
-    getVisitesUrl(){ 
+      return item && item.Attachments
+        ? process.env.VUE_APP_ROOT_DOCS +
+            item.AttachmentFiles.results[0].ServerRelativeUrl
+        : 'assets/images/blog/grid/1.jpg';
+    },
+    getVisitesUrl() {
       /*
       countapi.visits("extranet.ta.gov.mz","19dd30fa-bd8f-4ac0-a04a-eb035f08dfc4").then((result) => {
             document.getElementById("count_visitors").innerText = result.value;
             console.log(result.value);
       });
       */
-    }
-   
-
+    },
 
     // addToSlider(news) {
     //   news.forEach((article) => {
@@ -64,9 +71,6 @@ export default {
     //     })
     //   })
     // }
-  }
-}
+  },
+};
 </script>
-
-
-

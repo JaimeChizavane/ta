@@ -1,5 +1,5 @@
 <template>
-  <section class="slider" v-if="sliders.length">
+  <section class="slider" v-if="sliders.length" sty>
     <div
       class="slick-carousel carousel-arrows-light carousel-dots-light m-slides-0"
       data-slick='{"slidesToShow": 1, "arrows": true, "dots": true, "speed": 700,"fade": true,"cssEase": "linear", "autoplay": true}'
