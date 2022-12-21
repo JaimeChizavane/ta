@@ -14,6 +14,8 @@ import { BootstrapVue, IconsPlugin } from "bootstrap-vue";
 //import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 
+import vuetify from './plugins/vuetify'
+
 const loadimage = require("./assets/loading2.gif");
 
 Vue.config.productionTip = false;
@@ -83,5 +85,6 @@ Vue.filter("excerpt_shorter", function(value) {
 window.vm = new Vue({
     router,
     i18n,
-    render: (h) => h(App),
+    vuetify,
+    render: (h) => h(App)
 }).$mount("#app");

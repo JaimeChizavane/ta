@@ -1,54 +1,25 @@
 <template>
-  <section class="slider" v-if="sliders.length">
-    <div
-      class="slick-carousel carousel-arrows-light carousel-dots-light m-slides-0"
-      data-slick='{"slidesToShow": 1, "arrows": true, "dots": true, "speed": 700,"fade": true,"cssEase": "linear", "autoplay": true}'
+  <v-carousel
+    height="300"
+    cycle
+    :interval="5000"
+    :show-arrows="false"
+    hide-delimiter-background
+    class="slider"
+  >
+    <v-carousel-item
+      v-for="(item, i) in sliders"
+      :key="i"
+      :src="item.img"
+      class="align-v-h bg-overlay bg-overlay-gradient b-img"
     >
-      <div
-        class="slide-item align-v-h bg-overlay bg-overlay-gradient b-img"
-        v-for="(item, index) in sliders"
-        :key="index"
-      >
-        <div class="bg-img">
-          <img :src="item.img" alt="slide img" class="img-fluid" />
-        </div>
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <div class="slide__content">
-                <h1 class="pagetitle__heading">{{ item.title }}</h1>
-                <p class="slide__desc" v-html="item.subtitle"></p>
-                <!--                <div class="d-flex flex-wrap align-items-center">-->
-                <!--                  <router-link :to="item.to" class="btn btn__primary btn__primary-style2 mr-30">-->
-                <!--                    <i class="icon-arrow-right"></i>-->
-                <!--                    <span> Saber Mais</span>-->
-                <!--                  </router-link>-->
-                <!--                </div>-->
-              </div>
-              <!-- /.slide-content -->
-            </div>
-            <!-- /.col-xl-7 -->
-          </div>
-          <!-- /.row -->
-        </div>
-        <!-- /.container -->
-      </div>
-      <!-- /.slide-item -->
-    </div>
-    <!-- /.carousel -->
-  </section>
-  <!-- /.slider -->
+    </v-carousel-item>
+  </v-carousel>
 </template>
 
 <script>
 export default {
   name: 'QSlider',
-  watch: {
-    news: function() {
-      // this.sliders = this.sliders.concat(newVal)
-      // window.$('.slick-carousel').slick();
-    },
-  },
   data() {
     return {
       sliders: [
