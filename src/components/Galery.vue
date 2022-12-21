@@ -69,7 +69,7 @@
 
 <script>
 export default {
-  name: "QGallery",
+  name: 'QGallery',
   watch: {
     news: function() {
       // this.sliders = this.sliders.concat(newVal)
@@ -120,7 +120,7 @@ export default {
     getFileUrl(item) {
       return item && item.ServerRelativeUrl
         ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl
-        : "#";
+        : '#';
     },
     setActiveIndex(index) {
       this.activeIndex = index;
@@ -138,10 +138,10 @@ export default {
   },
   mounted() {
     this.$http
-      .get("images.json")
+      .get('images.json')
       .then((data) => {
         this.allImages = data.data.d.results
-          .filter((f) => f.Name !== "Forms")
+          .filter((f) => f.Name !== 'Forms')
           .flatMap((f) =>
             f.Folders.results.flatMap((fo) =>
               fo.Files.results.map((file) => {
@@ -175,6 +175,8 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
+  max-height: 400px;
+  max-width: 400px;
 }
 .carousel {
   display: flex;
