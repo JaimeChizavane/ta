@@ -1255,9 +1255,10 @@ h6 {
 
 .pagetitle__heading {
     color: #ffffff;
-    font-size: 75px;
+    font-size: 35px;
     line-height: 1.1;
     margin-bottom: 20px;
+    align-items: center;
 }
 
 .pagetitle__heading .text-underlined {
@@ -2728,7 +2729,7 @@ input[type=radio] {
     padding: 0;
     height: 100px;
     max-height: 100px;
-    background-color: #ffffff;
+    background-color: #6e1a3e !important;
     border-bottom: 1px solid #ededed;
     /*  dropdown-menu  */
 }
@@ -4501,10 +4502,7 @@ input[type=radio] {
 .slider .slide__desc {
     font-size: 17px;
     line-height: 1.5;
-    font-weight: 700;
     color: #ffffff;
-    max-width: 550px;
-    margin-bottom: 30px;
 }
 
 .slider .slick-dots {
@@ -4655,8 +4653,7 @@ input[type=radio] {
     }
     .slider .slide__desc {
         font-size: 15px;
-        font-weight: 400;
-        margin-bottom: 20px;
+        color: #ffffff;
     }
 }
 

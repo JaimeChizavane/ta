@@ -1,7 +1,6 @@
 <template>
   <div class="wrapper">
     <q-header />
-
     <q-slider-show />
     <q-blog />
 
@@ -32,10 +31,10 @@ export default {
     QBlog,
     QGalery,
     QAboutUsSection,
-
+    QSliderShow,
     QFooter,
     QHeader,
-    QSliderShow,
+    // QSlider,
   },
   data() {
     return {
