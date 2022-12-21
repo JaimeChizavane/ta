@@ -391,7 +391,7 @@ export default {
         // this.searcheable = this.items
         console.log('tamanho' + this.items.length);
 
-        console.log(this.items);
+        console.log(this.items[0]);
       })
       .catch((error) => {
         console.log(error);
