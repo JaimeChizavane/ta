@@ -3,11 +3,8 @@
     <q-header />
     <q-slider-show />
     <q-blog />
-    <v-row>
-      <v-col cols="12" md="8"> <q-galery /></v-col>
-      <v-col cols="12" md="4"></v-col>
-    </v-row>
 
+    <q-galery />
     <!--    <q-structure/>-->
     <q-about-us-section />
     <!--    <q-contact/>
