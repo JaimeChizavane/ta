@@ -1,5 +1,5 @@
 <template>
-  <section class="work-process pt-10 pb-10">
+  <section class="work-process pt-130 pb-130">
     <div class="bg-img">
       <img src="assets/images/backgrounds/2.jpg" alt="background" />
     </div>
@@ -79,38 +79,38 @@ export default {
   data() {
     return {
       allImages: [
-        {
-          src: 'assets/images/gallery02/IMG_0148.jpg',
-          subtitle: 'Abertura do ano Judicial',
-          Title: 'O Tribunal Administrativo1',
+        /*         {
+          src: "assets/images/gallery02/IMG_0148.jpg",
+          subtitle: "Abertura do ano Judicial",
+          Title: "O Tribunal Administrativo1",
           desc:
-            'É o órgão superior da hierarquia dos tribunais administrativos.',
-          to: { name: 'history' },
+            "É o órgão superior da hierarquia dos tribunais administrativos.",
+          to: { name: "history" },
         },
         {
-          src: 'assets/images/gallery02/IMG_0148.jpg',
-          subtitle: 'Abertura do ano Judicial',
-          Title: 'O Tribunal Administrativo1',
+          src: "assets/images/gallery02/IMG_0148.jpg",
+          subtitle: "Abertura do ano Judicial",
+          Title: "O Tribunal Administrativo1",
           desc:
-            'É o órgão superior da hierarquia dos tribunais administrativos.',
-          to: { name: 'history' },
+            "É o órgão superior da hierarquia dos tribunais administrativos.",
+          to: { name: "history" },
         },
         {
-          scr: 'assets/images/gallery02/IMG_0152.jpg',
-          subtitle: 'Abertura do ano Judicial 2',
-          Title: 'O Tribunal Administrativo2',
+          scr: "assets/images/gallery02/IMG_0152.jpg",
+          subtitle: "Abertura do ano Judicial 2",
+          Title: "O Tribunal Administrativo2",
           desc:
-            'É o órgão superior da hierarquia dos tribunais administrativos.',
-          to: { name: 'history' },
+            "É o órgão superior da hierarquia dos tribunais administrativos.",
+          to: { name: "history" },
         },
         {
-          src: 'assets/images/gallery02/IMG_0159.jpg',
-          subtitle: 'Abertura do ano Judicial',
-          Title: 'Tribunal Administrativo em prol da Justiça',
+          src: "assets/images/gallery02/IMG_0159.jpg",
+          subtitle: "Abertura do ano Judicial",
+          Title: "Tribunal Administrativo em prol da Justiça",
           desc:
-            'O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.',
-          to: { name: 'history' },
-        },
+            "O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.",
+          to: { name: "history" },
+        }, */
       ],
       activeIndex: 0,
       slideInterval: null,
@@ -175,7 +175,8 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 200px;
+  max-height: 400px;
+  max-width: 400px;
 }
 .carousel {
   display: flex;
