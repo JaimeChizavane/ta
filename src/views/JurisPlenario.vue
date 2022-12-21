@@ -216,26 +216,26 @@
   </div>
 </template>
 <script>
-import QFooter from "@/components/Footer";
-import QHeader from "@/components/Header/Header";
-import QBreadCrumb from "@/components/BreadCrumb";
+import QFooter from '@/components/Footer';
+import QHeader from '@/components/Header/Header';
+import QBreadCrumb from '@/components/BreadCrumb';
 //import Datatable from "@/components/Datatable/Datatable.vue";
 
 export default {
-  name: "QAboutUs",
+  name: 'QAboutUs',
   components: { QBreadCrumb, QHeader, QFooter },
   methods: {
     clear() {
       this.query = {
-        assunto: "",
-        tipo: "",
-        processo: "",
-        acordao: "",
-        pessoas: "",
-        relator: "",
-        data: "",
-        seccao_origem: "",
-        subseccao_origem: "",
+        assunto: '',
+        tipo: '',
+        processo: '',
+        acordao: '',
+        pessoas: '',
+        relator: '',
+        data: '',
+        seccao_origem: '',
+        subseccao_origem: '',
       };
 
       this.search();
@@ -243,7 +243,7 @@ export default {
     getFileUrl(item) {
       return item && item.ServerRelativeUrl
         ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl
-        : "#";
+        : '#';
     },
     search() {
       if (
@@ -257,39 +257,39 @@ export default {
       ) {
         this.items = this.allItems.filter(
           (file) =>
-            (this.query.assunto === "" ||
+            (this.query.assunto === '' ||
               file.Assunto.results.find((i) =>
                 i?.toLowerCase().includes(this.query.assunto.toLowerCase())
               )) &&
-            (this.query.relator === "" ||
+            (this.query.relator === '' ||
               file.Relator?.toLowerCase().includes(
                 this.query.relator.toLowerCase()
               )) &&
-            (this.query.data === "" ||
+            (this.query.data === '' ||
               file.Data_x0020_do_x0020_Ac_x00f3_rd_?.toLowerCase().includes(
                 this.query.data.toLowerCase()
               )) &&
-            (this.query.tipo === "" ||
+            (this.query.tipo === '' ||
               this.query.tipo
                 .toLowerCase()
                 .includes(
                   file.Ac_x00f3_rd_x00e3_o_x0020_ou_x00?.toLowerCase()
                 )) &&
-            (this.query.seccao_origem === "" ||
+            (this.query.seccao_origem === '' ||
               this.query.seccao_origem
                 .toLowerCase()
                 .includes(
                   file.Sec_x00e7__x00e3_o_x0020_de_x002?.toLowerCase()
                 )) &&
-            (this.query.subseccao_origem === "" ||
+            (this.query.subseccao_origem === '' ||
               this.query.subseccao_origem
                 .toLowerCase()
                 .includes(file.Subsec_x00e7__x00e3_o?.toLowerCase())) &&
-            (this.query.processo === "" ||
+            (this.query.processo === '' ||
               file.N_x002e__x00ba__x0020_do_x0020_P?.toLowerCase().includes(
                 this.query.processo.toLowerCase()
               )) &&
-            (this.query.acordao === "" ||
+            (this.query.acordao === '' ||
               file.N_x00b0__x0020_do_x0020_Acord_x0?.toLowerCase().includes(
                 this.query.acordao.toLowerCase()
               ))
@@ -306,17 +306,17 @@ export default {
       assuntos: [],
       areas: [],
       tipos: [],
-      subsecs: ["1.ª Subsecção", "2.ª Subsecção"],
+      subsecs: ['1.ª Subsecção', '2.ª Subsecção'],
       query: {
-        assunto: "",
-        tipo: "",
-        processo: "",
-        acordao: "",
-        pessoas: "",
-        relator: "",
-        data: "",
-        seccao_origem: "",
-        subseccao_origem: "",
+        assunto: '',
+        tipo: '',
+        processo: '',
+        acordao: '',
+        pessoas: '',
+        relator: '',
+        data: '',
+        seccao_origem: '',
+        subseccao_origem: '',
       },
       filtered: [],
       searcheable: [],
@@ -330,66 +330,66 @@ export default {
           thClasss: "btn__primary",
         }, */
         {
-          key: "Sec_x00e7__x00e3_o_x0020_de_x002",
-          label: "Secção de origem",
+          key: 'Sec_x00e7__x00e3_o_x0020_de_x002',
+          label: 'Secção de origem',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
         {
-          key: "N_x00b0__x0020_do_x0020_Acord_x0",
-          label: "N. Acórdão",
+          key: 'OData__N_x00b0__x0020_do_x0020_Acord_x',
+          label: 'N. Acórdão',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
         {
-          key: "N_x002e__x00ba__x0020_do_x0020_P",
-          label: "N. do Processo",
+          key: 'Numero_x0020_Processo',
+          label: 'N. do Processo',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
         {
-          key: "Data_do_Acórdão",
-          label: "Data do Acórdão",
+          key: 'Data_do_Acórdão',
+          label: 'Data do Acórdão',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
         {
-          key: "Relator",
-          label: "Relator",
+          key: 'OData__Relator',
+          label: 'Relator',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
         {
-          key: "Assunto",
-          label: "Assunto",
+          key: 'Assunto',
+          label: 'Assunto',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
         {
-          key: "Sumario",
-          label: "Sumário",
+          key: 'Sumario',
+          label: 'Sumário',
           sortable: true,
-          thClass: "btn__primary col-3",
+          thClass: 'btn__primary col-3',
         },
         {
-          key: "Document",
-          label: "Documento",
+          key: 'Document',
+          label: 'Documento',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
-        "",
+        '',
       ],
     };
   },
   mounted() {
     this.$http
-      .get("jurispudenciaPlenario.json")
+      .get('jurispudenciaPlenario.json')
       .then((data) => {
         this.allItems = data.data.d.results;
         this.items = this.allItems;
         // this.searcheable = this.items.flatMap(item => item.Folders.results.flatMap(s => s.Files.results))
         // this.searcheable = this.items
-        console.log("tamanho" + this.items.length);
+        console.log('tamanho' + this.items.length);
 
         console.log(this.items);
       })
@@ -398,7 +398,7 @@ export default {
       });
 
     this.$http
-      .get("assuntos.json")
+      .get('assuntos.json')
       .then((data) => {
         this.assuntos = data.data.d.results;
 
@@ -409,7 +409,7 @@ export default {
       });
 
     this.$http
-      .get("tipos.json")
+      .get('tipos.json')
       .then((data) => {
         this.tipos = data.data.d.results;
 
@@ -420,7 +420,7 @@ export default {
       });
 
     this.$http
-      .get("seccoes.json")
+      .get('seccoes.json')
       .then((data) => {
         this.areas = data.data.d.results;
 
