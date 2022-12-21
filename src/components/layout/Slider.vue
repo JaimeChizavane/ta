@@ -13,8 +13,7 @@
 
           <!-- /.container -->
         </v-img>
-        <v-card-title class="white--text mt-8">
-          {{ item.subtitle }}
+        <v-card-title class="white--text mt-8" v-html="item.subtitle">
         </v-card-title>
       </v-card>
     </v-carousel-item>
