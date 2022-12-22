@@ -1,7 +1,8 @@
 <template>
   <div class="wrapper">
     <q-header />
-    <q-slider-show />
+    <q-slider />
+
     <q-blog />
 
     <q-galery />
@@ -15,8 +16,8 @@
 
 <script>
 //import countapi from 'countapi-js';
-//import QSlider from '@/components/Slider';
-import QSliderShow from '@/components/layout/Slider.vue';
+import QSlider from '@/components/Slider';
+//import QSliderShow from '@/components/layout/Slider.vue';
 import QAboutUsSection from '@/components/AboutUsSection';
 //import QContact from "@/components/Contact";
 // import QStructure from "@/components/Structure";
@@ -31,10 +32,10 @@ export default {
     QBlog,
     QGalery,
     QAboutUsSection,
-    QSliderShow,
+    //QSliderShow,
     QFooter,
     QHeader,
-    // QSlider,
+    QSlider,
   },
   data() {
     return {

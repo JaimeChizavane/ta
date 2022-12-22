@@ -1,23 +1,37 @@
 <template>
-  <v-carousel
-    height="250"
-    cycle
-    :interval="10000"
-    :show-arrows="false"
-    class="mt-1"
+  <section
+    class="page-title page-title-layout12 bg-overlay bg-overlay-gradient bg-parallax text-center"
   >
-    <v-carousel-item v-for="(item, i) in sliders" :key="i">
-      <v-card class="align-center" tile>
-        <v-img :src="item.img" height="200px">
-          <!-- /.row -->
+    <v-carousel
+      height="250"
+      cycle
+      :interval="10000"
+      :show-arrows="false"
+      class="mt-1"
+    >
+      <v-carousel-item v-for="(item, i) in sliders" :key="i">
+        <v-card class="align-center" tile>
+          <v-img :src="item.img" height="200px">
+            <div class="row align-items-center">
+              <div class="slide__content">
+                <h1 class="pagetitle__heading">{{ item.title }}</h1>
 
-          <!-- /.container -->
-        </v-img>
-        <v-card-title class="white--text mt-8" v-html="item.subtitle">
-        </v-card-title>
-      </v-card>
-    </v-carousel-item>
-  </v-carousel>
+                <!--                <div class="d-flex flex-wrap align-items-center">-->
+                <!--                  <router-link :to="item.to" class="btn btn__primary btn__primary-style2 mr-30">-->
+                <!--                    <i class="icon-arrow-right"></i>-->
+                <!--                    <span> Saber Mais</span>-->
+                <!--                  </router-link>-->
+                <!--                </div>-->
+              </div>
+              <!-- /.slide-content -->
+            </div>
+            <!-- /.col-xl-7 -->
+          </v-img>
+          <v-card-title v-html="item.subtitle"> </v-card-title>
+        </v-card>
+      </v-carousel-item>
+    </v-carousel>
+  </section>
 </template>
 
 <script>
@@ -26,7 +40,7 @@ export default {
   data() {
     return {
       sliders: [
-        /*  {
+        {
           img: 'assets/images/sliders/1.jpg',
           subtitle:
             'Seja bem-vindo ao site do Tribunal Administrativo de Moçambique.',
@@ -51,7 +65,7 @@ export default {
           desc:
             'O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.',
           to: { name: 'history' },
-        },*/
+        },
       ],
     };
   },
