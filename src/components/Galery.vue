@@ -1,5 +1,5 @@
 <template>
-  <section class="work-process pt-130 pb-130">
+  <section class="work-process pt-10 pb-10">
     <div class="bg-img">
       <img src="assets/images/backgrounds/2.jpg" alt="background" />
     </div>
@@ -7,7 +7,7 @@
       <div class="row d-flex justify-content-center ">
         <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 ">
           <div class="banners-wrapper sticky-top">
-            <div class="tab-content mb-50">
+            <div class="tab-content">
               <div class="carousel" v-if="allImages.length">
                 <div class="carousel-inner">
                   <div
@@ -69,7 +69,7 @@
 
 <script>
 export default {
-  name: "QGallery",
+  name: 'QGallery',
   watch: {
     news: function() {
       // this.sliders = this.sliders.concat(newVal)
@@ -79,38 +79,38 @@ export default {
   data() {
     return {
       allImages: [
-        /*         {
-          src: "assets/images/gallery02/IMG_0148.jpg",
-          subtitle: "Abertura do ano Judicial",
-          Title: "O Tribunal Administrativo1",
+        {
+          src: 'assets/images/gallery02/IMG_0148.jpg',
+          subtitle: 'Abertura do ano Judicial',
+          Title: 'O Tribunal Administrativo1',
           desc:
-            "É o órgão superior da hierarquia dos tribunais administrativos.",
-          to: { name: "history" },
+            'É o órgão superior da hierarquia dos tribunais administrativos.',
+          to: { name: 'history' },
         },
         {
-          src: "assets/images/gallery02/IMG_0148.jpg",
-          subtitle: "Abertura do ano Judicial",
-          Title: "O Tribunal Administrativo1",
+          src: 'assets/images/gallery02/IMG_0148.jpg',
+          subtitle: 'Abertura do ano Judicial',
+          Title: 'O Tribunal Administrativo1',
           desc:
-            "É o órgão superior da hierarquia dos tribunais administrativos.",
-          to: { name: "history" },
+            'É o órgão superior da hierarquia dos tribunais administrativos.',
+          to: { name: 'history' },
         },
         {
-          scr: "assets/images/gallery02/IMG_0152.jpg",
-          subtitle: "Abertura do ano Judicial 2",
-          Title: "O Tribunal Administrativo2",
+          scr: 'assets/images/gallery02/IMG_0152.jpg',
+          subtitle: 'Abertura do ano Judicial 2',
+          Title: 'O Tribunal Administrativo2',
           desc:
-            "É o órgão superior da hierarquia dos tribunais administrativos.",
-          to: { name: "history" },
+            'É o órgão superior da hierarquia dos tribunais administrativos.',
+          to: { name: 'history' },
         },
         {
-          src: "assets/images/gallery02/IMG_0159.jpg",
-          subtitle: "Abertura do ano Judicial",
-          Title: "Tribunal Administrativo em prol da Justiça",
+          src: 'assets/images/gallery02/IMG_0159.jpg',
+          subtitle: 'Abertura do ano Judicial',
+          Title: 'Tribunal Administrativo em prol da Justiça',
           desc:
-            "O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.",
-          to: { name: "history" },
-        }, */
+            'O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.',
+          to: { name: 'history' },
+        },
       ],
       activeIndex: 0,
       slideInterval: null,
@@ -120,7 +120,7 @@ export default {
     getFileUrl(item) {
       return item && item.ServerRelativeUrl
         ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl
-        : "#";
+        : '#';
     },
     setActiveIndex(index) {
       this.activeIndex = index;
@@ -138,10 +138,10 @@ export default {
   },
   mounted() {
     this.$http
-      .get("images.json")
+      .get('images.json')
       .then((data) => {
         this.allImages = data.data.d.results
-          .filter((f) => f.Name !== "Forms")
+          .filter((f) => f.Name !== 'Forms')
           .flatMap((f) =>
             f.Folders.results.flatMap((fo) =>
               fo.Files.results.map((file) => {
