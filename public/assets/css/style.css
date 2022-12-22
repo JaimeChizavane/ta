@@ -1243,6 +1243,8 @@ h6 {
 
 .header-transparent+.page-title {
     margin-top: -135px;
+    padding-top: 135px;
+    height: 350px;
 }
 
 .pagetitle__subheading {
@@ -1268,11 +1270,6 @@ h6 {
     font-weight: 700;
     color: #f9f9f9;
     margin-bottom: 32px;
-}
-
-.page-title {
-    padding-top: 260px;
-    padding-bottom: 140px;
 }
 
 .page-title .breadcrumb-item+.breadcrumb-item::before {
@@ -1380,10 +1377,6 @@ h6 {
     background-color: #6e1a3e;
 }
 
-.page-title-layout12 {
-    padding-bottom: 120px;
-}
-
 .page-title-layout13 {
     padding-bottom: 20px;
 }
@@ -1447,9 +1440,6 @@ h6 {
         padding-top: 90px;
         padding-bottom: 90px;
     }
-    .page-title .pagetitle__heading {
-        font-size: 30px;
-    }
 }
 
 
@@ -1469,11 +1459,6 @@ h6 {
         font-size: 14px;
         font-weight: 400;
         margin-bottom: 10px;
-    }
-    .page-title .pagetitle__heading {
-        font-size: 28px !important;
-        line-height: 1.2;
-        margin-bottom: 20px;
     }
     .page-title-layout5 {
         padding-bottom: 115px;
@@ -4419,7 +4404,7 @@ input[type=radio] {
 --------------------------*/
 
 .header-transparent+.slider {
-    margin-top: -100px;
+    margin-top: -135px;
 }
 
 .header-transparent.header-full+.slider {
@@ -4427,13 +4412,13 @@ input[type=radio] {
 }
 
 .header-transparent+.slider .slide-item {
-    padding-top: 100px;
-    height: 300px;
+    padding-top: 135px;
+    height: 350px;
 }
 
 .header-transparent.header-full+.slider .slide-item {
-    padding-top: 100px;
-    height: 300px;
+    padding-top: 135px;
+    height: 350px;
 }
 
 .slider {
@@ -4441,15 +4426,14 @@ input[type=radio] {
 }
 
 .slider .slide-item {
-    height: 300px;
-    min-height: 300px;
+    height: 350px;
+    min-height: 350px;
 }
 
 .slider .slide__subtitle {
     display: block;
     font-family: "Roboto", sans-serif;
     font-size: 16px;
-    font-weight: 700;
     color: #f9f9f9;
     margin-bottom: 8px;
 }
@@ -4607,8 +4591,6 @@ input[type=radio] {
         margin-top: 0 !important;
     }
     .slider .slide-item {
-        min-height: 0;
-        padding: 100px 10px;
         height: auto !important;
     }
     .slider .slide__desc {
