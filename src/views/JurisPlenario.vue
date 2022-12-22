@@ -280,7 +280,7 @@ export default {
             (this.query.subseccao_origem === '' ||
               this.query.subseccao_origem
                 .toLowerCase()
-                .includes(file.Subsec_x00e7__x00e3_o?.toLowerCase())) &&
+                .includes(file.subseccao_origem?.toLowerCase())) &&
             (this.query.processo === '' ||
               file.n_processo
                 ?.toLowerCase()
@@ -350,7 +350,7 @@ export default {
           thClass: 'btn__primary',
         },
         {
-          key: 'OData__Relator',
+          key: 'relator',
           label: 'Relator',
           sortable: true,
           thClass: 'btn__primary',
@@ -384,17 +384,24 @@ export default {
         this.allItems = data.data.d.results.map((f) => {
           return {
             seccao_origem: f.Sec_x00e7__x00e3_o_x0020_de_x002,
-            n_processo: f.Numero_x0020_Processo,
-            n_acordao: f.OData__N_x00b0__x0020_do_x0020_Acord_x,
+            n_processo: f.Numero_x0020_Processo
+              ? f.Numero_x0020_Processo
+              : f.NProcesso,
+            n_acordao: f.OData__N_x00b0__x0020_do_x0020_Acord_x
+              ? f.OData__N_x00b0__x0020_do_x0020_Acord_x
+              : f.N_x00b0__x0020_do_x0020_Acord_x0,
             data_acordao: f.Data_x0020_do_x0020_Ac_x00f3_rd_,
-            relator: f.OData__Relator,
+            relator: f.OData__Relator ? f.OData__Relator : f.Relator,
             assunto: f.Assunto.results,
             sumario: f.Sum_x00e1_rio,
             documento: f.AttachmentFiles.results,
             tipo_acordao: f.Ac_x00f3_rd_x00e3_o_x0020_ou_x00,
+            subseccao: f.Subsec_x00e7__x00e3_o,
           };
         });
-        this.items = this.allItems;
+        this.items = this.allItems
+          .sort((a, b) => new Date(a.data_acordao) - new Date(b.data_acordao))
+          .reverse();
         // this.searcheable = this.items.flatMap(item => item.Folders.results.flatMap(s => s.Files.results))
         // this.searcheable = this.items
         console.log('tamanho' + this.items.length);
