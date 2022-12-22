@@ -289,6 +289,15 @@ const routes = [{
             import ('@/views/JurisPlenario.vue'),
     },
     {
+        path: '/jurispendency_1secao',
+        name: 'jurispendency_1secao',
+        meta: {
+            display: 'menus.jurispendency_1secao',
+        },
+        component: () =>
+            import ('@/views/Juris1Secao.vue'),
+    },
+    {
         path: '/sub_section',
         name: 'sub_section',
         meta: {
@@ -1365,8 +1374,6 @@ const routes = [{
         component: () =>
             import ('@/views/aduaneiro/tadps/Home.vue'),
     },
-
-
 ];
 
 const router = new VueRouter({

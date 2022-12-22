@@ -58,6 +58,7 @@
             "others": "Outros",
             "news": "Notícias",
             "jurispendency_plenario": "Jurisprudência do Plenário",
+            "jurispendency_1secao": "Jurisprudência da 1.ª Secção",
             "plenary": "Plenário",
             "tax_courts": "Tribunais Fiscais",
             "customs_courts": "Tribunais Aduaneiros",
@@ -69,8 +70,6 @@
             "tfpm": "Tribunal Fiscal da Província de Maputo",
             "tfps": "Tribunal Fiscal da Província de Sofala",
             "tadcm": "Tribunal Aduaneiro da Cidade de Maputo"
-
-
         },
         "search": "Pesquisar",
         "read_more": "Ler mais",
