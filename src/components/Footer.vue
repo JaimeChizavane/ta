@@ -1,9 +1,8 @@
 <template>
   <div>
-
     <footer class="footer bg-secondary">
       <div class="container">
-        <div class="footer-top pt-50 pb-30">
+        <div class="footer-top pt-10 pb-10">
           <div class="row">
             <!-- <div class="col-sm-4 col-md-2 col-lg-4">
               <img src="assets/images/logo/logo-light-small.png" alt="logo" class="mb-30">
@@ -20,17 +19,20 @@
                 </button>
               </form>
             </div> --><!-- /.col-lg-6 -->
-          </div><!-- /.row -->
-        </div><!-- /.footer-top -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.footer-top -->
         <div class="footer-primary">
           <div class="row">
-            <div class="col-sm-4 col-md-4 col-lg-4 footer-widget footer-widget-about">
+            <div
+              class="col-sm-4 col-md-4 col-lg-4 footer-widget footer-widget-about"
+            >
               <div class="footer-widget__content">
                 <div class="contact-info">
                   <h6 class="footer-widget__title">Contacto</h6>
                   <ul class="contact-list list-unstyled">
-                    <li class="color-gray">Entre em contacto connosco.
-                    </li>
+                    <li class="color-gray">Entre em contacto connosco.</li>
                     <li class="mt-20 mb-20">
                       <a href="tel:21345002" class="phone-number">
                         <i class="icon-phone"></i> <span>+258 21345002/3</span>
@@ -46,44 +48,86 @@
                         <i class="icon-website"></i> <span>www.ta.gov.mz</span>
                       </a>
                     </li>
-                    <li class="color-body">Praça da Independência, N.º1117, Maputo - Moçambique</li>
+                    <li class="color-body">
+                      Praça da Independência, N.º1117, Maputo - Moçambique
+                    </li>
                   </ul>
-                </div><!-- /.contact-info -->
+                </div>
+                <!-- /.contact-info -->
 
                 <!--                <ul class="social-icons list-unstyled mb-0">-->
                 <!--                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>-->
                 <!--                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>-->
                 <!--                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>-->
                 <!--                </ul>&lt;!&ndash; /.social-icons &ndash;&gt;-->
-              </div><!-- /.footer-widget__content -->
+              </div>
+              <!-- /.footer-widget__content -->
             </div>
-            <div class="col-sm-4 col-md-4 col-lg-4 footer-widget footer-widget-about">
+            <div
+              class="col-sm-4 col-md-4 col-lg-4 footer-widget footer-widget-about"
+            >
               <div class="contact-info">
                 <h6 class="footer-widget__title">Links Importantes</h6>
                 <ul class="contact-list list-unstyled">
-                  <li><a href="https://www.portaldogoverno.gov.mz/por/" target="_blank" class="phone-number"> Portal do Governo de Moçambique </a>
+                  <li>
+                    <a
+                      href="https://www.portaldogoverno.gov.mz/por/"
+                      target="_blank"
+                      class="phone-number"
+                    >
+                      Portal do Governo de Moçambique
+                    </a>
                   </li>
-                   <li><a href="https://www.pgr.gov.mz/por#" target="_blank" class="phone-number"> Procuradoria-Geral da Republica </a>
+                  <li>
+                    <a
+                      href="https://www.pgr.gov.mz/por#"
+                      target="_blank"
+                      class="phone-number"
+                    >
+                      Procuradoria-Geral da Republica
+                    </a>
                   </li>
-                   <li><a href="https://www.presidencia.gov.mz/#" target="_blank" class="phone-number"> Presidência da Republica de Moçambique </a>
+                  <li>
+                    <a
+                      href="https://www.presidencia.gov.mz/#"
+                      target="_blank"
+                      class="phone-number"
+                    >
+                      Presidência da Republica de Moçambique
+                    </a>
                   </li>
-
                 </ul>
               </div>
-            </div> <!--links importantes-->
-            <div class="col-sm-4 col-md-4 col-lg-4 footer-widget footer-widget-about">
+            </div>
+            <!--links importantes-->
+            <div
+              class="col-sm-4 col-md-4 col-lg-4 footer-widget footer-widget-about"
+            >
               <div class="contact-info">
                 <h6 class="footer-widget__title">Redes Sociais</h6>
                 <ul class="contact-list list-unstyled">
-                  <li class="mt-20 mb-20"><a target="_blank" href="https://www.facebook.com/Tribunal-Administrativo-de-Mo%C3%A7ambique-102816889005908" class="phone-number"><i class="fab fa-facebook"></i><span> facebook</span>
-                  </a></li>
-                  <li class="mt-20 mb-20"><a href="#" class="phone-number"><i class="fab fa-instagram"></i> <span> instagram</span>
-                  </a></li>
-                  <li class="mt-20 mb-20"><a href="#" class="phone-number"><i class="fab fa-twitter"></i>
-                    <span> twitter </span></a></li>
+                  <li class="mt-20 mb-20">
+                    <a
+                      target="_blank"
+                      href="https://www.facebook.com/Tribunal-Administrativo-de-Mo%C3%A7ambique-102816889005908"
+                      class="phone-number"
+                      ><i class="fab fa-facebook"></i><span> facebook</span>
+                    </a>
+                  </li>
+                  <li class="mt-20 mb-20">
+                    <a href="#" class="phone-number"
+                      ><i class="fab fa-instagram"></i> <span> instagram</span>
+                    </a>
+                  </li>
+                  <li class="mt-20 mb-20">
+                    <a href="#" class="phone-number"
+                      ><i class="fab fa-twitter"></i> <span> twitter </span></a
+                    >
+                  </li>
                 </ul>
               </div>
-            </div> <!--redes sociais-->
+            </div>
+            <!--redes sociais-->
             <!--  <div class="col-sm-6 col-md-6 col-lg-2 footer-widget footer-widget-nav" v-for="(menu, index) in menus"
                   :key="index">
                <h6 class="footer-widget__title">{{ $t(menu.name) | upper }}</h6>
@@ -103,12 +147,18 @@
         </div>
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12 text-center pb-40">
-            <span class="fz-14">&copy; {{year}}, Todos Direitos reservados. Desenvolvido com </span>
+            <span class="fz-14"
+              >&copy; {{ year }}, Todos Direitos reservados. Desenvolvido com
+            </span>
             <a class="fz-14 color-primary" href="#">AMBISIG</a>
-          </div><!-- /.col-lg-12 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </footer><!-- /.Footer -->
+          </div>
+          <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </footer>
+    <!-- /.Footer -->
     <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
 
     <div class="login-popup" id="login-popup">
@@ -118,18 +168,32 @@
           <p class="login-popup__desc">Mantenha-se conectado ao TA.</p>
           <div class="form-group mb-20">
             <i class="icon-mail input-icon"></i>
-            <input type="text" class="form-control" placeholder="Email">
+            <input type="text" class="form-control" placeholder="Email" />
           </div>
           <div class="form-group mb-20">
             <i class="icon-lock input-icon"></i>
-            <input type="password" class="form-control" placeholder="********">
+            <input
+              type="password"
+              class="form-control"
+              placeholder="********"
+            />
           </div>
           <div class="d-flex align-items-center justify-content-between mb-20">
-            <div class="custom-control custom-checkbox d-flex align-items-center">
-              <input type="checkbox" class="custom-control-input" id="customCheck1">
-              <label class="custom-control-label" for="customCheck1">Lembrar-me!</label>
+            <div
+              class="custom-control custom-checkbox d-flex align-items-center"
+            >
+              <input
+                type="checkbox"
+                class="custom-control-input"
+                id="customCheck1"
+              />
+              <label class="custom-control-label" for="customCheck1"
+                >Lembrar-me!</label
+              >
             </div>
-            <a href="#" class="fz-14 font-weight-bold color-secondary">Esqueci a password?</a>
+            <a href="#" class="fz-14 font-weight-bold color-secondary"
+              >Esqueci a password?</a
+            >
           </div>
           <button type="submit" class="btn btn__primary btn__block btn__xl">
             <span>Login</span>
@@ -137,59 +201,67 @@
           </button>
         </form>
         <div class="d-flex justify-content-center align-items-center mt-20">
-          <span class="color-white fz-14 font-weight-bold">Nao tem uma conta?</span>
+          <span class="color-white fz-14 font-weight-bold"
+            >Nao tem uma conta?</span
+          >
           <button id="go-register" class="go-register fz-14 font-weight-bold">
             <span>Register Here</span><i class="icon-arrow-right"></i>
           </button>
         </div>
       </div>
-    </div><!-- /.login-popup -->
+    </div>
+    <!-- /.login-popup -->
 
     <!-- /.login-popup -->
 
     <div class="search-popup">
-      <button type="button" class="search-popup__close"><i class="fas fa-times"></i></button>
+      <button type="button" class="search-popup__close">
+        <i class="fas fa-times"></i>
+      </button>
       <form class="search-popup__form" @submit.prevent="search">
-        <input type="text" class="search-popup__form__input" placeholder="Escreva e pressione ENTER"
-               v-model="searchQuery">
+        <input
+          type="text"
+          class="search-popup__form__input"
+          placeholder="Escreva e pressione ENTER"
+          v-model="searchQuery"
+        />
         <button class="search-popup__btn"><i class="icon-search"></i></button>
       </form>
-    </div><!-- /. search-popup -->
-  </div><!-- /.wrapper -->
+    </div>
+    <!-- /. search-popup -->
+  </div>
+  <!-- /.wrapper -->
 </template>
 
 <script>
-import menus from '@/mocking_data/menu.json'
+import menus from '@/mocking_data/menu.json';
 
 export default {
-  name: "QFooter",
+  name: 'QFooter',
   data() {
     return {
       searchQuery: '',
-      year:''
-    }
+      year: '',
+    };
   },
   computed: {
-    menus: function () {
+    menus: function() {
       return menus.filter((menu) => {
-        return menu.sub_menus && menu.sub_menus.length
-      })
-    }
+        return menu.sub_menus && menu.sub_menus.length;
+      });
+    },
   },
   methods: {
     search() {
-      window.$(".search-popup__close")[0].click()
+      window.$('.search-popup__close')[0].click();
 
-
-      this.$router.push({ name: 'search', query:{ query: this.searchQuery } })
-    }
+      this.$router.push({ name: 'search', query: { query: this.searchQuery } });
+    },
   },
   mounted() {
-    this.year = new Date().getFullYear()
-  }
-}
+    this.year = new Date().getFullYear();
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

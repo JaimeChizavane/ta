@@ -4014,8 +4014,8 @@ input[type=radio] {
 }
 
 .footer .footer-primary {
-    padding-top: 85px;
-    padding-bottom: 65px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-top: 2px solid #053362;
 }
 
@@ -4149,8 +4149,8 @@ input[type=radio] {
 
 @media (min-width: 320px) and (max-width: 1200px) {
     .footer .footer-primary {
-        padding-top: 30px;
-        padding-bottom: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     .footer .footer-secondary {
         padding-bottom: 20px;
