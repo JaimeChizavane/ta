@@ -146,18 +146,18 @@
               >
                 <template v-slot:cell(Data_do_Acórdão)="data">
                   <span class="job__location">
-                    {{ data.item.Data_x0020_do_x0020_Ac_x00f3_rd_ | date }}
+                    {{ data.item.data_acordao | date }}
                   </span>
                 </template>
                 <template v-slot:cell(Sumario)="data">
                   <span class="job__location">
-                    {{ data.item.Sum_x00e1_rio | excerpt }}
+                    {{ data.item.sumario | excerpt }}
                   </span>
                 </template>
                 <template v-slot:cell(Assunto)="data">
                   <div
                     class="job__meta"
-                    v-for="(subject, index) in data.item.Assunto.results"
+                    v-for="(subject, index) in data.item.assunto"
                     :key="'subject' + index"
                   >
                     <span class="job__location">
@@ -168,11 +168,11 @@
                 <template v-slot:cell(Document)="data">
                   <div
                     class="col-sm-12 col-md-12 col-lg-8"
-                    v-if="data.item.AttachmentFiles.results.length"
+                    v-if="data.item.documento.length"
                   >
                     <div
                       class="row mb-5"
-                      v-for="(file, index) in data.item.AttachmentFiles.results"
+                      v-for="(file, index) in data.item.documento"
                       :key="'file' + index"
                     >
                       <div class="col-sm-12 col-md-12 col-lg-9">
@@ -258,41 +258,37 @@ export default {
         this.items = this.allItems.filter(
           (file) =>
             (this.query.assunto === '' ||
-              file.Assunto.results.find((i) =>
+              file.assunto.find((i) =>
                 i?.toLowerCase().includes(this.query.assunto.toLowerCase())
               )) &&
             (this.query.relator === '' ||
-              file.Relator?.toLowerCase().includes(
-                this.query.relator.toLowerCase()
-              )) &&
+              file.relator
+                ?.toLowerCase()
+                .includes(this.query.relator.toLowerCase())) &&
             (this.query.data === '' ||
-              file.Data_x0020_do_x0020_Ac_x00f3_rd_?.toLowerCase().includes(
-                this.query.data.toLowerCase()
-              )) &&
+              file.data_acordao
+                ?.toLowerCase()
+                .includes(this.query.data.toLowerCase())) &&
             (this.query.tipo === '' ||
               this.query.tipo
                 .toLowerCase()
-                .includes(
-                  file.Ac_x00f3_rd_x00e3_o_x0020_ou_x00?.toLowerCase()
-                )) &&
+                .includes(file.tipo_acordao?.toLowerCase())) &&
             (this.query.seccao_origem === '' ||
               this.query.seccao_origem
                 .toLowerCase()
-                .includes(
-                  file.Sec_x00e7__x00e3_o_x0020_de_x002?.toLowerCase()
-                )) &&
+                .includes(file.seccao_origem?.toLowerCase())) &&
             (this.query.subseccao_origem === '' ||
               this.query.subseccao_origem
                 .toLowerCase()
                 .includes(file.Subsec_x00e7__x00e3_o?.toLowerCase())) &&
             (this.query.processo === '' ||
-              file.N_x002e__x00ba__x0020_do_x0020_P?.toLowerCase().includes(
-                this.query.processo.toLowerCase()
-              )) &&
+              file.n_processo
+                ?.toLowerCase()
+                .includes(this.query.processo.toLowerCase())) &&
             (this.query.acordao === '' ||
-              file.N_x00b0__x0020_do_x0020_Acord_x0?.toLowerCase().includes(
-                this.query.acordao.toLowerCase()
-              ))
+              file.n_acordao
+                ?.toLowerCase()
+                .includes(this.query.acordao.toLowerCase()))
         );
       } else {
         this.items = this.allItems;
@@ -330,19 +326,19 @@ export default {
           thClasss: "btn__primary",
         }, */
         {
-          key: 'Sec_x00e7__x00e3_o_x0020_de_x002',
+          key: 'seccao_origem',
           label: 'Secção de origem',
           sortable: true,
           thClass: 'btn__primary',
         },
         {
-          key: 'OData__N_x00b0__x0020_do_x0020_Acord_x',
+          key: 'n_acordao',
           label: 'N. Acórdão',
           sortable: true,
           thClass: 'btn__primary',
         },
         {
-          key: 'Numero_x0020_Processo',
+          key: ' n_processo',
           label: 'N. do Processo',
           sortable: true,
           thClass: 'btn__primary',
@@ -385,7 +381,19 @@ export default {
     this.$http
       .get('jurispudenciaPlenario.json')
       .then((data) => {
-        this.allItems = data.data.d.results;
+        this.allItems = data.data.d.results.map((f) => {
+          return {
+            seccao_origem: f.Sec_x00e7__x00e3_o_x0020_de_x002,
+            n_processo: f.Numero_x0020_Processo,
+            n_acordao: f.OData__N_x00b0__x0020_do_x0020_Acord_x,
+            data_acordao: f.Data_x0020_do_x0020_Ac_x00f3_rd_,
+            relator: f.OData__Relator,
+            assunto: f.Assunto.results,
+            sumario: f.Sum_x00e1_rio,
+            documento: f.AttachmentFiles.results,
+            tipo_acordao: f.Ac_x00f3_rd_x00e3_o_x0020_ou_x00,
+          };
+        });
         this.items = this.allItems;
         // this.searcheable = this.items.flatMap(item => item.Folders.results.flatMap(s => s.Files.results))
         // this.searcheable = this.items
