@@ -381,6 +381,8 @@ export default {
             seccao_origem: f.Sec_x00e7__x00e3_o_x0020_de_x002,
             n_processo: f.Numero_x0020_Processo
               ? f.Numero_x0020_Processo
+              : f.N_x002e__x00ba__x0020_do_x0020_P
+              ? f.N_x002e__x00ba__x0020_do_x0020_P
               : f.NProcesso,
             n_acordao: f.OData__N_x00b0__x0020_do_x0020_Acord_x
               ? f.OData__N_x00b0__x0020_do_x0020_Acord_x
