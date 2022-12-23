@@ -146,18 +146,18 @@
               >
                 <template v-slot:cell(Data_do_Acórdão)="data">
                   <span class="job__location">
-                    {{ data.item.Data_x0020_do_x0020_Ac_x00f3_rd_ | date }}
+                    {{ data.item.data_acordao | date }}
                   </span>
                 </template>
                 <template v-slot:cell(Sumario)="data">
                   <span class="job__location">
-                    {{ data.item.Sum_x00e1_rio | excerpt }}
+                    {{ data.item.sumario | excerpt }}
                   </span>
                 </template>
                 <template v-slot:cell(Assunto)="data">
                   <div
                     class="job__meta"
-                    v-for="(subject, index) in data.item.Assunto.results"
+                    v-for="(subject, index) in data.item.assunto"
                     :key="'subject' + index"
                   >
                     <span class="job__location">
@@ -168,16 +168,13 @@
                 <template v-slot:cell(Document)="data">
                   <div
                     class="col-sm-12 col-md-12 col-lg-8"
-                    v-if="data.item.AttachmentFiles.results.length"
+                    v-if="data.item.documento.length"
                   >
                     <div
                       class="row mb-5"
-                      v-for="(file, index) in data.item.AttachmentFiles.results"
+                      v-for="(file, index) in data.item.documento"
                       :key="'file' + index"
                     >
-                      <div class="col-sm-12 col-md-12 col-lg-9">
-                        <p class="job__desc" v-html="file.FileName"></p>
-                      </div>
                       <!-- /.col-lg-5 -->
                       <div
                         class="
@@ -216,26 +213,26 @@
   </div>
 </template>
 <script>
-import QFooter from "@/components/Footer";
-import QHeader from "@/components/Header/Header";
-import QBreadCrumb from "@/components/BreadCrumb";
+import QFooter from '@/components/Footer';
+import QHeader from '@/components/Header/Header';
+import QBreadCrumb from '@/components/BreadCrumb';
 //import Datatable from "@/components/Datatable/Datatable.vue";
 
 export default {
-  name: "QAboutUs",
+  name: 'QAboutUs',
   components: { QBreadCrumb, QHeader, QFooter },
   methods: {
     clear() {
       this.query = {
-        assunto: "",
-        tipo: "",
-        processo: "",
-        acordao: "",
-        pessoas: "",
-        relator: "",
-        data: "",
-        seccao_origem: "",
-        subseccao_origem: "",
+        assunto: '',
+        tipo: '',
+        processo: '',
+        acordao: '',
+        pessoas: '',
+        relator: '',
+        data: '',
+        seccao_origem: '',
+        subseccao_origem: '',
       };
 
       this.search();
@@ -243,7 +240,7 @@ export default {
     getFileUrl(item) {
       return item && item.ServerRelativeUrl
         ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl
-        : "#";
+        : '#';
     },
     search() {
       if (
@@ -257,42 +254,38 @@ export default {
       ) {
         this.items = this.allItems.filter(
           (file) =>
-            (this.query.assunto === "" ||
-              file.Assunto.results.find((i) =>
+            (this.query.assunto === '' ||
+              file.assunto.find((i) =>
                 i?.toLowerCase().includes(this.query.assunto.toLowerCase())
               )) &&
-            (this.query.relator === "" ||
-              file.Relator?.toLowerCase().includes(
-                this.query.relator.toLowerCase()
-              )) &&
-            (this.query.data === "" ||
-              file.Data_x0020_do_x0020_Ac_x00f3_rd_?.toLowerCase().includes(
-                this.query.data.toLowerCase()
-              )) &&
-            (this.query.tipo === "" ||
+            (this.query.relator === '' ||
+              file.relator
+                ?.toLowerCase()
+                .includes(this.query.relator.toLowerCase())) &&
+            (this.query.data === '' ||
+              file.data_acordao
+                ?.toLowerCase()
+                .includes(this.query.data.toLowerCase())) &&
+            (this.query.tipo === '' ||
               this.query.tipo
                 .toLowerCase()
-                .includes(
-                  file.Ac_x00f3_rd_x00e3_o_x0020_ou_x00?.toLowerCase()
-                )) &&
-            (this.query.seccao_origem === "" ||
+                .includes(file.tipo_acordao?.toLowerCase())) &&
+            (this.query.seccao_origem === '' ||
               this.query.seccao_origem
                 .toLowerCase()
-                .includes(
-                  file.Sec_x00e7__x00e3_o_x0020_de_x002?.toLowerCase()
-                )) &&
-            (this.query.subseccao_origem === "" ||
+                .includes(file.seccao_origem?.toLowerCase())) &&
+            (this.query.subseccao_origem === '' ||
               this.query.subseccao_origem
                 .toLowerCase()
-                .includes(file.Subsec_x00e7__x00e3_o?.toLowerCase())) &&
-            (this.query.processo === "" ||
-              file.N_x002e__x00ba__x0020_do_x0020_P?.toLowerCase().includes(
-                this.query.processo.toLowerCase()
-              )) &&
-            (this.query.acordao === "" ||
-              file.N_x00b0__x0020_do_x0020_Acord_x0?.toLowerCase().includes(
-                this.query.acordao.toLowerCase()
-              ))
+                .includes(file.subseccao_origem?.toLowerCase())) &&
+            (this.query.processo === '' ||
+              file.n_processo
+                ?.toLowerCase()
+                .includes(this.query.processo.toLowerCase())) &&
+            (this.query.acordao === '' ||
+              file.n_acordao
+                ?.toLowerCase()
+                .includes(this.query.acordao.toLowerCase()))
         );
       } else {
         this.items = this.allItems;
@@ -306,17 +299,17 @@ export default {
       assuntos: [],
       areas: [],
       tipos: [],
-      subsecs: ["1.ª Subsecção", "2.ª Subsecção"],
+      subsecs: ['1.ª Subsecção', '2.ª Subsecção'],
       query: {
-        assunto: "",
-        tipo: "",
-        processo: "",
-        acordao: "",
-        pessoas: "",
-        relator: "",
-        data: "",
-        seccao_origem: "",
-        subseccao_origem: "",
+        assunto: '',
+        tipo: '',
+        processo: '',
+        acordao: '',
+        pessoas: '',
+        relator: '',
+        data: '',
+        seccao_origem: '',
+        subseccao_origem: '',
       },
       filtered: [],
       searcheable: [],
@@ -330,81 +323,98 @@ export default {
           thClasss: "btn__primary",
         }, */
         {
-          key: "Sec_x00e7__x00e3_o_x0020_de_x002",
-          label: "Secção de origem",
+          key: 'seccao_origem',
+          label: 'Secção de origem',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
         {
-          key: "N_x00b0__x0020_do_x0020_Acord_x0",
-          label: "N. Acórdão",
+          key: 'n_acordao',
+          label: 'N. Acórdão',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
         {
-          key: "N_x002e__x00ba__x0020_do_x0020_P",
-          label: "N. do Processo",
+          key: 'n_processo',
+          label: 'N. do Processo',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
         {
-          key: "Data_do_Acórdão",
-          label: "Data do Acórdão",
+          key: 'Data_do_Acórdão',
+          label: 'Data do Acórdão',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
         {
-          key: "Relator",
-          label: "Relator",
+          key: 'relator',
+          label: 'Relator',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
         {
-          key: "Assunto",
-          label: "Assunto",
+          key: 'Assunto',
+          label: 'Assunto',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
         {
-          key: "Sumario",
-          label: "Sumário",
+          key: 'Sumario',
+          label: 'Sumário',
           sortable: true,
-          thClass: "btn__primary col-3",
+          thClass: 'btn__primary col-3',
         },
         {
-          key: "Document",
-          label: "Documento",
+          key: 'Document',
+          label: 'Documento',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
-        "",
+        '',
       ],
     };
   },
   mounted() {
     this.$http
-      .get("jurispudenciaAll.json")
+      .get('jurispudenciaAll.json')
       .then((data) => {
-        this.allItems = data.data.d.results;
+        this.allItems = data.data.d.results.map((f) => {
+          return {
+            seccao_origem: f.Sec_x00e7__x00e3_o_x0020_de_x002,
+            n_processo: f.Numero_x0020_Processo
+              ? f.Numero_x0020_Processo
+              : f.N_x002e__x00ba__x0020_do_x0020_P
+              ? f.N_x002e__x00ba__x0020_do_x0020_P
+              : f.NProcesso,
+            n_acordao: f.OData__N_x00b0__x0020_do_x0020_Acord_x
+              ? f.OData__N_x00b0__x0020_do_x0020_Acord_x
+              : f.NAcordao
+              ? f.NAcordao
+              : f.N_x00b0__x0020_do_x0020_Acord_x0,
+            data_acordao: f.Data_x0020_do_x0020_Ac_x00f3_rd_,
+            relator: f.OData__Relator ? f.OData__Relator : f.Relator,
+            assunto: f.Assunto.results,
+            sumario: f.Sum_x00e1_rio,
+            documento: f.AttachmentFiles.results,
+            tipo_acordao: f.Ac_x00f3_rd_x00e3_o_x0020_ou_x00,
+            subseccao: f.Subsec_x00e7__x00e3_o,
+          };
+        });
         this.items = this.allItems
-          .sort(
-            (a, b) =>
-              new Date(a.Data_x0020_do_x0020_Ac_x00f3_rd_) -
-              new Date(b.Data_x0020_do_x0020_Ac_x00f3_rd_)
-          )
+          .sort((a, b) => new Date(a.data_acordao) - new Date(b.data_acordao))
           .reverse();
         // this.searcheable = this.items.flatMap(item => item.Folders.results.flatMap(s => s.Files.results))
         // this.searcheable = this.items
-        console.log("tamanho" + this.items.length);
-
-        console.log(this.items);
+        console.log('tamanho' + this.items.length);
+        console.log(data.data.d.results[0]);
+        console.log(this.items[0]);
       })
       .catch((error) => {
         console.log(error);
       });
 
     this.$http
-      .get("assuntos.json")
+      .get('assuntos.json')
       .then((data) => {
         this.assuntos = data.data.d.results;
 
@@ -415,7 +425,7 @@ export default {
       });
 
     this.$http
-      .get("tipos.json")
+      .get('tipos.json')
       .then((data) => {
         this.tipos = data.data.d.results;
 
@@ -426,7 +436,7 @@ export default {
       });
 
     this.$http
-      .get("seccoes.json")
+      .get('seccoes.json')
       .then((data) => {
         this.areas = data.data.d.results;
 
