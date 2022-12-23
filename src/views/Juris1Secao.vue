@@ -49,7 +49,7 @@
                   </select>
                 </div>
 
-                <div class="col-md-4 col-sm-6">
+                <!--  <div class="col-md-4 col-sm-6">
                   <select
                     class="form-control bordered-box mb-20"
                     @change="search"
@@ -60,9 +60,9 @@
                       {{ tipo.Title }}
                     </option>
                   </select>
-                </div>
+                </div> -->
 
-                <div
+                <!--  <div
                   class="col-md-2 col-sm-6"
                   v-show="query.seccao_origem === '3a Secção'"
                 >
@@ -76,10 +76,17 @@
                       {{ tipo }}
                     </option>
                   </select>
+                </div> -->
+                <div class="col-md-4 col-sm-6">
+                  <input
+                    @change="search"
+                    v-model="query.data"
+                    type="date"
+                    class="form-control bordered-box mb-20"
+                    placeholder="Procurar por data do acordão..."
+                  />
                 </div>
-              </div>
-              <div class="form-row">
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4 col-sm-6">
                   <input
                     @keyup="search"
                     v-model="query.acordao"
@@ -88,7 +95,7 @@
                     placeholder="Procurar por acordão/despacho..."
                   />
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4 col-sm-6">
                   <input
                     @keyup="search"
                     v-model="query.processo"
@@ -97,22 +104,13 @@
                     placeholder="Procurar por n. do processo..."
                   />
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4 col-sm-6">
                   <input
                     @keyup="search"
                     v-model="query.relator"
                     type="text"
                     class="form-control bordered-box mb-20"
                     placeholder="Procurar por relator..."
-                  />
-                </div>
-                <div class="col-md-3 col-sm-6">
-                  <input
-                    @change="search"
-                    v-model="query.data"
-                    type="date"
-                    class="form-control bordered-box mb-20"
-                    placeholder="Procurar por data do acordão..."
                   />
                 </div>
               </div>

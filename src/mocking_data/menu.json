@@ -147,6 +147,11 @@
                 "sub_menus": []
             },
             {
+                "name": "menus.section1",
+                "to": "jurispendency_1secao",
+                "sub_menus": []
+            },
+            {
                 "name": "menus.acordion",
                 "to": "acordion",
                 "sub_menus": []
