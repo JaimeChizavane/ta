@@ -3099,7 +3099,7 @@ input[type=radio] {
 .header-full .navbar {
     height: 135px;
     max-height: 135px;
-    background-color: #6e1a3e !important;
+    /* background-color: #6e1a3e !important;*/
 }
 
 .header-full .navbar .nav__item .nav__item-link {
