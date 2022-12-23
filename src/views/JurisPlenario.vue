@@ -173,10 +173,6 @@
                       v-for="(file, index) in data.item.documento"
                       :key="'file' + index"
                     >
-                      <div class="col-sm-12 col-md-12 col-lg-9">
-                        <p class="job__desc" v-html="file.FileName"></p>
-                      </div>
-                      <!-- /.col-lg-5 -->
                       <div
                         class="
                           align-items-center

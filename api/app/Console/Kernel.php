@@ -59,6 +59,8 @@ use App\Console\Commands\FetchNewsTADCMCommand;
 use App\Console\Commands\FetchLawTADCMCommand;
 use App\Console\Commands\FetchFAQTADCMCommand;
 use App\Console\Commands\FetchJurispudencia1SecaoCommand;
+use App\Console\Commands\FetchJurispudencia2SecaoCommand;
+use App\Console\Commands\FetchJurispudencia3SecaoCommand;
 
 
 use App\Console\Commands\SPApiFetchAll;
@@ -130,6 +132,8 @@ class Kernel extends ConsoleKernel
         FetchLawTADCMCommand::class,
         FetchFAQTADCMCommand::class,
         FetchJurispudencia1SecaoCommand::class,
+        FetchJurispudencia2SecaoCommand::class,
+        FetchJurispudencia3SecaoCommand::class,
         SPApiFetchAll::class,
 
     ];

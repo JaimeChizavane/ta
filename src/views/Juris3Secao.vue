@@ -374,7 +374,7 @@ export default {
   },
   mounted() {
     this.$http
-      .get('jurispudencia1secao.json')
+      .get('jurispudencia3secao.json')
       .then((data) => {
         this.allItems = data.data.d.results.map((f) => {
           return {

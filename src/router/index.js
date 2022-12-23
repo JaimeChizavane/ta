@@ -298,6 +298,24 @@ const routes = [{
             import ('@/views/Juris1Secao.vue'),
     },
     {
+        path: '/jurispendency_2secao',
+        name: 'jurispendency_2secao',
+        meta: {
+            display: 'menus.jurispendency_2secao',
+        },
+        component: () =>
+            import ('@/views/Juris2Secao.vue'),
+    },
+    {
+        path: '/jurispendency_3secao',
+        name: 'jurispendency_3secao',
+        meta: {
+            display: 'menus.jurispendency_3secao',
+        },
+        component: () =>
+            import ('@/views/Juris3Secao.vue'),
+    },
+    {
         path: '/sub_section',
         name: 'sub_section',
         meta: {
