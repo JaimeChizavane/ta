@@ -77,6 +77,7 @@ class SPApiFetchAll extends Command
         FetchNewsTADCMCommand::class,
         FetchLawTADCMCommand::class,
         FetchFAQTADCMCommand::class,
+        FetchJurispudencia1SecaoCommand::class
     ];
 
     public function __construct()

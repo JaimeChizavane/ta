@@ -379,7 +379,7 @@ export default {
   },
   mounted() {
     this.$http
-      .get('jurispudenciaPlenario.json')
+      .get('jurispudencia1secao.json')
       .then((data) => {
         this.allItems = data.data.d.results.map((f) => {
           return {
@@ -405,7 +405,7 @@ export default {
         // this.searcheable = this.items.flatMap(item => item.Folders.results.flatMap(s => s.Files.results))
         // this.searcheable = this.items
         console.log('tamanho' + this.items.length);
-
+        console.log(data.data.d.results[0]);
         console.log(this.items[0]);
       })
       .catch((error) => {
