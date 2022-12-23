@@ -396,10 +396,11 @@ export default {
             documento: f.AttachmentFiles.results,
             tipo_acordao: f.Ac_x00f3_rd_x00e3_o_x0020_ou_x00,
             subseccao: f.Subsec_x00e7__x00e3_o,
+            Created: f.Created,
           };
         });
         this.items = this.allItems
-          .sort((a, b) => new Date(a.data_acordao) - new Date(b.data_acordao))
+          .sort((a, b) => new Date(a.Created) - new Date(b.Created))
           .reverse();
         // this.searcheable = this.items.flatMap(item => item.Folders.results.flatMap(s => s.Files.results))
         // this.searcheable = this.items
