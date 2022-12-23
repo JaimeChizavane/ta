@@ -3,63 +3,35 @@
     <div class="bg-img">
       <img src="assets/images/backgrounds/2.jpg" alt="background" />
     </div>
-    <div class="container">
-      <div class="row d-flex justify-content-center ">
-        <div class="col-sm-12 col-md-12 col-lg-10 col-xl-10 ">
-          <div class="banners-wrapper sticky-top">
-            <div class="tab-content">
-              <div class="carousel" v-if="allImages.length">
-                <div class="carousel-inner">
-                  <div
-                    class="carousel-iten"
-                    v-for="(image, index) in allImages"
-                    :key="index"
-                    :activeIndex="activeIndex"
-                    :index="index"
-                    v-show="activeIndex === index"
-                  >
-                    <div class="bg-primary col-sm-12 text-center">
-                      <span class=" " v-html="image.Title"></span>
-                    </div>
-                    <div class="video__banner">
-                      <img v-lazy="image.src" class="rounded" alt="banner" />
-                    </div>
+    <v-container class="col-md-6">
+      <v-carousel height="350" cycle class="mt-1" v-if="allImages.length">
+        <v-carousel-item v-for="(item, i) in allImages" :key="i">
+          <v-card>
+            <v-img v-lazy="item.src" class="rounded" alt="banner">
+              <v-app-bar flat class="bg-primary">
+                <span class="text-light text-uppercase">
+                  {{ item.Title }}
+                </span>
+              </v-app-bar>
+            </v-img>
 
-                    <button
-                      class="carousel-control left text-light "
-                      @click="prev()"
-                    >
-                      <i class="fa fa-arrow-left"></i>
-                    </button>
-                    <button
-                      class="carousel-control right text-light slick-next"
-                      @click="next()"
-                    >
-                      <i class="fa fa-arrow-right"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /.slider -->
-            <div
-              class="cta-banner mt-30 mb-30 d-flex flex-wrap align-items-center"
-            >
-              <h4 class="cta__title my-3 pr-30">
-                Encontre a nossa galeria de imagens online.
-              </h4>
-              <router-link
-                :to="{ name: 'galery' }"
-                class="btn btn__primary btn__primary-style2"
-              >
-                <span> Ver mais </span>
-                <i class="icon-arrow-right"></i>
-              </router-link>
-            </div>
-          </div>
-        </div>
+            <!-- /.col-xl-7 -->
+          </v-card>
+        </v-carousel-item>
+      </v-carousel>
+      <div class="cta-banner mt-30 mb-30 d-flex flex-wrap align-items-center">
+        <h4 class="cta__title my-3 pr-30">
+          Encontre a nossa galeria de imagens online.
+        </h4>
+        <router-link
+          :to="{ name: 'galery' }"
+          class="btn btn__primary btn__primary-style2"
+        >
+          <span> Ver mais </span>
+          <i class="icon-arrow-right"></i>
+        </router-link>
       </div>
-    </div>
+    </v-container>
   </section>
   <!-- /.slider -->
 </template>
@@ -76,7 +48,7 @@ export default {
   data() {
     return {
       allImages: [
-        /*{
+        /* {
           src: 'assets/images/gallery02/IMG_0148.jpg',
           subtitle: 'Abertura do ano Judicial',
           Title: 'O Tribunal Administrativo1',
@@ -107,7 +79,7 @@ export default {
           desc:
             'O Tribunal Administrativo é o órgão superior da hierarquia dos tribunais administrativos provinciais e da Cidade de Maputo, dos tribunais fiscais e dos tribunais aduaneiros.',
           to: { name: 'history' },
-        },*/
+        }, */
       ],
       activeIndex: 0,
       slideInterval: null,
