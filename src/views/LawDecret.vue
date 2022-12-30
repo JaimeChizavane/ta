@@ -221,13 +221,17 @@ export default {
                 this.query.diploma.toLowerCase()
               )) &&
             (this.query.data === '' ||
-              file.Data_x0020_do_x0020_BR?.toLowerCase().includes(
-                this.query.data.toLowerCase()
-              ))
+              this.compareDate(file.Data_x0020_do_x0020_BR, this.query.data))
         );
       } else {
         this.items = this.allItems;
       }
+    },
+    compareDate(a, b) {
+      let dateA = new Date(a).toDateString();
+      let dateB = new Date(b).toDateString();
+
+      return dateA.toLowerCase().includes(dateB.toLowerCase());
     },
     getFileUrl(item) {
       return item && item.ServerRelativeUrl

@@ -232,13 +232,7 @@ export default {
     compareDate(a, b) {
       let dateA = new Date(a).toDateString();
       let dateB = new Date(b).toDateString();
-      console.log(
-        dateA +
-          '-' +
-          dateB +
-          '=' +
-          dateA.toLowerCase().includes(dateB.toLowerCase())
-      );
+
       return dateA.toLowerCase().includes(dateB.toLowerCase());
     },
     getFileUrl(item) {
