@@ -263,9 +263,7 @@ export default {
                 ?.toLowerCase()
                 .includes(this.query.relator.toLowerCase())) &&
             (this.query.data === '' ||
-              file.data_acordao
-                ?.toLowerCase()
-                .includes(this.query.data.toLowerCase())) &&
+              this.compareDate(file.data_acordao, this.query.data)) &&
             (this.query.tipo === '' ||
               this.query.tipo
                 .toLowerCase()
@@ -290,6 +288,12 @@ export default {
       } else {
         this.items = this.allItems;
       }
+    },
+    compareDate(a, b) {
+      let dateA = new Date(a).toDateString();
+      let dateB = new Date(b).toDateString();
+
+      return dateA.toLowerCase().includes(dateB.toLowerCase());
     },
   },
   data() {
