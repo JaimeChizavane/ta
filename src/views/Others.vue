@@ -229,9 +229,9 @@ export default {
         this.items = this.allItems;
       }
     },
-    compareDate(a, b) {
-      let dateA = new Date(a).toISOString();
-      let dateB = new Date(b).toISOString();
+    compareDate(a = null, b) {
+      let dateA = new Date(a).toDateString();
+      let dateB = new Date(b).toDateString();
       console.log(
         dateA +
           '-' +
