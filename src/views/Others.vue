@@ -229,7 +229,7 @@ export default {
         this.items = this.allItems;
       }
     },
-    compareDate(a = null, b) {
+    compareDate(a, b) {
       let dateA = new Date(a).toDateString();
       let dateB = new Date(b).toDateString();
       console.log(
