@@ -23,7 +23,7 @@
                 </button>
               </label>
               <div class="form-row">
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4 col-sm-6">
                   <select
                     class="form-control bordered-box mb-20"
                     @change="search"
@@ -35,7 +35,7 @@
                     >
                   </select>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-4 col-sm-6">
                   <input
                     @keyup="search"
                     v-model="query.assunto"
@@ -44,7 +44,7 @@
                     placeholder="Procurar por assunto..."
                   />
                 </div>
-                <div class="col-md-2 col-sm-6">
+                <div class="col-md-4 col-sm-6">
                   <input
                     @keyup="search"
                     v-model="query.br"
@@ -53,7 +53,7 @@
                     placeholder="Procurar por n. do BR..."
                   />
                 </div>
-                <div class="col-md-2 col-sm-6">
+                <div class="col-md-4 col-sm-6">
                   <input
                     @keyup="search"
                     v-model="query.diploma"
@@ -62,7 +62,7 @@
                     placeholder="Procurar por n. da legislação..."
                   />
                 </div>
-                <div class="col-md-2 col-sm-6">
+                <div class="col-md-4 col-sm-6">
                   <input
                     @change="search"
                     v-model="query.data"
@@ -171,20 +171,20 @@
 </template>
 
 <script>
-import QFooter from "@/components/Footer";
-import QHeader from "@/components/Header/Header";
-import QBreadCrumb from "@/components/BreadCrumb";
+import QFooter from '@/components/Footer';
+import QHeader from '@/components/Header/Header';
+import QBreadCrumb from '@/components/BreadCrumb';
 
 export default {
-  name: "QLaw",
+  name: 'QLaw',
   components: { QBreadCrumb, QHeader, QFooter },
   methods: {
     clear() {
-      this.query.assunto = "";
-      this.query.br = "";
-      this.query.diploma = "";
-      this.query.data = "";
-      this.query.area = "";
+      this.query.assunto = '';
+      this.query.br = '';
+      this.query.diploma = '';
+      this.query.data = '';
+      this.query.area = '';
 
       this.search();
     },
@@ -198,29 +198,29 @@ export default {
       ) {
         this.items = this.allItems.filter(
           (file) =>
-            (this.query.assunto === "" ||
+            (this.query.assunto === '' ||
               file.Title?.toLowerCase().includes(
                 this.query.assunto.toLowerCase()
               ) ||
               file.Assunto?.toLowerCase().includes(
                 this.query.assunto.toLowerCase()
               )) &&
-            (this.query.br === "" ||
+            (this.query.br === '' ||
               file.N_x00fa_mero_x0020_do_x0020_BR?.toLowerCase().includes(
                 this.query.br.toLowerCase()
               )) &&
-            (this.query.area === "" ||
+            (this.query.area === '' ||
               file.OData__x00c1_rea_x0020_de_x0020_Apoio_0.results?.find((x) =>
                 x.toLowerCase().includes(this.query.area.toLowerCase())
               ) ||
               file.OData__x00c1_rea_x0020_de_x0020_Apoio_?.toLowerCase().includes(
                 this.query.area.toLowerCase()
               )) &&
-            (this.query.diploma === "" ||
+            (this.query.diploma === '' ||
               file.N_x00fa_meroDaLegisla_x00e7__x00?.toLowerCase().includes(
                 this.query.diploma.toLowerCase()
               )) &&
-            (this.query.data === "" ||
+            (this.query.data === '' ||
               file.Data_x0020_do_x0020_BR?.toLowerCase().includes(
                 this.query.data.toLowerCase()
               ))
@@ -232,7 +232,7 @@ export default {
     getFileUrl(item) {
       return item && item.ServerRelativeUrl
         ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl
-        : "#";
+        : '#';
     },
   },
   data() {
@@ -243,63 +243,63 @@ export default {
       filtered: [],
       searcheable: [],
       query: {
-        assunto: "",
-        br: "",
-        diploma: "",
-        data: "",
-        area: "",
+        assunto: '',
+        br: '',
+        diploma: '',
+        data: '',
+        area: '',
       },
       perPage: 10,
       currentPage: 1,
       fields: [
         {
-          key: "Tipo_x0020_de_x0020_Legisla_x00e",
-          label: "Tipo de Legislação",
+          key: 'Tipo_x0020_de_x0020_Legisla_x00e',
+          label: 'Tipo de Legislação',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
         {
-          key: "N_x00fa_mero_x0020_do_x0020_BR",
-          label: "Número do BR",
+          key: 'N_x00fa_mero_x0020_do_x0020_BR',
+          label: 'Número do BR',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
         {
-          key: "N_x00fa_meroDaLegisla_x00e7__x00",
-          label: "Número de Legislação",
+          key: 'N_x00fa_meroDaLegisla_x00e7__x00',
+          label: 'Número de Legislação',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
         {
-          key: "Legisla_x00e7__x00e3_o_x0020_Ger",
-          label: "Legislação",
+          key: 'Legisla_x00e7__x00e3_o_x0020_Ger',
+          label: 'Legislação',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
         {
-          key: "Data_do_BR",
-          label: "Data do BR",
+          key: 'Data_do_BR',
+          label: 'Data do BR',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
         {
-          key: "Área de Apoio",
-          label: "Área de Apoio",
+          key: 'Área de Apoio',
+          label: 'Área de Apoio',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
 
         {
-          key: "Sumario",
-          label: "Sumário",
+          key: 'Sumario',
+          label: 'Sumário',
           sortable: true,
-          thClass: "btn__primary col-3",
+          thClass: 'btn__primary col-3',
         },
         {
-          key: "Document",
-          label: "Documento",
+          key: 'Document',
+          label: 'Documento',
           sortable: true,
-          thClass: "btn__primary",
+          thClass: 'btn__primary',
         },
       ],
     };
@@ -308,12 +308,12 @@ export default {
     window.mainExecution();
 
     this.$http
-      .get("legislacaoAll.json")
+      .get('legislacaoAll.json')
       .then((data) => {
         this.allItems = data.data.d.results.filter(
           (item) =>
-            item?.Tipo === "Decretos" ||
-            item?.Tipo_x0020_de_x0020_Legisla_x00e === "Decreto"
+            item?.Tipo === 'Decretos' ||
+            item?.Tipo_x0020_de_x0020_Legisla_x00e === 'Decreto'
         );
         this.items = this.allItems
           .sort(
@@ -350,7 +350,7 @@ export default {
       });
 
     this.$http
-      .get("areas.json")
+      .get('areas.json')
       .then((data) => {
         this.areas = data.data.d.results;
 
