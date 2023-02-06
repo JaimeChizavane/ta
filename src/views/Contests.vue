@@ -158,14 +158,11 @@ export default {
     this.$http
       .get('concursos.json')
       .then((data) => {
-        this.history = data.data.d.results.sort((a, b) =>
-          a.Name.localeCompare(b.Name)
-        );
+        this.history = data.data.d.results;
 
         this.history.forEach((item) => {
-          item.Files.results = item.Files.results.sort((a, b) =>
-            a.Name.localeCompare(b.Name)
-          );
+          //item.Files.results = item.Files.results;
+
           this.allItems.push(item);
         });
 
