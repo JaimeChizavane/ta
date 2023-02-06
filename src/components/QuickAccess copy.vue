@@ -1,0 +1,37 @@
+<template>
+  <div class="container">
+    <div class="row" v-if="menus.length">
+      <div class="heading text-center">
+        <h4 class="">
+          <router-link :to="{ name: 'home' }">
+            {{ $tc('quick_access', 2) }}
+          </router-link>
+        </h4>
+      </div>
+    </div>
+    <div class="navbar-nav ml-auto">
+      <router-link
+        v-for="(menu, index) in menus"
+        :key="index"
+        :to="{ name: menu.to }"
+        class="nav__item-link mb-2 mt-2"
+      >
+        {{ $t(menu.name) | upper }}
+      </router-link>
+    </div>
+  </div>
+</template>
+
+<script>
+import menus from '@/mocking_data/menu_quick.json';
+export default {
+  name: 'QuickMenu',
+  data() {
+    return {
+      menus,
+    };
+  },
+};
+</script>
+
+<style></style>

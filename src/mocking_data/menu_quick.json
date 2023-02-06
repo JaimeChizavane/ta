@@ -1,0 +1,16 @@
+[{
+        "name": "menus.contests",
+        "to": "contests",
+        "sub_menus": []
+    },
+    {
+        "name": "menus.work_opportunity",
+        "to": "work_opportunity",
+        "sub_menus": []
+    },
+    {
+        "name": "menus.visa_consultation",
+        "to": "visa_consultation",
+        "sub_menus": []
+    }
+]

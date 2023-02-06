@@ -82,6 +82,7 @@
         "competencies": "@:menus.competencies",
         "support_services": "@:menus.support_services",
         "recent_article": "Artigo recente | Artigos recentes",
+        "quick_access": "Acesso Rápido",
         "not_found": "Não encontrado!",
         "errors": {
             "404": "Página não encontrada!",

@@ -4,8 +4,15 @@
     <q-slider />
 
     <q-blog />
+    <div class="row">
+      <div class="col-sm-4">
+        <q-quick-access />
+      </div>
+      <div class="col-sm-8">
+        <q-galery />
+      </div>
+    </div>
 
-    <q-galery />
     <!--    <q-structure/>-->
     <q-about-us-section />
     <!--    <q-contact/>
@@ -25,6 +32,7 @@ import QGalery from '@/components/Galery';
 import QBlog from '@/components/Blog';
 import QHeader from '@/components/Header/Header';
 import QFooter from '@/components/Footer';
+import QQuickAccess from '@/components/QuickAccess';
 
 export default {
   name: 'QHome',
@@ -36,6 +44,7 @@ export default {
     QFooter,
     QHeader,
     QSlider,
+    QQuickAccess,
   },
   data() {
     return {
