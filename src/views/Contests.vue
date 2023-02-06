@@ -28,49 +28,87 @@
           </div>
           <!-- /.col-xl-6 -->
         </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="jobs-container">
-              <!-- career item #1 -->
+
+        <div class="container">
+          <div class="row" id="accordion">
+            <div class="col-sm-12 col-md-12 col-lg-12">
               <div
-                class="job-item"
-                v-for="(item, index) in history.Files.results"
+                class="accordion-item"
+                v-for="(faq, index) in history"
                 :key="index"
               >
-                <div class="row">
-                  <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="job__meta">
-                      <span class="job__type" v-show="item.TimeLastModified">
-                        {{ item.TimeLastModified | date }}
-                      </span>
-                    </div>
-                    <h4 class="job__title">{{ item.Name || 'Sem titulo' }}</h4>
-                  </div>
-                  <!-- /.col-lg-4 -->
-                  <div class="col-sm-12 col-md-12 col-lg-5">
-                    <p class="job__desc" v-html="item.Name"></p>
-                  </div>
-                  <!-- /.col-lg-5 -->
-                  <div
-                    class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap"
-                  >
-                    <a
-                      :href="getFileUrl(item)"
-                      target="_blank"
-                      class="btn btn__secondary"
-                      >Abrir</a
-                    >
-                  </div>
-                  <!-- /.col-lg-3 -->
+                <div
+                  class="accordion__header"
+                  data-toggle="collapse"
+                  :data-target="'#collapse' + index"
+                >
+                  <a class="accordion__title" @click.prevent>{{ faq.Name }}</a>
                 </div>
-                <!-- /.row -->
+                <!-- /.accordion-item-header -->
+                <div
+                  :id="'collapse' + index"
+                  class="collapse"
+                  data-parent="#accordion"
+                >
+                  <div class="accordion__body">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="jobs-container">
+                          <!-- career item #1 -->
+                          <div
+                            class="job-item"
+                            v-for="(item, index) in faq.Files.results"
+                            :key="index"
+                          >
+                            <div class="row">
+                              <div class="col-sm-12 col-md-12 col-lg-4">
+                                <div class="job__meta">
+                                  <span
+                                    class="job__type"
+                                    v-show="item.TimeLastModified"
+                                  >
+                                    {{ item.TimeLastModified | date }}
+                                  </span>
+                                </div>
+                                <h4 class="job__title">
+                                  {{ item.Name || 'Sem titulo' }}
+                                </h4>
+                              </div>
+                              <!-- /.col-lg-4 -->
+                              <div class="col-sm-12 col-md-12 col-lg-5">
+                                <p class="job__desc" v-html="item.Name"></p>
+                              </div>
+                              <!-- /.col-lg-5 -->
+                              <div
+                                class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap"
+                              >
+                                <a
+                                  :href="getFileUrl(item)"
+                                  target="_blank"
+                                  class="btn btn__secondary"
+                                  >Abrir</a
+                                >
+                              </div>
+                              <!-- /.col-lg-3 -->
+                            </div>
+                            <!-- /.row -->
+                          </div>
+                          <!-- /.job-item -->
+                        </div>
+                      </div>
+                      <!-- /.col-lg-12 -->
+                    </div>
+                    <!-- /.row -->
+                  </div>
+                  <!-- /.accordion-item-body -->
+                </div>
               </div>
-              <!-- /.job-item -->
             </div>
+            <!-- /.col-lg-6 -->
           </div>
-          <!-- /.col-lg-12 -->
+          <!-- /.row -->
         </div>
-        <!-- /.row -->
+        <!-- /.container -->
       </div>
       <!-- /.container -->
     </section>
@@ -90,8 +128,12 @@ export default {
   methods: {
     search() {
       if (this.query) {
-        this.history = this.allItems.filter((item) =>
-          item.Name?.toLowerCase().includes(this.query.toLowerCase())
+        this.history = this.allItems.filter(
+          (item) =>
+            item.Name?.toLowerCase().includes(this.query.toLowerCase()) ||
+            item.Files.results.find((f) =>
+              f.Name?.toLowerCase().includes(this.query.toLowerCase())
+            )
         );
       } else {
         this.history = this.allItems;
@@ -116,13 +158,22 @@ export default {
     this.$http
       .get('concursos.json')
       .then((data) => {
-        console.log(data.data.d.results.slice(0, 4));
-        this.history = data.data.d.results;
+        this.history = data.data.d.results
+          .filter(
+            (i) =>
+              i.Name !== 'Forms' &&
+              i.Name.toLowerCase().includes('relatórios e pareceres')
+          )
+          .sort((a, b) => a.Name.localeCompare(b.Name))
+          .reverse();
+        this.history.forEach((item) => {
+          item.Files.results = item.Files.results.sort((a, b) =>
+            a.Name.localeCompare(b.Name)
+          );
+          this.allItems.push(item);
+        });
 
-        this.allItems = this.history;
-        console.log(this.allItems);
-
-        //this.allItems = this.history.sort((a, b) => a['Name'].localeCompare(b['Name']))
+        this.history = this.allItems;
       })
       .catch((error) => {
         console.log(error);
