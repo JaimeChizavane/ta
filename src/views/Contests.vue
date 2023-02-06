@@ -130,9 +130,9 @@ export default {
       if (this.query) {
         this.history = this.allItems.filter(
           (item) =>
-            item.Name?.toLowerCase().includes(this.query.toLowerCase()) ||
+            item.Name.toLowerCase().includes(this.query.toLowerCase()) ||
             item.Files.results.find((f) =>
-              f.Name?.toLowerCase().includes(this.query.toLowerCase())
+              f.Name.toLowerCase().includes(this.query.toLowerCase())
             )
         );
       } else {
@@ -158,14 +158,10 @@ export default {
     this.$http
       .get('concursos.json')
       .then((data) => {
-        this.history = data.data.d.results
-          .filter(
-            (i) =>
-              i.Name !== 'Forms' &&
-              i.Name.toLowerCase().includes('relatórios e pareceres')
-          )
-          .sort((a, b) => a.Name.localeCompare(b.Name))
-          .reverse();
+        this.history = data.data.d.results.sort((a, b) =>
+          a.Name.localeCompare(b.Name)
+        );
+
         this.history.forEach((item) => {
           item.Files.results = item.Files.results.sort((a, b) =>
             a.Name.localeCompare(b.Name)
