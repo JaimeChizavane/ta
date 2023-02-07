@@ -70,13 +70,11 @@
                                     {{ item.TimeLastModified | date }}
                                   </span>
                                 </div>
-                                <h4 class="job__title">
-                                  {{ item.Name || 'Sem titulo' }}
-                                </h4>
+                                <!--   <h4 class="job__title">{{ item.Name || 'Sem titulo' }}</h4> -->
                               </div>
                               <!-- /.col-lg-4 -->
                               <div class="col-sm-12 col-md-12 col-lg-5">
-                                <p class="job__desc" v-html="item.Name"></p>
+                                <h4 class="job__title" v-html="item.Name"></h4>
                               </div>
                               <!-- /.col-lg-5 -->
                               <div
@@ -114,6 +112,8 @@
     </section>
     <!-- /.careers -->
     <q-footer />
+    <CoolLightBox :items="slideImages" :index="index" @close="index = null">
+    </CoolLightBox>
   </div>
 </template>
 
@@ -122,9 +122,12 @@ import QFooter from '@/components/Footer';
 import QHeader from '@/components/Header/Header';
 import QBreadCrumb from '@/components/BreadCrumb';
 
+import CoolLightBox from 'vue-cool-lightbox';
+import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css';
+
 export default {
-  name: 'QDecret',
-  components: { QBreadCrumb, QHeader, QFooter },
+  name: 'QStrategicPlan',
+  components: { QBreadCrumb, QHeader, QFooter, CoolLightBox },
   methods: {
     search() {
       if (this.query) {
@@ -144,6 +147,32 @@ export default {
         ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl
         : '#';
     },
+    getFileThumb(item) {
+      return item && item.ServerRelativeUrl
+        ? process.env.VUE_APP_ROOT_DOCS +
+            '/thumbs/' +
+            item.ServerRelativeUrl +
+            '.png'
+        : '#';
+    },
+    zoomImage(file) {
+      this.slideImages = [
+        {
+          src: this.getFileThumb(file),
+          description: file.Name,
+        },
+      ];
+      this.index = 0;
+    },
+    filterImages(name = null) {
+      this.activeFilter = name;
+
+      if (name) {
+        this.items = this.allItems;
+      } else {
+        this.items = this.allItems;
+      }
+    },
   },
   data() {
     return {
@@ -159,14 +188,9 @@ export default {
       .get('concursos.json')
       .then((data) => {
         this.history = data.data.d.results.filter((i) => i.Name !== 'Forms');
-        this.allItems = this.history;
-        // this.history.forEach((item) => {
-        //   item.Files.results = item.Files.results;
-        //   this.allItems.push(item);
-        // });
 
-        //  this.history = this.allItems;
-        console.log(this.history[0].Name);
+        this.allItems = this.history;
+        console.log(this.allItems);
       })
       .catch((error) => {
         console.log(error);
