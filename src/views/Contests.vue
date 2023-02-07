@@ -42,7 +42,9 @@
                   data-toggle="collapse"
                   :data-target="'#collapse' + index"
                 >
-                  <a class="accordion__title" @click.prevent>{{ faq.Name }}</a>
+                  <a class="accordion__title" @click.prevent>{{
+                    faq.Folder.Name
+                  }}</a>
                 </div>
                 <!-- /.accordion-item-header -->
                 <div
