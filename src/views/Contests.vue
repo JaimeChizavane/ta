@@ -174,9 +174,6 @@ export default {
       .catch((error) => {
         console.log(error);
       });
-
-    console.log(this.allItems.length);
-    console.log(this.allItems[0].Name);
   },
 };
 </script>
