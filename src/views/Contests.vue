@@ -159,14 +159,15 @@ export default {
       .get('concursos.json')
       .then((data) => {
         this.history = data.data.d.results;
+        this.allItems = this.history;
 
-        this.history.forEach((item) => {
-          //item.Files.results = item.Files.results;
+        // this.history.forEach((item) => {
+        //   item.Files.results = item.Files.results
+        //   );
+        //   this.allItems.push(item);
+        // });
 
-          this.allItems.push(item);
-        });
-
-        this.history = this.allItems;
+        // this.history = this.allItems;
       })
       .catch((error) => {
         console.log(error);

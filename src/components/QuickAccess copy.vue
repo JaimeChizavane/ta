@@ -14,7 +14,7 @@
         v-for="(menu, index) in menus"
         :key="index"
         :to="{ name: menu.to }"
-        class="nav__item-link mb-2 mt-2"
+        class="list-group-item list-group-item-action btn btn__primary list-group-item-success mb-2 mt-2"
       >
         {{ $t(menu.name) | upper }}
       </router-link>
