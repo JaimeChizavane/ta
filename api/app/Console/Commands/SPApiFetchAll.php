@@ -80,6 +80,7 @@ class SPApiFetchAll extends Command
         FetchJurispudencia1SecaoCommand::class,
         FetchJurispudencia2SecaoCommand::class,
         FetchJurispudencia3SecaoCommand::class,
+        FetchConcursoCommand::class,
     ];
 
     public function __construct()

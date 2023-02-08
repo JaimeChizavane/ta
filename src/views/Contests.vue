@@ -42,9 +42,7 @@
                   data-toggle="collapse"
                   :data-target="'#collapse' + index"
                 >
-                  <a class="accordion__title" @click.prevent>{{
-                    faq.Folder.Name
-                  }}</a>
+                  <a class="accordion__title" @click.prevent>{{ faq.Name }}</a>
                 </div>
                 <!-- /.accordion-item-header -->
                 <div
@@ -59,7 +57,7 @@
                           <!-- career item #1 -->
                           <div
                             class="job-item"
-                            v-for="(item, index) in faq.Folder.Files.results"
+                            v-for="(item, index) in faq.Files.results"
                             :key="index"
                           >
                             <div class="row">
@@ -187,7 +185,7 @@ export default {
     window.mainExecution();
 
     this.$http
-      .get('concursos.json')
+      .get('concurso.json')
       .then((data) => {
         this.history = data.data.d.results.filter((i) => i.Name !== 'Forms');
 
