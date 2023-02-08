@@ -32,7 +32,9 @@
                   data-toggle="collapse"
                   :data-target="'#collapse' + index"
                 >
-                  <a class="accordion__title" @click.prevent>{{ faq.Tipo }}</a>
+                  <a class="accordion__title" @click.prevent>{{
+                    a.Folder.Name
+                  }}</a>
                 </div>
                 <div
                   :id="'collapse' + index"
@@ -153,6 +155,9 @@ export default {
       .then((data) => {
         this.allItems = data.data.d.results;
         this.items = this.allItems.filter((item) => item.Folder.Files);
+        this.items = this.items.sort((a, b) =>
+          a.Folder.Name.localeCompare(b.Folder.Name)
+        );
         console.log(this.items);
       })
       .catch((error) => {
