@@ -12,8 +12,8 @@ namespace App\Console\Commands;
 
 class FetchConcursosCommand extends SPApiFetch
 {
-    protected $signature   = 'sp:concursos';
-    protected $description = 'Fetch all concursos';
+    protected $signature   = 'sp:concurso';
+    protected $description = 'Fetch all concurso';
     /**
      * @var \App\Services\HttpClient
      */
