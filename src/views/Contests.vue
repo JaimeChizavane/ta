@@ -155,9 +155,7 @@ export default {
       .then((data) => {
         this.allItems = data.data.d.results;
         this.items = this.allItems.filter((item) => item.Folder.Files);
-        this.items = this.items.sort((a, b) =>
-          a.Folder.Name.localeCompare(b.Folder.Name)
-        );
+
         console.log(this.items);
       })
       .catch((error) => {
