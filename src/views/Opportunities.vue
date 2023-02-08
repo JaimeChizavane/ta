@@ -1,103 +1,173 @@
+@@ -0,0 +1,104 @@
 <template>
   <div class="wrapper">
-    <q-header/>
-    <q-bread-crumb/>
+    <q-header />
+    <q-bread-crumb />
     <section class="careers">
       <div class="container">
         <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-            <div class="heading text-center mb-50">
-              <h3 class="heading__title">{{ $tc($route.meta.display) }}</h3>
-            </div><!-- /.heading -->
-          </div><!-- /.col-lg-10 -->
-        </div><!-- /.row -->
-        <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-3">
             <div class="pagetitle__form mb-50">
-              <input @keyup="search" v-model="query" type="text" class="form-control bordered-box"
-                     placeholder="Procurar...">
+              <input
+                @keyup="search"
+                v-model="query"
+                type="text"
+                class="form-control bordered-box"
+                placeholder="Procurar..."
+              />
             </div>
-          </div><!-- /.col-xl-6 -->
+          </div>
+          <!-- /.col-xl-6 -->
         </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="jobs-container">
-              <!-- career item #1 -->
-              <div class="job-item" v-for="(item, index) in history" :key="index">
-                <div class="row">
-                  <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="job__meta">
-                      <span class="job__type" v-show="item.Tipo">{{
-                          item.Tipo
-                        }}</span>
-                      <span class="job__location">
-                        {{ item.Created | date }}
-                      </span>
+        <div class="container">
+          <div class="row" id="accordion">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+              <div
+                class="accordion-item"
+                v-for="(faq, index) in items"
+                :key="index"
+              >
+                <div
+                  class="accordion__header"
+                  data-toggle="collapse"
+                  :data-target="'#collapse' + index"
+                >
+                  <a class="accordion__title" @click.prevent>{{
+                    faq.Folder.Name
+                  }}</a>
+                </div>
+                <div
+                  :id="'collapse' + index"
+                  class="collapse"
+                  data-parent="#accordion"
+                >
+                  <div class="accordion__body">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="jobs-container">
+                          <!-- career item #1 -->
+                          <div
+                            class="job-item"
+                            v-for="(item, index) in faq.Folder.Files.results"
+                            :key="index"
+                          >
+                            <div class="row">
+                              <div class="col-sm-12 col-md-12 col-lg-4">
+                                <div class="job__meta">
+                                  <span
+                                    class="job__type"
+                                    v-show="item.TimeLastModified"
+                                  >
+                                    {{ item.TimeLastModified | date }}
+                                  </span>
+                                </div>
+                              </div>
+                              <!-- /.col-lg-4 -->
+                              <div class="col-sm-12 col-md-12 col-lg-5">
+                                <p class="job__desc" v-html="item.Name"></p>
+                              </div>
+                              <!-- /.col-lg-5 -->
+                              <div
+                                class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap"
+                              >
+                                <a
+                                  :href="getFileUrl(item)"
+                                  target="_blank"
+                                  class="btn btn__secondary"
+                                  >Abrir</a
+                                >
+                              </div>
+                              <!-- /.col-lg-3 -->
+                            </div>
+                            <!-- /.row -->
+                          </div>
+                          <!-- /.job-item -->
+                        </div>
+                      </div>
+                      <!-- /.col-lg-12 -->
                     </div>
-                    <h4 class="job__title">{{ item.Descricao || item.Title || 'Sem titulo' }}</h4>
-                  </div><!-- /.col-lg-4 -->
-                  <div class="col-sm-12 col-md-12 col-lg-5">
-                    <p class="job__desc" v-html="item.File.Name"></p>
-                  </div><!-- /.col-lg-5 -->
-                  <div class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap">
-                    <a :href="getFileUrl(item.File)" target="_blank" class="btn btn__secondary" v-show="item.File">Abrir</a>
-                  </div><!-- /.col-lg-3 -->
-                </div><!-- /.row -->
-              </div><!-- /.job-item -->
+                    <!-- /.row -->
+                  </div>
+                  <!-- /.accordion-item-body -->
+                </div>
+              </div>
             </div>
-          </div><!-- /.col-lg-12 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /.careers -->
-    <q-footer/>
+          </div>
+        </div>
+
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.careers -->
+    <q-footer />
   </div>
 </template>
 
 <script>
-import QFooter from "@/components/Footer";
-import QHeader from "@/components/Header/Header";
-import QBreadCrumb from "@/components/BreadCrumb";
+import QFooter from '@/components/Footer';
+import QHeader from '@/components/Header/Header';
+import QBreadCrumb from '@/components/BreadCrumb';
 
 export default {
-  name: "QOpportunity",
+  name: 'QAboutUs',
   components: { QBreadCrumb, QHeader, QFooter },
   methods: {
+    getFileUrl(item) {
+      return item && item.ServerRelativeUrl
+        ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl
+        : '#';
+    },
     search() {
       if (this.query) {
-        this.history = this.allItems
-            .filter(item => item.Descricao?.toLowerCase().includes(this.query.toLowerCase())
-                || item.Tipo?.toLowerCase().includes(this.query.toLowerCase())
-                || item.File?.Name?.toLowerCase().includes(this.query.toLowerCase())
-                || item.Title?.toLowerCase().includes(this.query.toLowerCase()))
+        this.items = this.allItems
+          .filter(
+            (item) =>
+              item.Tipo && item.Folder.Files && item.Folder.Files.results.length
+          )
+          .filter(
+            (item) =>
+              item.Folder.Name.toLowerCase().includes(
+                this.query.toLowerCase()
+              ) ||
+              item.Tipo.toLowerCase().includes(this.query.toLowerCase()) ||
+              item.Folder.Files.results.find((i) =>
+                i.Name.toLowerCase().includes(this.query.toLowerCase())
+              )
+          );
       } else {
-        this.history = this.allItems
+        this.items = this.allItems.filter((item) => item.Folder.Files);
       }
-    },
-    getFileUrl(item) {
-      return item && item.ServerRelativeUrl ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl : '#'
     },
   },
   data() {
     return {
+      items: [],
       allItems: [],
-      history: [],
-      query: ''
-    }
+      query: '',
+    };
   },
   mounted() {
-    window.mainExecution()
+    window.mainExecution();
 
-    this.$http.get("oportunities.json").then((data) => {
-      this.history = data.data.d.results
+    this.$http
+      .get('oportunities.json')
+      .then((data) => {
+        this.allItems = data.data.d.results;
+        this.items = this.allItems.filter((item) => item.Folder.Files);
+        this.items = this.items.sort((a, b) =>
+          a.Folder.Name.localeCompare(b.Folder.Name)
+        );
 
-      this.allItems = this.history
-    }).catch((error) => {
-      console.log(error)
-    })
-  }
-}
+        this.allItems = this.items;
+
+        console.log(this.items[0]);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -159,7 +159,9 @@ export default {
           a.Folder.Name.localeCompare(b.Folder.Name)
         );
 
-        console.log(this.items);
+        this.allItems = this.items;
+
+        console.log(this.items[0]);
       })
       .catch((error) => {
         console.log(error);
