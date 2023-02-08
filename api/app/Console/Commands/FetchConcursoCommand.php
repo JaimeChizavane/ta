@@ -10,7 +10,7 @@
 
 namespace App\Console\Commands;
 
-class FetchConcursosCommand extends SPApiFetch
+class FetchConcursoCommand extends SPApiFetch
 {
     protected $signature   = 'sp:concurso';
     protected $description = 'Fetch all concurso';
