@@ -42,7 +42,9 @@
                   data-toggle="collapse"
                   :data-target="'#collapse' + index"
                 >
-                  <a class="accordion__title" @click.prevent>{{ faq.Name }}</a>
+                  <a class="accordion__title" @click.prevent>{{
+                    faq.Folder.Name
+                  }}</a>
                 </div>
                 <!-- /.accordion-item-header -->
                 <div
@@ -57,7 +59,7 @@
                           <!-- career item #1 -->
                           <div
                             class="job-item"
-                            v-for="(item, index) in faq.Files.results"
+                            v-for="(item, index) in faq.Folder.Files.results"
                             :key="index"
                           >
                             <div class="row">
