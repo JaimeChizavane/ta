@@ -20,6 +20,6 @@ class FetchConcursosCommand extends SPApiFetch
     protected $client;
     // protected $uri  = "_api/web/lists/getByTitle('Concursos')/items?\$expand=Folder/Files";
 
-    protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/Concursos')/Folders?\$expand=Files&\$orderBy=Created desc";
+    protected $uri  = "_api/web/lists/getByTitle('Concursos')/items?\$expand=Folder/Files";
     protected $path = 'concursos.json';
 }

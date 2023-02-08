@@ -185,7 +185,7 @@ export default {
     window.mainExecution();
 
     this.$http
-      .get('concurso.json')
+      .get('concursos.json')
       .then((data) => {
         this.history = data.data.d.results.filter((i) => i.Name !== 'Forms');
 
