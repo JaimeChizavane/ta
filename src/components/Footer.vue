@@ -84,7 +84,7 @@
                       target="_blank"
                       class="phone-number"
                     >
-                      Procuradoria-Geral da Republica
+                      Procuradoria-Geral da República
                     </a>
                   </li>
                   <li>
@@ -93,7 +93,7 @@
                       target="_blank"
                       class="phone-number"
                     >
-                      Presidência da Republica de Moçambique
+                      Presidência da República de Moçambique
                     </a>
                   </li>
                 </ul>
