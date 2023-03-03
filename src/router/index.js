@@ -1393,7 +1393,7 @@ const routes = [{
             import ('@/views/aduaneiro/tadps/Home.vue'),
     },
     {
-        path: '/intranet',
+        path: '/',
         name: 'intranet',
         beforeEnter() {
             window.open(
