@@ -1392,6 +1392,21 @@ const routes = [{
         component: () =>
             import ('@/views/aduaneiro/tadps/Home.vue'),
     },
+    {
+        path: '/intranet',
+        name: 'intranet',
+        beforeEnter() {
+            window.open(
+                'https://intranet.ta.gov.mz/SitePages/Portal-Interno-do-Tribunal-Administrativo.aspx',
+                '_blank'
+            );
+        }, // location.href = 'https://intranet.ta.gov.mz/SitePages/Portal-Interno-do-Tribunal-Administrativo.aspx' },
+        meta: {
+            display: 'menus.intranet',
+        },
+        component: () =>
+            import ('@/views/AboutUs.vue'),
+    },
 ];
 
 const router = new VueRouter({

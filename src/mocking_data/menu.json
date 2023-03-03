@@ -261,11 +261,19 @@
     {
         "name": "menus.jurisdiction",
         "to": "jurisdiction",
-        "sub_menus": []
+        "sub_menus": [
+            {
+                "name": "menus.csmja",
+                "to": "csmja.history",
+                "blank": true,
+                "sub_menus": []
+            }
+        ]
     },
+  
     {
-        "name": "menus.csmja",
-        "to": "csmja.history",
+        "name": "menus.intranet",
+        "to": "intranet",
         "blank": true,
         "sub_menus": []
     }

@@ -12,5 +12,10 @@
         "name": "menus.visa_consultation",
         "to": "visa_consultation",
         "sub_menus": []
+    },
+    {
+        "name": "menus.international_cooperation",
+        "to": "international_cooperation",
+        "sub_menus": []
     }
 ]
