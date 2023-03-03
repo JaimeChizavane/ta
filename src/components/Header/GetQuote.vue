@@ -25,7 +25,7 @@
         </span>
       </li>
       <li class="d-none d-xl-block"></li>
-      <li class="d-none d-xl-block">
+      <li class="d-flex align-items-center">
         <a href="https://mail.ta.gov.mz/" class="action__btn" target="_blank"
           ><i class="fa-solid fa-envelope-circle-check"></i>
           <img
