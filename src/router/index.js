@@ -1397,10 +1397,10 @@ const routes = [{
         name: 'intranet',
         beforeEnter() {
             window.open(
-                'https://intranet.ta.gov.mz/SitePages/Portal-Interno-do-Tribunal-Administrativo.aspx',
+                'https://intranet.ta.gov.mz',
                 '_blank'
             );
-        }, // location.href = 'https://intranet.ta.gov.mz/SitePages/Portal-Interno-do-Tribunal-Administrativo.aspx' },
+        }, // location.href = 'https://intranet.ta.gov' },
         meta: {
             display: 'menus.intranet',
         },
