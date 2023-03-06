@@ -162,7 +162,7 @@ export default {
           .filter(
             (i) =>
               i.Name !== 'Forms' &&
-              i.Name.toLowerCase().includes('relatórios e pareceres')
+              i.Name.toLowerCase().includes('relatório e pareceres')
           )
           .sort((a, b) => a.Name.localeCompare(b.Name))
           .reverse();
