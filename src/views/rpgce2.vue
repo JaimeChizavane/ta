@@ -156,7 +156,7 @@ export default {
     window.mainExecution();
 
     this.$http
-      .get('rpcge.json')
+      .get('contas.json')
       .then((data) => {
         this.history = data.data.d.results
           .filter(
