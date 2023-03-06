@@ -158,6 +158,7 @@ export default {
     this.$http
       .get('contas.json')
       .then((data) => {
+        console.log(data.data.d.results);
         this.history = data.data.d.results
           .filter(
             (i) =>
