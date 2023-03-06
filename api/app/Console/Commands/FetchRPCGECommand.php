@@ -19,6 +19,7 @@ class FetchRPCGECommand extends SPApiFetch
      */
     protected $client;
     //  protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/Relatrios%20e%20Pareceres%20CGE')/Folders?\$expand=Files&\$orderBy=Name desc";
-    protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/RPCGE')/Folders?\$expand=Files&\$orderBy=Created desc";
+    // protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/RPCGE')/Folders?\$expand=Files&\$orderBy=Created desc";
+    protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/Certificao%20de%20contas/RPCGE')/Folders?\$expand=Files";
     protected $path = 'rpcge.json';
 }

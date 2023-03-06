@@ -156,15 +156,14 @@ export default {
     window.mainExecution();
 
     this.$http
-      .get('contas.json')
+      .get('rpcge.json')
       .then((data) => {
         // console.log(data.data.d.results);
         this.history = data.data.d.results
           .filter(
-            (i) =>
-              i.Name !== 'Forms' &&
-              (i.Name.toLowerCase().includes('relatório e parecer') ||
-                i.Name.toLowerCase().includes('relatórios e pareceres'))
+            (i) => i.Name !== 'Forms' // &&
+            // (i.Name.toLowerCase().includes('relatório e parecer') ||
+            //   i.Name.toLowerCase().includes('relatórios e pareceres'))
           )
           .sort((a, b) => a.Name.localeCompare(b.Name))
           .reverse();
