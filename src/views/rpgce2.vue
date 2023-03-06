@@ -158,17 +158,17 @@ export default {
     this.$http
       .get('contas.json')
       .then((data) => {
-        console.log(data.data.d.results);
+        // console.log(data.data.d.results);
         this.history = data.data.d.results
           .filter(
             (i) =>
               i.Name !== 'Forms' &&
-              (i.Name.toLowerCase().includes('relatório e pareceres') ||
+              (i.Name.toLowerCase().includes('relatório e parecer') ||
                 i.Name.toLowerCase().includes('relatórios e pareceres'))
           )
           .sort((a, b) => a.Name.localeCompare(b.Name))
           .reverse();
-        console.log(this.history);
+        // console.log(this.history);
         this.history.forEach((item) => {
           item.Files.results = item.Files.results.sort((a, b) =>
             a.Name.localeCompare(b.Name)
