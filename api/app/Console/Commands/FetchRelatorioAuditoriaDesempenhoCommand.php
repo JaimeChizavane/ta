@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Criado por Maizer Aly de O. Gomes para api.
  * Email: maizer.gomes@gmail.com / maizer.gomes@ekutivasolutions / maizer.gomes@outlook.com
@@ -17,6 +18,7 @@ class FetchRelatorioAuditoriaDesempenhoCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/RelatorioAuditoriaDesempenho')/Folders?\$expand=Files&\$orderBy=Name desc";
+    //protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/RelatorioAuditoriaDesempenho')/Folders?\$expand=Files&\$orderBy=Name desc";
+    protected $uri  = "_api/web/GetFolderByServerRelativeUrl('/Certificao%20de%20contas/Relatório%20Auditoria%20Desempenho')/Folders?\$expand=Files&\$orderBy=Name desc";
     protected $path = 'relatorioAuditoriaDesempenho.json';
 }
