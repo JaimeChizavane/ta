@@ -267,6 +267,12 @@
                 "to": "csmja.history",
                 "blank": true,
                 "sub_menus": []
+            },
+            {
+                "name": "menus.tfps",
+                "to": "tfps.home",
+                "blank": true,
+                "sub_menus": []
             }
         ]
     },
