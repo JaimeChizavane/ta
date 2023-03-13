@@ -273,6 +273,12 @@
                 "to": "tfps.home",
                 "blank": true,
                 "sub_menus": []
+            },
+            {
+                "name": "menus.tfcm",
+                "to": "tfcm.home",
+                "blank": true,
+                "sub_menus": []
             }
         ]
     },
