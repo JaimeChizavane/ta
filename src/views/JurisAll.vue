@@ -300,6 +300,7 @@ export default {
     return {
       items: [],
       allItems: [],
+      allItemsBak: [],
       assuntos: [],
       areas: [],
       tipos: [],
@@ -410,13 +411,49 @@ export default {
           .reverse();
         // this.searcheable = this.items.flatMap(item => item.Folders.results.flatMap(s => s.Files.results))
         // this.searcheable = this.items
-        console.log('tamanho' + this.items.length);
-        console.log(data.data.d.results[0]);
-        console.log(this.items[0]);
+        // console.log('tamanho' + this.items.length);
+        //console.log(data.data.d.results[0]);
+        //console.log(this.items[0]);
       })
       .catch((error) => {
         console.log(error);
       });
+    this.$http
+      .get('jurispudenciaAll_bak.json')
+      .then((data) => {
+        this.allItemsBak = data.data.d.results.map((f) => {
+          return {
+            seccao_origem: f.Sec_x00e7__x00e3_o_x0020_de_x002,
+            n_processo: f.Numero_x0020_Processo
+              ? f.Numero_x0020_Processo
+              : f.N_x002e__x00ba__x0020_do_x0020_P
+              ? f.N_x002e__x00ba__x0020_do_x0020_P
+              : f.NProcesso,
+            n_acordao: f.OData__N_x00b0__x0020_do_x0020_Acord_x
+              ? f.OData__N_x00b0__x0020_do_x0020_Acord_x
+              : f.NAcordao
+              ? f.NAcordao
+              : f.N_x00b0__x0020_do_x0020_Acord_x0,
+            data_acordao: f.Data_x0020_do_x0020_Ac_x00f3_rd_,
+            relator: f.OData__Relator ? f.OData__Relator : f.Relator,
+            assunto: f.Assunto.results,
+            sumario: f.Sum_x00e1_rio,
+            documento: f.AttachmentFiles.results,
+            tipo_acordao: f.Ac_x00f3_rd_x00e3_o_x0020_ou_x00,
+            subseccao: f.Subsec_x00e7__x00e3_o,
+            Created: f.Created,
+          };
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    if (this.allItems.length < this.allItemsBak.length) {
+      this.allItems = this.allItemsBak;
+      this.items = this.allItems
+        .sort((a, b) => new Date(a.Created) - new Date(b.Created))
+        .reverse();
+    }
 
     this.$http
       .get('assuntos.json')
