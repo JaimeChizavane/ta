@@ -317,15 +317,7 @@ export default {
     this.$http
       .get('legislacaoAll.json')
       .then((data) => {
-        this.allItems = data.data.d.results.filter(
-          (l) =>
-            !(
-              l.N_x00fa_meroDaLegisla_x00e7__x00.toLowerCase().includes(
-                '9/2018'
-              ) &&
-              l.Legisla_x00e7__x00e3_o_x0020_Ge.toLowerCase().includes('geral')
-            )
-        );
+        this.allItems = data.data.d.results;
         this.items = this.allItems
 
           .sort(
@@ -338,17 +330,32 @@ export default {
       .catch((error) => {
         console.log(error);
       });
+    console.log(
+      this.items.filter(
+        (l) =>
+          l.N_x00fa_meroDaLegisla_x00e7__x00.toLowerCase().includes('9/2018') &&
+          l.Legisla_x00e7__x00e3_o_x0020_Ge.toLowerCase().includes('geral')
+      )
+    );
+
+    console.log(
+      this.items.filter(
+        (l) =>
+          !l.N_x00fa_meroDaLegisla_x00e7__x00.toLowerCase().includes(
+            '9/2018'
+          ) &&
+          !l.Legisla_x00e7__x00e3_o_x0020_Ge.toLowerCase().includes('geral')
+      )
+    );
     this.$http
       .get('legislacaoAll_bak.json')
       .then((data) => {
         this.allItemsBak = data.data.d.results.filter(
           (l) =>
-            !(
-              l.N_x00fa_meroDaLegisla_x00e7__x00.toLowerCase().includes(
-                '9/2018'
-              ) &&
-              l.Legisla_x00e7__x00e3_o_x0020_Ge.toLowerCase().includes('geral')
-            )
+            !l.N_x00fa_meroDaLegisla_x00e7__x00.toLowerCase().includes(
+              '9/2018'
+            ) &&
+            !l.Legisla_x00e7__x00e3_o_x0020_Ge.toLowerCase().includes('geral')
         );
       })
       .catch((error) => {
