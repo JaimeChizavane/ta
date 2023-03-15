@@ -333,18 +333,22 @@ export default {
     console.log(
       this.items.filter(
         (l) =>
-          l.N_x00fa_meroDaLegisla_x00e7__x00.toLowerCase().includes('9/2018') &&
-          l.Legisla_x00e7__x00e3_o_x0020_Ge.toLowerCase().includes('geral')
+          l.N_x00fa_meroDaLegisla_x00e7__x00?.toLowerCase().includes(
+            '9/2018'
+          ) &&
+          l.Legisla_x00e7__x00e3_o_x0020_Ger?.toLowerCase().includes('geral')
       )
     );
 
     console.log(
       this.items.filter(
         (l) =>
-          !l.N_x00fa_meroDaLegisla_x00e7__x00.toLowerCase().includes(
-            '9/2018'
-          ) &&
-          !l.Legisla_x00e7__x00e3_o_x0020_Ge.toLowerCase().includes('geral')
+          !(
+            l.N_x00fa_meroDaLegisla_x00e7__x00?.toLowerCase().includes(
+              '9/2018'
+            ) &&
+            l.Legisla_x00e7__x00e3_o_x0020_Ger?.toLowerCase().includes('geral')
+          )
       )
     );
     this.$http
@@ -355,7 +359,7 @@ export default {
             !l.N_x00fa_meroDaLegisla_x00e7__x00.toLowerCase().includes(
               '9/2018'
             ) &&
-            !l.Legisla_x00e7__x00e3_o_x0020_Ge.toLowerCase().includes('geral')
+            !l.Legisla_x00e7__x00e3_o_x0020_Ger?.toLowerCase().includes('geral')
         );
       })
       .catch((error) => {
