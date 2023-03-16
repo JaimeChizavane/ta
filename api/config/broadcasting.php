@@ -36,12 +36,12 @@ return [
             'secret'  => 123456,
             'app_id'  => env('PUSHER_APP_ID', 'local'),
             'options' => [
-//                'cluster'   => env('PUSHER_APP_CLUSTER'),
-//                'encrypted' => true,
+                //                'cluster'   => env('PUSHER_APP_CLUSTER'),
+                'encrypted' => false,
                 'host'      => env('PUSHER_APP_HOST'),
                 'port'      => env('PUSHER_APP_PORT'),
                 'scheme' => 'http'
-//                'useTLS'    => true,
+                //                'useTLS'    => true,
                 //                'scheme'    => 'https',
             ],
         ],

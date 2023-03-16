@@ -68,7 +68,7 @@ const echoinstance = process.env.VUE_APP_WEBSOCKET_HOST
       wsPort: 8082,
       wssPort: 8082,
       forceTLS: false,
-      encrypted: true,
+      encrypted: false,
       disableStats: true,
       enabledTransports: ['ws', 'wss'],
       // authEndpoint: "https://api.ta.test/broadcasting/auth"
