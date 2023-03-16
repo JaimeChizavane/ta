@@ -313,7 +313,7 @@ export default {
   },
   created() {},
   mounted() {
-    // window.mainExecution();
+    window.mainExecution();
 
     this.$http
       .get('legislacaoAll.json')

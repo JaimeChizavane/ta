@@ -311,7 +311,7 @@ export default {
     };
   },
   mounted() {
-    // window.mainExecution();
+    window.mainExecution();
     this.$http
       .get('legislacaoAll.json')
       .then((data) => {
