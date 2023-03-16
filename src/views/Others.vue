@@ -311,6 +311,19 @@ export default {
       ],
     };
   },
+  created() {
+    if (this.allItems.length < 10) {
+      console.log('change to backup');
+      this.allItems = this.allItemsBak;
+      this.items = this.allItems
+        .sort(
+          (a, b) =>
+            new Date(a.Data_x0020_do_x0020_BR) -
+            new Date(b.Data_x0020_do_x0020_BR)
+        )
+        .reverse();
+    }
+  },
   mounted() {
     window.mainExecution();
 
@@ -319,14 +332,6 @@ export default {
       .then((data) => {
         this.allItems = data.data.d.results;
         console.log('all' + this.allItems.length);
-        this.items = this.allItems
-
-          .sort(
-            (a, b) =>
-              new Date(a.Data_x0020_do_x0020_BR) -
-              new Date(b.Data_x0020_do_x0020_BR)
-          )
-          .reverse();
       })
       .catch((error) => {
         console.log(error);
@@ -356,17 +361,6 @@ export default {
       .catch((error) => {
         console.log(error);
       });
-
-    if (this.allItems.length < 10) {
-      this.allItems = this.allItemsBak;
-      this.items = this.allItems
-        .sort(
-          (a, b) =>
-            new Date(a.Data_x0020_do_x0020_BR) -
-            new Date(b.Data_x0020_do_x0020_BR)
-        )
-        .reverse();
-    }
 
     this.$http
       .get('areas.json')
