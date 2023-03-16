@@ -311,8 +311,7 @@ export default {
     };
   },
   mounted() {
-    window.mainExecution();
-
+    // window.mainExecution();
     this.$http
       .get('legislacaoAll.json')
       .then((data) => {
@@ -328,10 +327,12 @@ export default {
               new Date(b.Data_x0020_do_x0020_BR)
           )
           .reverse();
+        console.log('all' + this.allItems.length);
       })
       .catch((error) => {
         console.log(error);
       });
+
     this.$http
       .get('legislacaoAll_bak.json')
       .then((data) => {
@@ -340,20 +341,22 @@ export default {
             item?.Tipo === 'Leis' ||
             item?.Tipo_x0020_de_x0020_Legisla_x00e === 'Lei'
         );
+        console.log('allBak' + this.allItemsBak.length);
+        if (this.allItems.length < 10) {
+          console.log('change to backup');
+          this.allItems = this.allItemsBak;
+          this.items = this.allItems
+            .sort(
+              (a, b) =>
+                new Date(a.Data_x0020_do_x0020_BR) -
+                new Date(b.Data_x0020_do_x0020_BR)
+            )
+            .reverse();
+        }
       })
       .catch((error) => {
         console.log(error);
       });
-    if (this.allItems.length < this.allItemsBak.length) {
-      this.allItems = this.allItemsBak;
-      this.items = this.allItems
-        .sort(
-          (a, b) =>
-            new Date(a.Data_x0020_do_x0020_BR) -
-            new Date(b.Data_x0020_do_x0020_BR)
-        )
-        .reverse();
-    }
 
     this.$http
       .get('areas.json')

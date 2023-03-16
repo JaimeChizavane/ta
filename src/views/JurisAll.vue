@@ -444,16 +444,17 @@ export default {
             Created: f.Created,
           };
         });
+        if (this.allItems.length < 10) {
+          console.log('change to backup');
+          this.allItems = this.allItemsBak;
+          this.items = this.allItems
+            .sort((a, b) => new Date(a.Created) - new Date(b.Created))
+            .reverse();
+        }
       })
       .catch((error) => {
         console.log(error);
       });
-    if (this.allItems.length < this.allItemsBak.length) {
-      this.allItems = this.allItemsBak;
-      this.items = this.allItems
-        .sort((a, b) => new Date(a.Created) - new Date(b.Created))
-        .reverse();
-    }
 
     this.$http
       .get('assuntos.json')

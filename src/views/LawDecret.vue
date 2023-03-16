@@ -309,8 +309,7 @@ export default {
     };
   },
   mounted() {
-    window.mainExecution();
-
+    //window.mainExecution();
     this.$http
       .get('legislacaoAll.json')
       .then((data) => {
@@ -319,29 +318,39 @@ export default {
             item?.Tipo === 'Decreto Lei' ||
             item?.Tipo_x0020_de_x0020_Legisla_x00e === 'Decreto Lei'
         );
-        this.items = this.allItems;
-        // this.searcheable = this.items.flatMap((item) => {
-        //   if (item.AttachmentFiles.results) {
-        //     return item.AttachmentFiles.results.flatMap((file) => {
-        //       return {
-        //         Tipo: item.Tipo_x0020_de_x0020_Legisla_x00e,
-        //         Area_x0020_de_x0020_Apoio: item.Area_x0020_de_x0020_Apoio,
-        //         Tipo_x0020_de_x0020_Legisla_x00e: item.Tipo_x0020_de_x0020_Legisla_x00e,
-        //         OData__x00c1_rea_x0020_de_x0020_Apoio_: item.OData__x00c1_rea_x0020_de_x0020_Apoio_,
-        //         OData__x00c1_rea_x0020_de_x0020_Apoio_0: item.OData__x00c1_rea_x0020_de_x0020_Apoio_0,
-        //         Title: item.Title,
-        //         Descricao: item.Descricao,
-        //         Assunto: item.Assunto,
-        //         N_x00fa_meroDeBR: item.N_x00fa_meroDeBR,
-        //         N_x00fa_meroDaLegisla_x00e7__x00: item.N_x00fa_meroDaLegisla_x00e7__x00,
-        //         Data_x0020_do_x0020_BR: item.Data_x0020_do_x0020_BR,
-        //         Legisla_x00e7__x00e3_o_x0020_Ger: item.Legisla_x00e7__x00e3_o_x0020_Ger,
-        //         Cart_x00f3_rio_x0020_da_x0020_3a: item.Cart_x00f3_rio_x0020_da_x0020_3a,
-        //         File: file
-        //       }
-        //     })
-        //   }
-        // })
+        this.items = this.allItems
+          .sort(
+            (a, b) =>
+              new Date(a.Data_x0020_do_x0020_BR) -
+              new Date(b.Data_x0020_do_x0020_BR)
+          )
+          .reverse();
+        console.log('all' + this.allItems.length);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    this.$http
+      .get('legislacaoAll_bak.json')
+      .then((data) => {
+        this.allItemsBak = data.data.d.results.filter(
+          (item) =>
+            item?.Tipo === 'Decreto Lei' ||
+            item?.Tipo_x0020_de_x0020_Legisla_x00e === 'Decreto Lei'
+        );
+        console.log('allBak' + this.allItemsBak.length);
+        if (this.allItems.length < 10) {
+          console.log('change to backup');
+          this.allItems = this.allItemsBak;
+          this.items = this.allItems
+            .sort(
+              (a, b) =>
+                new Date(a.Data_x0020_do_x0020_BR) -
+                new Date(b.Data_x0020_do_x0020_BR)
+            )
+            .reverse();
+        }
       })
       .catch((error) => {
         console.log(error);

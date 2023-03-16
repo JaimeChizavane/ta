@@ -313,7 +313,7 @@ export default {
   },
   created() {},
   mounted() {
-    window.mainExecution();
+    // window.mainExecution();
 
     this.$http
       .get('legislacaoAll.json')
@@ -331,9 +331,6 @@ export default {
       .catch((error) => {
         console.log(error);
       });
-    console.log(
-      this.items.filter((l) => l.N_x00fa_meroDaLegisla_x00e7__x00 == '9/2018')
-    );
 
     this.$http
       .get('legislacaoAll_bak.json')
