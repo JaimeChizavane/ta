@@ -311,19 +311,7 @@ export default {
       ],
     };
   },
-  created() {
-    if (this.allItems.length < 10) {
-      console.log('change to backup');
-      this.allItems = this.allItemsBak;
-      this.items = this.allItems
-        .sort(
-          (a, b) =>
-            new Date(a.Data_x0020_do_x0020_BR) -
-            new Date(b.Data_x0020_do_x0020_BR)
-        )
-        .reverse();
-    }
-  },
+  created() {},
   mounted() {
     window.mainExecution();
 
@@ -372,6 +360,25 @@ export default {
       .catch((error) => {
         console.log(error);
       });
+    if (this.allItems.length < 10) {
+      console.log('change to backup');
+      this.allItems = this.allItemsBak;
+      this.items = this.allItems
+        .sort(
+          (a, b) =>
+            new Date(a.Data_x0020_do_x0020_BR) -
+            new Date(b.Data_x0020_do_x0020_BR)
+        )
+        .reverse();
+    } else {
+      this.items = this.allItems
+        .sort(
+          (a, b) =>
+            new Date(a.Data_x0020_do_x0020_BR) -
+            new Date(b.Data_x0020_do_x0020_BR)
+        )
+        .reverse();
+    }
   },
 };
 </script>
