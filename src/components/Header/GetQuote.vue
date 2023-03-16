@@ -1,7 +1,7 @@
 <template>
   <li>
     <ul class="navbar-actions list-unstyled mb-0 d-flex align-items-center">
-      <li class="d-none">
+      <li class="">
         <span>
           Online:
           <span
@@ -80,7 +80,7 @@ export default {
   data() {
     return {
       users: [],
-      usersCount: 0,
+      usersCount: 1,
     };
   },
   mounted() {
