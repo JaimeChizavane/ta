@@ -319,32 +319,38 @@ export default {
       .get('legislacaoAll.json')
       .then((data) => {
         this.allItems = data.data.d.results;
+        this.items = this.allItems
+          .sort(
+            (a, b) =>
+              new Date(a.Data_x0020_do_x0020_BR) -
+              new Date(b.Data_x0020_do_x0020_BR)
+          )
+          .reverse();
         console.log('all' + this.allItems.length);
       })
       .catch((error) => {
         console.log(error);
       });
     console.log(
-      this.items.filter((l) =>
-        l.N_x00fa_meroDaLegisla_x00e7__x00?.toLowerCase().includes('9/2018')
-      )
+      this.items.filter((l) => l.N_x00fa_meroDaLegisla_x00e7__x00 == '9/2018')
     );
 
-    console.log(
-      this.items.filter(
-        (l) =>
-          !(
-            l.N_x00fa_meroDaLegisla_x00e7__x00?.toLowerCase().includes('9/2018')
-            //&&
-            // l.Legisla_x00e7__x00e3_o_x0020_Ger?.toLowerCase().includes('geral')
-          )
-      )
-    );
     this.$http
       .get('legislacaoAll_bak.json')
       .then((data) => {
         this.allItemsBak = data.data.d.results;
         console.log('allBak' + this.allItemsBak.length);
+        if (this.allItems.length < 10) {
+          console.log('change to backup');
+          this.allItems = this.allItemsBak;
+          this.items = this.allItems
+            .sort(
+              (a, b) =>
+                new Date(a.Data_x0020_do_x0020_BR) -
+                new Date(b.Data_x0020_do_x0020_BR)
+            )
+            .reverse();
+        }
       })
       .catch((error) => {
         console.log(error);
@@ -360,25 +366,6 @@ export default {
       .catch((error) => {
         console.log(error);
       });
-    if (this.allItems.length < 10) {
-      console.log('change to backup');
-      this.allItems = this.allItemsBak;
-      this.items = this.allItems
-        .sort(
-          (a, b) =>
-            new Date(a.Data_x0020_do_x0020_BR) -
-            new Date(b.Data_x0020_do_x0020_BR)
-        )
-        .reverse();
-    } else {
-      this.items = this.allItems
-        .sort(
-          (a, b) =>
-            new Date(a.Data_x0020_do_x0020_BR) -
-            new Date(b.Data_x0020_do_x0020_BR)
-        )
-        .reverse();
-    }
   },
 };
 </script>
