@@ -1,7 +1,7 @@
 <template>
   <li>
     <ul class="navbar-actions list-unstyled mb-0 d-flex align-items-center">
-      <li class="">
+      <li class="d-none">
         <span>
           Online:
           <span
