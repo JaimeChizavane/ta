@@ -370,7 +370,7 @@ export default {
             )
             .reverse();
         }
-        console.log(
+        /*  console.log(
           this.items.filter(
             (l) =>
               l?.N_x00fa_meroDaLegisla_x00e7__x00 === '9/2018' &&
@@ -387,7 +387,7 @@ export default {
                   l?.N_x00fa_mero_x0020_do_x0020_BR == '')
               )
           )
-        );
+        ); */
       })
       .catch((error) => {
         console.log(error);
