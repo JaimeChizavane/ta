@@ -444,7 +444,7 @@ export default {
             Created: f.Created,
           };
         });
-        if (this.allItems.length < 10) {
+        if (this.allItems.length < this.allItemsBak.length) {
           console.log('change to backup');
           this.allItems = this.allItemsBak;
           this.items = this.allItems

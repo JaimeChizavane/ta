@@ -353,6 +353,11 @@ export default {
             )
             .reverse();
         }
+        console.log(
+          this.items.filter(
+            (l) => l?.N_x00fa_meroDaLegisla_x00e7__x00 === '9/2018'
+          )
+        );
       })
       .catch((error) => {
         console.log(error);
