@@ -1,0 +1,38 @@
+login as: ta
+ta@10.0.0.42's password:
+Welcome to Ubuntu 22.04.1 LTS (GNU/Linux 5.15.0-67-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Fri Mar 17 06:43:47 AM CAT 2023
+
+  System load:  0.04296875          Processes:               1118
+  Usage of /:   11.6% of 145.37GB   Users logged in:         1
+  Memory usage: 63%                 IPv4 address for ens160: 10.0.0.42
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+109 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+
+Last login: Fri Mar 17 06:43:48 2023 from 10.0.0.146
+ta@spprdfe:~$ cd sites/ta
+ta@spprdfe:~/sites/ta$ ls
+api              dist          package-lock.json  README.md  vue.config.js
+babel.config.js  node_modules  post-merge         src        yarn-error.log
+certificate      package.json  public             template   yarn.lock
+ta@spprdfe:~/sites/ta$ nano .env
+ta@spprdfe:~/sites/ta$ nano .env.example
+ta@spprdfe:~/sites/ta$ cd api
+ta@spprdfe:~/sites/ta/api$ ls
+app            laravel-echo-server.json.example  routes
+artisan        link.sh                           socketi.json
+
+soketi start --config=socketi.json
