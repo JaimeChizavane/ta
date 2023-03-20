@@ -2,7 +2,7 @@
 	<li>
 		<ul class="navbar-actions list-unstyled mb-0 d-flex align-items-center">
 			<li>
-				<span>
+				<span v-if="usersCount > 0">
 					Online:
 					<span
 						class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary"
@@ -14,7 +14,7 @@
 			</li>
 			<li class="d-none d-xl-block"></li>
 			<li>
-				<span>
+				<span v-if="usersVisit > 0">
 					Visitas :
 					<span
 						class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary"
