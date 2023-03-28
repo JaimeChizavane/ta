@@ -18,6 +18,6 @@ class FetchNewsTADCMCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "TADCM/_api/web/lists/getByTitle('Noticias')/items?\$expand=AttachmentFiles&\$orderBy=Data_x0020_Noticia desc";
+    protected $uri  = "TADCM/_api/web/lists/getByTitle('Notícias')/items?\$expand=AttachmentFiles&\$orderBy=Data_x0020_Noticia desc";
     protected $path = 'tadcmnews.json';
 }

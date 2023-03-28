@@ -18,6 +18,6 @@ class FetchNewsTFPMCommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "TFPM/_api/web/lists/getByTitle('Noticias')/items?\$expand=AttachmentFiles&\$orderBy=Data_x0020_Noticia desc";
+    protected $uri  = "TFPM/_api/web/lists/getByTitle('Notícias')/items?\$expand=AttachmentFiles&\$orderBy=Data_x0020_Noticia desc";
     protected $path = 'tfpmnews.json';
 }

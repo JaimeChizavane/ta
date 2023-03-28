@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Criado por Maizer Aly de O. Gomes para api.
  * Email: maizer.gomes@gmail.com / maizer.gomes@ekutivasolutions / maizer.gomes@outlook.com
@@ -17,6 +18,6 @@ class FetchNewsCSMJACommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "CSMJA/_api/web/lists/getByTitle('Noticias')/items?\$expand=AttachmentFiles&\$orderBy=Data_x0020_Noticia desc";
+    protected $uri  = "CSMJA/_api/web/lists/getByTitle('Notícias')/items?\$expand=AttachmentFiles&\$orderBy=Data_x0020_Noticia desc";
     protected $path = 'cmsjanews.json';
 }
