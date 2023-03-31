@@ -16,8 +16,8 @@
                 <h5>{{ item.Title }}</h5>
                 <p
                   class="heading__desc mb-30"
-                  v-html="item.OData__x0074_i27"
-                ></p>
+                  v-html="item.Conteudo__x0074_i27"
+                  ></p>
               </div>
             </div>
           </div>
