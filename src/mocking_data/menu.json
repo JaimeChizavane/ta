@@ -291,7 +291,13 @@
                 "to": "tadpn.home",
                 "blank": true,
                 "sub_menus": []
-            }
+            },
+            {
+                "name": "menus.tadps",
+                "to": "tadps.home",
+                "blank": true,
+                "sub_menus": []
+            } 
         ]
     },
   
