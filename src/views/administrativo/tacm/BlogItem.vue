@@ -7,7 +7,7 @@
       :item="item"
       :navigation="navigation"
       :related="related"
-      route-name="tadcm.blog-item"
+      route-name="tacm.blog-item"
     />
     <q-footer />
   </div>
@@ -18,7 +18,7 @@ import QFooter from '@/components/Footer';
 import QHeader from '@/components/Header/Header';
 import QBreadCrumb from '@/components/BreadCrumb';
 import QItem from '@/components/Item';
-import SubMenu from '@/views/aduaneiro/tadcm/components/SubMenu';
+import SubMenu from '@/views/administrativo/tacm/components/SubMenu';
 
 export default {
   name: 'QBlogItem',
@@ -86,7 +86,7 @@ export default {
   async mounted() {
     window.mainExecution();
 
-    const data = await this.$http.get('tadcmnews.json');
+    const data = await this.$http.get('tacmnews.json');
 
     this.news = data.data.d.results;
 

@@ -26,7 +26,7 @@
             class="navbar-brand btn btn__primary btn__primary-style2"
             :to="{ name: 'folhetoCSMJA' }"
           >
-            <span>Saiba mais sobre o tadcm</span>
+            <span>Saiba mais sobre o tacm</span>
             <i class="icon-arrow-right"></i>
           </router-link>
         </div>
