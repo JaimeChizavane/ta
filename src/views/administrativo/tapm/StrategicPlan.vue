@@ -5,7 +5,7 @@
         <div class="col-sm-12 col-md-12 col-lg-7 col-xl-6">
           <div class="heading heading-layout2 mb-50">
             <h3 class="heading__title">
-              Tribunal Aduaneiro da Província de Nampula
+              Tribunal Administrativo da Província de Maputo
             </h3>
             <div class="about-text-wrapper">
               <div

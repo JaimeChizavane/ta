@@ -50,7 +50,7 @@
 import QFooter from '@/components/Footer';
 import QHeader from '@/components/Header/Header';
 import QBreadCrumb from '@/components/BreadCrumb';
-import SubMenu from '@/views/aduaneiro/tadpn/components/SubMenu';
+import SubMenu from '@/views/administrativo/tapm/components/SubMenu';
 
 export default {
   name: 'QFaq',
@@ -64,7 +64,7 @@ export default {
     window.mainExecution();
 
     this.$http
-      .get('tadpnfaq.json')
+      .get('tapmfaq.json')
       .then((data) => {
         this.faqs = data.data.d.results;
       })

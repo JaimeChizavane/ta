@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import menus from '@/mocking_data/tadpn.json';
+import menus from '@/mocking_data/tapm.json';
 
 export default {
   name: 'SubMenu',
