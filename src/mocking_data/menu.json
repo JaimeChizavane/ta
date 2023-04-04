@@ -285,6 +285,12 @@
                 "to": "tadcm.home",
                 "blank": true,
                 "sub_menus": []
+            },
+            {
+                "name": "menus.tadpn",
+                "to": "tadpn.home",
+                "blank": true,
+                "sub_menus": []
             }
         ]
     },
