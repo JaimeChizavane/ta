@@ -303,7 +303,13 @@
                 "to": "tfpm.home",
                 "blank": true,
                 "sub_menus": []
-            } 
+            },
+            {
+                "name": "menus.tfptt",
+                "to": "tfptt.home",
+                "blank": true,
+                "sub_menus": []
+            }
         ]
     },
   
