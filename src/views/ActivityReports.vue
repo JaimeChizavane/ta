@@ -292,8 +292,8 @@ export default {
 					(i) =>
 						i.Folder.Files &&
 						i.Folder.Files.results?.length &&
-						(i.Name.includes('Auditorias de Desempenho') ||
-							i.Name.includes('Contas do TA'))
+						(i.Folder.Name.includes('Auditorias de Desempenho') ||
+							i.Folder.Name.includes('Contas do TA'))
 				);
 				this.items = this.allItems;
 				this.searcheable = this.items.flatMap((item) => {
