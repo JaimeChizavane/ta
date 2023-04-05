@@ -19,12 +19,12 @@
 import QFooter from '@/components/Footer';
 import QHeader from '@/components/Header/Header';
 import QBreadCrumb from '@/components/BreadCrumb';
-import SubMenu from '@/views/fiscal/tftt/components/SubMenu';
-import QCSSupportServices from '@/views/fiscal/tftt/SupportService';
-import QCSStrategicPlan from '@/views/fiscal/tftt/StrategicPlan';
-import QCSHistory from '@/views/fiscal/tftt/History';
-import QCSCompetencies from '@/views/fiscal/tftt/Competencies';
-import QCSJABlog from '@/components/TFTTBlog';
+import SubMenu from '@/views/fiscal/tfptt/components/SubMenu';
+import QCSSupportServices from '@/views/fiscal/tfptt/SupportService';
+import QCSStrategicPlan from '@/views/fiscal/tfptt/StrategicPlan';
+import QCSHistory from '@/views/fiscal/tfptt/History';
+import QCSCompetencies from '@/views/fiscal/tfptt/Competencies';
+import QCSJABlog from '@/components/TFPTTBlog';
 
 export default {
   name: 'QSectionOne',
@@ -48,7 +48,7 @@ export default {
     window.mainExecution();
 
     this.$http
-      .get('tfttinstituicao.json')
+      .get('tfpttinstituicao.json')
       .then((data) => {
         this.services = data.data.d.results;
       })
