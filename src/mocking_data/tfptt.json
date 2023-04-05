@@ -1,0 +1,41 @@
+[{
+        "name": "menus.institution",
+        "to": "tfptt.home",
+        "sub_menus": []
+    },
+    {
+        "name": "menus.legislation",
+        "to": "legislation",
+        "sub_menus": [{
+                "name": "menus.law",
+                "to": "tfptt.law",
+                "sub_menus": []
+            },
+            {
+                "name": "menus.decret",
+                "to": "tfptt.decret",
+                "sub_menus": []
+            },
+            {
+                "name": "menus.resolution",
+                "to": "tfptt.dispatchment",
+                "sub_menus": []
+            }
+        ]
+    },
+    {
+        "name": "menus.news",
+        "to": "tfptt.publications",
+        "sub_menus": []
+    },
+    {
+        "name": "menus.publications",
+        "to": "tfptt.publication",
+        "sub_menus": []
+    },
+    {
+        "name": "menus.faq",
+        "to": "tfptt.faq",
+        "sub_menus": []
+    }
+]
