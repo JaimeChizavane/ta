@@ -26,7 +26,7 @@
             <div class="post__img">
               <router-link
                 :to="{
-                  name: 'TFPTT.blog-item',
+                  name: 'tfptt.blog-item',
                   params: { guid: article.GUID },
                 }"
               >
@@ -41,7 +41,7 @@
               <h4 class="post__title">
                 <router-link
                   :to="{
-                    name: 'TFPTT.blog-item',
+                    name: 'tfptt.blog-item',
                     params: { guid: article.GUID },
                   }"
                 >
@@ -84,7 +84,7 @@
 
 <script>
 export default {
-  name: 'QTFPSBlog',
+  name: 'QTFPTTBlog',
   methods: {
     getImageUrl(item) {
       return item && item.Attachments
