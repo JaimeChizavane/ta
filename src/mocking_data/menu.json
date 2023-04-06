@@ -309,6 +309,12 @@
                 "to": "tfptt.home",
                 "blank": true,
                 "sub_menus": []
+            },
+            {
+                "name": "menus.tadpz",
+                "to": "tadpz.home",
+                "blank": true,
+                "sub_menus": []
             }
         ]
     },
