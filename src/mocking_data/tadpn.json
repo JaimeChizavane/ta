@@ -1,6 +1,6 @@
 [{
         "name": "menus.institution",
-        "to": "tadcm.home",
+        "to": "tadpn.home",
         "sub_menus": []
     },
     {
@@ -8,34 +8,34 @@
         "to": "legislation",
         "sub_menus": [{
                 "name": "menus.law",
-                "to": "tadcm.law",
+                "to": "tadpn.law",
                 "sub_menus": []
             },
             {
                 "name": "menus.decret",
-                "to": "tadcm.decret",
+                "to": "tadpn.decret",
                 "sub_menus": []
             },
             {
                 "name": "menus.resolution",
-                "to": "tadcm.dispatchment",
+                "to": "tadpn.dispatchment",
                 "sub_menus": []
             }
         ]
     },
     {
         "name": "menus.news",
-        "to": "tadcm.publications",
+        "to": "tadpn.publications",
         "sub_menus": []
     },
     {
         "name": "menus.publications",
-        "to": "tadcm.publication",
+        "to": "tadpn.publication",
         "sub_menus": []
     },
     {
         "name": "menus.faq",
-        "to": "tadcm.faq",
+        "to": "tadpn.faq",
         "sub_menus": []
     }
 ]
