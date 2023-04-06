@@ -1086,6 +1086,14 @@ const routes = [
     component: () => import('@/views/fiscal/tfps/Publications.vue'),
   },
   {
+    path: '/tfptt/publications',
+    name: 'tfptt.publication',
+    meta: {
+      display: 'menus.publications',
+    },
+    component: () => import('@/views/fiscal/tfptt/Publications.vue'),
+  },
+  {
     path: '/tfpm/publications',
     name: 'tfpm.publication',
     meta: {
