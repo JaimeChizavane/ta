@@ -84,7 +84,7 @@
 
 <script>
 export default {
-  name: 'QtadpzBlog',
+  name: 'QTADPZBlog',
   methods: {
     getImageUrl(item) {
       return item && item.Attachments
