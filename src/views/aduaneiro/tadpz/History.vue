@@ -10,7 +10,7 @@
             <img :src="bannerImage()" alt="about" />
             <blockquote class="blockquote mb-0">
               <h4 class="blockquote__title">
-                Tribunal Aduaneiro da Provincia da Zambezia
+                Tribunal Aduaneiro da Provincia da Zambézia
               </h4>
             </blockquote>
           </div>

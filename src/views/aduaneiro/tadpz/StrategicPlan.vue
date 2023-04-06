@@ -5,7 +5,7 @@
         <div class="col-sm-12 col-md-12 col-lg-7 col-xl-6">
           <div class="heading heading-layout2 mb-50">
             <h3 class="heading__title">
-              Tribunal Aduaneiro da Provincia da Zambezia
+              Tribunal Aduaneiro da Provincia da Zambézia
             </h3>
             <div class="about-text-wrapper">
               <div
