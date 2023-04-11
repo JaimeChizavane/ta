@@ -75,7 +75,9 @@
             "tadcm": "Tribunal Aduaneiro da Cidade de Maputo",
             "tfptt": "Tribunal Fiscal da Província de Tete",
             "tadpz": "Tribunal Aduaneiro da Província da Zambézia",
-            "tadpn": "Tribunal Aduaneiro da Província de Nampula"
+            "tadpn": "Tribunal Aduaneiro da Província de Nampula",
+            "tadps": "Tribunal Aduaneiro da Província de Sofala"
+
         },
         "search": "Pesquisar",
         "read_more": "Ler mais",
