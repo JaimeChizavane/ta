@@ -1260,7 +1260,7 @@ const routes = [
     meta: {
       display: 'menus.tadpz',
     },
-    component: () => import('@/views/fiscal/tadpz/Home.vue'),
+    component: () => import('@/views/aduaneiro/tadpz/Home.vue'),
   },
   {
     path: '/tadpz/news',
@@ -1268,7 +1268,7 @@ const routes = [
     meta: {
       display: 'blog',
     },
-    component: () => import('@/views/fiscal/tadpz/BlogList.vue'),
+    component: () => import('@/views/aduaneiro/tadpz/BlogList.vue'),
   },
   {
     path: '/tadpz/blog',
@@ -1276,7 +1276,7 @@ const routes = [
     meta: {
       display: 'blog',
     },
-    component: () => import('@/views/fiscal/tadpz//BlogList.vue'),
+    component: () => import('@/views/aduaneiro/tadpz//BlogList.vue'),
   },
   {
     path: '/tadpz/blog/:guid',
@@ -1284,7 +1284,7 @@ const routes = [
     meta: {
       display: 'blog',
     },
-    component: () => import('@/views/fiscal/tadpz/BlogItem.vue'),
+    component: () => import('@/views/aduaneiro/tadpz/BlogItem.vue'),
   },
   {
     path: '/tadpz/faq',
@@ -1292,7 +1292,7 @@ const routes = [
     meta: {
       display: 'menus.faq',
     },
-    component: () => import('@/views/fiscal/tadpz/Faq.vue'),
+    component: () => import('@/views/aduaneiro/tadpz/Faq.vue'),
   },
   {
     path: '/tadpz/law',
@@ -1301,7 +1301,7 @@ const routes = [
       display: 'menus.law',
       parent: 'menus.legislation',
     },
-    component: () => import('@/views/fiscal/tadpz/Law.vue'),
+    component: () => import('@/views/aduaneiro/tadpz/Law.vue'),
   },
   {
     path: '/tadpz/decret',
@@ -1310,7 +1310,7 @@ const routes = [
       display: 'menus.decret',
       parent: 'menus.legislation',
     },
-    component: () => import('@/views/fiscal/tadpz/Decret.vue'),
+    component: () => import('@/views/aduaneiro/tadpz/Decret.vue'),
   },
   {
     path: '/tadpz/dispatchment',
@@ -1319,7 +1319,7 @@ const routes = [
       display: 'menus.resolution',
       parent: 'menus.legislation',
     },
-    component: () => import('@/views/fiscal/tadpz/Dispatchment.vue'),
+    component: () => import('@/views/aduaneiro/tadpz/Dispatchment.vue'),
   },
 
   {
