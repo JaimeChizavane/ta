@@ -277,6 +277,24 @@
                     "to": "tadcm.home",
                     "blank": true,
                     "sub_menus": []
+                },
+                {
+                    "name": "menus.tadps",
+                    "to": "tadps.home",
+                    "blank": true,
+                    "sub_menus": []
+                },
+                {
+                    "name": "menus.tadpz",
+                    "to": "tadpz.home",
+                    "blank": true,
+                    "sub_menus": []
+                },
+                {
+                    "name": "menus.tadpn",
+                    "to": "tadpn.home",
+                    "blank": true,
+                    "sub_menus": []
                 }
 
             ]
@@ -293,19 +311,7 @@
                 "blank": true,
                 "sub_menus": []
             },
-            
-            {
-                "name": "menus.tadpn",
-                "to": "tadpn.home",
-                "blank": true,
-                "sub_menus": []
-            },
-            {
-                "name": "menus.tadps",
-                "to": "tadps.home",
-                "blank": true,
-                "sub_menus": []
-            },
+                        
             {
                 "name": "menus.tfpm",
                 "to": "tfpm.home",
@@ -317,13 +323,8 @@
                 "to": "tfptt.home",
                 "blank": true,
                 "sub_menus": []
-            },
-            {
-                "name": "menus.tadpz",
-                "to": "tadpz.home",
-                "blank": true,
-                "sub_menus": []
             }
+            
         ]
     },
   
