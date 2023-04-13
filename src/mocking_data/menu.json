@@ -269,6 +269,12 @@
                 "sub_menus": []
             },
             {
+                "name": "menus.administrative_courts",
+                "to": "administrative_courts",
+                "sub_menus": []
+                
+                },
+            {
             "name": "menus.customs_courts",
             "to": "customs_courts",
             "sub_menus": [
