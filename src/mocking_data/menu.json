@@ -299,7 +299,7 @@
 
             ]
             },
-            [
+            
             {
                 "name": "menus.tax_courts",
                 "to": "tax_courts",
@@ -329,7 +329,7 @@
                         "sub_menus": []
                     }
                 ]    
-            }    ]
+            }    
         ]
     },
   
