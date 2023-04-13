@@ -300,31 +300,35 @@
             ]
             },
             {
-                "name": "menus.tfps",
-                "to": "tfps.home",
-                "blank": true,
-                "sub_menus": []
-            },
-            {
-                "name": "menus.tfcm",
-                "to": "tfcm.home",
-                "blank": true,
-                "sub_menus": []
-            },
-                        
-            {
-                "name": "menus.tfpm",
-                "to": "tfpm.home",
-                "blank": true,
-                "sub_menus": []
-            },
-            {
-                "name": "menus.tfptt",
-                "to": "tfptt.home",
-                "blank": true,
-                "sub_menus": []
-            }
-            
+                "name": "menus.tax_courts",
+                "to": "tax_courts",
+                "sub_menus": [
+                    {
+                        "name": "menus.tfcm",
+                        "to": "tfcm.home",
+                        "blank": true,
+                        "sub_menus": []
+                    },
+                    {
+                        "name": "menus.tfpm",
+                        "to": "tfpm.home",
+                        "blank": true,
+                        "sub_menus": []
+                    },
+                    {
+                        "name": "menus.tfps",
+                        "to": "tfps.home",
+                        "blank": true,
+                        "sub_menus": []
+                    },
+                    {
+                        "name": "menus.tfptt",
+                        "to": "tfptt.home",
+                        "blank": true,
+                        "sub_menus": []
+                    }
+                ]
+                }    
         ]
     },
   
