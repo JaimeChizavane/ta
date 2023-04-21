@@ -39,8 +39,7 @@
                   <div class="form-group">
                     <select class="form-control" v-model="denuncia.Title">
                       <option :selected="true">Seleccione</option>
-                      <option v-for="(area, index) in areas" :key="index" 
-                      :selected="Seleccione"
+                      <option v-for="(area, index) in areas" :key="index" :selected="area.Title == denuncia.Tipo"
                               :value="area.Title">
                         {{ area.Title }}
                       </option>
