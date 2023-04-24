@@ -33,12 +33,11 @@
                     <input type="email" class="form-control" placeholder="Email" id="contact-email"
                            v-model="denuncia.Email"
                            name="contact-email" required>
-                  </div>
+                  </div> 
                 </div><!-- /.col-lg-6 -->
                 <div class="col-sm-6 col-md-6 col-lg-6">
                   <div class="form-group">
                     <select class="form-control" v-model="denuncia.Title">
-                      <option :selected="true">Seleccione</option>
                       <option v-for="(area, index) in areas" :key="index" :selected="area.Title == denuncia.Tipo"
                               :value="area.Title">
                         {{ area.Title }}
