@@ -152,7 +152,7 @@ class Kernel extends ConsoleKernel
         foreach ($this->commands as $command) {
             $schedule->command($command)->when(function () use ($command) {
                 $command !== SPApiFetchAll::class;
-            })->everyFifteenMinutes()->withoutOverlapping();
+            })->twiceDaily()->withoutOverlapping();
         }
     }
 }
