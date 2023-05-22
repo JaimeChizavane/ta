@@ -165,7 +165,7 @@ export default {
 				this.allItems = data.data.d.results;
 				this.items = this.allItems.filter(
 					(item) =>
-						item.Folder.Files.length > 0 &&
+						item.Folder.Files.results.length > 0 &&
 						!this.notItems.includes(item.Folder.Name.toLowerCase())
 				);
 				this.items = this.items.sort((a, b) =>
