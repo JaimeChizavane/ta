@@ -158,7 +158,7 @@ export default {
 		this.$http
 			.get('cmsja_publicacao.json')
 			.then((data) => {
-				// console.log(data.data.d.results);
+				console.log(data.data.d.results[0]);
 				this.history = data.data.d.results
 					.filter(
 						(i) => i.Name !== 'Forms' // &&
