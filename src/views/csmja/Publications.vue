@@ -3,6 +3,7 @@
 	<div class="wrapper">
 		<q-header />
 		<q-bread-crumb />
+		<sub-menu />
 		<section class="careers">
 			<div class="container">
 				<div class="row">
@@ -108,10 +109,11 @@
 import QFooter from '@/components/Footer';
 import QHeader from '@/components/Header/Header';
 import QBreadCrumb from '@/components/BreadCrumb';
+import SubMenu from '@/views/csmja/components/SubMenu';
 
 export default {
 	name: 'QAboutUs',
-	components: { QBreadCrumb, QHeader, QFooter },
+	components: { QBreadCrumb, QHeader, QFooter, SubMenu },
 	methods: {
 		getFileUrl(item) {
 			return item && item.ServerRelativeUrl
