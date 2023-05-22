@@ -170,7 +170,7 @@ export default {
 				// console.log(this.history);
 				this.history.forEach((item) => {
 					item.Files.results = item.Files.results.sort((a, b) =>
-						a.Name.localeCompare(b.Name)
+						a.Name?.localeCompare(b.Name)
 					);
 					this.allItems.push(item);
 				});
