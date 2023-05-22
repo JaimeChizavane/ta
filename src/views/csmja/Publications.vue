@@ -159,17 +159,12 @@ export default {
 			.get('cmsja_publicacao.json')
 			.then((data) => {
 				console.log(data.data.d.results[0]);
-				this.history = data.data.d.results
-					.filter(
-						(i) => i.Name !== 'Forms' // &&
-						// (i.Name.toLowerCase().includes('relatório e parecer') ||
-						//   i.Name.toLowerCase().includes('relatórios e pareceres'))
-					)
-					.sort((a, b) =>
-						a.Folder.Name.toLowerCase().localeCompare(
-							b.Folder.Name.toLowerCase()
-						)
-					);
+				this.history = data.data.d.results.filter(
+					(i) => i.Name !== 'Forms' // &&
+					// (i.Name.toLowerCase().includes('relatório e parecer') ||
+					//   i.Name.toLowerCase().includes('relatórios e pareceres'))
+				);
+
 				this.allItems = this.history;
 				//.sort((a, b) => a.Name?.localeCompare(b.Name));
 
