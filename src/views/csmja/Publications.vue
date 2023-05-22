@@ -299,8 +299,8 @@ export default {
 							.reverse()
 							.flatMap((file) => {
 								return {
-									Tipo: item.Tipo,
-									Title: item.Title || item.Folder.Name,
+									Tipo: item.Folder.Name,
+									Title: item.Folder.Name,
 									File: file,
 								};
 							});
