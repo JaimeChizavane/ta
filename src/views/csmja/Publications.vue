@@ -165,8 +165,8 @@ export default {
 						// (i.Name.toLowerCase().includes('relatório e parecer') ||
 						//   i.Name.toLowerCase().includes('relatórios e pareceres'))
 					)
-					.sort((a, b) => a.Name.localeCompare(b.Name))
-					.reverse();
+					.sort((a, b) => a.Name?.localeCompare(b.Name));
+
 				// console.log(this.history);
 				this.history.forEach((item) => {
 					item.Files.results = item.Files.results.sort((a, b) =>
