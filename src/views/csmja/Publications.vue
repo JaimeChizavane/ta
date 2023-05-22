@@ -165,15 +165,21 @@ export default {
 						// (i.Name.toLowerCase().includes('relatório e parecer') ||
 						//   i.Name.toLowerCase().includes('relatórios e pareceres'))
 					)
-					.sort((a, b) => a.Name?.localeCompare(b.Name));
+					.sort((a, b) =>
+						a.Folder.Name.toLowerCase().localeCompare(
+							b.Folder.Name.toLowerCase()
+						)
+					);
+				this.allItems = this.history;
+				//.sort((a, b) => a.Name?.localeCompare(b.Name));
 
 				// console.log(this.history);
-				this.history.forEach((item) => {
+				/*	this.history.forEach((item) => {
 					item.Files.results = item.Files.results.sort((a, b) =>
 						a.Name?.localeCompare(b.Name)
 					);
 					this.allItems.push(item);
-				});
+				});*/
 
 				this.history = this.allItems;
 			})
