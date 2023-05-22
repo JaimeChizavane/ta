@@ -1,19 +1,10 @@
+@@ -0,0 +1,104 @@
 <template>
 	<div class="wrapper">
 		<q-header />
 		<q-bread-crumb />
 		<section class="careers">
 			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-						<div class="heading text-center mb-50">
-							<h3 class="heading__title">{{ $tc($route.meta.display) }}</h3>
-						</div>
-						<!-- /.heading -->
-					</div>
-					<!-- /.col-lg-10 -->
-				</div>
-				<!-- /.row -->
 				<div class="row">
 					<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-3">
 						<div class="pagetitle__form mb-50">
@@ -28,13 +19,12 @@
 					</div>
 					<!-- /.col-xl-6 -->
 				</div>
-
 				<div class="container">
 					<div class="row" id="accordion">
 						<div class="col-sm-12 col-md-12 col-lg-12">
 							<div
 								class="accordion-item"
-								v-for="(faq, index) in history"
+								v-for="(faq, index) in items"
 								:key="index"
 							>
 								<div
@@ -42,9 +32,10 @@
 									data-toggle="collapse"
 									:data-target="'#collapse' + index"
 								>
-									<a class="accordion__title" @click.prevent>{{ faq.Name }}</a>
+									<a class="accordion__title" @click.prevent>{{
+										faq.Folder.Name
+									}}</a>
 								</div>
-								<!-- /.accordion-item-header -->
 								<div
 									:id="'collapse' + index"
 									class="collapse"
@@ -57,7 +48,7 @@
 													<!-- career item #1 -->
 													<div
 														class="job-item"
-														v-for="(item, index) in faq.Files.results"
+														v-for="(item, index) in faq.Folder.Files.results"
 														:key="index"
 													>
 														<div class="row">
@@ -70,9 +61,6 @@
 																		{{ item.TimeLastModified | date }}
 																	</span>
 																</div>
-																<h4 class="job__title">
-																	{{ item.Name || 'Sem titulo' }}
-																</h4>
 															</div>
 															<!-- /.col-lg-4 -->
 															<div class="col-sm-12 col-md-12 col-lg-5">
@@ -104,11 +92,10 @@
 								</div>
 							</div>
 						</div>
-						<!-- /.col-lg-6 -->
 					</div>
-					<!-- /.row -->
 				</div>
-				<!-- /.container -->
+
+				<!-- /.row -->
 			</div>
 			<!-- /.container -->
 		</section>
@@ -123,32 +110,39 @@ import QHeader from '@/components/Header/Header';
 import QBreadCrumb from '@/components/BreadCrumb';
 
 export default {
-	name: 'QDecret',
+	name: 'QAboutUs',
 	components: { QBreadCrumb, QHeader, QFooter },
 	methods: {
-		search() {
-			if (this.query) {
-				this.history = this.allItems.filter(
-					(item) =>
-						item.Name?.toLowerCase().includes(this.query.toLowerCase()) ||
-						item.Files.results.find((f) =>
-							f.Name?.toLowerCase().includes(this.query.toLowerCase())
-						)
-				);
-			} else {
-				this.history = this.allItems;
-			}
-		},
 		getFileUrl(item) {
 			return item && item.ServerRelativeUrl
 				? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl
 				: '#';
 		},
+		search() {
+			if (this.query) {
+				this.items = this.allItems
+					.filter(
+						(item) => item.Folder.Files && item.Folder.Files.results.length
+					)
+					.filter(
+						(item) =>
+							item.Folder.Name.toLowerCase().includes(
+								this.query.toLowerCase()
+							) ||
+							item.Tipo.toLowerCase().includes(this.query.toLowerCase()) ||
+							item.Folder.Files.results.find((i) =>
+								i.Name.toLowerCase().includes(this.query.toLowerCase())
+							)
+					);
+			} else {
+				this.items = this.allItems.filter((item) => item.Folder.Files);
+			}
+		},
 	},
 	data() {
 		return {
+			items: [],
 			allItems: [],
-			history: [],
 			query: '',
 		};
 	},
@@ -158,25 +152,15 @@ export default {
 		this.$http
 			.get('cmsja_publicacao.json')
 			.then((data) => {
-				console.log(data.data.d.results[0]);
-				this.history = data.data.d.results.filter(
-					(i) => i.Name !== 'Forms' // &&
-					// (i.Name.toLowerCase().includes('relatório e parecer') ||
-					//   i.Name.toLowerCase().includes('relatórios e pareceres'))
+				this.allItems = data.data.d.results;
+				this.items = this.allItems.filter((item) => item.Folder.Files);
+				this.items = this.items.sort((a, b) =>
+					a.Folder.Name.localeCompare(b.Folder.Name)
 				);
 
-				this.allItems = this.history;
-				//.sort((a, b) => a.Name?.localeCompare(b.Name));
+				this.allItems = this.items;
 
-				// console.log(this.history);
-				/*	this.history.forEach((item) => {
-					item.Files.results = item.Files.results.sort((a, b) =>
-						a.Name?.localeCompare(b.Name)
-					);
-					this.allItems.push(item);
-				});*/
-
-				this.history = this.allItems;
+				console.log(this.items[0]);
 			})
 			.catch((error) => {
 				console.log(error);
