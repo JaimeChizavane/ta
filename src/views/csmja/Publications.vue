@@ -2,101 +2,39 @@
 	<div class="wrapper">
 		<q-header />
 		<q-bread-crumb />
-
-		<section class="portfolio-grid">
-			<div class="container" v-if="items.length">
+		<section class="careers">
+			<div class="container">
 				<div class="row">
-					<div class="col-12">
+					<div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+						<div class="heading text-center mb-50">
+							<h3 class="heading__title">{{ $tc($route.meta.display) }}</h3>
+						</div>
+						<!-- /.heading -->
+					</div>
+					<!-- /.col-lg-10 -->
+				</div>
+				<!-- /.row -->
+				<div class="row">
+					<div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 offset-xl-3">
 						<div class="pagetitle__form mb-50">
-							<div class="form-row">
-								<div class="col-12">
-									<input
-										@keyup="search"
-										v-model="query.assunto"
-										type="text"
-										class="form-control bordered-box mb-20"
-										placeholder="Procurar por assunto..."
-									/>
-								</div>
-							</div>
+							<input
+								@keyup="search"
+								v-model="query"
+								type="text"
+								class="form-control bordered-box"
+								placeholder="Procurar..."
+							/>
 						</div>
 					</div>
 					<!-- /.col-xl-6 -->
 				</div>
-				<div class="row mb-50" v-if="filtered.length">
-					<div class="col-12">
-						<div class="heading text-center mb-50">
-							<h2 class="heading__subtitle color-body">
-								Resultados encontrados:
-							</h2>
-						</div>
-						<div class="row">
-							<div
-								class="col-sm-3 col-md-3 col-lg-2"
-								v-for="(file, index) in filtered"
-								:key="index"
-							>
-								<div class="portfolio-item">
-									<div class="portfolio__img" @click="zoomImage(file.File)">
-										<img v-lazy="getFileThumb(file.File)" alt="portfolio img" />
-									</div>
-									<!-- /.portfolio-img -->
-									<div class="portfolio__content">
-										<h4 class="portfolio__title">
-											<a
-												:href="getFileUrl(file.File)"
-												target="_blank"
-												v-html="file.File.Name"
-											></a>
-										</h4>
-										<div class="portfolio__cat">
-											<a :href="getFileUrl(file.File)" target="_blank">{{
-												file.Tipo
-											}}</a>
-										</div>
-										<!-- /.portfolio-cat -->
 
-										<div class="portfolio__cat">
-											<a
-												class="btn btn__secondary btn__link"
-												:href="getFileUrl(file.File)"
-												target="_blank"
-											>
-												<span>{{ $tc('read_more') }}</span>
-												<i class="icon-arrow-right"></i>
-											</a>
-										</div>
-										<!-- /.portfolio-cat -->
-									</div>
-									<!-- /.portfolio-content -->
-								</div>
-								<!-- /.portfolio-item -->
-							</div>
-							<!-- /.col-lg-4 -->
-						</div>
-					</div>
-					<!-- /.col-lg-12 -->
-				</div>
-				<!-- /.row -->
-
-				<!--        <div class="row">-->
-				<!--          <div class="col-12">-->
-				<!--            <ul class="portfolio-filter d-flex flex-wrap justify-content-center list-unstyled">-->
-				<!--              <li><a class="filter" :class="[activeFilter ? '':'active']" href="#"-->
-				<!--                     @click.prevent="filterImages(null)">Todas</a></li>-->
-				<!--              <li v-for="(filter, index) in allItems" :key="index">-->
-				<!--                <a class="filter" :class="[activeFilter === filter.Tipo ? 'active':'']" href="#"-->
-				<!--                   @click.prevent="filterImages(filter.Tipo)">{{ filter.Title || filter.Tipo }}</a>-->
-				<!--              </li>-->
-				<!--            </ul>&lt;!&ndash; /.portfolio-filter  &ndash;&gt;-->
-				<!--          </div>&lt;!&ndash; /.col-lg-12 &ndash;&gt;-->
-				<!--        </div>&lt;!&ndash; /.row &ndash;&gt;-->
 				<div class="container">
 					<div class="row" id="accordion">
 						<div class="col-sm-12 col-md-12 col-lg-12">
 							<div
 								class="accordion-item"
-								v-for="(filter, index) in allItems"
+								v-for="(faq, index) in history"
 								:key="index"
 							>
 								<div
@@ -104,9 +42,7 @@
 									data-toggle="collapse"
 									:data-target="'#collapse' + index"
 								>
-									<a class="accordion__title" @click.prevent>{{
-										filter.Title || filter.Tipo
-									}}</a>
+									<a class="accordion__title" @click.prevent>{{ faq.Name }}</a>
 								</div>
 								<!-- /.accordion-item-header -->
 								<div
@@ -115,59 +51,52 @@
 									data-parent="#accordion"
 								>
 									<div class="accordion__body">
-										<div
-											class="row"
-											v-for="(item, index) in items.filter(
-												(i) => i.Tipo === filter.Tipo
-											)"
-											:key="index"
-										>
-											<!-- portfolio item #1 -->
-											<div
-												class="col-sm-4 col-md-4 col-lg-3"
-												v-for="file in item.Folder.Files.results"
-												:key="file.UniqueId"
-											>
-												<div class="portfolio-item">
-													<div class="portfolio__img" @click="zoomImage(file)">
-														<img
-															v-lazy="getFileThumb(file)"
-															alt="portfolio img"
-														/>
-													</div>
-													<!-- /.portfolio-img -->
-													<div class="portfolio__content">
-														<h4 class="portfolio__title">
-															<a
-																:href="getFileUrl(file)"
-																target="_blank"
-																v-html="file.Name"
-															></a>
-														</h4>
-														<div class="portfolio__cat">
-															<a :href="getFileUrl(file)" target="_blank"
-																><i class="icon-download"></i>
-																{{ item.Folder.Name }}</a
+										<div class="row">
+											<div class="col-12">
+												<div class="jobs-container">
+													<!-- career item #1 -->
+													<div
+														class="job-item"
+														v-for="(item, index) in faq.Files.results"
+														:key="index"
+													>
+														<div class="row">
+															<div class="col-sm-12 col-md-12 col-lg-4">
+																<div class="job__meta">
+																	<span
+																		class="job__type"
+																		v-show="item.TimeLastModified"
+																	>
+																		{{ item.TimeLastModified | date }}
+																	</span>
+																</div>
+																<h4 class="job__title">
+																	{{ item.Name || 'Sem titulo' }}
+																</h4>
+															</div>
+															<!-- /.col-lg-4 -->
+															<div class="col-sm-12 col-md-12 col-lg-5">
+																<p class="job__desc" v-html="item.Name"></p>
+															</div>
+															<!-- /.col-lg-5 -->
+															<div
+																class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap"
 															>
+																<a
+																	:href="getFileUrl(item)"
+																	target="_blank"
+																	class="btn btn__secondary"
+																	>Abrir</a
+																>
+															</div>
+															<!-- /.col-lg-3 -->
 														</div>
-														<!-- /.portfolio-cat -->
-														<div class="portfolio__cat">
-															<a
-																class="btn btn__secondary btn__link"
-																:href="getFileUrl(file)"
-																target="_blank"
-															>
-																<span>{{ $tc('read_more') }}</span>
-																<i class="icon-arrow-right"></i>
-															</a>
-														</div>
-														<!-- /.portfolio-cat -->
+														<!-- /.row -->
 													</div>
-													<!-- /.portfolio-content -->
+													<!-- /.job-item -->
 												</div>
-												<!-- /.portfolio-item -->
 											</div>
-											<!-- /.col-lg-4 -->
+											<!-- /.col-lg-12 -->
 										</div>
 										<!-- /.row -->
 									</div>
@@ -182,16 +111,9 @@
 				<!-- /.container -->
 			</div>
 			<!-- /.container -->
-			<div class="container" v-else>
-				<div class="heading text-center mb-20">
-					<h3 class="heading__title">Sem resultados...</h3>
-				</div>
-			</div>
 		</section>
-		<!-- /.portfolio layout 3  -->
+		<!-- /.careers -->
 		<q-footer />
-		<CoolLightBox :items="slideImages" :index="index" @close="index = null">
-		</CoolLightBox>
 	</div>
 </template>
 
@@ -200,32 +122,21 @@ import QFooter from '@/components/Footer';
 import QHeader from '@/components/Header/Header';
 import QBreadCrumb from '@/components/BreadCrumb';
 
-import CoolLightBox from 'vue-cool-lightbox';
-import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css';
-
 export default {
-	name: 'QPublications',
-	components: { QBreadCrumb, QHeader, QFooter, CoolLightBox },
+	name: 'QDecret',
+	components: { QBreadCrumb, QHeader, QFooter },
 	methods: {
 		search() {
-			if (this.query.assunto) {
-				this.filtered = this.searcheable
-					.filter(
-						(file) =>
-							this.query.assunto === '' ||
-							file.File.Name?.toLowerCase().includes(
-								this.query.assunto.toLowerCase()
-							) ||
-							file.Tipo?.toLowerCase().includes(
-								this.query.assunto.toLowerCase()
-							) ||
-							file.Title?.toLowerCase().includes(
-								this.query.assunto.toLowerCase()
-							)
-					)
-					.slice(0, 10);
+			if (this.query) {
+				this.history = this.allItems.filter(
+					(item) =>
+						item.Name?.toLowerCase().includes(this.query.toLowerCase()) ||
+						item.Files.results.find((f) =>
+							f.Name?.toLowerCase().includes(this.query.toLowerCase())
+						)
+				);
 			} else {
-				this.filtered = [];
+				this.history = this.allItems;
 			}
 		},
 		getFileUrl(item) {
@@ -233,52 +144,12 @@ export default {
 				? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl
 				: '#';
 		},
-		getFileThumb(item) {
-			return item && item.ServerRelativeUrl
-				? process.env.VUE_APP_ROOT_DOCS +
-						'/thumbs/' +
-						item.ServerRelativeUrl +
-						'.png'
-				: '#';
-		},
-		zoomImage(file) {
-			this.slideImages = [
-				{
-					src: this.getFileThumb(file),
-					description: file.Name,
-				},
-			];
-			this.index = 0;
-		},
-		filterImages(name = null) {
-			this.activeFilter = name;
-
-			if (name) {
-				this.items = this.allItems.filter((i) => i.Tipo === name);
-			} else {
-				this.items = this.allItems;
-			}
-		},
 	},
 	data() {
 		return {
 			allItems: [],
-			items: [],
-			filtered: [],
-			searcheable: [],
-			query: {
-				assunto: '',
-				br: '',
-				diploma: '',
-				data: '',
-			},
-
-			images: [],
-			allImages: [],
-			filters: [],
-			activeFilter: null,
-			index: null,
-			slideImages: [],
+			history: [],
+			query: '',
 		};
 	},
 	mounted() {
@@ -287,25 +158,24 @@ export default {
 		this.$http
 			.get('cmsja_publicacao.json')
 			.then((data) => {
-				console.log(data.data.d.results[0]);
-				this.allItems = data.data.d.results.filter(
-					(i) => i.Folder.Files && i.Folder.Files.results?.length
-				);
-				this.items = this.allItems;
-				this.searcheable = this.items.flatMap((item) => {
-					if (item.Folder.Files) {
-						return item.Folder.Files.results
-							.sort((a, b) => a.Name.localeCompare(b.Name))
-							.reverse()
-							.flatMap((file) => {
-								return {
-									Tipo: item.Folder.Name,
-									Title: item.Folder.Name,
-									File: file,
-								};
-							});
-					}
+				// console.log(data.data.d.results);
+				this.history = data.data.d.results
+					.filter(
+						(i) => i.Name !== 'Forms' // &&
+						// (i.Name.toLowerCase().includes('relatório e parecer') ||
+						//   i.Name.toLowerCase().includes('relatórios e pareceres'))
+					)
+					.sort((a, b) => a.Name.localeCompare(b.Name))
+					.reverse();
+				// console.log(this.history);
+				this.history.forEach((item) => {
+					item.Files.results = item.Files.results.sort((a, b) =>
+						a.Name.localeCompare(b.Name)
+					);
+					this.allItems.push(item);
 				});
+
+				this.history = this.allItems;
 			})
 			.catch((error) => {
 				console.log(error);
