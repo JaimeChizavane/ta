@@ -164,7 +164,7 @@ export default {
 			.then((data) => {
 				this.allItems = data.data.d.results;
 				this.items = this.allItems.filter(
-					(item) => !this.notItems.includes(item.Folder.Name?.toLowerCase())
+					(item) => !this.notItems.includes(item.Folder.Name)
 				);
 				this.items = this.items.sort((a, b) =>
 					a.Folder.Name.localeCompare(b.Folder.Name)
