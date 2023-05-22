@@ -146,14 +146,6 @@ export default {
 			items: [],
 			allItems: [],
 			query: '',
-			notItems: [
-				'leis',
-				'resolução',
-				'resulucao',
-				'noticias',
-				'legislacao',
-				'decretos',
-			],
 		};
 	},
 	mounted() {
@@ -163,9 +155,7 @@ export default {
 			.get('cmsja_publicacao.json')
 			.then((data) => {
 				this.allItems = data.data.d.results;
-				this.items = this.allItems.filter(
-					(item) => !this.notItems.includes(item.Folder.Name)
-				);
+				this.items = this.allItems.filter((item) => item.Folder.Files);
 				this.items = this.items.sort((a, b) =>
 					a.Folder.Name.localeCompare(b.Folder.Name)
 				);
