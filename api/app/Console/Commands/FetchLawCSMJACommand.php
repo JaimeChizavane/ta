@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Criado por Maizer Aly de O. Gomes para api.
  * Email: maizer.gomes@gmail.com / maizer.gomes@ekutivasolutions / maizer.gomes@outlook.com
@@ -17,6 +18,6 @@ class FetchLawCSMJACommand extends SPApiFetch
      * @var \App\Services\HttpClient
      */
     protected $client;
-    protected $uri  = "CSMJA/_api/web/GetFolderByServerRelativeUrl('/CSMJA/CSMJA/Legislacao/Leis')/files";
+    protected $uri  = "CSMJA/_api/web/lists/getByTitle('Legislação')/items?\$expand=AttachmentFiles";
     protected $path = 'cmsjalaws.json';
 }
