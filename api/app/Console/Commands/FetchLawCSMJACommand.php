@@ -19,5 +19,5 @@ class FetchLawCSMJACommand extends SPApiFetch
      */
     protected $client;
     protected $uri  = "CSMJA/_api/web/lists/getByTitle('Legislação')/items?\$expand=AttachmentFiles";
-    protected $path = 'cmsjalaws.json';
+    protected $path = 'csmjalaws.json';
 }
