@@ -163,9 +163,14 @@ export default {
 				this.images = this.allImages;
 				console.log(this.images);
 
-				this.allImages.forEach((folder) => {
-					this.filters.push(folder.Name);
-				});
+				this.filters = this.allImages
+					.filter((f) => f.Name !== 'Forms' && f.Name != '_w' && f.Name != '_t')
+					.map((k) => {
+						return k.name;
+					});
+				//.forEach((folder) => {
+				//	.push(folder.Name);
+				//});
 			})
 			.catch((error) => {
 				console.log(error);
