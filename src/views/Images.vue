@@ -47,6 +47,7 @@
 									class="accordion__header"
 									data-toggle="collapse"
 									:data-target="'#collapse' + index"
+									v-show="folder.Files.results.length > 0"
 								>
 									<a class="accordion__title" @click.prevent>{{
 										folder.Name
