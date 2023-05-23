@@ -58,8 +58,12 @@
 									:id="'collapse' + index"
 									class="collapse"
 									data-parent="#accordion"
+									v-show="folder.Files.results.length > 0"
 								>
-									<div class="accordion__body">
+									<div
+										class="accordion__body"
+										v-show="folder.Files.results.length > 0"
+									>
 										<div class="row">
 											<div
 												class="col-sm-6 col-md-6 col-lg-4"
