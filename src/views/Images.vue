@@ -40,9 +40,7 @@
 						<div class="col-sm-12 col-md-12 col-lg-12">
 							<div
 								class="accordion-item"
-								v-for="(folder, index) in folder.Folders.results.filter((f) => {
-									f.Name != '_w' && f.Name != '_t';
-								})"
+								v-for="(folder, index) in folder.Folders.results"
 								:key="'FF-' + index"
 							>
 								<div
@@ -160,7 +158,11 @@ export default {
 			.get('images.json')
 			.then((data) => {
 				this.allImages = data.data.d.results.filter(
-					(f) => f.Name !== 'Forms' && f.Name != '_w' && f.Name != '_t'
+					(f) =>
+						f.Name !== 'Forms' &&
+						f.Name != '_w' &&
+						f.Name != '_t' &&
+						f.Folders.results.length > 0
 				);
 				this.images = this.allImages;
 				console.log(this.images);
