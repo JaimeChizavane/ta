@@ -40,7 +40,9 @@
 						<div class="col-sm-12 col-md-12 col-lg-12">
 							<div
 								class="accordion-item"
-								v-for="(folder, index) in folder.Folders.results"
+								v-for="(folder, index) in folder.Folders.results.filter((f) => {
+									f.Name != '_w' && f.Name != '_t';
+								})"
 								:key="'FF-' + index"
 							>
 								<div
@@ -163,14 +165,9 @@ export default {
 				this.images = this.allImages;
 				console.log(this.images);
 
-				this.filters = this.allImages
-					.filter((f) => f.Name !== 'Forms' && f.Name != '_w' && f.Name != '_t')
-					.map((k) => {
-						return k.name;
-					});
-				//.forEach((folder) => {
-				//	.push(folder.Name);
-				//});
+				this.allImages.forEach((folder) => {
+					this.filters.push(folder.Name);
+				});
 			})
 			.catch((error) => {
 				console.log(error);
