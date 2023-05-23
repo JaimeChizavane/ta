@@ -41,13 +41,13 @@
 							<div
 								class="accordion-item"
 								v-for="(folder, index) in folder.Folders.results"
+								v-show="folder.Files.results.length > 0"
 								:key="'FF-' + index"
 							>
 								<div
 									class="accordion__header"
 									data-toggle="collapse"
 									:data-target="'#collapse' + index"
-									v-show="folder.Files.results.length > 0"
 								>
 									<a class="accordion__title" @click.prevent>{{
 										folder.Name
@@ -64,7 +64,7 @@
 										class="accordion__body"
 										v-show="folder.Files.results.length > 0"
 									>
-										<div class="row">
+										<div class="row" v-show="folder.Files.results.length > 0">
 											<div
 												class="col-sm-6 col-md-6 col-lg-4"
 												v-for="(file, index) in folder.Files.results"
