@@ -131,9 +131,13 @@ export default {
 			this.activeFilter = name;
 
 			if (name) {
-				this.images = this.allImages.filter((i) => i.Name === name);
+				this.images = this.allImages.filter(
+					(i) => i.Name === name && i.Name != '_w' && i.Name != '_t'
+				);
 			} else {
-				this.images = this.allImages;
+				this.images = this.allImages.filter(
+					(i) => i.Name != '_w' && i.Name != '_t'
+				);
 			}
 		},
 	},
