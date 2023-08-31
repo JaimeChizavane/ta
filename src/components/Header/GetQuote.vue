@@ -54,7 +54,7 @@ import Echo from 'laravel-echo';
 window.io = require('socket.io-client');
 window.Pusher = require('pusher-js');
 
-const echoinstance = new Echo({
+const echoinstance = process.env.VUE_APP_WEBSOCKET_KEY ? new Echo({
 	key: process.env.VUE_APP_WEBSOCKET_KEY,
 	wsHost: process.env.VUE_APP_WEBSOCKET_HOST,
 	// wsPort: process.env.VUE_APP_WEBSOCKET_PORT,
@@ -71,7 +71,7 @@ const echoinstance = new Echo({
 	disableStats: true,
 	enabledTransports: ['ws', 'wss'],
 	// authEndpoint: "https://api.ta.test/broadcasting/auth"
-});
+}) : {};
 
 export default {
 	name: 'QGetQuote',
@@ -83,6 +83,10 @@ export default {
 		};
 	},
 	mounted() {
+    if (Object.keys(echoinstance).length === 0) {
+      return
+    }
+
 		echoinstance.connect();
 
 		echoinstance
@@ -127,6 +131,9 @@ export default {
 	},
 	methods: {},
 	beforeDestroy() {
+    if (Object.keys(echoinstance).length === 0) {
+      return
+    }
 		echoinstance.disconnect();
 	},
 };
