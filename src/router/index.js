@@ -14,6 +14,15 @@ const routes = [
     component: () => import('@/views/Home.vue'),
   },
   {
+    path: '/pesquisa',
+    name: 'search',
+    meta: {
+      display: 'menus.home',
+      display_title: 'Tribunal Administrativo de Moçambique',
+    },
+    component: () => import('@/views/Search.vue'),
+  },
+  {
     path: '/support_services',
     name: 'support_services',
     meta: {

@@ -1,491 +1,313 @@
 <template>
   <div class="wrapper">
-    <q-header/>
-    <q-bread-crumb/>
-    <section class="careers">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="pagetitle__form">
-              <label class="offset-11">
-                <button @click="clear"><i class="icon-query"></i> Limpar</button>
-              </label>
-              <form @submit.prevent="search">
-                <div class="form-row">
-                  <div class="col-12">
-                    <input v-model="query.assunto" type="text" class="form-control bordered-box"
-                           placeholder="Escreva o que procurar e pise em ENTER">
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div><!-- /.col-xl-6 -->
-        </div>
-      </div>
-    </section>
-    <section class="careers" v-if="searching && legisltationItems.length">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-            <div class="heading text-center mb-50">
-              <h3 class="heading__title">
-                <router-link :to="{name: 'others'}">
-                  {{ $tc('menus.legislation') }}
-                </router-link>
-              </h3>
-            </div><!-- /.heading -->
-          </div><!-- /.col-lg-10 -->
-        </div><!-- /.row -->
-        <div class="row">
-          <div class="col-12">
-            <div class="jobs-container">
-              <!-- career item #1 -->
-              <div class="job-item" v-for="(item, index) in legisltationItems" :key="index">
-                <div class="row">
-                  <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="table-responsive">
-                      <table border="1px" class="table">
-                        <tr>
-                          <td class="ta_table job__type" colspan="2">
-                            <div class="job__meta">
-                              <span class="font-weight-bold">Tipo de Legislação:</span> &nbsp;&nbsp;&nbsp;&nbsp;
-                              {{ item.Tipo_x0020_de_x0020_Legisla_x00e }}
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="ta_table"
-                              v-html="'<span class=\'font-weight-bold\'>N. BR: </span>' + item.N_x00fa_mero_x0020_do_x0020_BR"></td>
-                          <td class="ta_table">
-                            <span class="font-weight-bold">N. Legislação:</span>
-                            {{ item.N_x00fa_meroDaLegisla_x00e7__x00 }}
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="ta_table">
-                            <span class="font-weight-bold">Legislação </span>
-                            {{ item.Legisla_x00e7__x00e3_o_x0020_Ger }}
-                          </td>
-                          <td class="ta_table" v-if="item.OData__x00c1_rea_x0020_de_x0020_Apoio_0.results">
-                            <span class="font-weight-bold">Área de Apoio:</span>
-                            <span v-for="(area, areadIndex) in item.OData__x00c1_rea_x0020_de_x0020_Apoio_0.results"
-                                  :key="areadIndex">
-                          {{ area }}
-                          <span
-                              v-show="areadIndex !== (item.OData__x00c1_rea_x0020_de_x0020_Apoio_0.results.length - 1)">,
-                          </span>
-                        </span>
-                          </td>
-                          <td class="ta_table" v-else>
-                            <span class="font-weight-bold"> Área de Apoio:</span>
-                            {{ item.OData__x00c1_rea_x0020_de_x0020_Apoio_0 }}
-                          </td>
-                        </tr>
-                      </table>
-                    </div>
-                    <hr>
+    <q-header />
+    <q-bread-crumb />
+    <v-container>
 
-                    <span class="job__location">
-                        {{ item.Data_x0020_do_x0020_BR | date }}
-                      </span>
-                  </div><!-- /.col-lg-4 -->
-                  <div class="col-sm-12 col-md-12 col-lg-8" v-if="item.AttachmentFiles.results.length">
-                    <div class="row mb-5" v-for="file in item.AttachmentFiles.results" :key="file.__metadata.id">
-                      <div class="col-sm-12 col-md-12 col-lg-9">
-                        <p class="job__desc">{{ item.Title || file.FileName }}</p>
-                      </div><!-- /.col-lg-5 -->
-                      <div class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap">
-                        <a :href="getFileUrl(file)" target="_blank" class="btn btn__secondary">Abrir</a>
-                      </div><!-- /.col-lg-3 -->
-                    </div>
-                    <hr>
-                    <div class="row col-sm-12">
-                      <div class="row col-sm-12">
-                        <span class="font-weight-bold">Sumário: </span>
-                      </div>
-                      <div class="row col-sm-12">
-                        <span class="job__desc" v-html="item.Assunto"></span>
-                      </div>
-                    </div>
-                  </div>
-                </div><!-- /.row -->
-              </div><!-- /.job-item -->
-            </div>
-          </div><!-- /.col-lg-12 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /.careers -->
-    <section class="careers" v-if="searching && jurisdictionItems.length">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-            <div class="heading text-center mb-50">
-              <h3 class="heading__title">
-                <router-link :to="{name: 'jurispendency_all'}">
-                  {{ $tc('menus.jurisdiction') }}
-                </router-link>
-              </h3>
-            </div><!-- /.heading -->
-          </div><!-- /.col-lg-10 -->
-        </div><!-- /.row -->
-        <div class="row">
-          <div class="col-12">
-            <div class="jobs-container">
-              <!-- career item #1 -->
-              <div class="job-item" v-for="(item, index) in jurisdictionItems" :key="index">
-                <div class="row">
-                  <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="table-responsive">
-                      <table border="1px" class="table">
-                        <tr v-show="item.Entidade">
-                          <td class="ta_table"
-                              v-html="'<span class=\'font-weight-bold\'>Entidade: </span>'+item.Entidade"></td>
-                        </tr>
-                        <tr v-show="item.Benefici_x00e1_rio_x0020_do_x002">
-                          <td class="ta_table"
-                              v-html="'<span class=\'font-weight-bold\'>Beneficiário: </span>'+item.Benefici_x00e1_rio_x0020_do_x002"></td>
-                        </tr>
-                        <tr v-show="item.Contratante">
-                          <td class="ta_table"
-                              v-html="'<span class=\'font-weight-bold\'>Contratante: </span>'+item.Contratante"></td>
-                        </tr>
-                        <tr v-show="item.Contratado">
-                          <td class="ta_table"
-                              v-html="'<span class=\'font-weight-bold\'>Contratado: </span>'+item.Contratado"></td>
-                        </tr>
-                        <tr>
-                          <td class="ta_table job__type">
-                            <div class="job__meta">
-                              <span class="font-weight-bold">Tipo:</span> &nbsp;&nbsp;&nbsp;&nbsp;
-                              {{ item.Ac_x00f3_rd_x00e3_o_x0020_ou_x00 }}
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="ta_table"><span class="font-weight-bold">Secção de origem:</span>
-                            {{ item.Sec_x00e7__x00e3_o_x0020_de_x002 }}
-                          </td>
-                        </tr>
-                        <tr v-show="item.Subsec_x00e7__x00e3_o">
-                          <td class="ta_table"><span class="font-weight-bold">Subsecção:</span>
-                            {{ item.Subsec_x00e7__x00e3_o }}
-                          </td>
-                        </tr>
-                        <tr v-show="item.N_x00b0__x0020_do_x0020_Acord_x0">
-                          <td class="ta_table"
-                              v-html="'<span class=\'font-weight-bold\'>N. Acórdão: </span>'+item.N_x00b0__x0020_do_x0020_Acord_x0"></td>
-                        </tr>
-                        <tr v-show="item.N_x002e__x00ba__x0020_do_x0020_P">
-                          <td class="ta_table"
-                              v-html="'<span class=\'font-weight-bold\'>N. do Processo: </span>'+item.N_x002e__x00ba__x0020_do_x0020_P"></td>
-                        </tr>
-                        <tr v-show="item.Relator">
-                          <td class="ta_table"
-                              v-html="'<span class=\'font-weight-bold\'>Relator: </span>'+item.Relator"></td>
-                        </tr>
-                      </table>
-                    </div>
-                    <hr>
-                    <div class="job__meta">
-                      <span class="job__location">
-                        {{ item.Data_x0020_do_x0020_Ac_x00f3_rd_ | date }}
-                      </span>
-                    </div>
-                    <!--   <h4 class="job__title" v-html="item.Title || item.Objecto_x0020_de_x0020_Recurso"></h4> -->
-                    <!--   <div class="job__meta">
-                        <span class="job__location" v-html="'Relator: ' + item.Relator"></span>
-                      </div> -->
+      <v-row>
+        
+        <v-form>
+          <v-col cols="12"  >
+            <v-text-field v-model="query.assunto" label="Pesquisa" clearable @keyup="search"
+              placeholder="Escreva o que procurar e pise em ENTER" single-line full-width></v-text-field>
+          </v-col>
+        </v-form>
 
-                    <p v-show="item.Assunto.results.length"><strong>Assunto:</strong></p>
-                    <div class="job__meta" v-for="(subject, index) in item.Assunto.results"
-                         :key="'subject' + index">
-                      <span class="job__location">
-                        {{ subject }}
-                      </span>
-                    </div>
+      </v-row>
 
-                  </div><!-- /.col-lg-4 -->
-                  <div class="col-sm-12 col-md-12 col-lg-8" v-if="item.AttachmentFiles.results.length">
-                    <div class="row mb-5" v-for="(file, index) in item.AttachmentFiles.results" :key="'file' + index">
-                      <div class="col-sm-12 col-md-12 col-lg-9">
-                        <p class="job__desc" v-html="file.FileName"></p>
-                      </div><!-- /.col-lg-5 -->
-                      <div class="col-sm-12 col-md-12 col-lg-3 d-flex align-items-center justify-content-end btn-wrap">
-                        <a :href="getFileUrl(file)" target="_blank" class="btn btn__secondary">Abrir</a>
-                      </div><!-- /.col-lg-3 -->
 
-                    </div>
-                    <hr>
-                    <div class="row col-sm-12" v-show="item.Sum_x00e1_rio">
-                      <div class="row col-sm-12">
-                        <span class="font-weight-bold">Sumário: </span>
-                      </div>
-                      <div class="row col-sm-12">
-                        <span class="job__desc" v-html="item.Sum_x00e1_rio"></span>
-                      </div>
-                    </div>
 
-                  </div>
-                  <div class="col-sm-12 col-md-12 col-lg-8" v-else>
-                    <div class="row mb-5">
-                      <div class="col-sm-12 col-md-12 col-lg-9">
-                        <p class="job__desc" v-html="item.Title || item.Objecto_x0020_de_x0020_Recurso"></p>
-                      </div><!-- /.col-lg-5 -->
-                    </div>
-                  </div>
-                </div><!-- /.row -->
-              </div><!-- /.job-item -->
-            </div>
-          </div><!-- /.col-lg-12 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /.careers -->
-    <section class="portfolio-grid" v-if="searching && publicationItems.length">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-            <div class="heading text-center mb-50">
-              <h3 class="heading__title">
-                <router-link :to="{name: 'publications'}">
-                  {{ $tc('menus.publications') }}
-                </router-link>
-              </h3>
-            </div><!-- /.heading -->
-          </div><!-- /.col-lg-10 -->
-        </div><!-- /.row -->
-        <div class="row">
-          <div class="col-12">
-            <div class="row">
-              <div class="col-sm-3 col-md-3 col-lg-2"
-                   v-for="(file, index) in publicationItems" :key="index">
-                <div class="portfolio-item">
-                  <div class="portfolio__img" @click="zoomImage(file.File)">
-                    <img :src="getFileThumb(file.File)" alt="portfolio img">
-                  </div><!-- /.portfolio-img -->
-                  <div class="portfolio__content">
-                    <h4 class="portfolio__title">
-                      <a :href="getFileUrl(file.File)" target="_blank" v-html="file.File.Name"></a>
-                    </h4>
-                    <div class="portfolio__cat">
-                      <a :href="getFileUrl(file.File)" target="_blank">{{ file.Tipo }}</a>
-                    </div><!-- /.portfolio-cat -->
 
-                    <div class="portfolio__cat">
-                      <a class="btn btn__secondary btn__link" :href="getFileUrl(file.File)" target="_blank">
-                        <span>{{ $tc('read_more') }}</span>
-                        <i class="icon-arrow-right"></i>
-                      </a>
-                    </div><!-- /.portfolio-cat -->
-                  </div><!-- /.portfolio-content -->
-                </div><!-- /.portfolio-item -->
-              </div><!-- /.col-lg-4 -->
-            </div>
-          </div><!-- /.col-lg-12 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-    </section><!-- /.portfolio layout 3  -->
-    <section class="blog-grid pb-50" v-if="searching && newsItems.length">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
-            <div class="heading text-center mb-50">
-              <h3 class="heading__title">
-                <router-link :to="{name: 'blog'}">
-                  {{ $tc('blog') }}
-                </router-link>
-              </h3>
-            </div><!-- /.heading -->
-          </div><!-- /.col-lg-10 -->
-        </div><!-- /.row -->
-        <div class="row">
-          <!-- Blog Item #1 -->
-          <div class="col-sm-12 col-md-6 col-lg-4" v-for="(article) in newsItems" :key="article.GUID">
-            <div class="post-item">
-              <div class="post__img">
-                <router-link :to="{name: 'blog-item', params: {guid : article.GUID}}">
-                  <img :src="getImageUrl(article)" alt="blog image" class="cover__image">
-                </router-link>
-              </div><!-- /.blog-img -->
-              <div class="post__body">
-                <h4 class="post__title">
-                  <router-link :to="{name: 'blog-item', params: {guid : article.GUID}}">
-                    {{ article.Title }}
-                  </router-link>
-                </h4>
-                <div class="post__meta">
-                  <span class="post__meta-date">{{
-                      article.Data_x0020_Noticia || article.Created | date_with_week
-                    }}</span>
-                </div>
-                <p class="post__desc" v-html="$options.filters.excerpt(article.Content)"></p>
-                <router-link :to="{name: 'blog-item', params: {guid : article.GUID}}"
-                             class="btn btn__secondary btn__link">
-                  <span>{{ $tc('read_more') }}</span>
-                  <i class="icon-arrow-right"></i>
-                </router-link>
-              </div><!-- /.blog-content -->
-            </div><!-- /.post-item -->
-          </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
-      <hr>
-    </section><!-- /.blog Grid -->
 
-    <section class="careers"
-             v-if="!legisltationItems.length && !jurisdictionItems.length && !publicationItems.length && !newsItems.length">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="heading text-center mb-20">
-              <h3 class="heading__title">Sem resultados...</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <q-footer/>
-    <CoolLightBox
-        :items="slideImages"
-        :index="index"
-        @close="index = null">
-    </CoolLightBox>
+
+
+      <!-- /.row -->
+
+      <v-row>
+        <v-card>
+          <v-card-title>
+            Resultado da legilacao
+            <v-spacer></v-spacer>
+            <v-text-field v-model="query.search" append-icon="mdi-magnify" label="Search" single-line
+              hide-details></v-text-field>
+          </v-card-title>
+          <v-card-text>
+            <v-data-table :headers="legislacao.headers" :items="legislacao.items" :search="query.search"></v-data-table>
+
+
+
+
+          </v-card-text>
+        </v-card>
+      </v-row>
+      <!-- /.container -->
+    </v-container>
+    <!-- /.careers -->
+    <q-footer />
   </div>
 </template>
 
 <script>
-import QFooter from "@/components/Footer";
-import QHeader from "@/components/Header/Header";
-import QBreadCrumb from "@/components/BreadCrumb";
-
-import CoolLightBox from 'vue-cool-lightbox'
-import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
+import QFooter from '@/components/Footer';
+import QHeader from '@/components/Header/Header';
+import QBreadCrumb from '@/components/BreadCrumb';
 
 export default {
-  name: "QLaw",
-  components: { QBreadCrumb, QHeader, QFooter, CoolLightBox },
+  name: 'QLaw',
+  components: { QBreadCrumb, QHeader, QFooter },
   methods: {
-    getFileThumb(item) {
-      return item && item.ServerRelativeUrl ? process.env.VUE_APP_ROOT_DOCS + '/thumbs/' + item.ServerRelativeUrl + '.png' : '#'
-    },
-    zoomImage(file) {
-      this.slideImages = [{
-        src: this.getFileThumb(file),
-        description: file.Name
-      }]
-      this.index = 0
-    },
     clear() {
-      this.query.assunto = ''
-      this.$route.query.query = ''
+      this.query.assunto = '';
+      this.query.br = '';
+      this.query.diploma = '';
+      this.query.data = '';
+      this.query.area = '';
 
-      this.searching = false
-
-      this.legisltationItems = []
-      this.newsItems = []
-      this.publicationItems = []
-      this.jurisdictionItems = []
+      this.search();
     },
-    fetchFromApi(url) {
-      return this.$http.get(url).then((data) => {
-        return data
-      })
+    searchLegislacao() {
+      if (
+        this.query.assunto ||
+        this.query.br ||
+        this.query.diploma ||
+        this.query.data ||
+        this.query.area
+      ) {
+        this.legislacao.filtes = this.legislacao.data.filter(
+          (file) =>
+            (this.query.assunto === '' ||
+              file.Title?.toLowerCase().includes(
+                this.query.assunto.toLowerCase()
+              ) ||
+              file.Assunto?.toLowerCase().includes(
+                this.query.assunto.toLowerCase()
+              )) &&
+            (this.query.br === '' ||
+              file.N_x00fa_mero_x0020_do_x0020_BR?.toLowerCase().includes(
+                this.query.br.toLowerCase()
+              )) &&
+            (this.query.area === '' ||
+              file.OData__x00c1_rea_x0020_de_x0020_Apoio_0.results?.find((x) =>
+                x.toLowerCase().includes(this.query.area.toLowerCase())
+              ) ||
+              file.OData__x00c1_rea_x0020_de_x0020_Apoio_?.toLowerCase().includes(
+                this.query.area.toLowerCase()
+              )) &&
+            (this.query.diploma === '' ||
+              file.N_x00fa_meroDaLegisla_x00e7__x00?.toLowerCase().includes(
+                this.query.diploma.toLowerCase()
+              )) &&
+            (this.query.data === '' ||
+              this.compareDate(file.Data_x0020_do_x0020_BR, this.query.data))
+        );
+      } else {
+        this.legislacao.filtes = this.legislacao.data;
+      }
     },
     search() {
-      this.$route.query.query = this.query.assunto
 
-      this.searching = true
+    },
+    compareDate(a, b) {
+      let dateA = new Date(a).toDateString();
+      let dateB = new Date(b).toDateString();
 
-      Promise.all([
-        this.fetchFromApi("legislacaoAll.json"),
-        this.fetchFromApi("jurispudenciaAll.json"),
-        this.fetchFromApi("publicacoes.json"),
-        this.fetchFromApi("news.json")
-      ]).then((datas) => {
-        this.legisltationItems = datas[0].data.d.results.filter(file => (this.query.assunto === ''
-            || file.Title?.toLowerCase().includes(this.query.assunto.toLowerCase())
-            || file.Assunto?.toLowerCase().includes(this.query.assunto.toLowerCase()))
-        ).slice(0, 10)
-
-        this.jurisdictionItems = datas[1].data.d.results
-            .filter(file => (this.query.assunto === ''
-                || file.Assunto.results.find(i => i?.toLowerCase().includes(this.query.assunto.toLowerCase()))
-                || file.Relator?.toLowerCase().includes(this.query.assunto.toLowerCase())
-                || file.N_x002e__x00ba__x0020_do_x0020_P?.toLowerCase().includes(this.query.assunto.toLowerCase())
-                || file.N_x00b0__x0020_do_x0020_Acord_x0?.toLowerCase().includes(this.query.assunto.toLowerCase()))
-            ).slice(0, 10)
-
-
-        this.publicationItems = datas[2].data.d.results.filter(i => i.Folder.Files && i.Folder.Files.results?.length
-            && !i.Tipo.toLowerCase().trim().includes('Relatórios de Auditorias às Contas do TA'.toLowerCase())
-        ).flatMap((item) => {
-          if (item.Folder.Files) {
-            return item.Folder.Files.results.flatMap((file) => {
-              return {
-                Tipo: item.Tipo,
-                Title: item.Title || item.Folder.Name,
-                File: file
-              }
-            })
-          }
-        }).filter(file => (this.query.assunto === ''
-            || file.File.Name?.toLowerCase().includes(this.query.assunto.toLowerCase())
-            || file.Tipo?.toLowerCase().includes(this.query.assunto.toLowerCase())
-            || file.Title?.toLowerCase().includes(this.query.assunto.toLowerCase()))
-        ).slice(0, 10)
-
-
-        this.newsItems = datas[3].data.d.results.filter(article =>
-            (this.query.assunto === '' || article.Title?.toLowerCase().includes(this.query.assunto.toLowerCase()))
-        ).slice(0, 10)
-
-
-      }).catch((error) => {
-        console.log(error)
-      })
+      return dateA.toLowerCase().includes(dateB.toLowerCase());
     },
     getFileUrl(item) {
-      return item && item.ServerRelativeUrl ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl : '#'
+      return item && item.ServerRelativeUrl
+        ? process.env.VUE_APP_ROOT_DOCS + item.ServerRelativeUrl
+        : '#';
     },
-    getImageUrl(item) {
-      return item && item.Attachments ? process.env.VUE_APP_ROOT_DOCS + item.AttachmentFiles.results[0].ServerRelativeUrl : 'assets/images/blog/grid/1.jpg'
+    initLegislcacao() {
+      this.$http
+        .get('legislacaoAll.json')
+        .then((data) => {
+          this.legislacao.data = data.data.d.results;
+          this.legislacao.data = this.legislacao.data.filter(
+            (l) =>
+              !(
+                l?.N_x00fa_meroDaLegisla_x00e7__x00 === '9/2018' &&
+                (l?.N_x00fa_mero_x0020_do_x0020_BR == null ||
+                  l?.N_x00fa_mero_x0020_do_x0020_BR == '')
+              )
+          );
+          this.legislacao.filters = this.legislacao.data
+            .sort(
+              (a, b) =>
+                new Date(a.Data_x0020_do_x0020_BR) -
+                new Date(b.Data_x0020_do_x0020_BR)
+            )
+            .reverse();
+
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
+      this.$http
+        .get('legislacaoAll_bak.json')
+        .then((data) => {
+          this.allItemsBak = data.data.d.results;
+          this.allItemsBak = this.allItemsBak.filter(
+            (l) =>
+              !(
+                l?.N_x00fa_meroDaLegisla_x00e7__x00 === '9/2018' &&
+                (l?.N_x00fa_mero_x0020_do_x0020_BR == null ||
+                  l?.N_x00fa_mero_x0020_do_x0020_BR == '')
+              )
+          );
+
+          if (this.legislacao.data.length < 10) {
+
+            this.legislacao.data = this.allItemsBak;
+            this.legislacao.items = this.legislacao.data
+              .sort(
+                (a, b) =>
+                  new Date(a.Data_x0020_do_x0020_BR) -
+                  new Date(b.Data_x0020_do_x0020_BR)
+              )
+              .reverse();
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
   },
   data() {
     return {
-      index: null,
-      slideImages: [],
-      searching: true,
+      legislacao: {
+        headers: [
 
-      legisltationItems: [],
-      jurisdictionItems: [],
-      publicationItems: [],
-      newsItems: [],
-      query: {
-        assunto: ''
+          {
+            value: 'Tipo_x0020_de_x0020_Legisla_x00e',
+            text: 'Tipo de Legislação',
+            sortable: true,
+            thClass: 'btn__primary',
+          },
+          {
+            value: 'N_x00fa_mero_x0020_do_x0020_BR',
+            text: 'Número do BR',
+            sortable: true,
+            thClass: 'btn__primary',
+          },
+          {
+            value: 'N_x00fa_meroDaLegisla_x00e7__x00',
+            text: 'Número de Legislação',
+            sortable: true,
+            thClass: 'btn__primary',
+          },
+          {
+            value: 'Legisla_x00e7__x00e3_o_x0020_Ger',
+            text: 'Legislação',
+            sortable: true,
+            thClass: 'btn__primary',
+          },
+          {
+            value: 'Data_do_BR',
+            text: 'Data do BR',
+            sortable: true,
+            thClass: 'btn__primary',
+          },
+          {
+            value: 'Área de Apoio',
+            text: 'Área de Apoio',
+            sortable: true,
+            thClass: 'btn__primary',
+          },
+
+          {
+            value: 'Sumario',
+            text: 'Sumário',
+            sortable: true,
+            thClass: 'btn__primary col-3',
+          },
+          {
+            value: 'Document',
+            text: 'Documento',
+            sortable: true,
+            thClass: 'btn__primary',
+          },
+        ],
+        items: [],
+        data: [],
       },
+      allItems: [],
+      allItemsBak: [],
+      items: [],
+      areas: [],
+      filtered: [],
+      searcheable: [],
+      query: {
+        search: '',
+        assunto: '',
+        br: '',
+        diploma: '',
+        data: '',
+        area: '',
+      },
+      perPage: 10,
+      currentPage: 1,
+      fields: [
+        {
+          key: 'Tipo_x0020_de_x0020_Legisla_x00e',
+          label: 'Tipo de Legislação',
+          sortable: true,
+          thClass: 'btn__primary',
+        },
+        {
+          key: 'N_x00fa_mero_x0020_do_x0020_BR',
+          label: 'Número do BR',
+          sortable: true,
+          thClass: 'btn__primary',
+        },
+        {
+          key: 'N_x00fa_meroDaLegisla_x00e7__x00',
+          label: 'Número de Legislação',
+          sortable: true,
+          thClass: 'btn__primary',
+        },
+        {
+          key: 'Legisla_x00e7__x00e3_o_x0020_Ger',
+          label: 'Legislação',
+          sortable: true,
+          thClass: 'btn__primary',
+        },
+        {
+          key: 'Data_do_BR',
+          label: 'Data do BR',
+          sortable: true,
+          thClass: 'btn__primary',
+        },
+        {
+          key: 'Área de Apoio',
+          label: 'Área de Apoio',
+          sortable: true,
+          thClass: 'btn__primary',
+        },
 
-    }
+        {
+          key: 'Sumario',
+          label: 'Sumário',
+          sortable: true,
+          thClass: 'btn__primary col-3',
+        },
+        {
+          key: 'Document',
+          label: 'Documento',
+          sortable: true,
+          thClass: 'btn__primary',
+        },
+      ],
+    };
   },
-  watch: {
-    'query.assunto': function (value) {
-      if (value === '') {
-        this.clear()
-      }
-    },
-    '$route.query.query': function (value) {
-      this.query.assunto = value
-    }
-  },
+  created() { },
   mounted() {
-    window.mainExecution()
+    window.mainExecution();
+    this.initLegislcacao();
 
-    this.query.assunto = this.$route.query.query
-
-    this.search()
   }
-}
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
