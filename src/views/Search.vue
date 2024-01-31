@@ -24,68 +24,99 @@
       </div>
     </section>
     <section class="careers">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <v-card v-show="query.search">
-              <v-card-title>
-                Resultado da legilação
-
-              </v-card-title>
-              <v-card-text>
-                <v-data-table :headers="legislacao.headers" :items="legislacao.items" :search="query.search">
-                  <template v-slot:item.Sumario="{item}">
-                  <span class="job__location">
-                    {{ item.sumario | excerpt }}
-                  </span>
-                </template>
-                  <template v-slot:item.Document="{ item }">
-                    <div
-                    class="col-sm-12 col-md-12 col-lg-8"
-                    v-if="item.AttachmentFiles.results.length"
-                  >
-                    <div
-                      class="row mb-5"
-                      v-for="(file, index) in item.AttachmentFiles.results"
-                      :key="'file' + index"
-                    >
-                      <!-- /.col-lg-5 -->
-                      <div
-                        class="
+      <v-container>
+        <v-card v-show="query.search" justify="center">
+          <v-card-title>
+            Resultado da pesquisa por: {{ query.search }}
+          </v-card-title>
+          <v-card-text>
+            <v-expansion-panels focusable accordion>
+              <v-expansion-panel :key="1">
+                <v-expansion-panel-header>Resultado da legilação</v-expansion-panel-header>
+                <v-expansion-panel-content>
+                  <v-data-table :headers="legislacao.headers" :items="legislacao.items" :search="query.search">
+                    <template v-slot:item.Data_do_BR="{ item }">
+                      <span class="job__location">
+                        {{ item.Data_x0020_do_x0020_BR | date }}
+                      </span>
+                    </template>
+                    <template v-slot:item.Área_de_Apoio="{ item }">
+                      <span v-for="(area, areadIndex) in item
+                        .OData__x00c1_rea_x0020_de_x0020_Apoio_0.results" :key="areadIndex">
+                        {{ area }}
+                      </span>
+                    </template>
+                    <template v-slot:item.Sumario="{ item }">
+                      <span class="job__location">
+                        {{ item.Sumario | excerpt }}
+                      </span>
+                    </template>
+                    <template v-slot:item.Document="{ item }">
+                      <div class="col-sm-12 col-md-12 col-lg-8" v-if="item.AttachmentFiles.results.length">
+                        <div class="row mb-5" v-for="(file, index) in item.AttachmentFiles.results" :key="'file' + index">
+                          <!-- /.col-lg-5 -->
+                          <div class="
                           align-items-center
                           justify-content-end
                           btn-wrap
-                        "
-                      >
-                        <a
-                          :href="getFileUrl(file)"
-                          target="_blank"
-                          class="btn btn__secondary"
-                          >Abrir</a
-                        >
+                        ">
+                            <a :href="getFileUrl(file)" target="_blank" class="btn btn__secondary">Abrir</a>
+                          </div>
+                          <!-- /.col-lg-3 -->
+                        </div>
+                        <hr />
                       </div>
-                      <!-- /.col-lg-3 -->
-                    </div>
-                    <hr />
-                  </div>
-                  </template>
-                </v-data-table>
-              </v-card-text>
-            </v-card>
+                    </template>
+                  </v-data-table>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+              <v-expansion-panel :key="1">
+                <v-expansion-panel-header>Resultado da jurisprudência</v-expansion-panel-header>
+                <v-expansion-panel-content>
+                  <v-data-table :headers="jurisprudencia.headers" :items="jurisprudencia.items" :search="query.search">
+                    <template v-slot:item.Document="{ item }">
+                      <div class="col-sm-12 col-md-12 col-lg-8" v-if="item.documento.length">
+                        <div class="row mb-5" v-for="(file, index) in item.documento" :key="'file' + index">
+                          <!-- /.col-lg-5 -->
+                          <div class="
+                          align-items-center
+                          justify-content-end
+                          btn-wrap
+                        ">
+                            <a :href="getFileUrl(file)" target="_blank" class="btn btn__secondary">Abrir</a>
+                          </div>
+                          <!-- /.col-lg-3 -->
+                        </div>
+                        <hr />
+                      </div>
+                    </template>
+                    <template v-slot:item.data_acordao="{ item }">
+                      <span class="job__location">
+                        {{ item.data_acordao | date }}
+                      </span>
+                    </template>
+                    <template v-slot:item.Sumario="{ item }">
+                      <span class="job__location">
+                        {{ item.sumario | excerpt }}
+                      </span>
+                    </template>
+                    <template v-slot:item.Assunto="{ item }">
+                      <div class="job__meta" v-for="(subject, index) in item.assunto" :key="'subject' + index">
+                        <span class="job__location">
+                          {{ subject }}
+                        </span>
+                      </div>
+                    </template>
+                  </v-data-table>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+            </v-expansion-panels>
+          </v-card-text>
+        </v-card>
+      </v-container>
 
-            <v-card v-show="query.search" class="mt-20">
-              <v-card-title>
-                Resultado da jurisprudência
 
-              </v-card-title>
-              <v-card-text>
-                <v-data-table :headers="jurisprudencia.headers" :items="jurisprudencia.items" :search="query.search">
-                </v-data-table>
-              </v-card-text>
-            </v-card>
-          </div>
-        </div>
-      </div>
+
     </section>
     <v-container>
 
@@ -293,6 +324,13 @@ export default {
           console.log(error);
         });
     },
+    initDocs() {
+      this.$http.get("planoEstrategico.json").then((data) => {
+        this.history = data.data.d.results.filter(i => i.Name !== 'Forms')
+
+        this.allItems = this.history
+      });
+    }
   },
   data() {
     return {
@@ -378,7 +416,7 @@ export default {
             thClass: 'btn__primary',
           },
           {
-            value: 'Data_do_Acórdão',
+            value: 'data_acordao',
             text: 'Data do Acórdão',
             sortable: true,
             thClass: 'btn__primary',
@@ -408,6 +446,36 @@ export default {
             thClass: 'btn__primary',
           },
         ],
+        items: [],
+        data: [],
+      },
+      docs: {
+        headers: [
+          {
+            value: 'tipo_doc',
+            text: 'Categoria Documento',
+            sortable: true,
+          },
+          {
+            value: 'Name',
+            text: 'Nome do documento',
+            sortable: true,
+          },
+          {
+            value: 'TimeLastModified',
+            text: 'Ultima modificacao',
+            sortable: true,
+
+          },
+          {
+            value: 'Document',
+            text: 'Documento',
+            sortable: true,
+            thClass: 'btn__primary',
+          },
+
+
+        ], 
         items: [],
         data: [],
       },
@@ -485,6 +553,7 @@ export default {
     window.mainExecution();
     this.initLegislcacao();
     this.initJurisprudencia();
+    this.initDocs();
     this.query.search = this.$route.query.query;
 
   }
