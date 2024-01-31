@@ -2,43 +2,49 @@
   <div class="wrapper">
     <q-header />
     <q-bread-crumb />
+    <section class="careers">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="pagetitle__form">
+              <label class="offset-11">
+                <button @click="clear"><i class="icon-query"></i> Limpar</button>
+              </label>
+              <form @submit.prevent="search">
+                <div class="form-row">
+                  <div class="col-12">
+                    <input v-model="query.search" type="text" class="form-control bordered-box"
+                      placeholder="Escreva o que procurar e pise em ENTER" @keyup="search">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div><!-- /.col-xl-6 -->
+        </div>
+      </div>
+    </section>
+    <section class="careers">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <v-card>
+              <v-card-title>
+                Resultado da legilação
+                 
+              </v-card-title>
+              <v-card-text>
+                <v-data-table :headers="legislacao.headers" :items="legislacao.items"
+                  :search="query.search"></v-data-table> </v-card-text>
+            </v-card>
+          </div>
+        </div>
+      </div>
+    </section>
     <v-container>
 
-      <v-row>
-        
-        <v-form>
-          <v-col cols="12"  >
-            <v-text-field v-model="query.assunto" label="Pesquisa" clearable @keyup="search"
-              placeholder="Escreva o que procurar e pise em ENTER" single-line full-width></v-text-field>
-          </v-col>
-        </v-form>
-
-      </v-row>
-
-
-
-
-
-
-
-      <!-- /.row -->
 
       <v-row>
-        <v-card>
-          <v-card-title>
-            Resultado da legilacao
-            <v-spacer></v-spacer>
-            <v-text-field v-model="query.search" append-icon="mdi-magnify" label="Search" single-line
-              hide-details></v-text-field>
-          </v-card-title>
-          <v-card-text>
-            <v-data-table :headers="legislacao.headers" :items="legislacao.items" :search="query.search"></v-data-table>
 
-
-
-
-          </v-card-text>
-        </v-card>
       </v-row>
       <!-- /.container -->
     </v-container>
@@ -66,14 +72,14 @@ export default {
       this.search();
     },
     searchLegislacao() {
-      if (
+     /*  if (
         this.query.assunto ||
         this.query.br ||
         this.query.diploma ||
         this.query.data ||
         this.query.area
       ) {
-        this.legislacao.filtes = this.legislacao.data.filter(
+        this.legislacao.items = this.legislacao.data.filter(
           (file) =>
             (this.query.assunto === '' ||
               file.Title?.toLowerCase().includes(
@@ -101,8 +107,8 @@ export default {
               this.compareDate(file.Data_x0020_do_x0020_BR, this.query.data))
         );
       } else {
-        this.legislacao.filtes = this.legislacao.data;
-      }
+        this.legislacao.items = this.legislacao.data;
+      } */
     },
     search() {
 
@@ -123,15 +129,8 @@ export default {
         .get('legislacaoAll.json')
         .then((data) => {
           this.legislacao.data = data.data.d.results;
-          this.legislacao.data = this.legislacao.data.filter(
-            (l) =>
-              !(
-                l?.N_x00fa_meroDaLegisla_x00e7__x00 === '9/2018' &&
-                (l?.N_x00fa_mero_x0020_do_x0020_BR == null ||
-                  l?.N_x00fa_mero_x0020_do_x0020_BR == '')
-              )
-          );
-          this.legislacao.filters = this.legislacao.data
+          
+          this.legislacao.items = this.legislacao.data
             .sort(
               (a, b) =>
                 new Date(a.Data_x0020_do_x0020_BR) -
@@ -148,14 +147,7 @@ export default {
         .get('legislacaoAll_bak.json')
         .then((data) => {
           this.allItemsBak = data.data.d.results;
-          this.allItemsBak = this.allItemsBak.filter(
-            (l) =>
-              !(
-                l?.N_x00fa_meroDaLegisla_x00e7__x00 === '9/2018' &&
-                (l?.N_x00fa_mero_x0020_do_x0020_BR == null ||
-                  l?.N_x00fa_mero_x0020_do_x0020_BR == '')
-              )
-          );
+         
 
           if (this.legislacao.data.length < 10) {
 
@@ -178,7 +170,6 @@ export default {
     return {
       legislacao: {
         headers: [
-
           {
             value: 'Tipo_x0020_de_x0020_Legisla_x00e',
             text: 'Tipo de Legislação',
@@ -305,6 +296,7 @@ export default {
   mounted() {
     window.mainExecution();
     this.initLegislcacao();
+    this.query.search = this.$route.query.query;
 
   }
 };
