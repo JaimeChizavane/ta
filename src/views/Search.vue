@@ -411,7 +411,7 @@ export default {
 						.filter((i) => i.Name !== 'Forms')
 						.map((f) => {
 							console.log(f);
-							f.Files.results.maps((k) => {
+							f.Files.results.forEach((k) => {
 								k.tipo_doc = 'Plano Estrategico';
 								this.docs.data.push(k);
 							});
