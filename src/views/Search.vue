@@ -404,18 +404,53 @@ export default {
 				});
 		},
 		initDocs() {
-			this.$http.get('planoEstrategico.json').then((data) => {
-				data.data.d.results
-					.filter((i) => i.Name !== 'Forms')
-					.map((f) => {
-						f.Files.results.maps((k) => {
-							k.tipo_doc = 'Plano Estrategico';
-							this.history.push(k);
+			this.$http
+				.get('planoEstrategico.json')
+				.then((data) => {
+					data.data.d.results
+						.filter((i) => i.Name !== 'Forms')
+						.map((f) => {
+							f.Files.results.maps((k) => {
+								k.tipo_doc = 'Plano Estrategico';
+								this.docs.data.push(k);
+							});
 						});
-					});
-
-				this.docs.items = this.history;
-			});
+				})
+				.catch((error) => {
+					console.log(error);
+				});
+			this.$http
+				.get('relatorioAuditoriaDesempenho.json')
+				.then((data) => {
+					data.data.d.results
+						.filter((i) => i.Name !== 'Forms')
+						.map((f) => {
+							f.Files.results.maps((k) => {
+								k.tipo_doc = 'Relatório de auditoria de desempenho';
+								this.docs.data.push(k);
+							});
+						});
+				})
+				.catch((error) => {
+					console.log(error);
+				});
+			this.$http
+				.get('rpcge.json')
+				.then((data) => {
+					data.data.d.results
+						.filter((i) => i.Name !== 'Forms')
+						.map((f) => {
+							f.Files.results.maps((k) => {
+								k.tipo_doc = 'Relatórios e Pareceres CGE';
+								this.docs.data.push(k);
+							});
+						});
+				})
+				.catch((error) => {
+					console.log(error);
+				});
+			this.docs.items = this.docs.data;
+			console.log(this.docs.items);
 		},
 	},
 	data() {
