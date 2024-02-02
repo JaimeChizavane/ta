@@ -410,6 +410,7 @@ export default {
 					data.data.d.results
 						.filter((i) => i.Name !== 'Forms')
 						.map((f) => {
+							console.log(f);
 							f.Files.results.maps((k) => {
 								k.tipo_doc = 'Plano Estrategico';
 								this.docs.data.push(k);
@@ -579,12 +580,12 @@ export default {
 					},
 					{
 						value: 'Name',
-						text: 'Nome do documento',
+						text: 'Nome do Documento',
 						sortable: true,
 					},
 					{
 						value: 'TimeLastModified',
-						text: 'Ultima modificacao',
+						text: 'Ultima modificação',
 						sortable: true,
 					},
 					{
