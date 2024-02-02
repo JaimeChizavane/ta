@@ -180,26 +180,10 @@
 											</div>
 											<!-- /.col-lg-3 -->
 										</template>
-										<template v-slot:item.data_acordao="{ item }">
+										<template v-slot:item.TimeLastModified="{ item }">
 											<span class="job__location">
-												{{ item.data_acordao | date }}
+												{{ item.TimeLastModified | date }}
 											</span>
-										</template>
-										<template v-slot:item.Sumario="{ item }">
-											<span class="job__location">
-												{{ item.sumario | excerpt }}
-											</span>
-										</template>
-										<template v-slot:item.Assunto="{ item }">
-											<div
-												class="job__meta"
-												v-for="(subject, index) in item.assunto"
-												:key="'subject' + index"
-											>
-												<span class="job__location">
-													{{ subject }}
-												</span>
-											</div>
 										</template>
 									</v-data-table>
 								</v-expansion-panel-content>
@@ -410,9 +394,9 @@ export default {
 					data.data.d.results
 						.filter((i) => i.Name !== 'Forms')
 						.map((f) => {
-							console.log(f);
 							f.Files.results.forEach((k) => {
 								k.tipo_doc = 'Plano Estrategico';
+								k.title = f.Name;
 								this.docs.data.push(k);
 							});
 						});
@@ -426,8 +410,9 @@ export default {
 					data.data.d.results
 						.filter((i) => i.Name !== 'Forms')
 						.map((f) => {
-							f.Files.results.maps((k) => {
+							f.Files.results.forEach((k) => {
 								k.tipo_doc = 'Relatório de auditoria de desempenho';
+								k.title = f.Name;
 								this.docs.data.push(k);
 							});
 						});
@@ -441,8 +426,9 @@ export default {
 					data.data.d.results
 						.filter((i) => i.Name !== 'Forms')
 						.map((f) => {
-							f.Files.results.maps((k) => {
+							f.Files.results.forEach((k) => {
 								k.tipo_doc = 'Relatórios e Pareceres CGE';
+								k.title = f.Name;
 								this.docs.data.push(k);
 							});
 						});
@@ -576,6 +562,11 @@ export default {
 					{
 						value: 'tipo_doc',
 						text: 'Categoria Documento',
+						sortable: true,
+					},
+					{
+						value: 'title',
+						text: 'Titulo',
 						sortable: true,
 					},
 					{
