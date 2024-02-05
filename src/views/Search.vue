@@ -482,7 +482,7 @@ export default {
           console.log(error);
         });
     },
-    initDocs() {
+    async initDocs() {
       this.$http
         .get("planoEstrategico.json")
         .then((data) => {
@@ -515,7 +515,7 @@ export default {
         .catch((error) => {
           console.log(error);
         });
-      this.$http
+      await this.$http
         .get("rpcge.json")
         .then((data) => {
           data.data.d.results
@@ -531,7 +531,7 @@ export default {
         .catch((error) => {
           console.log(error);
         });
-      this.$http
+      await this.$http
         .get("contas.json")
         .then((data) => {
           data.data.d.results
@@ -547,7 +547,7 @@ export default {
         .catch((error) => {
           console.log(error);
         });
-      this.$http
+      await this.$http
         .get("publicacoes.json")
         .then((data) => {
           data.data.d.results
@@ -567,14 +567,14 @@ export default {
       this.docs.items = this.docs.data;
       console.log(this.docs.items);
     },
-    initNews() {
-      this.$http
+    async initNews() {
+      await this.$http
         .get("news.json")
         .then((data) => {
-          this.news.items = data.data.d.results.maps(k=>{
-            k.tipo_doc='Notícias';
+          this.news.items = data.data.d.results.map((k) => {
+            k.tipo_doc = "Notícias";
             return k;
-          })
+          });
         })
         .catch((error) => {
           console.log(error);
