@@ -460,14 +460,30 @@ export default {
           console.log(error);
         });
       this.$http
-        .get("publicacoes.json")
+        .get("contas.json")
         .then((data) => {
           data.data.d.results
             .filter((i) => i.Name !== "Forms")
             .map((f) => {
               f.Files.results.forEach((k) => {
-                k.tipo_doc = "Publicações";
+                k.tipo_doc = "Certificação de contas";
                 k.title = f.Name;
+                this.docs.data.push(k);
+              });
+            });
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      this.$http
+        .get("publicacoes.json")
+        .then((data) => {
+          data.data.d.results
+            .filter((i) => i.Name !== "Forms")
+            .map((f) => {
+              f.Folder.Files.results.forEach((k) => {
+                k.tipo_doc = "Publicações";
+                k.title = f.Folder.Name;
                 this.docs.data.push(k);
               });
             });
