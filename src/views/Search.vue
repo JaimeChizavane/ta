@@ -41,7 +41,7 @@
             <v-expansion-panels focusable accordion>
               <v-expansion-panel :key="1">
                 <v-expansion-panel-header
-                  >Resultado da legilação</v-expansion-panel-header
+                  >Resultado da legislação</v-expansion-panel-header
                 >
                 <v-expansion-panel-content>
                   <v-data-table
@@ -51,6 +51,9 @@
                     :page.sync="legislacao.page"
                     :items-per-page="legislacao.itemsPerPage"
                     :no-data-text="'Não há dados disponíveis'"
+                    :no-results-text="
+                      'Nenhum registro correspondente encontrado'
+                    "
                     hide-default-footer
                     class="elevation-1"
                     @page-count="legislacao.pageCount = $event"
@@ -107,7 +110,6 @@
                       :length="legislacao.pageCount"
                       :total-visible="7"
                     ></v-pagination>
-                
                   </div>
                 </v-expansion-panel-content>
               </v-expansion-panel>
@@ -123,7 +125,10 @@
                     :search="query.search"
                     :page.sync="jurisprudencia.page"
                     :items-per-page="jurisprudencia.itemsPerPage"
-                   
+                    :no-data-text="'Não há dados disponíveis'"
+                    :no-results-text="
+                      'Nenhum registro correspondente encontrado'
+                    "
                     hide-default-footer
                     class="elevation-1"
                     @page-count="jurisprudencia.pageCount = $event"
@@ -182,7 +187,6 @@
                       :length="jurisprudencia.pageCount"
                       :total-visible="7"
                     ></v-pagination>
-                
                   </div>
                 </v-expansion-panel-content>
               </v-expansion-panel>
@@ -201,7 +205,6 @@
                     hide-default-footer
                     class="elevation-1"
                     @page-count="docs.pageCount = $event"
-                    
                   >
                     <template v-slot:item.Document="{ item }">
                       <div
@@ -228,7 +231,55 @@
                       :length="docs.pageCount"
                       :total-visible="7"
                     ></v-pagination>
-                
+                  </div>
+                </v-expansion-panel-content>
+              </v-expansion-panel>
+              <v-expansion-panel :key="4">
+                <v-expansion-panel-header
+                  >Resultado de Artigos</v-expansion-panel-header
+                >
+                <v-expansion-panel-content>
+                  <v-data-table
+                    :headers="news.headers"
+                    :items="news.items"
+                    :search="query.search"
+                    :page.sync="news.page"
+                    :items-per-page="news.itemsPerPage"
+                    :no-data-text="'Não há dados disponíveis'"
+                    hide-default-footer
+                    class="elevation-1"
+                    @page-count="news.pageCount = $event"
+                  >
+                    <template v-slot:item.Document="{ item }">
+                      <router-link
+                        :to="{
+                          name: 'blog-item',
+                          params: { guid: item.GUID },
+                        }"
+                        class="btn btn__secondary btn__link"
+                      >
+                        <span>{{ $tc("read_more") }}</span>
+                        <i class="icon-arrow-right"></i>
+                      </router-link>
+                      <!-- /.col-lg-3 -->
+                    </template>
+                    <template v-slot:item.Content="{ item }">
+                      <span class="job__location">
+                        {{ item.Content | excerpt }}
+                      </span>
+                    </template>
+                    <template v-slot:item.TimeLastModified="{ item }">
+                      <span class="job__location">
+                        {{ item.Data_x0020_Noticia | date }}
+                      </span>
+                    </template>
+                  </v-data-table>
+                  <div class="text-center pt-2">
+                    <v-pagination
+                      v-model="news.page"
+                      :length="news.pageCount"
+                      :total-visible="7"
+                    ></v-pagination>
                   </div>
                 </v-expansion-panel-content>
               </v-expansion-panel>
@@ -508,13 +559,26 @@ export default {
                 this.docs.data.push(k);
               });
             });
-            console.log(data.data.d.results);
+          //console.log(data.data.d.results);
         })
         .catch((error) => {
           console.log(error);
         });
       this.docs.items = this.docs.data;
       console.log(this.docs.items);
+    },
+    initNews() {
+      this.$http
+        .get("news.json")
+        .then((data) => {
+          this.news.items = data.data.d.results.maps(k=>{
+            k.tipo_doc='Notícias';
+            return k;
+          })
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
   },
   data() {
@@ -525,50 +589,50 @@ export default {
             value: "Tipo_x0020_de_x0020_Legisla_x00e",
             text: "Tipo de Legislação",
             sortable: true,
-           class: "btn__primary text-white"
+            class: "btn__primary text-white",
           },
           {
             value: "N_x00fa_mero_x0020_do_x0020_BR",
             text: "Número do BR",
             sortable: true,
-           class: "btn__primary text-white"
+            class: "btn__primary text-white",
           },
           {
             value: "N_x00fa_meroDaLegisla_x00e7__x00",
             text: "Número de Legislação",
             sortable: true,
-           class: "btn__primary text-white"
+            class: "btn__primary text-white",
           },
           {
             value: "Legisla_x00e7__x00e3_o_x0020_Ger",
             text: "Legislação",
             sortable: true,
-           class: "btn__primary text-white"
+            class: "btn__primary text-white",
           },
           {
             value: "Data_do_BR",
             text: "Data do BR",
             sortable: true,
-           class: "btn__primary text-white"
+            class: "btn__primary text-white",
           },
           {
             value: "Área de Apoio",
             text: "Área de Apoio",
             sortable: true,
-           class: "btn__primary text-white"
+            class: "btn__primary text-white",
           },
 
           {
             value: "Sumario",
             text: "Sumário",
             sortable: true,
-            class: "btn__primary text-white col-3"
+            class: "btn__primary text-white col-3",
           },
           {
             value: "Document",
             text: "Documento",
             sortable: true,
-           class: "btn__primary text-white"
+            class: "btn__primary text-white",
           },
         ],
         items: [],
@@ -583,49 +647,49 @@ export default {
             value: "seccao_origem",
             text: "Secção de origem",
             sortable: true,
-           class: "btn__primary text-white"
+            class: "btn__primary text-white",
           },
           {
             value: "n_acordao",
             text: "N. Acórdão",
             sortable: true,
-           class: "btn__primary text-white"
+            class: "btn__primary text-white",
           },
           {
             value: "n_processo",
             text: "N. do Processo",
             sortable: true,
-           class: "btn__primary text-white"
+            class: "btn__primary text-white",
           },
           {
             value: "data_acordao",
             text: "Data do Acórdão",
             sortable: true,
-           class: "btn__primary text-white"
+            class: "btn__primary text-white",
           },
           {
             value: "relator",
             text: "Relator",
             sortable: true,
-           class: "btn__primary text-white"
+            class: "btn__primary text-white",
           },
           {
             value: "Assunto",
             text: "Assunto",
             sortable: true,
-           class: "btn__primary text-white"
+            class: "btn__primary text-white",
           },
           {
             value: "Sumario",
             text: "Sumário",
             sortable: true,
-            class: "btn__primary text-white"
+            class: "btn__primary text-white",
           },
           {
             value: "Document",
             text: "Documento",
             sortable: true,
-           class: "btn__primary text-white"
+            class: "btn__primary text-white",
           },
         ],
         items: [],
@@ -640,31 +704,70 @@ export default {
             value: "tipo_doc",
             text: "Categoria Documento",
             sortable: true,
-            class: "btn__primary text-white"
+            class: "btn__primary text-white",
           },
           {
             value: "title",
             text: "Titulo",
             sortable: true,
-            class: "btn__primary text-white"
+            class: "btn__primary text-white",
           },
           {
             value: "Name",
             text: "Nome do Documento",
             sortable: true,
-            class: "btn__primary text-white"
+            class: "btn__primary text-white",
           },
           {
             value: "TimeLastModified",
             text: "Ultima modificação",
             sortable: true,
-            class: "btn__primary text-white"
+            class: "btn__primary text-white",
           },
           {
             value: "Document",
             text: "Documento",
             sortable: true,
-            class: "btn__primary text-white"
+            class: "btn__primary text-white",
+          },
+        ],
+        items: [],
+        data: [],
+        page: 1,
+        pageCount: 0,
+        itemsPerPage: 10,
+      },
+      news: {
+        headers: [
+          {
+            value: "tipo_doc",
+            text: "Categoria",
+            sortable: true,
+            class: "btn__primary text-white",
+          },
+          {
+            value: "Title",
+            text: "Titulo",
+            sortable: true,
+            class: "btn__primary text-white",
+          },
+          {
+            value: "Content",
+            text: "Conteúdo",
+            sortable: true,
+            class: "btn__primary text-white",
+          },
+          {
+            value: "TimeLastModified",
+            text: "Ultima modificação",
+            sortable: true,
+            class: "btn__primary text-white",
+          },
+          {
+            value: "Document",
+            text: "Link",
+            sortable: true,
+            class: "btn__primary text-white col-4",
           },
         ],
         items: [],
@@ -694,37 +797,37 @@ export default {
           key: "Tipo_x0020_de_x0020_Legisla_x00e",
           label: "Tipo de Legislação",
           sortable: true,
-         class: "btn__primary text-white"
+          class: "btn__primary text-white",
         },
         {
           key: "N_x00fa_mero_x0020_do_x0020_BR",
           label: "Número do BR",
           sortable: true,
-         class: "btn__primary text-white"
+          class: "btn__primary text-white",
         },
         {
           key: "N_x00fa_meroDaLegisla_x00e7__x00",
           label: "Número de Legislação",
           sortable: true,
-         class: "btn__primary text-white"
+          class: "btn__primary text-white",
         },
         {
           key: "Legisla_x00e7__x00e3_o_x0020_Ger",
           label: "Legislação",
           sortable: true,
-         class: "btn__primary text-white"
+          class: "btn__primary text-white",
         },
         {
           key: "Data_do_BR",
           label: "Data do BR",
           sortable: true,
-         class: "btn__primary text-white"
+          class: "btn__primary text-white",
         },
         {
           key: "Área de Apoio",
           label: "Área de Apoio",
           sortable: true,
-         class: "btn__primary text-white"
+          class: "btn__primary text-white",
         },
 
         {
@@ -737,7 +840,7 @@ export default {
           key: "Document",
           label: "Documento",
           sortable: true,
-         class: "btn__primary text-white"
+          class: "btn__primary text-white",
         },
       ],
     };
