@@ -851,6 +851,7 @@ export default {
     this.initLegislcacao();
     this.initJurisprudencia();
     this.initDocs();
+    this.initNews();
     this.query.search = this.$route.query.query;
   },
 };
