@@ -251,22 +251,26 @@
                     @page-count="news.pageCount = $event"
                   >
                     <template v-slot:item.Document="{ item }">
-                      <router-link
-                        :to="{
-                          name: 'blog-item',
-                          params: { guid: item.GUID },
-                        }"
-                        class="btn btn__secondary btn__link"
+                      <div
+                        class="align-items-center justify-content-end btn-wrap"
                       >
-                        <span>{{ $tc("read_more") }}</span>
-                        <i class="icon-arrow-right"></i>
-                      </router-link>
+                        <router-link
+                          :to="{
+                            name: 'blog-item',
+                            params: { guid: item.GUID },
+                          }"
+                          class="btn btn__secondary"
+                          >Abrir</router-link
+                        >
+                      </div>
+
                       <!-- /.col-lg-3 -->
                     </template>
                     <template v-slot:item.Content="{ item }">
-                      <span class="job__location">
-                        {{ item.Content | excerpt }}
-                      </span>
+                      <p
+                        class="post__desc"
+                        v-html="$options.filters.excerpt(item.Content)"
+                      ></p>
                     </template>
                     <template v-slot:item.TimeLastModified="{ item }">
                       <span class="job__location">
