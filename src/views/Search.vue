@@ -48,7 +48,12 @@
                     :headers="legislacao.headers"
                     :items="legislacao.items"
                     :search="query.search"
+                    :page.sync="legislacao.page"
+                    :items-per-page="legislacao.itemsPerPage"
                     :no-data-text="'Não há dados disponíveis'"
+                    hide-default-footer
+                    class="elevation-1"
+                    @page-count="legislacao.pageCount = $event"
                   >
                     <template v-slot:item.Data_do_BR="{ item }">
                       <span class="job__location">
@@ -66,7 +71,7 @@
                     </template>
                     <template v-slot:item.Sumario="{ item }">
                       <span class="job__location">
-                        {{ item.Sumario | excerpt }}
+                        {{ item.Assunto | excerpt }}
                       </span>
                     </template>
                     <template v-slot:item.Document="{ item }">
@@ -96,6 +101,14 @@
                       </div>
                     </template>
                   </v-data-table>
+                  <div class="text-center pt-2">
+                    <v-pagination
+                      v-model="legislacao.page"
+                      :length="legislacao.pageCount"
+                      :total-visible="7"
+                    ></v-pagination>
+                
+                  </div>
                 </v-expansion-panel-content>
               </v-expansion-panel>
               <v-expansion-panel :key="2">
@@ -105,9 +118,15 @@
                 <v-expansion-panel-content>
                   <v-data-table
                     :headers="jurisprudencia.headers"
+                    :locale="pt"
                     :items="jurisprudencia.items"
                     :search="query.search"
-                    :no-data-text="'Não há dados disponíveis'"
+                    :page.sync="jurisprudencia.page"
+                    :items-per-page="jurisprudencia.itemsPerPage"
+                   
+                    hide-default-footer
+                    class="elevation-1"
+                    @page-count="jurisprudencia.pageCount = $event"
                   >
                     <template v-slot:item.Document="{ item }">
                       <div
@@ -157,6 +176,14 @@
                       </div>
                     </template>
                   </v-data-table>
+                  <div class="text-center pt-2">
+                    <v-pagination
+                      v-model="jurisprudencia.page"
+                      :length="jurisprudencia.pageCount"
+                      :total-visible="7"
+                    ></v-pagination>
+                
+                  </div>
                 </v-expansion-panel-content>
               </v-expansion-panel>
               <v-expansion-panel :key="3">
@@ -199,15 +226,9 @@
                     <v-pagination
                       v-model="docs.page"
                       :length="docs.pageCount"
+                      :total-visible="7"
                     ></v-pagination>
-                   <!--  <v-text-field
-                      :value="docs.itemsPerPage"
-                      label="Items per page"
-                      type="number"
-                      min="-1"
-                      max="15"
-                      @input="docs.itemsPerPage = parseInt($event, 10)"
-                    ></v-text-field> -->
+                
                   </div>
                 </v-expansion-panel-content>
               </v-expansion-panel>
@@ -487,6 +508,7 @@ export default {
                 this.docs.data.push(k);
               });
             });
+            console.log(data.data.d.results);
         })
         .catch((error) => {
           console.log(error);
@@ -551,15 +573,12 @@ export default {
         ],
         items: [],
         data: [],
+        page: 1,
+        pageCount: 0,
+        itemsPerPage: 10,
       },
       jurisprudencia: {
         headers: [
-          {
-            value: "Tipo_x0020_de_x0020_Legisla_x00e",
-            text: "Tipo de Legislação",
-            sortable: true,
-           class: "btn__primary text-white"
-          },
           {
             value: "seccao_origem",
             text: "Secção de origem",
@@ -611,6 +630,9 @@ export default {
         ],
         items: [],
         data: [],
+        page: 1,
+        pageCount: 0,
+        itemsPerPage: 10,
       },
       docs: {
         headers: [
