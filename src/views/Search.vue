@@ -273,7 +273,11 @@
 											<!-- /.col-lg-3 -->
 										</template>
 										<template v-slot:item.Content="{ item }">
-											<v-textarea v-html="item.Content"></v-textarea>
+											<v-textarea
+												v-html="item.Content"
+												no-resize
+												rows="2"
+											></v-textarea>
 
 											<!-- <p
 												class="post__desc"
