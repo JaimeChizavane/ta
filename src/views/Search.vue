@@ -202,6 +202,9 @@
                     :page.sync="docs.page"
                     :items-per-page="docs.itemsPerPage"
                     :no-data-text="'Não há dados disponíveis'"
+                    :no-results-text="
+                      'Nenhum registro correspondente encontrado'
+                    "
                     hide-default-footer
                     class="elevation-1"
                     @page-count="docs.pageCount = $event"
@@ -246,6 +249,9 @@
                     :page.sync="news.page"
                     :items-per-page="news.itemsPerPage"
                     :no-data-text="'Não há dados disponíveis'"
+                    :no-results-text="
+                      'Nenhum registro correspondente encontrado'
+                    "
                     hide-default-footer
                     class="elevation-1"
                     @page-count="news.pageCount = $event"
@@ -269,7 +275,7 @@
                     <template v-slot:item.Content="{ item }">
                       <p
                         class="post__desc"
-                        v-html="$options.filters.excerpt(item.Content)"
+                        v-html="$options.filters.excerpt2(item.Content)"
                       ></p>
                     </template>
                     <template v-slot:item.TimeLastModified="{ item }">
@@ -759,7 +765,7 @@ export default {
             value: "Content",
             text: "Conteúdo",
             sortable: true,
-            class: "btn__primary text-white",
+            class: "btn__primary text-white col-4",
           },
           {
             value: "TimeLastModified",
@@ -771,7 +777,7 @@ export default {
             value: "Document",
             text: "Link",
             sortable: true,
-            class: "btn__primary text-white col-4",
+            class: "btn__primary text-white",
           },
         ],
         items: [],
