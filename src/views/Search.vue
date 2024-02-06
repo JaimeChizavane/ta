@@ -591,6 +591,7 @@ export default {
 					data.data.d.results.map((k) => {
 						k.tipo_doc = 'Notícias';
 						k.router = 'blog-item';
+						k.content = k.content.textContent;
 						this.news.items.push(k);
 						//	return k;
 					});
@@ -604,6 +605,7 @@ export default {
 					data.data.d.results.map((k) => {
 						k.tipo_doc = 'Instituição';
 						k.router = 'institution-item';
+						k.content = k.content.textContent;
 						this.news.items.push(k);
 						//	return k;
 					});
