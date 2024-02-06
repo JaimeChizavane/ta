@@ -516,6 +516,38 @@ export default {
 					console.log(error);
 				});
 			this.$http
+				.get('oportunities.json')
+				.then((data) => {
+					data.data.d.results
+						.filter((i) => i.Name !== 'Forms')
+						.map((f) => {
+							f.Files.results.forEach((k) => {
+								k.tipo_doc = 'Oportunidade de emprego';
+								k.title = f.Name;
+								this.docs.data.push(k);
+							});
+						});
+				})
+				.catch((error) => {
+					console.log(error);
+				});
+			this.$http
+				.get('concursos.json')
+				.then((data) => {
+					data.data.d.results
+						.filter((i) => i.Name !== 'Forms')
+						.map((f) => {
+							f.Files.results.forEach((k) => {
+								k.tipo_doc = 'Concurso';
+								k.title = f.Name;
+								this.docs.data.push(k);
+							});
+						});
+				})
+				.catch((error) => {
+					console.log(error);
+				});
+			this.$http
 				.get('relatorioAuditoriaDesempenho.json')
 				.then((data) => {
 					data.data.d.results
@@ -603,6 +635,21 @@ export default {
 					data.data.d.results.map((k) => {
 						k.tipo_doc = 'Instituição';
 						k.router = 'institution-item';
+
+						this.news.items.push(k);
+						//	return k;
+					});
+				})
+				.catch((error) => {
+					console.log(error);
+				});
+			await this.$http
+				.get('faq.json')
+				.then((data) => {
+					data.data.d.results.map((k) => {
+						k.tipo_doc = 'Perguntas Frequentes';
+						k.router = 'institution-item';
+						k.Content = k.Resposta;
 
 						this.news.items.push(k);
 						//	return k;

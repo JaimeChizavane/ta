@@ -88,6 +88,19 @@ export default {
 		const data = await this.$http.get('instituicao.json');
 
 		this.news = data.data.d.results;
+		await this.$http
+			.get('faq.json')
+			.then((data) => {
+				data.data.d.results.map((k) => {
+					k.Content = k.Resposta;
+
+					this.news.items.push(k);
+					//	return k;
+				});
+			})
+			.catch((error) => {
+				console.log(error);
+			});
 
 		window.mainExecution();
 
