@@ -521,9 +521,9 @@ export default {
 					data.data.d.results
 						.filter((i) => i.Name !== 'Forms')
 						.map((f) => {
-							f.Files.results.forEach((k) => {
-								k.tipo_doc = 'Oportunidade de emprego';
-								k.title = f.Name;
+							f.Folder.Files.results.forEach((k) => {
+								k.tipo_doc = 'Oportunidades de Emprego';
+								k.title = f.Folder.Name;
 								this.docs.data.push(k);
 							});
 						});
@@ -537,9 +537,9 @@ export default {
 					data.data.d.results
 						.filter((i) => i.Name !== 'Forms')
 						.map((f) => {
-							f.Files.results.forEach((k) => {
+							f.Folder.Files.results.forEach((k) => {
 								k.tipo_doc = 'Concurso';
-								k.title = f.Name;
+								k.title = f.Folder.Name;
 								this.docs.data.push(k);
 							});
 						});

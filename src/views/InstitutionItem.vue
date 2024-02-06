@@ -94,7 +94,7 @@ export default {
 				data.data.d.results.map((k) => {
 					k.Content = k.Resposta;
 
-					this.news.items.push(k);
+					this.news.push(k);
 					//	return k;
 				});
 			})
