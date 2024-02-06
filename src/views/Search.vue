@@ -273,14 +273,21 @@
 											<!-- /.col-lg-3 -->
 										</template>
 										<template v-slot:item.Content="{ item }">
-											<p
+											<textarea
+												id="tx1"
+												rows="3"
+												cols="50"
+												v-html="item.Content"
+											></textarea>
+											<br />
+											<!-- <p
 												class="post__desc"
 												v-html="$options.filters.excerpt(item.Content)"
-											></p>
+											></p> -->
 										</template>
 										<template v-slot:item.TimeLastModified="{ item }">
 											<span class="job__location">
-												{{ item.TimeLastModified | date }}
+												{{ item.Created | date }}
 											</span>
 										</template>
 									</v-data-table>
@@ -882,4 +889,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+#tx1 {
+	border: none;
+}
+</style>
