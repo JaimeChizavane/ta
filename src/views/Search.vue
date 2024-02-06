@@ -273,13 +273,8 @@
 											<!-- /.col-lg-3 -->
 										</template>
 										<template v-slot:item.Content="{ item }">
-											<textarea
-												id="tx1"
-												rows="3"
-												cols="50"
-												v-html="item.Content"
-											></textarea>
-											<br />
+											<v-textarea v-html="item.Content"></v-textarea>
+
 											<!-- <p
 												class="post__desc"
 												v-html="$options.filters.excerpt(item.Content)"
