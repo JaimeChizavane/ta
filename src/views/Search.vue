@@ -274,7 +274,7 @@
 										</template>
 										<template v-slot:item.Content="{ item }">
 											<v-textarea
-												v-html="item.Content"
+												v-html="$options.filters.excerpt2(item.Content)"
 												no-resize
 												rows="2"
 											></v-textarea>
