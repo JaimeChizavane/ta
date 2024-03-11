@@ -223,10 +223,10 @@ const routes = [
 		name: 'visa_consultation',
 		beforeEnter() {
 			window.open(
-				'http://consultavisto.ta.gov.mz:8080/vistoPublic/login/auth',
+				'http://consultavisto.ta.gov.mz:8090/vistoPublic/login/auth',
 				'_blank'
 			);
-		}, // location.href = 'http://consultavisto.ta.gov.mz:8080/vistoPublic/login/auth' },
+		}, // location.href = 'http://consultavisto.ta.gov.mz:8090/vistoPublic/login/auth' },
 		meta: {
 			display: 'menus.visa_consultation',
 		},
@@ -237,10 +237,10 @@ const routes = [
 		name: 'statistic',
 		beforeEnter() {
 			window.open(
-				'http://consultavisto.ta.gov.mz:8080/dashboard/public/reportViewer?code=ESTATISTICAS+DO+VISTO',
+				'http://consultavisto.ta.gov.mz:8090/dashboard/public/reportViewer?code=ESTATISTICAS+DO+VISTO',
 				'_blank'
 			);
-		}, // location.href = 'http://consultavisto.ta.gov.mz:8080/vistoPublic/login/auth' },
+		}, // location.href = 'http://consultavisto.ta.gov.mz:8090/vistoPublic/login/auth' },
 		meta: {
 			display: 'menus.statistic',
 		},
