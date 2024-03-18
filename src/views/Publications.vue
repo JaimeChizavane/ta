@@ -263,6 +263,7 @@ export default {
 	data() {
 		return {
 			allItems: [],
+			allItemsBak: [],
 			items: [],
 			filtered: [],
 			searcheable: [],
@@ -287,7 +288,7 @@ export default {
 		this.$http
 			.get('publicacoes.json')
 			.then((data) => {
-				console.log(data.data.d.results[0]);
+				//console.log(data.data.d.results[0]);
 				this.allItems = data.data.d.results.filter(
 					(i) =>
 						i.Folder.Files &&
@@ -295,25 +296,46 @@ export default {
 						!i.Folder.Name.includes('Auditorias de Desempenho') &&
 						!i.Folder.Name.includes('Contas do TA')
 				);
-				this.items = this.allItems;
-				this.searcheable = this.items.flatMap((item) => {
-					if (item.Folder.Files) {
-						return item.Folder.Files.results
-							.sort((a, b) => a.Name.localeCompare(b.Name))
-							.reverse()
-							.flatMap((file) => {
-								return {
-									Tipo: item.Tipo,
-									Title: item.Title || item.Folder.Name,
-									File: file,
-								};
-							});
-					}
-				});
 			})
 			.catch((error) => {
 				console.log(error);
 			});
+		this.$http
+			.get('publicacoes_bak.json')
+			.then((data) => {
+				//console.log(data.data.d.results[0]);
+				this.allItemsBak = data.data.d.results.filter(
+					(i) =>
+						i.Folder.Files &&
+						i.Folder.Files.results?.length &&
+						!i.Folder.Name.includes('Auditorias de Desempenho') &&
+						!i.Folder.Name.includes('Contas do TA')
+				);
+				if (this.allItems.length < this.allItemsBak.length) {
+					console.log('change to backup');
+					this.allItems = this.allItemsBak;
+				} else {
+					console.log('not change to backup');
+				}
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+		this.items = this.allItems;
+		this.searcheable = this.items.flatMap((item) => {
+			if (item.Folder.Files) {
+				return item.Folder.Files.results
+					.sort((a, b) => a.Name.localeCompare(b.Name))
+					.reverse()
+					.flatMap((file) => {
+						return {
+							Tipo: item.Tipo,
+							Title: item.Title || item.Folder.Name,
+							File: file,
+						};
+					});
+			}
+		});
 	},
 };
 </script>
