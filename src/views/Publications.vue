@@ -314,28 +314,26 @@ export default {
 				if (this.allItems.length < this.allItemsBak.length) {
 					console.log('change to backup');
 					this.allItems = this.allItemsBak;
-				} else {
-					console.log('not change to backup');
 				}
+				this.items = this.allItems;
+				this.searcheable = this.items.flatMap((item) => {
+					if (item.Folder.Files) {
+						return item.Folder.Files.results
+							.sort((a, b) => a.Name.localeCompare(b.Name))
+							.reverse()
+							.flatMap((file) => {
+								return {
+									Tipo: item.Tipo,
+									Title: item.Title || item.Folder.Name,
+									File: file,
+								};
+							});
+					}
+				});
 			})
 			.catch((error) => {
 				console.log(error);
 			});
-		this.items = this.allItems;
-		this.searcheable = this.items.flatMap((item) => {
-			if (item.Folder.Files) {
-				return item.Folder.Files.results
-					.sort((a, b) => a.Name.localeCompare(b.Name))
-					.reverse()
-					.flatMap((file) => {
-						return {
-							Tipo: item.Tipo,
-							Title: item.Title || item.Folder.Name,
-							File: file,
-						};
-					});
-			}
-		});
 	},
 };
 </script>
